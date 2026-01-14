@@ -1,0 +1,175 @@
+.info-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.info-panel-title {
+  margin: 0 0 20px 0;
+  color: #2c5f2d;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.evc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.evc-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c5f2d;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.evc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.field-value {
+  font-size: 1rem;
+  color: #333;
+}
+
+.status-value {
+  font-weight: bold;
+}
+
+.empty-state {
+  color: #666;
+  font-style: italic;
+  line-height: 1.5;
+  padding: 20px 0;
+}
+
+/* Show Plants Button */
+.show-plants-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background: #2c5f2d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.show-plants-btn:hover {
+  background: #1e4620;
+}
+
+/* Loading State */
+.loading-plants {
+  padding: 20px 0;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Plant List Container */
+.plant-list-container {
+  margin-top: 16px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+.plant-list-title {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  color: #2c5f2d;
+  font-weight: 600;
+}
+
+/* Scrollable Plant List */
+.plant-list {
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Individual Plant Item */
+.plant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  background: #f8f9f8;
+  border-radius: 6px;
+  border-left: 3px solid #2c5f2d;
+}
+
+.plant-names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.plant-common-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.plant-scientific-name {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Likelihood Badge */
+.likelihood-badge {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* View 3D Diorama Button */
+.diorama-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #1565C0, #42A5F5);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.diorama-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
