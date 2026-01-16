@@ -1,4 +1,6 @@
-import { MapContainer, TileLayer, WMSTileLayer, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
+import { useState, useEffect } from 'react';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import useMapStore from '../store/useMapStore';
 
@@ -6,62 +8,103 @@ import useMapStore from '../store/useMapStore';
 const MELBOURNE_CENTER = [-37.8136, 144.9631];
 const DEFAULT_ZOOM = 13;
 
-// WMS Configuration
-const WMS_BASE_URL = 'https://opendata.maps.vic.gov.au/geoserver/wms';
-const EVC_LAYER = 'open-data-platform:nv1750_evcbcs';
+// Color mapping for the 12 vegetation types
+const VEGETATION_COLORS = {
+  'Grasslands and Woodlands on fertile plains': '#8BC34A',   // Light green
+  'River banks and creeklines': '#2E7D32',                   // Dark green
+  'Freshwater wetland': '#1565C0',                           // Blue
+  'Coastal marshlands and brackish flats': '#0288D1',        // Light blue
+  'Saltmarsh': '#F57F17',                                    // Amber
+  'Swamp scrub': '#00695C',                                  // Teal
+  'Woodlands and heathlands on sand': '#558B2F',             // Olive green
+  'Cliffs and escarpments': '#6D4C41',                       // Brown
+  'Water body': '#0D47A1',                                   // Dark blue
+  'Unknown': '#9E9E9E',                                      // Grey
+};
 
-// Component to handle map click events
-function MapClickHandler() {
-  const map = useMap();
+// Get color for a vegetation type
+function getVegetationColor(vegetationType) {
+  return VEGETATION_COLORS[vegetationType] || '#4CAF50'; // Default green
+}
+
+// Style function for GeoJSON features
+function getFeatureStyle(feature) {
+  const vegetationType = feature.properties?.vegetation_type || '';
+  const color = getVegetationColor(vegetationType);
+
+  return {
+    fillColor: color,
+    fillOpacity: 0.6,
+    color: '#333',      // Border color
+    weight: 1,          // Border width
+    opacity: 0.8,       // Border opacity
+  };
+}
+
+// Component to load and display GeoJSON
+function EVCGeoJSON() {
+  const [geoData, setGeoData] = useState(null);
   const setSelectedEVC = useMapStore((state) => state.setSelectedEVC);
 
-  useMapEvents({
-    click: async (e) => {
-      const { lat, lng } = e.latlng;
-      const bounds = map.getBounds();
-      const size = map.getSize();
-      const point = map.latLngToContainerPoint([lat, lng]);
+  useEffect(() => {
+    fetch('/data/melbourne_vegetation_types_ari.geojson')
+      .then(response => response.json())
+      .then(data => {
+        console.log('GeoJSON loaded:', data.features?.length, 'features');
+        setGeoData(data);
+      })
+      .catch(error => console.error('Error loading GeoJSON:', error));
+  }, []);
 
-      // Build GetFeatureInfo URL
-      const url = `${WMS_BASE_URL}?` +
-        `SERVICE=WMS&` +
-        `VERSION=1.3.0&` +
-        `REQUEST=GetFeatureInfo&` +
-        `FORMAT=image/png&` +
-        `TRANSPARENT=true&` +
-        `QUERY_LAYERS=${EVC_LAYER}&` +
-        `LAYERS=${EVC_LAYER}&` +
-        `INFO_FORMAT=application/json&` +
-        `I=${Math.round(point.x)}&` +
-        `J=${Math.round(point.y)}&` +
-        `WIDTH=${size.x}&` +
-        `HEIGHT=${size.y}&` +
-        `CRS=EPSG:4326&` +
-        `BBOX=${bounds.getSouth()},${bounds.getWest()},${bounds.getNorth()},${bounds.getEast()}`;
+  // Handle click on a polygon
+  const onEachFeature = (feature, layer) => {
+    layer.on({
+      click: (e) => {
+        const props = feature.properties;
+        console.log('Clicked:', props.vegetation_type, '-', props.x_evcname);
 
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
+        setSelectedEVC({
+          evc: props.evc,
+          evcName: props.x_evcname,
+          bioregion: props.bioregion,
+          bcs: props.evc_bcs,
+          bcsDesc: props.evc_bcs_desc,
+          vegetationType: props.vegetation_type,
+          groupName: props.x_groupname,
+          subgroupName: props.x_subgroupname,
+        });
 
-        if (data.features && data.features.length > 0) {
-          const props = data.features[0].properties;
-          setSelectedEVC({
-            evc: props.evc,
-            evcName: props.x_evcname,
-            bioregion: props.bioregion,
-            bcs: props.evc_bcs,
-            bcsDesc: props.evc_bcs_desc,
-          });
-        } else {
-          setSelectedEVC(null);
-        }
-      } catch (error) {
-        console.error('Error fetching EVC info:', error);
-      }
-    }
-  });
+        // Stop propagation so map click doesn't fire
+        L.DomEvent.stopPropagation(e);
+      },
+      mouseover: (e) => {
+        const layer = e.target;
+        layer.setStyle({
+          fillOpacity: 0.8,
+          weight: 2,
+        });
+      },
+      mouseout: (e) => {
+        const layer = e.target;
+        layer.setStyle({
+          fillOpacity: 0.6,
+          weight: 1,
+        });
+      },
+    });
+  };
 
-  return null;
+  if (!geoData) {
+    return null;
+  }
+
+  return (
+    <GeoJSON
+      data={geoData}
+      style={getFeatureStyle}
+      onEachFeature={onEachFeature}
+    />
+  );
 }
 
 function MapView() {
@@ -78,18 +121,8 @@ function MapView() {
         maxZoom={19}
       />
 
-      {/* Victorian EVC WMS layer */}
-      <WMSTileLayer
-        url={WMS_BASE_URL}
-        layers={EVC_LAYER}
-        format="image/png"
-        transparent={true}
-        opacity={0.7}
-        attribution="Victorian Government Open Data"
-      />
-
-      {/* Click handler */}
-      <MapClickHandler />
+      {/* Local GeoJSON EVC layer */}
+      <EVCGeoJSON />
     </MapContainer>
   );
 }

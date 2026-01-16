@@ -118,6 +118,13 @@ function InfoPanel() {
             </span>
           </div>
 
+          {selectedEVC.vegetationType && (
+            <div className="evc-field">
+              <span className="field-label">Vegetation Type:</span>
+              <span className="field-value vegetation-type">{selectedEVC.vegetationType}</span>
+            </div>
+          )}
+
           <PlantList />
           <DioramaButton />
         </div>
