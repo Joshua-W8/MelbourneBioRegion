@@ -82,16 +82,42 @@ function DioramaButton() {
   );
 }
 
-function InfoPanel() {
-  const selectedEVC = useMapStore((state) => state.selectedEVC);
-
+function EVCList({ evcs }) {
   const getStatusStyle = (status) => {
     const statusInfo = STATUS_COLORS[status] || STATUS_COLORS.LC;
     return {
-      color: statusInfo.color,
-      fontWeight: 'bold',
+      backgroundColor: statusInfo.color,
     };
   };
+
+  if (!evcs || evcs.length === 0) return null;
+
+  return (
+    <div className="evc-list-container">
+      <span className="field-label">Ecological Vegetation Classes ({evcs.length}):</span>
+      <div className="evc-list">
+        {evcs.map((evc, index) => (
+          <div key={index} className="evc-item">
+            <div className="evc-item-header">
+              <span className="evc-item-name">{evc.evcName}</span>
+              <span
+                className="evc-status-badge"
+                style={getStatusStyle(evc.bcs)}
+                title={evc.bcsDesc}
+              >
+                {evc.bcs}
+              </span>
+            </div>
+            <span className="evc-item-code">EVC {evc.evc}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function InfoPanel() {
+  const selectedEVC = useMapStore((state) => state.selectedEVC);
 
   return (
     <div className="info-panel">
@@ -99,31 +125,11 @@ function InfoPanel() {
 
       {selectedEVC ? (
         <div className="evc-details">
-          <div className="evc-name">
-            EVC {selectedEVC.evc}: {selectedEVC.evcName}
+          <div className="vegetation-type-name">
+            {selectedEVC.vegetationType}
           </div>
 
-          <div className="evc-field">
-            <span className="field-label">Bioregion:</span>
-            <span className="field-value">{selectedEVC.bioregion}</span>
-          </div>
-
-          <div className="evc-field">
-            <span className="field-label">Conservation Status:</span>
-            <span
-              className="field-value status-value"
-              style={getStatusStyle(selectedEVC.bcs)}
-            >
-              {selectedEVC.bcs} - {selectedEVC.bcsDesc}
-            </span>
-          </div>
-
-          {selectedEVC.vegetationType && (
-            <div className="evc-field">
-              <span className="field-label">Vegetation Type:</span>
-              <span className="field-value vegetation-type">{selectedEVC.vegetationType}</span>
-            </div>
-          )}
+          <EVCList evcs={selectedEVC.evcs} />
 
           <PlantList />
           <DioramaButton />
