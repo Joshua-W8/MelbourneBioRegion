@@ -1,5 +1,6 @@
 import MapView from './components/MapView';
 import InfoPanel from './components/InfoPanel';
+import AddressSearch from './components/AddressSearch';
 import DioramaView from './components/DioramaView';
 import useMapStore from './store/useMapStore';
 import './App.css';
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <MapView />
+      <AddressSearch />
       <InfoPanel />
     </>
   );
