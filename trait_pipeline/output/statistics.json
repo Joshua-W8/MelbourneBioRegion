@@ -1,0 +1,57 @@
+{
+  "total_species": 442,
+  "diorama_species_3.1+": 442,
+  "prominent_species_3.2": 67,
+  "plantlist_species_2.1+": 442,
+  "certain_species": 442,
+  "by_vegetation_type": {
+    "Beach and Dunes": {
+      "prominent_3.2": 11,
+      "present_3.1": 21
+    },
+    "Saltmarsh": {
+      "prominent_3.2": 6,
+      "present_3.1": 55
+    },
+    "Coastal marshlands and brackish flats": {
+      "prominent_3.2": 2,
+      "present_3.1": 38
+    },
+    "Swamp scrub": {
+      "prominent_3.2": 9,
+      "present_3.1": 88
+    },
+    "Woodlands and heathlands on sand": {
+      "prominent_3.2": 20,
+      "present_3.1": 139
+    },
+    "Woodlands and forests on sedimentary hills": {
+      "prominent_3.2": 16,
+      "present_3.1": 129
+    },
+    "Grasslands and Woodlands on fertile plains": {
+      "prominent_3.2": 5,
+      "present_3.1": 55
+    },
+    "Cliffs and escarpments": {
+      "prominent_3.2": 14,
+      "present_3.1": 61
+    },
+    "River banks and creeklines": {
+      "prominent_3.2": 2,
+      "present_3.1": 11
+    },
+    "Wet heathland": {
+      "prominent_3.2": 2,
+      "present_3.1": 52
+    },
+    "Freshwater wetland": {
+      "prominent_3.2": 2,
+      "present_3.1": 6
+    },
+    "Saltwater wetland": {
+      "prominent_3.2": 67,
+      "present_3.1": 375
+    }
+  }
+}

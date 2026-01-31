@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "description": "Australian vegetation structural classification reference data",
+    "source": "Specht, R.L. (1970). Vegetation. In: Leeper, G.W. (Ed.) The Australian Environment.",
+    "note": "Used to validate coverage parameters against established ecological standards"
+  },
+
+  "specht_classifications": {
+
+    "Tall Open Forest": {
+      "tree_cover_percent_range": [30, 50],
+      "tree_height_m_range": [20, 40],
+      "melbourne_examples": ["Valley Grassy Forest (sedimentary hills)"]
+    },
+
+    "Open Woodland": {
+      "tree_cover_percent_range": [10, 30],
+      "tree_height_m_range": [10, 25],
+      "melbourne_examples": ["Plains Grassy Woodland", "Heathy Woodland"]
+    },
+
+    "Low Open Woodland": {
+      "tree_cover_percent_range": [10, 30],
+      "tree_height_m_range": [5, 15],
+      "melbourne_examples": ["Riparian Woodland"]
+    },
+
+    "Tall Shrubland": {
+      "shrub_cover_percent_range": [50, 90],
+      "shrub_height_m_range": [2, 6],
+      "melbourne_examples": ["Swamp Scrub", "Estuarine Scrub"]
+    },
+
+    "Heathland": {
+      "shrub_cover_percent_range": [50, 80],
+      "shrub_height_m_range": [0.5, 3],
+      "melbourne_examples": ["Wet Heathland", "Sand Heathland"]
+    },
+
+    "Low Shrubland": {
+      "shrub_cover_percent_range": [30, 70],
+      "shrub_height_m_range": [0.5, 2],
+      "melbourne_examples": ["Coastal Dune Scrub", "Escarpment Shrubland"]
+    },
+
+    "Sedgeland": {
+      "ground_cover_percent_range": [60, 95],
+      "ground_height_m_range": [0.5, 2],
+      "melbourne_examples": ["Estuarine Wetland", "Brackish Sedgeland"]
+    },
+
+    "Tussock Grassland": {
+      "ground_cover_percent_range": [60, 90],
+      "ground_height_m_range": [0.3, 1],
+      "melbourne_examples": ["Plains Grassland", "Estuarine Flats Grassland"]
+    },
+
+    "Herbland": {
+      "ground_cover_percent_range": [50, 90],
+      "ground_height_m_range": [0.05, 0.5],
+      "melbourne_examples": ["Saltmarsh", "Brackish Herbland"]
+    }
+  },
+
+  "mapping_to_vegetation_types": {
+    "Beach and Dunes": "Low Shrubland",
+    "Cliffs and escarpments": "Low Shrubland",
+    "Coastal marshlands and brackish flats": "Sedgeland",
+    "Freshwater wetland": "Sedgeland",
+    "Grasslands and Woodlands on fertile plains": "Open Woodland",
+    "River banks and creeklines": "Low Open Woodland",
+    "Saltmarsh": "Herbland",
+    "Saltwater wetland": "Low Open Woodland (mangroves) or Herbland (sea-grass)",
+    "Swamp scrub": "Tall Shrubland",
+    "Wet heathland": "Heathland",
+    "Woodlands and forests on sedimentary hills": "Tall Open Forest",
+    "Woodlands and heathlands on sand": "Open Woodland with dense heath understorey"
+  }
+}

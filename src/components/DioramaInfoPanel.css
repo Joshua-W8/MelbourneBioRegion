@@ -1,0 +1,122 @@
+/* Species Info Panel - flora.ai style */
+
+.species-info-panel {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 20px 28px;
+  box-shadow: var(--shadow-lg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 280px;
+  min-width: 200px;
+  z-index: 200;
+  border: 1px solid var(--panel-border);
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.species-info-panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Close button */
+.panel-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.panel-close:hover {
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+/* Prominence dot - top left indicator */
+.prominence-dot {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--panel-bg);
+}
+
+/* Layer label - small uppercase text */
+.species-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* Scientific name - main text */
+.species-name {
+  font-size: 17px;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.3;
+  font-style: italic;
+}
+
+/* Common name - subtext */
+.species-common-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Prominence badge */
+.prominence-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prominence-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .species-info-panel {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}

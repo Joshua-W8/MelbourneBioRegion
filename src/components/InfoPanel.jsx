@@ -1,66 +1,134 @@
+import { useState, useMemo } from 'react';
 import useMapStore from '../store/useMapStore';
 import { LIKELIHOOD_CODES } from '../data/evcMappings';
+import PlantModal from './PlantModal';
 import './InfoPanel.css';
 
-// Conservation status color mapping
-const STATUS_COLORS = {
-  E: { color: '#d32f2f', label: 'Endangered' },
-  V: { color: '#f57c00', label: 'Vulnerable' },
-  D: { color: '#fbc02d', label: 'Depleted' },
-  LC: { color: '#388e3c', label: 'Least Concern' },
-};
+// Group plants by likelihood code
+function groupPlantsByLikelihood(plants) {
+  const groups = {};
 
-function PlantList() {
+  // Define the order of likelihood codes (highest first)
+  const order = ['3.2', '3.1', '2.2', '2.1', '-'];
+
+  plants.forEach(plant => {
+    const code = plant._likelihoodCode || '-';
+    if (!groups[code]) {
+      groups[code] = [];
+    }
+    groups[code].push(plant);
+  });
+
+  // Return ordered array of groups
+  return order
+    .filter(code => groups[code] && groups[code].length > 0)
+    .map(code => ({
+      code,
+      plants: groups[code],
+      ...LIKELIHOOD_CODES[code] || { label: code, color: '#999' }
+    }));
+}
+
+// Plant Card Component
+function PlantCard({ plant, onClick }) {
+  return (
+    <div className="plant-card" onClick={() => onClick(plant)}>
+      <div className="plant-card-image">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path d="M12 22V12M12 12C12 12 8 8 8 5C8 2 12 2 12 2C12 2 16 2 16 5C16 8 12 12 12 12Z" />
+          <path d="M12 12C12 12 16 10 19 10C22 10 22 14 22 14C22 14 22 18 19 18C16 18 12 12 12 12Z" />
+          <path d="M12 12C12 12 8 10 5 10C2 10 2 14 2 14C2 14 2 18 5 18C8 18 12 12 12 12Z" />
+        </svg>
+      </div>
+      <div className="plant-card-info">
+        <div className="plant-card-common">
+          {plant.common_name_s || 'Unknown'}
+        </div>
+        <div className="plant-card-scientific">
+          {plant.species}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Likelihood Accordion Component
+function LikelihoodAccordion({ group, isOpen, onToggle, onPlantClick }) {
+  return (
+    <div className="likelihood-accordion">
+      <button className="accordion-header" onClick={onToggle}>
+        <div className="accordion-title">
+          <span
+            className="likelihood-dot"
+            style={{ backgroundColor: group.color }}
+          />
+          <span className="accordion-label">{group.label}</span>
+          <span className="accordion-count">{group.plants.length}</span>
+        </div>
+        <span className={`accordion-chevron ${isOpen ? 'open' : ''}`}>▼</span>
+      </button>
+      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
+        <div className="accordion-content-inner">
+          <div className="plant-cards-grid">
+            {group.plants.map((plant, index) => (
+              <PlantCard key={index} plant={plant} onClick={onPlantClick} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PlantAccordions() {
   const plants = useMapStore((state) => state.plants);
   const isLoadingPlants = useMapStore((state) => state.isLoadingPlants);
-  const fetchPlants = useMapStore((state) => state.fetchPlants);
+  const [openAccordions, setOpenAccordions] = useState({});
+  const [selectedPlant, setSelectedPlant] = useState(null);
+
+  const groupedPlants = useMemo(() => groupPlantsByLikelihood(plants), [plants]);
+
+  const toggleAccordion = (code) => {
+    setOpenAccordions(prev => ({
+      ...prev,
+      [code]: !prev[code]
+    }));
+  };
 
   if (isLoadingPlants) {
     return <div className="loading-plants">Loading plants...</div>;
   }
 
   if (plants.length === 0) {
-    return (
-      <button className="show-plants-btn" onClick={fetchPlants}>
-        Show Plants
-      </button>
-    );
+    return null;
   }
 
   return (
-    <div className="plant-list-container">
-      <h3 className="plant-list-title">
-        Pre-colonial Plants ({plants.length})
-      </h3>
-      <div className="plant-list">
-        {plants.map((plant, index) => {
-          const likelihood = LIKELIHOOD_CODES[plant._likelihoodCode] || {
-            label: plant._likelihoodCode,
-            color: '#999',
-          };
-
-          return (
-            <div key={index} className="plant-item">
-              <div className="plant-names">
-                <span className="plant-common-name">
-                  {plant.common_name_s || 'Unknown'}
-                </span>
-                <span className="plant-scientific-name">
-                  {plant.species}
-                </span>
-              </div>
-              <span
-                className="likelihood-badge"
-                style={{ backgroundColor: likelihood.color }}
-                title={likelihood.label}
-              >
-                {plant._likelihoodCode}
-              </span>
-            </div>
-          );
-        })}
+    <>
+      <div className="plant-list-container">
+        <h3 className="plant-list-title">
+          Pre-colonial Plants ({plants.length})
+        </h3>
+        <div className="likelihood-accordions">
+          {groupedPlants.map(group => (
+            <LikelihoodAccordion
+              key={group.code}
+              group={group}
+              isOpen={openAccordions[group.code] || false}
+              onToggle={() => toggleAccordion(group.code)}
+              onPlantClick={setSelectedPlant}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+
+      {selectedPlant && (
+        <PlantModal
+          plant={selectedPlant}
+          onClose={() => setSelectedPlant(null)}
+        />
+      )}
+    </>
   );
 }
 
@@ -83,32 +151,15 @@ function DioramaButton() {
 }
 
 function EVCList({ evcs }) {
-  const getStatusStyle = (status) => {
-    const statusInfo = STATUS_COLORS[status] || STATUS_COLORS.LC;
-    return {
-      backgroundColor: statusInfo.color,
-    };
-  };
-
   if (!evcs || evcs.length === 0) return null;
 
   return (
     <div className="evc-list-container">
-      <span className="field-label">Ecological Vegetation Classes ({evcs.length}):</span>
+      <span className="field-label">Ecological Vegetation Classes ({evcs.length})</span>
       <div className="evc-list">
         {evcs.map((evc, index) => (
           <div key={index} className="evc-item">
-            <div className="evc-item-header">
-              <span className="evc-item-name">{evc.evcName}</span>
-              <span
-                className="evc-status-badge"
-                style={getStatusStyle(evc.bcs)}
-                title={evc.bcsDesc}
-              >
-                {evc.bcs}
-              </span>
-            </div>
-            <span className="evc-item-code">EVC {evc.evc}</span>
+            <span className="evc-item-name">{evc.evcName}</span>
           </div>
         ))}
       </div>
@@ -131,7 +182,7 @@ function InfoPanel() {
 
           <EVCList evcs={selectedEVC.evcs} />
 
-          <PlantList />
+          <PlantAccordions />
           <DioramaButton />
         </div>
       ) : (

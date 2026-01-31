@@ -1,5 +1,5 @@
-import { MapContainer, TileLayer, GeoJSON, Rectangle } from 'react-leaflet';
-import { useState, useEffect, useRef } from 'react';
+import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
+import { useState, useEffect, useMemo } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import * as turf from '@turf/turf';
@@ -15,46 +15,29 @@ const MAX_BOUNDS = [
   [-37.65, 145.15],  // Northeast
 ];
 
-// Bounds for the dark overlay (covers very large area to prevent edge visibility when panning)
-const OVERLAY_BOUNDS = [
-  [-45.0, 140.0],  // Southwest - extended far beyond viewable area
-  [-30.0, 150.0],  // Northeast - extended far beyond viewable area
-];
-
-// Color mapping for vegetation types - all shades of green
-const VEGETATION_COLORS = {
-  'Grasslands and Woodlands on fertile plains': '#90EE90',   // Light green
-  'River banks and creeklines': '#228B22',                   // Forest green
-  'Freshwater wetland': '#20B2AA',                           // Light sea green
-  'Coastal marshlands and brackish flats': '#3CB371',        // Medium sea green
-  'Saltmarsh': '#6B8E23',                                    // Olive drab
-  'Swamp scrub': '#2E8B57',                                  // Sea green
-  'Woodlands and heathlands on sand': '#9ACD32',             // Yellow green
-  'Wet heathland': '#32CD32',                                // Lime green
-  'Beach and Dunes': '#8FBC8F',                              // Dark sea green
-  'Saltwater wetland': '#66CDAA',                            // Medium aquamarine
-  'Cliffs and escarpments': '#556B2F',                       // Dark olive green
-  'Woodlands and forests on sedimentary hills, valleys and ridges': '#006400', // Dark green
-  'Water body': '#2F4F4F',                                   // Dark slate gray
-  'Unknown': '#808080',                                      // Grey
+// Tile layer URLs for different themes
+const TILE_URLS = {
+  dark: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
+  light: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
 };
 
-// Get color for a vegetation type
-function getVegetationColor(vegetationType) {
-  return VEGETATION_COLORS[vegetationType] || '#4CAF50'; // Default green
-}
-
-// Style function for GeoJSON features
-function getFeatureStyle(feature) {
-  return {
-    fillColor: '#92f488',
-    fillOpacity: 1,
-    stroke: true,
-    color: '#134a38',
-    weight: 1,
-    opacity: 1,
-  };
-}
+// Flora.ai inspired colors
+const THEME_COLORS = {
+  dark: {
+    fill: '#86efac',
+    fillHover: '#a7f3c9',
+    stroke: '#166534',
+    fillOpacity: 0.9,
+    fillOpacityHover: 1,
+  },
+  light: {
+    fill: '#86efac',
+    fillHover: '#4ade80',
+    stroke: '#166534',
+    fillOpacity: 0.85,
+    fillOpacityHover: 0.95,
+  },
+};
 
 // Union polygons by vegetation type
 function unionByVegetationType(geojson) {
@@ -89,7 +72,6 @@ function unionByVegetationType(geojson) {
     const evcsArray = Array.from(group.evcs.values());
 
     try {
-      // Try to union all polygons
       let merged = null;
       for (const poly of group.polygons) {
         try {
@@ -111,7 +93,6 @@ function unionByVegetationType(geojson) {
         result.push(merged);
       }
     } catch (error) {
-      // Fallback: use first polygon with combined properties
       console.warn(`Union failed for ${vegType}, using fallback`);
       const fallback = { ...group.polygons[0] };
       fallback.properties = {
@@ -128,27 +109,40 @@ function unionByVegetationType(geojson) {
   };
 }
 
-// Component to load and display GeoJSON
-function EVCGeoJSON() {
+// Component to load and display GeoJSON with hover effects
+function EVCGeoJSON({ theme }) {
   const [displayData, setDisplayData] = useState(null);
   const setSelectedEVC = useMapStore((state) => state.setSelectedEVC);
+  const selectedEVC = useMapStore((state) => state.selectedEVC);
+
+  const colors = THEME_COLORS[theme];
 
   useEffect(() => {
     fetch('/data/melbourne_vegetation_types_ari.geojson')
       .then(response => response.json())
       .then(data => {
         console.log('GeoJSON loaded:', data.features?.length, 'features');
-
-        // Union polygons by vegetation type
         const merged = unionByVegetationType(data);
         console.log('Merged into:', merged.features?.length, 'vegetation types');
-
         setDisplayData(merged);
       })
       .catch(error => console.error('Error loading GeoJSON:', error));
   }, []);
 
-  // Handle click
+  // Style function
+  const getFeatureStyle = (feature) => {
+    const isSelected = selectedEVC?.vegetationType === feature.properties?.vegetation_type;
+    return {
+      fillColor: isSelected ? colors.fillHover : colors.fill,
+      fillOpacity: isSelected ? colors.fillOpacityHover : colors.fillOpacity,
+      stroke: true,
+      color: colors.stroke,
+      weight: isSelected ? 2 : 1,
+      opacity: 1,
+    };
+  };
+
+  // Handle interactions
   const onEachFeature = (feature, layer) => {
     layer.on({
       click: (e) => {
@@ -162,6 +156,24 @@ function EVCGeoJSON() {
 
         L.DomEvent.stopPropagation(e);
       },
+      mouseover: (e) => {
+        const layer = e.target;
+        layer.setStyle({
+          fillColor: colors.fillHover,
+          fillOpacity: colors.fillOpacityHover,
+          weight: 2,
+        });
+        layer.bringToFront();
+      },
+      mouseout: (e) => {
+        const layer = e.target;
+        const isSelected = selectedEVC?.vegetationType === feature.properties?.vegetation_type;
+        layer.setStyle({
+          fillColor: isSelected ? colors.fillHover : colors.fill,
+          fillOpacity: isSelected ? colors.fillOpacityHover : colors.fillOpacity,
+          weight: isSelected ? 2 : 1,
+        });
+      },
     });
   };
 
@@ -171,6 +183,7 @@ function EVCGeoJSON() {
 
   return (
     <GeoJSON
+      key={`geojson-${theme}-${selectedEVC?.vegetationType || 'none'}`}
       data={displayData}
       style={getFeatureStyle}
       onEachFeature={onEachFeature}
@@ -178,7 +191,23 @@ function EVCGeoJSON() {
   );
 }
 
+// Theme-aware tile layer component
+function ThemeTileLayer({ theme }) {
+  const url = TILE_URLS[theme];
+
+  return (
+    <TileLayer
+      key={`tiles-${theme}`}
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      url={url}
+      maxZoom={19}
+    />
+  );
+}
+
 function MapView() {
+  const theme = useMapStore((state) => state.theme);
+
   return (
     <MapContainer
       center={MELBOURNE_CENTER}
@@ -188,15 +217,8 @@ function MapView() {
       maxBoundsViscosity={1.0}
       className="map-container"
     >
-      {/* Dark base layer - no overlay needed */}
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png"
-        maxZoom={19}
-      />
-
-      {/* Local GeoJSON EVC layer */}
-      <EVCGeoJSON />
+      <ThemeTileLayer theme={theme} />
+      <EVCGeoJSON theme={theme} />
     </MapContainer>
   );
 }

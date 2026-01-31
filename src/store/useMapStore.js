@@ -20,6 +20,13 @@ const useMapStore = create((set, get) => ({
   isLoadingPlants: false,
   viewMode: 'map', // 'map' | 'diorama'
   speciesData: null, // Species with traits for selected vegetation type
+  theme: 'dark', // 'dark' | 'light'
+
+  toggleTheme: () => set((state) => ({
+    theme: state.theme === 'dark' ? 'light' : 'dark'
+  })),
+
+  setTheme: (theme) => set({ theme }),
 
   setSelectedEVC: async (evc) => {
     set({
@@ -28,13 +35,18 @@ const useMapStore = create((set, get) => ({
       speciesData: null,
     });
 
-    // Log species data with traits for the vegetation type
-    if (evc?.vegetationType) {
-      const vegKey = vegetationTypeToKey(evc.vegetationType);
-      if (vegKey) {
-        const speciesResult = await logSpeciesForVegetationType(vegKey);
-        if (speciesResult) {
-          set({ speciesData: speciesResult });
+    if (evc) {
+      // Auto-fetch plants when a vegetation type is selected
+      get().fetchPlants();
+
+      // Log species data with traits for the vegetation type
+      if (evc.vegetationType) {
+        const vegKey = vegetationTypeToKey(evc.vegetationType);
+        if (vegKey) {
+          const speciesResult = await logSpeciesForVegetationType(vegKey);
+          if (speciesResult) {
+            set({ speciesData: speciesResult });
+          }
         }
       }
     }

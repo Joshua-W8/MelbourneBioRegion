@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "created": "2025-01-31",
+    "version": "1.0",
+    "source": "Sinclair et al. (2021) Pre-colonial plant list for the City of Melbourne, ARI",
+    "description": "Vegetation coverage parameters by stratum for 12 City of Melbourne vegetation types"
+  },
+
+  "vegetation_types": {
+
+    "Beach and Dunes": {
+      "description": "Sparse shrubland or tussock grassland on sand and shell ridges along coast",
+      "structure_type": "Open shrubland over sparse grassland",
+      "coverage": {
+        "tree_canopy_percent": 5,
+        "shrub_cover_percent": 35,
+        "groundcover_percent": 45,
+        "bare_ground_percent": 40,
+        "water_percent": 0
+      },
+      "height_ranges_m": {
+        "canopy": [0, 8],
+        "shrub": [1, 3],
+        "ground": [0, 0.5]
+      },
+      "notes": "High bare sand between plants. Coast Banksia in patches, Coast Tea-tree scrub, or Spinifex grass dominant."
+    },
+
+    "Cliffs and escarpments": {
+      "description": "Patchy shrubland growing on near vertical rocky slopes",
+      "structure_type": "Patchy shrubland on rock faces",
+      "coverage": {
+        "tree_canopy_percent": 5,
+        "shrub_cover_percent": 30,
+        "groundcover_percent": 25,
+        "bare_ground_percent": 40,
+        "water_percent": 0
+      },
+      "height_ranges_m": {
+        "canopy": [0, 6],
+        "shrub": [0.5, 2],
+        "ground": [0, 0.3]
+      },
+      "notes": "Very patchy due to steep rocky terrain. Plants in crevices and ledges."
+    },
+
+    "Coastal marshlands and brackish flats": {
+      "description": "Extensive beds of sedges and reeds in areas affected by brackish water",
+      "structure_type": "Dense marshland dominated by rushes and sedges",
+      "coverage": {
+        "tree_canopy_percent": 0,
+        "shrub_cover_percent": 15,
+        "groundcover_percent": 75,
+        "bare_ground_percent": 10,
+        "water_percent": 20
+      },
+      "height_ranges_m": {
+        "canopy": [0, 0],
+        "shrub": [0.5, 2],
+        "ground": [0.3, 1.5]
+      },
+      "notes": "Dominated by Sea Rush (Juncus krausii) beds. Frequently waterlogged."
+    },
+
+    "Freshwater wetland": {
+      "description": "Wetland communities including aquatic herbland, tall marsh, and sedgeland",
+      "structure_type": "Dense sedgeland or reedbed with aquatic plants",
+      "coverage": {
+        "tree_canopy_percent": 0,
+        "shrub_cover_percent": 10,
+        "groundcover_percent": 80,
+        "bare_ground_percent": 0,
+        "water_percent": 30
+      },
+      "height_ranges_m": {
+        "canopy": [0, 0],
+        "shrub": [0.5, 1.5],
+        "ground": [0.2, 3]
+      },
+      "notes": "Dominated by Common Reed (Phragmites) or rhizomatous sedges. Significant open water with aquatics."
+    },
+
+    "Grasslands and Woodlands on fertile plains": {
+      "description": "Open woodland dominated by River Red Gum over rich grassy layer",
+      "structure_type": "Open woodland over species-rich grassland",
+      "coverage": {
+        "tree_canopy_percent": 20,
+        "shrub_cover_percent": 10,
+        "groundcover_percent": 70,
+        "bare_ground_percent": 10,
+        "water_percent": 0
+      },
+      "height_ranges_m": {
+        "canopy": [15, 30],
+        "shrub": [2, 6],
+        "ground": [0.3, 1]
+      },
+      "notes": "Iconic River Red Gums widely spaced. Dense Kangaroo Grass dominates. Very high forb diversity."
+    },
+
+    "River banks and creeklines": {
+      "description": "Riparian woodland with River Red Gums, shrubs, and dense herbaceous layer",
+      "structure_type": "Woodland with dense shrubby and herbaceous understorey",
+      "coverage": {
+        "tree_canopy_percent": 40,
+        "shrub_cover_percent": 35,
+        "groundcover_percent": 65,
+        "bare_ground_percent": 5,
+        "water_percent": 10
+      },
+      "height_ranges_m": {
+        "canopy": [15, 35],
+        "shrub": [2, 6],
+        "ground": [0.3, 1.2]
+      },
+      "notes": "River Red Gums overhang water. Dense thickets of Swamp Paperbark, Sweet Bursaria. Overlapping layers."
+    },
+
+    "Saltmarsh": {
+      "description": "Low herbs and succulent shrubs in saline areas",
+      "structure_type": "Low sparse to dense succulent herbs and low shrubs",
+      "coverage": {
+        "tree_canopy_percent": 0,
+        "shrub_cover_percent": 30,
+        "groundcover_percent": 50,
+        "bare_ground_percent": 20,
+        "water_percent": 10
+      },
+      "height_ranges_m": {
+        "canopy": [0, 0],
+        "shrub": [0.1, 0.8],
+        "ground": [0.05, 0.4]
+      },
+      "notes": "Variable by sub-type. Glasswort shrubs in hypersaline areas. Often patchy with bare salt pans."
+    },
+
+    "Saltwater wetland": {
+      "description": "Mangroves or submerged sea-grass beds in saline water",
+      "structure_type": "Low mangrove woodland or submerged sea-grass beds",
+      "coverage": {
+        "tree_canopy_percent": 25,
+        "shrub_cover_percent": 10,
+        "groundcover_percent": 15,
+        "bare_ground_percent": 10,
+        "water_percent": 60
+      },
+      "height_ranges_m": {
+        "canopy": [3, 8],
+        "shrub": [1, 4],
+        "ground": [0, 0.5]
+      },
+      "notes": "Grey Mangrove shrubland on intertidal mud, or submerged sea-grass beds. Mostly open water."
+    },
+
+    "Swamp scrub": {
+      "description": "Dense scrub of Swamp Paperbark over sedges",
+      "structure_type": "Very dense shrubland over sedges",
+      "coverage": {
+        "tree_canopy_percent": 10,
+        "shrub_cover_percent": 70,
+        "groundcover_percent": 50,
+        "bare_ground_percent": 0,
+        "water_percent": 10
+      },
+      "height_ranges_m": {
+        "canopy": [4, 8],
+        "shrub": [2, 6],
+        "ground": [0.3, 1]
+      },
+      "notes": "Dominated by very dense Swamp Paperbark. Nearly impenetrable thickets. Murray (1843): 'jungle that rose up like a wall'."
+    },
+
+    "Wet heathland": {
+      "description": "Dense low shrubland in infertile sandy soils that are often waterlogged",
+      "structure_type": "Low dense heathland or tall paperbark scrub",
+      "coverage": {
+        "tree_canopy_percent": 10,
+        "shrub_cover_percent": 60,
+        "groundcover_percent": 45,
+        "bare_ground_percent": 5,
+        "water_percent": 10
+      },
+      "height_ranges_m": {
+        "canopy": [0, 8],
+        "shrub": [0.5, 3],
+        "ground": [0.2, 0.8]
+      },
+      "notes": "Dense heath shrubs on waterlogged sand. Scented Paperbark forms tall dense scrub in wetter areas."
+    },
+
+    "Woodlands and forests on sedimentary hills": {
+      "description": "Tall open forest dominated by Yellow Box and River Red Gum over species-rich grassy layer",
+      "structure_type": "Tall open forest over diverse grassy woodland",
+      "coverage": {
+        "tree_canopy_percent": 35,
+        "shrub_cover_percent": 15,
+        "groundcover_percent": 65,
+        "bare_ground_percent": 5,
+        "water_percent": 0
+      },
+      "height_ranges_m": {
+        "canopy": [20, 35],
+        "shrub": [1.5, 5],
+        "ground": [0.3, 1.2]
+      },
+      "notes": "Yellow Box and River Red Gum. Very species-rich - highest diversity vegetation in CoM. Wildflower displays in spring."
+    },
+
+    "Woodlands and heathlands on sand": {
+      "description": "Eucalypt woodland with dense diverse shrubby understorey on nutrient-poor sand",
+      "structure_type": "Open woodland over dense heath understorey",
+      "coverage": {
+        "tree_canopy_percent": 25,
+        "shrub_cover_percent": 55,
+        "groundcover_percent": 40,
+        "bare_ground_percent": 10,
+        "water_percent": 0
+      },
+      "height_ranges_m": {
+        "canopy": [10, 25],
+        "shrub": [1, 4],
+        "ground": [0.2, 0.8]
+      },
+      "notes": "Eucalypts over dense heath. Silver Banksia, Drooping She-oak, many Acacias. Very dense shrub layer. Bracken prominent."
+    }
+  }
+}
