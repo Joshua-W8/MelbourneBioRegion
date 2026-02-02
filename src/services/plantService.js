@@ -47,12 +47,13 @@ export async function fetchPlantsForEVC(evcCode) {
 
     console.log('Using field:', vegetationFieldName);
 
-    // Fetch records (paginated)
+    // Fetch all records (paginated)
     let allPlants = [];
     let offset = 0;
     const limit = 100;
+    const maxRecords = 2000; // Safety limit to prevent infinite loops
 
-    while (allPlants.length < 50) {
+    while (offset < maxRecords) {
       const response = await fetch(`${PLANT_API_URL}?limit=${limit}&offset=${offset}`);
       if (!response.ok) break;
 
@@ -74,6 +75,7 @@ export async function fetchPlantsForEVC(evcCode) {
 
       allPlants = allPlants.concat(plantsWithMeta);
 
+      // Stop if we've fetched all available records
       if (data.results.length < limit) break;
       offset += limit;
     }
@@ -84,8 +86,7 @@ export async function fetchPlantsForEVC(evcCode) {
       return (order[a._likelihoodCode] ?? 5) - (order[b._likelihoodCode] ?? 5);
     });
 
-    // Limit to 50 plants
-    return allPlants.slice(0, 50);
+    return allPlants;
 
   } catch (error) {
     console.error('Error fetching plant data:', error);
