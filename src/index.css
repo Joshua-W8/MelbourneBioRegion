@@ -80,11 +80,14 @@ body,
 /* All map paths */
 path.leaflet-interactive {
   outline: none !important;
-  transition: fill-opacity 0.2s ease, fill 0.2s ease;
 }
 
-path.leaflet-interactive:hover {
-  fill-opacity: 0.85 !important;
+/* Suburb name labels */
+.suburb-label {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
 }
 
 /* Leaflet zoom controls - match theme toggle style */

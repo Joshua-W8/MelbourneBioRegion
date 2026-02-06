@@ -20,13 +20,23 @@ const useMapStore = create((set, get) => ({
   isLoadingPlants: false,
   viewMode: 'map', // 'map' | 'diorama'
   speciesData: null, // Species with traits for selected vegetation type
-  theme: 'dark', // 'dark' | 'light'
+  theme: 'light', // 'dark' | 'light'
+  showNeighbourhoods: false,
+  showUrbanContext: false,
 
   toggleTheme: () => set((state) => ({
     theme: state.theme === 'dark' ? 'light' : 'dark'
   })),
 
   setTheme: (theme) => set({ theme }),
+
+  toggleNeighbourhoods: () => set((state) => ({
+    showNeighbourhoods: !state.showNeighbourhoods,
+  })),
+
+  toggleUrbanContext: () => set((state) => ({
+    showUrbanContext: !state.showUrbanContext,
+  })),
 
   setSelectedEVC: async (evc) => {
     set({
@@ -36,12 +46,13 @@ const useMapStore = create((set, get) => ({
     });
 
     if (evc) {
-      // Auto-fetch plants when a vegetation type is selected
+      // Auto-fetch plants when an EVC is selected
       get().fetchPlants();
 
       // Log species data with traits for the vegetation type
-      if (evc.vegetationType) {
-        const vegKey = vegetationTypeToKey(evc.vegetationType);
+      const vegType = evc.vegetationType || evc.groupName;
+      if (vegType) {
+        const vegKey = vegetationTypeToKey(vegType);
         if (vegKey) {
           const speciesResult = await logSpeciesForVegetationType(vegKey);
           if (speciesResult) {
@@ -56,38 +67,13 @@ const useMapStore = create((set, get) => ({
 
   fetchPlants: async () => {
     const { selectedEVC } = get();
-    if (!selectedEVC) return;
+    if (!selectedEVC?.evc) return;
 
     set({ isLoadingPlants: true });
 
     try {
-      // Fetch plants for all EVCs in the vegetation type
-      const evcs = selectedEVC.evcs || [];
-      if (evcs.length === 0) {
-        set({ plants: [], isLoadingPlants: false });
-        return;
-      }
-
-      // Fetch plants for each EVC and combine results
-      const allPlants = [];
-      const seenSpecies = new Set();
-
-      for (const evc of evcs) {
-        try {
-          const plants = await fetchPlantsForEVC(evc.evc);
-          plants.forEach(plant => {
-            // Deduplicate by species name
-            if (!seenSpecies.has(plant.species)) {
-              seenSpecies.add(plant.species);
-              allPlants.push(plant);
-            }
-          });
-        } catch (err) {
-          console.warn(`Failed to fetch plants for EVC ${evc.evc}`);
-        }
-      }
-
-      set({ plants: allPlants, isLoadingPlants: false });
+      const plants = await fetchPlantsForEVC(selectedEVC.evc);
+      set({ plants, isLoadingPlants: false });
     } catch (error) {
       console.error('Error fetching plants:', error);
       set({ plants: [], isLoadingPlants: false });
