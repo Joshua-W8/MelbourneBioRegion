@@ -1,9 +1,9 @@
 .address-search {
   position: fixed;
   top: 16px;
-  left: 16px;
+  left: 60px;
   z-index: 1000;
-  width: 320px;
+  width: 280px;
 }
 
 .search-input-wrapper {
@@ -14,35 +14,39 @@
 
 .search-input {
   width: 100%;
-  padding: 12px 40px 12px 14px;
-  font-size: 14px;
-  border: none;
-  border-radius: 8px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 10px 36px 10px 14px;
+  font-size: 13px;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
   outline: none;
-  transition: box-shadow 0.2s;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 .search-input:focus {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-green);
 }
 
 .search-input::placeholder {
-  color: #999;
+  color: var(--text-muted);
 }
 
 .clear-btn {
   position: absolute;
   right: 8px;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border: none;
-  background: #e0e0e0;
+  background: var(--card-bg);
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1;
-  color: #666;
+  color: var(--text-muted);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -51,17 +55,17 @@
 }
 
 .clear-btn:hover {
-  background: #ccc;
-  color: #333;
+  background: var(--card-border);
+  color: var(--text-primary);
 }
 
 .search-spinner {
   position: absolute;
   right: 12px;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #e0e0e0;
-  border-top-color: #2c5f2d;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--card-border);
+  border-top-color: var(--accent-green);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -76,20 +80,23 @@
   margin: 4px 0 0 0;
   padding: 0;
   list-style: none;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
   max-height: 300px;
   overflow-y: auto;
 }
 
 .suggestion-item {
-  padding: 12px 14px;
-  font-size: 13px;
-  color: #333;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--text-secondary);
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.15s;
+  border-bottom: 1px solid var(--panel-border);
+  transition: background-color 0.15s, color 0.15s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .suggestion-item:last-child {
@@ -97,17 +104,18 @@
 }
 
 .suggestion-item:hover {
-  background: #f5f9f5;
+  background: var(--card-bg);
+  color: var(--text-primary);
 }
 
 .suggestion-item:first-child {
-  border-radius: 8px 8px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .suggestion-item:last-child {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 12px 12px;
 }
 
 .suggestion-item:only-child {
-  border-radius: 8px;
+  border-radius: 12px;
 }

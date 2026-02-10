@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import MapView from './components/MapView';
 import InfoPanel from './components/InfoPanel';
 import AddressSearch from './components/AddressSearch';
+import ContextFilters from './components/ContextFilters';
 import DioramaView from './components/DioramaView';
 import ThemeToggle from './components/ThemeToggle';
 import useMapStore from './store/useMapStore';
@@ -29,6 +30,7 @@ function App() {
     <>
       <MapView />
       <AddressSearch />
+      <ContextFilters />
       <InfoPanel />
       <ThemeToggle />
     </>

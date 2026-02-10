@@ -155,6 +155,7 @@ function AddressSearch() {
     if (evcData) {
       setSelectedEVC({
         ...evcData,
+        vegetationType: evcData.groupName || null,
         searchedAddress: suggestion.displayName,
         coordinates: { lat: suggestion.lat, lng: suggestion.lng },
       });

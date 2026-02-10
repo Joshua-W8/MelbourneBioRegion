@@ -1,0 +1,43 @@
+.context-filters {
+  position: fixed;
+  top: 16px;
+  left: 350px;
+  z-index: 1000;
+  display: flex;
+  gap: 6px;
+}
+
+.context-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-muted);
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+
+.context-filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-green);
+}
+
+.context-filter-btn.active {
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border-color: var(--accent-green);
+  box-shadow: var(--shadow-md);
+}
+
+.context-filter-btn svg {
+  flex-shrink: 0;
+}

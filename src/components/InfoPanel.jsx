@@ -150,18 +150,16 @@ function DioramaButton() {
   );
 }
 
-function EVCList({ evcs }) {
-  if (!evcs || evcs.length === 0) return null;
+function VegetationTypeTag({ vegetationType }) {
+  if (!vegetationType) return null;
 
   return (
     <div className="evc-list-container">
-      <span className="field-label">Ecological Vegetation Classes ({evcs.length})</span>
+      <span className="field-label">Vegetation Type</span>
       <div className="evc-list">
-        {evcs.map((evc, index) => (
-          <div key={index} className="evc-item">
-            <span className="evc-item-name">{evc.evcName}</span>
-          </div>
-        ))}
+        <div className="evc-item">
+          <span className="evc-item-name">{vegetationType}</span>
+        </div>
       </div>
     </div>
   );
@@ -177,10 +175,10 @@ function InfoPanel() {
       {selectedEVC ? (
         <div className="evc-details">
           <div className="vegetation-type-name">
-            {selectedEVC.vegetationType}
+            {selectedEVC.evcName}
           </div>
 
-          <EVCList evcs={selectedEVC.evcs} />
+          <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
           <PlantAccordions />
           <DioramaButton />
