@@ -9,13 +9,16 @@ export const evcToVegetationType = {
 
   // Freshwater wetland
   '125': 'Freshwater wetland',  // Plains Grassy Wetland
+  '300': 'Freshwater wetland',  // Reed Swamp
   '647': 'Freshwater wetland',  // Plains Sedgy Wetland
   '136': 'Freshwater wetland',  // Sedge Wetland
   '653': 'Freshwater wetland',  // Aquatic Herbland
   '821': 'Freshwater wetland',  // Tall Marsh
   '932': 'Freshwater wetland',  // Wet Verge Sedgeland
+  '992': 'Freshwater wetland',  // Water Body - Fresh
 
   // River banks and creeklines
+  '56': 'River banks and creeklines',   // Floodplain Riparian Woodland
   '68': 'River banks and creeklines',   // Creekline Grassy Woodland
   '83': 'River banks and creeklines',   // Swampy Riparian Woodland
   '164': 'River banks and creeklines',  // Creekline Herb-rich Woodland
@@ -23,6 +26,8 @@ export const evcToVegetationType = {
   '654': 'River banks and creeklines',  // Creekline Tussock Grassland
   '707': 'River banks and creeklines',  // Sedgy Swamp Woodland
   '851': 'River banks and creeklines',  // Stream Bank Shrubland
+  '892': 'River banks and creeklines',  // Heathy Woodland/Sand Heathland Mosaic
+  '897': 'River banks and creeklines',  // Plains Floodplain Wetland Aggregate
 
   // Saltmarsh
   '9': 'Saltmarsh',  // Coastal Saltmarsh
@@ -32,6 +37,7 @@ export const evcToVegetationType = {
   '13': 'Coastal marshlands and brackish flats',   // Brackish Sedgeland
   '537': 'Coastal marshlands and brackish flats',  // Brackish Aquatic Herbland
   '538': 'Coastal marshlands and brackish flats',  // Brackish Herbland
+  '636': 'Coastal marshlands and brackish flats',  // Brackish Lake Aggregate
   '656': 'Coastal marshlands and brackish flats',  // Brackish Wetland
   '914': 'Coastal marshlands and brackish flats',  // Estuarine Flats Grassland
   '934': 'Coastal marshlands and brackish flats',  // Brackish Grassland
@@ -58,10 +64,12 @@ export const evcToVegetationType = {
   '163': 'Beach and Dunes',  // Coastal Tussock Grassland
   '311': 'Beach and Dunes',  // Berm Grassy Shrubland
   '879': 'Beach and Dunes',  // Coastal Dune Grassland
+  '921': 'Beach and Dunes',  // Coast Banksia Woodland/Coastal Dune Scrub Mosaic
 
   // Saltwater wetland
   '140': 'Saltwater wetland',  // Mangrove Shrubland
   '842': 'Saltwater wetland',  // Saline Aquatic Meadow
+  '991': 'Saltwater wetland',  // Water body - salt
 
   // Cliffs and escarpments
   '895': 'Cliffs and escarpments',  // Escarpment Shrubland
