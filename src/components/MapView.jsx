@@ -114,7 +114,7 @@ function EVCGeoJSON({ theme }) {
   });
 
   useEffect(() => {
-    fetch('/data/melbourne_vegetation_types_ari.geojson')
+    fetch('/data/vegetation_polygons.geojson')
       .then(response => response.json())
       .then(data => {
         console.log('GeoJSON loaded:', data.features?.length, 'features');
@@ -140,12 +140,14 @@ function EVCGeoJSON({ theme }) {
         const p = feature.properties;
         setSelectedEVC({
           _fid: p._fid,
-          evc: p.evc,
-          evcName: p.x_evcname,
+          patchId: p.patch_id,
+          evc: p.evc_number,
+          evcName: p.evc_name,
           vegetationType: p.vegetation_type,
           bioregion: p.bioregion,
-          bcs: p.evc_bcs,
-          bcsDesc: p.evc_bcs_desc,
+          bcs: p.bcs,
+          bcsDesc: p.bcs_desc,
+          hectares: p.hectares,
         });
         L.DomEvent.stopPropagation(e);
       },
