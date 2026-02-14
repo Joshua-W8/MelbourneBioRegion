@@ -1,337 +1,614 @@
 [
   {
-    "species": "Acacia dealbata ssp. dealbata",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Acacia mearnsii",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Acacia melanoxylon",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Acacia pycnantha",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Allocasuarina verticillata",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Arthropodium strictum",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Atriplex cinerea",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Atriplex paludosa ssp. paludosa",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Austrostipa bigeniculata",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Austrostipa scabra ssp. falcata",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Austrostipa stipoides",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Bolboschoenus caldwellii",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Bossiaea cinerea",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Brunonia australis",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Bulbine bulbosa",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Burchardia umbellata",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Bursaria spinosa ssp. spinosa",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Callistemon sieberi",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Calocephalus citreus",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Carex appressa",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Carex fascicularis",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Dianella brevicaulis",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Dianella revoluta var. revoluta",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Dichondra repens",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Disphyma crassifolium ssp. clavellatum",
-    "common_name": "1",
-    "certain": true
-  },
-  {
     "species": "Distichlis distichophylla",
-    "common_name": "1",
-    "certain": true
+    "common_name": "Australian Salt-grass, Gullibarkityallan",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh",
+      "Coastal Marshlands and Brackish Flats"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Eleocharis acuta",
-    "common_name": "",
-    "certain": true
+    "common_name": "Common Spike-sedge",
+    "certain": false,
+    "prominent_in": [
+      "Freshwater Wetland"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Eucalyptus camaldulensis var. camaldulensis",
-    "common_name": "1",
-    "certain": true
+    "common_name": "River Red Gum",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains",
+      "Cliffs and Escarpments",
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Exocarpos cupressiformis",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Ficinia nodosa",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Gahnia filum",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Goodenia ovata",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Juncus krausii ssp. australiensis",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Lepidosperma concavum",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Lepidosperma gladiatum",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Lepilaena cylindrocarpa",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Leptorhynchos squamatus ssp. squamatus",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Leptospermum continentale",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Leptospermum myrsinoides",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Leucopogon parviflorus",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Lomandra filiformis ssp. coriacea",
-    "common_name": "1",
-    "certain": true
+    "species": "Lomandra filiformis subsp. coriacea",
+    "common_name": "Wattle Mat-rush",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Lomandra longifolia var. longifolia",
-    "common_name": "",
-    "certain": true
+    "common_name": "Spiny-headed Mat-rush",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand",
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Melaleuca ericifolia",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Melicytus dentatus",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Microlaena stipoides var. stipoides",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Microseris walteri",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Oxalis perennans",
-    "common_name": "1",
-    "certain": true
+    "species": "Lepidosperma gladiatum",
+    "common_name": "Coast Sword-sedge",
+    "certain": false,
+    "prominent_in": [
+      "Beach and Dunes"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Phragmites australis",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Poa labillardierei var. labillardierei",
-    "common_name": "1",
-    "certain": true
+    "common_name": "Common Reed",
+    "certain": true,
+    "prominent_in": [
+      "Coastal Marshlands and Brackish Flats",
+      "River Banks and Creeklines",
+      "Freshwater Wetland"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Poa morrisii",
-    "common_name": "",
-    "certain": true
-  },
-  {
-    "species": "Poa poiformis var. poiformis",
-    "common_name": "1",
-    "certain": true
+    "common_name": "Velvet Tussock-grass, Soft Tussock-grass",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Poa sieberiana var. sieberiana",
-    "common_name": "",
-    "certain": true
+    "common_name": "Grey Tussock-grass",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Pteridium esculentum",
-    "common_name": "1",
-    "certain": true
+    "species": "Acacia mearnsii",
+    "common_name": "Black Wattle",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Rytidosperma caespitosum",
-    "common_name": "1",
-    "certain": true
+    "species": "Goodenia ovata",
+    "common_name": "Hop Goodenia",
+    "certain": true,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Rytidosperma erianthum",
-    "common_name": "",
-    "certain": true
+    "species": "Allocasuarina verticillata",
+    "common_name": "Drooping Sheoak, Coast Sheoak",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Rytidosperma setaceum var. setaceum",
-    "common_name": "",
-    "certain": true
+    "species": "Leptorhynchos squamatus subsp. squamatus",
+    "common_name": "Scaly Buttons",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Salicornia quinqueflora ssp. quinqueflora",
-    "common_name": "1",
-    "certain": true
+    "species": "Atriplex paludosa subsp. paludosa",
+    "common_name": "Marsh Saltbush",
+    "certain": false,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Schoenoplectus pungens",
-    "common_name": "1",
-    "certain": true
+    "species": "Bulbine bulbosa",
+    "common_name": "Bulbine Lily, Wild Onion, Pike",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Oxalis perennans",
+    "common_name": "Grassland Wood-sorrel, Scour Grass",
+    "certain": true,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Salicornia quinqueflora subsp. quinqueflora",
+    "common_name": "Beaded Glasswort, Beaded Samphire",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Leptospermum continentale",
+    "common_name": "Prickly Tea-tree",
+    "certain": false,
+    "prominent_in": [
+      "Wet Heathland"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Solenogyne dominii",
-    "common_name": "",
-    "certain": true
+    "common_name": "Smooth Solenogyne",
+    "certain": false,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Spinifex sericeus",
-    "common_name": "1",
-    "certain": true
+    "species": "Dianella revoluta var. revoluta",
+    "common_name": "Black-anther Flax-lily, Spreading Flax-lily",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand",
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Suaeda australis",
-    "common_name": "1",
-    "certain": true
+    "species": "Disphyma crassifolium subsp. clavellatum",
+    "common_name": "Rounded Noon-flower",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Tecticornia arbuscula",
-    "common_name": "1",
-    "certain": true
-  },
-  {
-    "species": "Tecticornia pergranulata ssp. pergranulata",
-    "common_name": "1",
-    "certain": true
+    "species": "Melicytus dentatus",
+    "common_name": "Tree Violet",
+    "certain": false,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Themeda triandra",
-    "common_name": "1",
-    "certain": true
+    "common_name": "Kangaroo Grass",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Gahnia filum",
+    "common_name": "Chaffy Saw-sedge",
+    "certain": false,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Dianella brevicaulis",
+    "common_name": "Small-flower Flax-lily",
+    "certain": false,
+    "prominent_in": [
+      "Beach and Dunes"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Schoenoplectus pungens",
+    "common_name": "Sharp Club-sedge, Delta Club-sedge",
+    "certain": true,
+    "prominent_in": [
+      "Coastal Marshlands and Brackish Flats"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Acacia pycnantha",
+    "common_name": "Golden Wattle",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Austrostipa bigeniculata",
+    "common_name": "Kneed Spear-grass, Tall Spear-grass, Plains Grass",
+    "certain": true,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Exocarpos cupressiformis",
+    "common_name": "Wild Cherry, Cherry Ballart",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand",
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains",
+      "Cliffs and Escarpments",
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Ficinia nodosa",
+    "common_name": "Knobby Club-sedge",
+    "certain": true,
+    "prominent_in": [
+      "Coastal Marshlands and Brackish Flats"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Austrostipa scabra subsp. falcata",
+    "common_name": "Slender Spear-grass",
+    "certain": false,
+    "prominent_in": [
+      "Cliffs and Escarpments"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Leptospermum myrsinoides",
+    "common_name": "Heath Tea-tree, Silky Tea-tree",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Microseris walteri",
+    "common_name": "Yam Daisy, Murnong",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Pteridium esculentum",
+    "common_name": "Austral Bracken",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Rytidosperma caespitosum",
+    "common_name": "Common Wallaby-grass",
+    "certain": true,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Rytidosperma setaceum var. setaceum",
+    "common_name": "Bristly Wallaby-grass",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Melaleuca ericifolia",
+    "common_name": "Swamp Paperbark",
+    "certain": true,
+    "prominent_in": [
+      "Swamp Scrub",
+      "Wet Heathland"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Poa poiformis var. poiformis",
+    "common_name": "Coast Tussock-grass, Blue Tussock-grass",
+    "certain": true,
+    "prominent_in": [
+      "Coastal Marshlands and Brackish Flats"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Triglochin striata",
-    "common_name": "1",
-    "certain": true
+    "common_name": "Streaked Arrowgrass",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
     "species": "Velleia paradoxa",
-    "common_name": "",
-    "certain": true
+    "common_name": "Spur Velleia",
+    "certain": false,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
   },
   {
-    "species": "Zostera muelleri ssp. capricorni",
-    "common_name": "",
-    "certain": true
+    "species": "Suaeda australis",
+    "common_name": "Austral Seablite",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Arthropodium strictum",
+    "common_name": "Chocolate Lily",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Bossiaea cinerea",
+    "common_name": "Showy Bossiaea",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Brunonia australis",
+    "common_name": "Blue Pincushion",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Atriplex cinerea",
+    "common_name": "Coast Saltbush, Grey Saltbush",
+    "certain": true,
+    "prominent_in": [
+      "Beach and Dunes"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Calocephalus citreus",
+    "common_name": "Lemon Beauty-heads",
+    "certain": false,
+    "prominent_in": [
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Juncus krausii subsp. australiensis",
+    "common_name": "Sea Rush",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Poa labillardierei var. labillardierei",
+    "common_name": "Common Tussock-grass",
+    "certain": true,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Rytidosperma erianthum",
+    "common_name": "Hill Wallaby-grass",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Acacia melanoxylon",
+    "common_name": "Blackwood",
+    "certain": true,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Bolboschoenus caldwellii",
+    "common_name": "Sea Club-sedge, Salt Club-sedge",
+    "certain": true,
+    "prominent_in": [
+      "Coastal Marshlands and Brackish Flats"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Burchardia umbellata",
+    "common_name": "Milkmaids",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand",
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Callistemon sieberi",
+    "common_name": "River Bottlebrush",
+    "certain": false,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Carex fascicularis",
+    "common_name": "Tassel Sedge",
+    "certain": false,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Dichondra repens",
+    "common_name": "Kidney-weed",
+    "certain": true,
+    "prominent_in": [
+      "Swamp Scrub",
+      "Woodlands and Heathlands on Sand"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Acacia dealbata subsp. dealbata",
+    "common_name": "Silver Wattle",
+    "certain": false,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Austrostipa stipoides",
+    "common_name": "Coast Spear-grass, Prickly Spear-grass",
+    "certain": false,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Leucopogon parviflorus",
+    "common_name": "Coast Beard Heath",
+    "certain": false,
+    "prominent_in": [
+      "Beach and Dunes"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Microlaena stipoides var. stipoides",
+    "common_name": "Weeping Grass",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains",
+      "Cliffs and Escarpments",
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Spinifex sericeus",
+    "common_name": "Hairy Spinifex",
+    "certain": true,
+    "prominent_in": [
+      "Beach and Dunes"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Bursaria spinosa subsp. spinosa",
+    "common_name": "Sweet Bursaria, Blackthorn",
+    "certain": true,
+    "prominent_in": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Cliffs and Escarpments"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Carex appressa",
+    "common_name": "Tall Sedge",
+    "certain": false,
+    "prominent_in": [
+      "River Banks and Creeklines"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Lepidosperma concavum",
+    "common_name": "Sandhill Sword-sedge, Hill Sword-sedge",
+    "certain": false,
+    "prominent_in": [
+      "Woodlands and Heathlands on Sand"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Tecticornia arbuscula",
+    "common_name": "Shrubby Glasswort",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
+  },
+  {
+    "species": "Tecticornia pergranulata subsp. pergranulata",
+    "common_name": "Blackseed Glasswort",
+    "certain": true,
+    "prominent_in": [
+      "Saltmarsh"
+    ],
+    "trait_status": "pending_manual_assignment"
   }
 ]

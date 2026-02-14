@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "description": "3D model taxonomy for pre-colonial Melbourne vegetation dioramas",
+    "version": "1.0",
+    "created": "2026-01-30",
+    "notes": "Maps AusTraits growth forms to Three.js model categories"
+  },
+  "model_categories": {
+    "canopy_tree": {
+      "description": "Tall trees forming the canopy layer (>10m)",
+      "height_range": [10, 40],
+      "examples": ["Eucalyptus camaldulensis", "Eucalyptus melliodora", "Eucalyptus ovata"],
+      "growth_forms": ["tree"],
+      "render_priority": 1,
+      "default_density": "sparse",
+      "three_js_approach": "Instanced mesh with billboard foliage or low-poly 3D"
+    },
+    "subcanopy_tree": {
+      "description": "Medium trees below canopy (5-10m)",
+      "height_range": [5, 10],
+      "examples": ["Allocasuarina verticillata", "Banksia marginata", "Acacia melanoxylon"],
+      "growth_forms": ["tree", "mallee"],
+      "render_priority": 2,
+      "default_density": "moderate",
+      "three_js_approach": "Instanced mesh with simple geometry"
+    },
+    "tall_shrub": {
+      "description": "Large shrubs (2-5m)",
+      "height_range": [2, 5],
+      "examples": ["Bursaria spinosa", "Leptospermum continentale", "Melaleuca ericifolia"],
+      "growth_forms": ["shrub"],
+      "render_priority": 3,
+      "default_density": "moderate",
+      "three_js_approach": "Instanced mesh with clustered particles"
+    },
+    "medium_shrub": {
+      "description": "Medium shrubs (0.5-2m)",
+      "height_range": [0.5, 2],
+      "examples": ["Correa reflexa", "Goodenia ovata", "Cassinia longifolia"],
+      "growth_forms": ["shrub", "subshrub"],
+      "render_priority": 4,
+      "default_density": "dense",
+      "three_js_approach": "Billboards or simple instanced spheres"
+    },
+    "low_shrub": {
+      "description": "Low shrubs and ground-hugging woody plants (<0.5m)",
+      "height_range": [0.1, 0.5],
+      "examples": ["Astroloma humifusum", "Hibbertia sericea", "Kennedia prostrata"],
+      "growth_forms": ["shrub", "subshrub", "prostrate_shrub"],
+      "render_priority": 5,
+      "default_density": "dense",
+      "three_js_approach": "Ground-plane billboards or texture patches"
+    },
+    "tussock_grass": {
+      "description": "Tussock-forming grasses",
+      "height_range": [0.3, 1.5],
+      "examples": ["Themeda triandra", "Poa labillardierei", "Austrostipa spp."],
+      "growth_forms": ["graminoid", "grass"],
+      "render_priority": 6,
+      "default_density": "very_dense",
+      "three_js_approach": "Instanced cone/cylinder geometry or grass shader"
+    },
+    "sedge_rush": {
+      "description": "Sedges and rushes (wetland graminoids)",
+      "height_range": [0.2, 2],
+      "examples": ["Juncus krausii", "Ficinia nodosa", "Gahnia filum"],
+      "growth_forms": ["graminoid", "sedge", "rush"],
+      "render_priority": 6,
+      "default_density": "dense",
+      "three_js_approach": "Instanced cylinders with varying height"
+    },
+    "forb_upright": {
+      "description": "Upright herbaceous plants (lilies, orchids, daisies)",
+      "height_range": [0.1, 1],
+      "examples": ["Arthropodium strictum", "Bulbine bulbosa", "Microseris walteri"],
+      "growth_forms": ["herb", "forb", "geophyte"],
+      "render_priority": 7,
+      "default_density": "scattered",
+      "three_js_approach": "Point sprites or small billboards"
+    },
+    "forb_rosette": {
+      "description": "Rosette-forming herbs and ground covers",
+      "height_range": [0.05, 0.3],
+      "examples": ["Dichondra repens", "Viola hederacea", "Centella cordifolia"],
+      "growth_forms": ["herb", "forb", "rosette"],
+      "render_priority": 8,
+      "default_density": "ground_cover",
+      "three_js_approach": "Ground texture or scattered billboards"
+    },
+    "fern": {
+      "description": "Ferns (various sizes)",
+      "height_range": [0.1, 2],
+      "examples": ["Pteridium esculentum", "Adiantum aethiopicum", "Cheilanthes sieberi"],
+      "growth_forms": ["fern"],
+      "render_priority": 5,
+      "default_density": "moderate",
+      "three_js_approach": "Billboards with fern frond textures"
+    },
+    "climber_scrambler": {
+      "description": "Climbing and scrambling plants",
+      "height_range": [0, 10],
+      "examples": ["Clematis microphylla", "Hardenbergia violacea", "Comesperma volubile"],
+      "growth_forms": ["climber", "vine", "scrambler"],
+      "render_priority": 9,
+      "default_density": "sparse",
+      "three_js_approach": "Spline-based geometry attached to trees"
+    },
+    "aquatic": {
+      "description": "Aquatic and semi-aquatic plants",
+      "height_range": [0, 2],
+      "examples": ["Phragmites australis", "Typha domingensis", "Cycnogeton procerum"],
+      "growth_forms": ["aquatic", "emergent", "floating"],
+      "render_priority": 4,
+      "default_density": "varies",
+      "three_js_approach": "Water-plane billboards or instanced reeds"
+    },
+    "succulent_saltmarsh": {
+      "description": "Succulent coastal/saltmarsh plants",
+      "height_range": [0.1, 1],
+      "examples": ["Salicornia quinqueflora", "Tecticornia arbuscula", "Disphyma crassifolium"],
+      "growth_forms": ["succulent", "subshrub"],
+      "render_priority": 5,
+      "default_density": "dense",
+      "three_js_approach": "Instanced low-poly succulents or texture patches"
+    },
+    "parasitic_epiphyte": {
+      "description": "Mistletoes and parasitic plants",
+      "height_range": [0.5, 2],
+      "examples": ["Amyema pendula", "Muellerina eucalyptoides", "Cassytha spp."],
+      "growth_forms": ["parasite", "hemiparasite", "epiphyte"],
+      "render_priority": 10,
+      "default_density": "rare",
+      "three_js_approach": "Attached to host tree meshes"
+    }
+  },
+  "density_multipliers": {
+    "3.2_prominent": 1.0,
+    "3.1_present": 0.4,
+    "default": 0.2
+  },
+  "render_settings": {
+    "max_instances_per_species": 50,
+    "lod_distances": [20, 50, 100],
+    "shadow_casting": ["canopy_tree", "subcanopy_tree", "tall_shrub"]
+  },
+  "fallback_mappings": {
+    "unknown_woody": "medium_shrub",
+    "unknown_herb": "forb_upright",
+    "unknown_graminoid": "tussock_grass",
+    "no_data": "forb_upright"
+  }
+}

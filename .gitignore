@@ -25,3 +25,4 @@ dist-ssr
 
 # Reference documents
 *.pdf
+trait_pipeline/austraits_data/traits.csv

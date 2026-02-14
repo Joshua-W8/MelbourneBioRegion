@@ -1,292 +1,241 @@
 #!/usr/bin/env python3
 """
-Extract species data from ARI Pre-colonial Plant List PDF.
-
-Reads Table 4 (pages 19-32) from the PDF and creates:
-- species_by_vegetation_type.json (grouped by vegetation type and prominence)
-- species_diorama.json (all species with codes 3.1+)
-- species_prominent.json (species with code 3.2)
-- species_plantlist.json (all species with codes 2.1+)
-
-Usage:
-    python3 extract_species.py
+Species Extraction Script for Pre-colonial Melbourne Vegetation Project
+Run from the trait_pipeline directory: python3 extract_species.py
 """
 
 import json
+from collections import defaultdict
 from pathlib import Path
-import re
 
-# The 12 vegetation types (in order as they appear in PDF table columns)
 VEGETATION_TYPES = [
-    "Beach and Dunes",
-    "Saltmarsh",
-    "Coastal marshlands and brackish flats",
-    "Swamp scrub",
-    "Woodlands and heathlands on sand",
-    "Woodlands and forests on sedimentary hills",
-    "Grasslands and Woodlands on fertile plains",
-    "Cliffs and escarpments",
-    "River banks and creeklines",
-    "Wet heathland",
-    "Freshwater wetland",
-    "Saltwater wetland"
+    'beach_and_dunes',
+    'saltmarsh', 
+    'coastal_marshlands_and_brackish_flats',
+    'swamp_scrub',
+    'woodlands_and_heathlands_on_sand',
+    'woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges',
+    'grasslands_and_woodlands_on_fertile_plains',
+    'cliffs_and_escarpments',
+    'river_banks_and_creeklines',
+    'wet_heathland',
+    'freshwater_wetland',
+    'saltwater_wetland'
 ]
 
-
-def parse_pdf_with_pdfplumber():
-    """
-    Extract table data from PDF using pdfplumber.
-    Returns list of species dictionaries.
-    """
-    try:
-        import pdfplumber
-    except ImportError:
-        print("Error: pdfplumber not installed")
-        print("Install it with: pip install pdfplumber --break-system-packages")
-        return None
-
-    pdf_path = Path(__file__).parent.parent / 'ari_plant_list.pdf'
-
-    if not pdf_path.exists():
-        print(f"Error: PDF not found at {pdf_path}")
-        return None
-
-    print(f"Reading PDF: {pdf_path}")
-
-    all_species = []
-
-    # Table 4 spans pages 19-32 (PDF pages 19-32, index 18-31)
-    with pdfplumber.open(pdf_path) as pdf:
-        for page_num in range(18, 32):  # Pages 19-32 in PDF (0-indexed)
-            print(f"Processing page {page_num + 1}...")
-
-            page = pdf.pages[page_num]
-            tables = page.extract_tables()
-
-            if not tables:
-                continue
-
-            # The main table should be the first/largest table on each page
-            table = tables[0]
-
-            # Skip header rows
-            for row in table[1:]:  # Skip first row (header)
-                if not row or not row[0]:  # Skip empty rows
-                    continue
-
-                species_name = row[0].strip() if row[0] else None
-
-                if not species_name or species_name == 'Species':  # Skip header repeats
-                    continue
-
-                # Extract data
-                species_dict = {
-                    'species': species_name,
-                    'common_name': row[1].strip() if len(row) > 1 and row[1] else '',
-                    'certain': bool(row[2]) if len(row) > 2 and row[2] else False,
-                    'codes': {}
-                }
-
-                # Extract codes for each vegetation type (columns 3-14)
-                for i, veg_type in enumerate(VEGETATION_TYPES):
-                    col_idx = i + 3  # Codes start at column index 3
-
-                    if col_idx < len(row) and row[col_idx]:
-                        code_str = str(row[col_idx]).strip()
-
-                        # Parse code (could be 0, 1, 2.1, 2.2, 3.1, 3.2)
-                        try:
-                            if '.' in code_str:
-                                code = float(code_str)
-                            else:
-                                code = int(code_str)
-
-                            species_dict['codes'][veg_type] = code
-                        except ValueError:
-                            species_dict['codes'][veg_type] = 0
-                    else:
-                        species_dict['codes'][veg_type] = 0
-
-                # Calculate "most likely occurrence" (highest code across all veg types)
-                max_code = max(species_dict['codes'].values()) if species_dict['codes'] else 0
-                species_dict['most_likely_occurrence'] = max_code
-
-                all_species.append(species_dict)
-
-    print(f"Extracted {len(all_species)} species from PDF")
-    return all_species
+VEG_TYPE_NAMES = {
+    'beach_and_dunes': 'Beach and Dunes',
+    'saltmarsh': 'Saltmarsh',
+    'coastal_marshlands_and_brackish_flats': 'Coastal Marshlands and Brackish Flats',
+    'swamp_scrub': 'Swamp Scrub',
+    'woodlands_and_heathlands_on_sand': 'Woodlands and Heathlands on Sand',
+    'woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges': 'Woodlands and Forests on Sedimentary Hills',
+    'grasslands_and_woodlands_on_fertile_plains': 'Grasslands and Woodlands on Fertile Plains',
+    'cliffs_and_escarpments': 'Cliffs and Escarpments',
+    'river_banks_and_creeklines': 'River Banks and Creeklines',
+    'wet_heathland': 'Wet Heathland',
+    'freshwater_wetland': 'Freshwater Wetland',
+    'saltwater_wetland': 'Saltwater Wetland'
+}
 
 
-def create_species_by_vegetation_type(all_species):
-    """
-    Group species by vegetation type and prominence code.
+def find_plant_list():
+    """Find the plant list JSON file."""
+    script_dir = Path(__file__).parent
+    possible_paths = [
+        script_dir / 'pre-colonial-plant-list.json',
+        script_dir.parent / 'pre-colonial-plant-list.json',
+        script_dir.parent / 'data' / 'pre-colonial-plant-list.json',
+        script_dir / 'data' / 'pre-colonial-plant-list.json',
+        script_dir.parent / 'precolonial-melbourne' / 'pre-colonial-plant-list.json',
+    ]
+    for p in possible_paths:
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        f"Could not find pre-colonial-plant-list.json.\n"
+        f"Searched in: {[str(p) for p in possible_paths]}\n"
+        f"Please place it in the trait_pipeline directory."
+    )
 
-    Returns dict with structure:
-    {
-        "Vegetation Type": {
-            "prominent": [species with code 3.2],
-            "present": [species with code 3.1]
-        }
-    }
-    """
-    result = {}
 
+def get_max_occurrence(species_record):
+    max_val = 0
     for veg_type in VEGETATION_TYPES:
-        prominent = []
-        present = []
+        val = species_record.get(veg_type, 0)
+        if val is not None and val > max_val:
+            max_val = val
+    return max_val
 
-        for species in all_species:
-            code = species['codes'].get(veg_type, 0)
 
-            if code == 3.2:
-                prominent.append({
-                    'species': species['species'],
-                    'common_name': species['common_name'],
-                    'code': 3.2
+def get_vegetation_types_for_species(species_record, threshold=3.1):
+    veg_types = []
+    for veg_type in VEGETATION_TYPES:
+        val = species_record.get(veg_type, 0)
+        if val is not None and val >= threshold:
+            veg_types.append({
+                'type': veg_type,
+                'name': VEG_TYPE_NAMES[veg_type],
+                'prominence_code': val
+            })
+    return veg_types
+
+
+def extract_species_by_threshold(plant_list, threshold):
+    species = []
+    for record in plant_list:
+        max_occurrence = get_max_occurrence(record)
+        if max_occurrence >= threshold:
+            species.append({
+                'species': record['species'],
+                'common_name': record.get('common_name_s', ''),
+                'certain': record.get('certain') == 1,
+                'max_prominence': max_occurrence,
+                'vegetation_types': get_vegetation_types_for_species(record, threshold)
+            })
+    return species
+
+
+def extract_prominent_species(plant_list):
+    species = []
+    for record in plant_list:
+        max_occurrence = get_max_occurrence(record)
+        if max_occurrence >= 3.2:
+            prominent_in = []
+            for veg_type in VEGETATION_TYPES:
+                val = record.get(veg_type, 0)
+                if val is not None and val >= 3.2:
+                    prominent_in.append(VEG_TYPE_NAMES[veg_type])
+            
+            species.append({
+                'species': record['species'],
+                'common_name': record.get('common_name_s', ''),
+                'certain': record.get('certain') == 1,
+                'prominent_in': prominent_in,
+                'trait_status': 'pending_manual_assignment'
+            })
+    return species
+
+
+def group_by_vegetation_type(plant_list, threshold=3.1):
+    grouped = defaultdict(lambda: {'prominent': [], 'present': []})
+    
+    for record in plant_list:
+        for veg_type in VEGETATION_TYPES:
+            val = record.get(veg_type, 0)
+            if val is None:
+                continue
+                
+            if val >= 3.2:
+                grouped[veg_type]['prominent'].append({
+                    'species': record['species'],
+                    'common_name': record.get('common_name_s', ''),
+                    'prominence_code': val
                 })
-            elif code == 3.1:
-                present.append({
-                    'species': species['species'],
-                    'common_name': species['common_name'],
-                    'code': 3.1
+            elif val >= threshold:
+                grouped[veg_type]['present'].append({
+                    'species': record['species'],
+                    'common_name': record.get('common_name_s', ''),
+                    'prominence_code': val
                 })
-
+    
+    result = {}
+    for veg_type, species_lists in grouped.items():
         result[veg_type] = {
-            'prominent': prominent,
-            'present': present
+            'name': VEG_TYPE_NAMES[veg_type],
+            'prominent_count': len(species_lists['prominent']),
+            'present_count': len(species_lists['present']),
+            'total_count': len(species_lists['prominent']) + len(species_lists['present']),
+            'prominent': sorted(species_lists['prominent'], key=lambda x: x['species']),
+            'present': sorted(species_lists['present'], key=lambda x: x['species'])
         }
-
+    
     return result
 
 
-def create_diorama_species(all_species):
-    """Species with codes 3.1+ (for 3D dioramas)."""
-    return [
-        {
-            'species': s['species'],
-            'common_name': s['common_name'],
-            'most_likely_occurrence': s['most_likely_occurrence'],
-            'certain': s['certain']
-        }
-        for s in all_species
-        if s['most_likely_occurrence'] >= 3.1
-    ]
-
-
-def create_prominent_species(all_species):
-    """Species with code 3.2 (prominent/visual anchors)."""
-    return [
-        {
-            'species': s['species'],
-            'common_name': s['common_name'],
-            'certain': s['certain']
-        }
-        for s in all_species
-        if s['most_likely_occurrence'] == 3.2
-    ]
-
-
-def create_plantlist_species(all_species):
-    """Species with codes 2.1+ (for plant lists)."""
-    return [
-        {
-            'species': s['species'],
-            'common_name': s['common_name'],
-            'most_likely_occurrence': s['most_likely_occurrence'],
-            'certain': s['certain']
-        }
-        for s in all_species
-        if s['most_likely_occurrence'] >= 2.1
-    ]
+def generate_statistics(plant_list):
+    stats = {
+        'total_species': len(plant_list),
+        'by_threshold': {},
+        'by_vegetation_type': {},
+        'certain_records': 0
+    }
+    
+    thresholds = [3.2, 3.1, 2.2, 2.1, 1.0]
+    for thresh in thresholds:
+        count = sum(1 for r in plant_list if get_max_occurrence(r) >= thresh)
+        stats['by_threshold'][str(thresh)] = count
+    
+    for veg_type in VEGETATION_TYPES:
+        count = sum(1 for r in plant_list 
+                   if r.get(veg_type, 0) is not None and r.get(veg_type, 0) >= 3.1)
+        stats['by_vegetation_type'][VEG_TYPE_NAMES[veg_type]] = count
+    
+    stats['certain_records'] = sum(1 for r in plant_list if r.get('certain') == 1)
+    
+    return stats
 
 
 def main():
-    """Main execution function."""
-
-    print("=" * 60)
-    print("ARI Species Data Extraction")
-    print("=" * 60)
-
-    # Extract species from PDF
-    all_species = parse_pdf_with_pdfplumber()
-
-    if not all_species:
-        print("\nERROR: Could not extract species data from PDF")
-        print("\nAlternative: Use the Melbourne Open Data CSV version")
-        print("Download from: https://data.melbourne.vic.gov.au/")
-        return
-
-    # Create output directory
-    output_dir = Path(__file__).parent / 'output'
-    output_dir.mkdir(exist_ok=True)
-
-    # Generate all output files
-    print("\nGenerating output files...")
-
-    # 1. Species by vegetation type (main file for scene generation)
-    species_by_veg = create_species_by_vegetation_type(all_species)
-    output_path = output_dir / 'species_by_vegetation_type.json'
-    with open(output_path, 'w') as f:
-        json.dump(species_by_veg, f, indent=2)
-    print(f"✓ Created: {output_path}")
-
-    # Print summary
-    for veg_type, data in species_by_veg.items():
-        prominent_count = len(data['prominent'])
-        present_count = len(data['present'])
-        print(f"  {veg_type}: {prominent_count} prominent, {present_count} present")
-
-    # 2. Diorama species (3.1+)
-    diorama_species = create_diorama_species(all_species)
-    output_path = output_dir / 'species_diorama.json'
-    with open(output_path, 'w') as f:
+    # Use relative paths from script location
+    script_dir = Path(__file__).parent
+    output_dir = script_dir / 'output'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Find input file
+    input_path = find_plant_list()
+    
+    print(f"Loading plant list from {input_path}...")
+    with open(input_path, 'r') as f:
+        plant_list = json.load(f)
+    print(f"Loaded {len(plant_list)} species records")
+    
+    # Generate statistics
+    print("\nGenerating statistics...")
+    stats = generate_statistics(plant_list)
+    print(f"  Total species: {stats['total_species']}")
+    print(f"  3.2 (prominent): {stats['by_threshold']['3.2']}")
+    print(f"  3.1+ (diorama): {stats['by_threshold']['3.1']}")
+    print(f"  2.1+ (plant list): {stats['by_threshold']['2.1']}")
+    print(f"  Certain records: {stats['certain_records']}")
+    
+    # Extract species lists
+    print("\nExtracting species lists...")
+    
+    diorama_species = extract_species_by_threshold(plant_list, 3.1)
+    with open(output_dir / 'species_diorama.json', 'w') as f:
         json.dump(diorama_species, f, indent=2)
-    print(f"\n✓ Created: {output_path} ({len(diorama_species)} species)")
-
-    # 3. Prominent species (3.2)
-    prominent_species = create_prominent_species(all_species)
-    output_path = output_dir / 'species_prominent.json'
-    with open(output_path, 'w') as f:
+    print(f"  Diorama species (3.1+): {len(diorama_species)}")
+    
+    prominent_species = extract_prominent_species(plant_list)
+    with open(output_dir / 'species_prominent.json', 'w') as f:
         json.dump(prominent_species, f, indent=2)
-    print(f"✓ Created: {output_path} ({len(prominent_species)} species)")
-
-    # 4. Plant list species (2.1+)
-    plantlist_species = create_plantlist_species(all_species)
-    output_path = output_dir / 'species_plantlist.json'
-    with open(output_path, 'w') as f:
+    print(f"  Prominent species (3.2): {len(prominent_species)}")
+    
+    plantlist_species = extract_species_by_threshold(plant_list, 2.1)
+    with open(output_dir / 'species_plantlist.json', 'w') as f:
         json.dump(plantlist_species, f, indent=2)
-    print(f"✓ Created: {output_path} ({len(plantlist_species)} species)")
-
-    # 5. Statistics
-    stats = {
-        'total_species': len(all_species),
-        'diorama_species_3.1+': len(diorama_species),
-        'prominent_species_3.2': len(prominent_species),
-        'plantlist_species_2.1+': len(plantlist_species),
-        'certain_species': sum(1 for s in all_species if s['certain']),
-        'by_vegetation_type': {
-            veg_type: {
-                'prominent_3.2': len(data['prominent']),
-                'present_3.1': len(data['present'])
-            }
-            for veg_type, data in species_by_veg.items()
-        }
-    }
-
-    output_path = output_dir / 'statistics.json'
-    with open(output_path, 'w') as f:
+    print(f"  Plant list species (2.1+): {len(plantlist_species)}")
+    
+    grouped = group_by_vegetation_type(plant_list, 3.1)
+    with open(output_dir / 'species_by_vegetation_type.json', 'w') as f:
+        json.dump(grouped, f, indent=2)
+    print(f"  Grouped into {len(grouped)} vegetation types")
+    
+    query_list = [{'species': sp['species'], 'common_name': sp.get('common_name', '')} 
+                  for sp in diorama_species]
+    with open(output_dir / 'austraits_query_list.json', 'w') as f:
+        json.dump(query_list, f, indent=2)
+    print(f"  AusTraits query list: {len(query_list)} species")
+    
+    with open(output_dir / 'statistics.json', 'w') as f:
         json.dump(stats, f, indent=2)
-    print(f"✓ Created: {output_path}")
-
-    print("\n" + "=" * 60)
-    print("SUMMARY")
-    print("=" * 60)
-    print(f"Total species extracted: {stats['total_species']}")
-    print(f"Diorama species (3.1+): {stats['diorama_species_3.1+']}")
-    print(f"Prominent species (3.2): {stats['prominent_species_3.2']}")
-    print(f"Plant list species (2.1+): {stats['plantlist_species_2.1+']}")
-    print(f"Certain historical records: {stats['certain_species']}")
-    print("\n✓ All files created successfully!")
+    
+    print("\nSpecies by vegetation type (3.1+ threshold):")
+    for veg_type, data in sorted(grouped.items(), key=lambda x: x[1]['total_count'], reverse=True):
+        print(f"  {data['name']}: {data['total_count']} ({data['prominent_count']} prominent)")
+    
+    print(f"\n✓ Output written to: {output_dir.absolute()}")
 
 
 if __name__ == '__main__':

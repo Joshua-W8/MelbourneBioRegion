@@ -1,0 +1,4657 @@
+{
+  "Actites megalocarpus": {
+    "model_category": "forb_upright",
+    "height": 0.48125,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Amperea xiphoclada var. xiphoclada": {
+    "model_category": "medium_shrub",
+    "height": 0.675,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Astroloma humifusum": {
+    "model_category": "low_shrub",
+    "height": 0.29000000000000004,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Caladenia phaeoclavia": {
+    "model_category": "forb_upright",
+    "height": 0.13,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calotis scabiosifolia var. scabiosifolia": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Crassula decumbens var. decumbens": {
+    "model_category": "forb_upright",
+    "height": 0.1,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cycnogeton procerum": {
+    "model_category": "forb_upright",
+    "height": 0.85,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Distichlis distichophylla": {
+    "model_category": "tussock_grass",
+    "height": 0.30525,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Diuris chryseopsis": {
+    "model_category": "forb_upright",
+    "height": 0.28,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eleocharis acuta": {
+    "model_category": "tussock_grass",
+    "height": 0.6569285714285715,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Eryngium ovinum": {
+    "model_category": "forb_upright",
+    "height": 0.5214285714285715,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eucalyptus camaldulensis var. camaldulensis": {
+    "model_category": "canopy_tree",
+    "height": 33.1875,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "medium"
+  },
+  "Glycine clandestina": {
+    "model_category": "climber_scrambler",
+    "height": 1.5,
+    "growth_form": "climber",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidium pseudotasmanicum": {
+    "model_category": "forb_upright",
+    "height": 0.33749999999999997,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lomandra filiformis subsp. coriacea": {
+    "model_category": "forb_upright",
+    "height": 0.24835000000000002,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Machaerina acuta": {
+    "model_category": "tussock_grass",
+    "height": 0.4583333333333333,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Montia australasica": {
+    "model_category": "forb_upright",
+    "height": 0.1076,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pimelea curviflora var. 1": {
+    "model_category": "medium_shrub",
+    "height": 1.0444444444444443,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Pomaderris paniculosa subsp. paralia": {
+    "model_category": "medium_shrub",
+    "height": 1.6666666666666667,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pterostylis nana": {
+    "model_category": "forb_upright",
+    "height": 0.074,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Stackhousia subterranea": {
+    "model_category": "forb_upright",
+    "height": 0.4666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Stylidium graminifolium": {
+    "model_category": "forb_upright",
+    "height": 0.4476125,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia implexa": {
+    "model_category": "canopy_tree",
+    "height": 10.326923076923077,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Centrolepis polygyna": {
+    "model_category": "tussock_grass",
+    "height": 0.04727272727272727,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Corybas diemenicus": {
+    "model_category": "forb_upright",
+    "height": 0.028333333333333332,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hibbertia fasciculata var. prostrata": {
+    "model_category": "medium_shrub",
+    "height": 0.5333333333333333,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Leucopogon virgatus": {
+    "model_category": "medium_shrub",
+    "height": 0.5469999999999999,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lomandra longifolia var. longifolia": {
+    "model_category": "forb_upright",
+    "height": 0.8685714285714285,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "medium"
+  },
+  "Nicotiana suaveolens": {
+    "model_category": "forb_upright",
+    "height": 1.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Panicum effusum": {
+    "model_category": "tussock_grass",
+    "height": 0.46,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pterostylis nutans": {
+    "model_category": "forb_upright",
+    "height": 0.21428571428571433,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Ranunculus amphitrichus": {
+    "model_category": "forb_upright",
+    "height": 0.28333333333333327,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Podolepis linearifolia": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Solenogyne gunnii": {
+    "model_category": "forb_upright",
+    "height": 0.08375,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thelymitra ixioides": {
+    "model_category": "forb_upright",
+    "height": 0.3875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thelymitra pauciflora": {
+    "model_category": "forb_upright",
+    "height": 0.2653333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wahlenbergia multicaulis": {
+    "model_category": "forb_upright",
+    "height": 0.535,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wilsonia backhousei": {
+    "model_category": "low_shrub",
+    "height": 0.15833333333333333,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hypolaena fastigata": {
+    "model_category": "tussock_grass",
+    "height": 0.5126086956521739,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Lepidosperma gladiatum": {
+    "model_category": "tussock_grass",
+    "height": 1.8,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Marsilea drummondii": {
+    "model_category": "forb_upright",
+    "height": 0.22999999999999998,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Muellerina eucalyptoides": {
+    "model_category": "tall_shrub",
+    "height": 25.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Myoporum insulare": {
+    "model_category": "tall_shrub",
+    "height": 5.270833333333333,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Persicaria decipiens": {
+    "model_category": "forb_upright",
+    "height": 0.75,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Phragmites australis": {
+    "model_category": "tussock_grass",
+    "height": 3.5,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Pimelea humilis": {
+    "model_category": "low_shrub",
+    "height": 0.3375,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Plantago varia": {
+    "model_category": "forb_upright",
+    "height": 0.2,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Poa morrisii": {
+    "model_category": "tussock_grass",
+    "height": 0.6499999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Poa sieberiana var. sieberiana": {
+    "model_category": "tussock_grass",
+    "height": 0.445,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Pterostylis truncata": {
+    "model_category": "forb_upright",
+    "height": 0.15,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Puccinellia perlaxa": {
+    "model_category": "tussock_grass",
+    "height": 0.4375,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Tetragonia implexicoma": {
+    "model_category": "low_shrub",
+    "height": 0.9857142857142858,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thysanotus tuberosus subsp. tuberosus": {
+    "model_category": "forb_upright",
+    "height": 0.2,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Viminaria juncea": {
+    "model_category": "medium_shrub",
+    "height": 3.5454545454545454,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Vittadinia muelleri": {
+    "model_category": "forb_upright",
+    "height": 0.18666666666666668,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia mearnsii": {
+    "model_category": "canopy_tree",
+    "height": 11.5,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Acaena novae-zelandiae": {
+    "model_category": "forb_upright",
+    "height": 0.14244000000000004,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Adiantum aethiopicum": {
+    "model_category": "fern",
+    "height": 0.366,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Aotus ericoides": {
+    "model_category": "medium_shrub",
+    "height": 1.7444444444444445,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calystegia sepium subsp. roseata": {
+    "model_category": "forb_upright",
+    "height": 4.0,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Carex breviculmis": {
+    "model_category": "forb_upright",
+    "height": 0.3444875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Carpobrotus rossii": {
+    "model_category": "forb_upright",
+    "height": 0.16666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cassytha pubescens": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "climber_herbaceous",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Chenopodium glaucum": {
+    "model_category": "forb_upright",
+    "height": 0.4083333333333334,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Goodenia ovata": {
+    "model_category": "medium_shrub",
+    "height": 1.9375,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Acaena ovina": {
+    "model_category": "forb_upright",
+    "height": 0.3584659090909091,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Allocasuarina verticillata": {
+    "model_category": "subcanopy_tree",
+    "height": 8.0,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Austrostipa rudis subsp. rudis": {
+    "model_category": "forb_upright",
+    "height": 0.4,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Brachyscome graminea": {
+    "model_category": "forb_upright",
+    "height": 0.5666666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Callitriche umbonata": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calochilus robertsonii": {
+    "model_category": "forb_upright",
+    "height": 0.382,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cardamine microthrix": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Coprosma quadrifida": {
+    "model_category": "medium_shrub",
+    "height": 3.9,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "swamp_scrub",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Corunastylis despectans": {
+    "model_category": "forb_upright",
+    "height": 0.15833333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Einadia trigonos": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Elatine gratioloides": {
+    "model_category": "forb_upright",
+    "height": 0.30999999999999994,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eriochilus cucullatus": {
+    "model_category": "forb_upright",
+    "height": 0.13714285714285715,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Euchiton sphaericus": {
+    "model_category": "forb_upright",
+    "height": 0.405,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Euphorbia drummondii": {
+    "model_category": "forb_upright",
+    "height": 0.1,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hypericum gramineum": {
+    "model_category": "forb_upright",
+    "height": 0.3097615384615384,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptorhynchos squamatus subsp. squamatus": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Lomandra micrantha subsp. micrantha": {
+    "model_category": "forb_upright",
+    "height": 0.5,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Poranthera microphylla": {
+    "model_category": "forb_upright",
+    "height": 0.123197340625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma geniculatum": {
+    "model_category": "forb_upright",
+    "height": 0.3075,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Vittadinia gracilis": {
+    "model_category": "forb_upright",
+    "height": 0.26666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Atriplex paludosa subsp. paludosa": {
+    "model_category": "medium_shrub",
+    "height": 2.0666666666666664,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Atriplex semibaccata": {
+    "model_category": "forb_upright",
+    "height": 0.2914285714285714,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa flavescens": {
+    "model_category": "tussock_grass",
+    "height": 0.9909090909090907,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Banksia integrifolia subsp. integrifolia": {
+    "model_category": "canopy_tree",
+    "height": 25.0,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Banksia marginata": {
+    "model_category": "tall_shrub",
+    "height": 6.7153846153846155,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Banksia marginata (tree)": {
+    "model_category": "tall_shrub",
+    "height": 6.7153846153846155,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Bossiaea prostrata": {
+    "model_category": "low_shrub",
+    "height": 0.6,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Bulbine bulbosa": {
+    "model_category": "forb_upright",
+    "height": 0.4204,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Calandrinia granulifera": {
+    "model_category": "forb_upright",
+    "height": 0.023639775800000002,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Chrysocephalum semipapposum": {
+    "model_category": "forb_upright",
+    "height": 0.5425,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Comesperma volubile": {
+    "model_category": "climber_scrambler",
+    "height": 1.8583333333333334,
+    "growth_form": "climber",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Isolepis fluitans var. fluitans": {
+    "model_category": "tussock_grass",
+    "height": 0.11000000000000001,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Isolepis producta": {
+    "model_category": "tussock_grass",
+    "height": 0.06666666666666667,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Limonium australe": {
+    "model_category": "forb_upright",
+    "height": 0.35000000000000003,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Luzula meridionalis var. meridionalis": {
+    "model_category": "tussock_grass",
+    "height": 0.3088888888888889,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Oxalis perennans": {
+    "model_category": "forb_upright",
+    "height": 0.22571946272727272,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Ozothamnus turbinatus": {
+    "model_category": "medium_shrub",
+    "height": 1.8571428571428572,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Persicaria lapathifolia": {
+    "model_category": "forb_upright",
+    "height": 1.3900000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Persicaria subsessilis": {
+    "model_category": "forb_upright",
+    "height": 0.7333333333333334,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Puccinellia stricta": {
+    "model_category": "tussock_grass",
+    "height": 0.491111111111111,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pyrorchis nigricans": {
+    "model_category": "forb_upright",
+    "height": 0.2081818181818182,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rumex dumosus": {
+    "model_category": "forb_upright",
+    "height": 0.4666666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Salicornia quinqueflora subsp. quinqueflora": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Schoenus nitens": {
+    "model_category": "tussock_grass",
+    "height": 0.24000000000000002,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Xerochrysum viscosum": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus revolutus": {
+    "model_category": "tussock_grass",
+    "height": 0.3,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptospermum continentale": {
+    "model_category": "medium_shrub",
+    "height": 2.1666666666666665,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "wet_heathland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Podolepis jaceoides": {
+    "model_category": "forb_upright",
+    "height": 0.6333333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Potamogeton ochreatus": {
+    "model_category": "forb_upright",
+    "height": 4.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Prostanthera lasianthos var. lasianthos": {
+    "model_category": "tall_shrub",
+    "height": 6.2,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Pycnosorus chrysanthes": {
+    "model_category": "forb_upright",
+    "height": 0.4846153846153846,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Rytidosperma bipartitum": {
+    "model_category": "forb_upright",
+    "height": 0.5874999999999999,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Solenogyne dominii": {
+    "model_category": "forb_upright",
+    "height": 0.08499999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Stackhousia monogyna": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wilsonia rotundifolia": {
+    "model_category": "low_shrub",
+    "height": 0.21000000000000002,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia acinacea": {
+    "model_category": "medium_shrub",
+    "height": 1.9125,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Correa alba var. alba": {
+    "model_category": "medium_shrub",
+    "height": 2.25,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Crassula sieberiana": {
+    "model_category": "forb_upright",
+    "height": 0.15,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cymbonotus preissianus": {
+    "model_category": "forb_upright",
+    "height": 0.1525,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cynoglossum suaveolens": {
+    "model_category": "forb_upright",
+    "height": 0.6333333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Cyperus sanguinolentus": {
+    "model_category": "tussock_grass",
+    "height": 0.1875,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Daucus glochidiatus": {
+    "model_category": "forb_upright",
+    "height": 0.3330680785,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dianella revoluta var. revoluta": {
+    "model_category": "tussock_grass",
+    "height": 0.8333333333333334,
+    "growth_form": "graminoid_not_tussock",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Disphyma crassifolium subsp. clavellatum": {
+    "model_category": "forb_upright",
+    "height": 0.12333333333333334,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Diuris punctata": {
+    "model_category": "forb_upright",
+    "height": 0.44999999999999996,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Diuris sulphurea": {
+    "model_category": "forb_upright",
+    "height": 0.425,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Glycine tabacina": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Goodenia pinnatifida": {
+    "model_category": "forb_upright",
+    "height": 0.2964625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Gratiola peruviana": {
+    "model_category": "forb_upright",
+    "height": 0.22999999999999998,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidium aschersonii": {
+    "model_category": "forb_upright",
+    "height": 0.248,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Melicytus dentatus": {
+    "model_category": "medium_shrub",
+    "height": 3.2115384615384617,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Muehlenbeckia adpressa": {
+    "model_category": "medium_shrub",
+    "height": 0.8666666666666666,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Myoporum petiolatum": {
+    "model_category": "medium_shrub",
+    "height": 2.625,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Ottelia ovalifolia subsp. ovalifolia": {
+    "model_category": "forb_upright",
+    "height": 0.9666666666666668,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Patersonia fragilis": {
+    "model_category": "forb_upright",
+    "height": 0.43333333333333335,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pterostylis pedunculata": {
+    "model_category": "forb_upright",
+    "height": 0.1685714285714286,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Sebaea ovata": {
+    "model_category": "forb_upright",
+    "height": 0.2255555555555556,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio quadridentatus": {
+    "model_category": "forb_upright",
+    "height": 0.8700285714285715,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines",
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thelymitra epipactoides": {
+    "model_category": "forb_upright",
+    "height": 0.36000000000000004,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Themeda triandra": {
+    "model_category": "tussock_grass",
+    "height": 1.0420866666666668,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Typha domingensis": {
+    "model_category": "forb_upright",
+    "height": 2.5625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Typha orientalis": {
+    "model_category": "forb_upright",
+    "height": 3.8,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Veronica plebeia": {
+    "model_category": "forb_upright",
+    "height": 0.19999999999999998,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Vittadinia cuneata var. cuneata": {
+    "model_category": "forb_upright",
+    "height": 0.25,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Walwhalleya proluta": {
+    "model_category": "forb_upright",
+    "height": 0.75,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Alisma plantago-aquatica": {
+    "model_category": "forb_upright",
+    "height": 1.375,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Allocasuarina paradoxa": {
+    "model_category": "medium_shrub",
+    "height": 1.5,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Alternanthera denticulata": {
+    "model_category": "forb_upright",
+    "height": 0.525,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Caladenia latifolia": {
+    "model_category": "forb_upright",
+    "height": 0.35875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Caladenia venusta": {
+    "model_category": "forb_upright",
+    "height": 0.4,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Callitriche sonderi": {
+    "model_category": "forb_upright",
+    "height": 0.05,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Chamaescilla corymbosa": {
+    "model_category": "forb_upright",
+    "height": 0.26,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cheilanthes austrotenuifolia": {
+    "model_category": "fern",
+    "height": 0.24002789820000003,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cheilanthes sieberi subsp. sieberi": {
+    "model_category": "fern",
+    "height": 0.3166666666666667,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Chloris truncata": {
+    "model_category": "tussock_grass",
+    "height": 0.33770000000000006,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Comesperma polygaloides": {
+    "model_category": "low_shrub",
+    "height": 0.28333333333333327,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Coronidium gunnianum": {
+    "model_category": "forb_upright",
+    "height": 0.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eragrostis parviflora": {
+    "model_category": "tussock_grass",
+    "height": 0.86,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Gahnia filum": {
+    "model_category": "forb_upright",
+    "height": 1.15,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Hibbertia sericea var. sericea": {
+    "model_category": "medium_shrub",
+    "height": 0.6499999999999999,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hovea heterophylla": {
+    "model_category": "low_shrub",
+    "height": 0.7571428571428571,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Angianthus preissianus": {
+    "model_category": "forb_upright",
+    "height": 0.12125,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa curticoma": {
+    "model_category": "tussock_grass",
+    "height": 0.9500000000000001,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa elegantissima": {
+    "model_category": "tussock_grass",
+    "height": 0.63620139585,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cullen tenax": {
+    "model_category": "forb_upright",
+    "height": 0.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dianella brevicaulis": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Epilobium billardierianum subsp. billardierianum": {
+    "model_category": "forb_upright",
+    "height": 0.734242857142857,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Eryngium vesiculosum": {
+    "model_category": "forb_upright",
+    "height": 0.120875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidosperma longitudinale": {
+    "model_category": "tussock_grass",
+    "height": 1.1019999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptinella reptans": {
+    "model_category": "forb_upright",
+    "height": 0.09999999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lycopus australis": {
+    "model_category": "forb_upright",
+    "height": 1.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Machaerina articulata": {
+    "model_category": "tussock_grass",
+    "height": null,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Mentha diemenica var. diemenica": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Pelargonium littorale": {
+    "model_category": "forb_upright",
+    "height": 0.3875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Plantago gaudichaudii": {
+    "model_category": "forb_upright",
+    "height": 0.25,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Poa sieberiana var. hirtella": {
+    "model_category": "tussock_grass",
+    "height": 0.445,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Schoenoplectus pungens": {
+    "model_category": "tussock_grass",
+    "height": 0.9199999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Triglochin mucronata": {
+    "model_category": "forb_upright",
+    "height": 0.10277777777777779,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Euchiton involucratus": {
+    "model_category": "forb_upright",
+    "height": 0.298,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Goodenia geniculata": {
+    "model_category": "forb_upright",
+    "height": 0.138075,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hemichroa pentandra": {
+    "model_category": "forb_upright",
+    "height": 0.15000000000000002,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hibbertia riparia": {
+    "model_category": "medium_shrub",
+    "height": 0.9,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hydrocotyle capillaris": {
+    "model_category": "forb_upright",
+    "height": 0.05800000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Indigofera australis": {
+    "model_category": "medium_shrub",
+    "height": 1.8322222222222224,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Machaerina juncea": {
+    "model_category": "tussock_grass",
+    "height": 0.8857142857142858,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Microtis unifolia": {
+    "model_category": "forb_upright",
+    "height": 0.51,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia pycnantha": {
+    "model_category": "subcanopy_tree",
+    "height": 6.133333333533333,
+    "growth_form": "shrub tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Acrotriche serrulata": {
+    "model_category": "low_shrub",
+    "height": 0.32,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Atriplex australasica": {
+    "model_category": "forb_upright",
+    "height": 0.8800000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa bigeniculata": {
+    "model_category": "forb_upright",
+    "height": 1.0614285714285716,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Caladenia carnea": {
+    "model_category": "forb_upright",
+    "height": 0.2375,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Caladenia tentaculata": {
+    "model_category": "forb_upright",
+    "height": 0.26,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calocephalus lacteus": {
+    "model_category": "forb_upright",
+    "height": 0.44000000000000006,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cladium procerum": {
+    "model_category": "tussock_grass",
+    "height": 2.25,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Comesperma calymega": {
+    "model_category": "forb_upright",
+    "height": 0.45625000000000004,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dichelachne crinita": {
+    "model_category": "tussock_grass",
+    "height": 0.8574100000000001,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dillwynia cinerascens": {
+    "model_category": "medium_shrub",
+    "height": 0.9333333333333332,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Exocarpos cupressiformis": {
+    "model_category": "subcanopy_tree",
+    "height": 7.940714285714286,
+    "growth_form": "shrub tree",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Ficinia nodosa": {
+    "model_category": "tussock_grass",
+    "height": 0.9333333333333335,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Glossodia major": {
+    "model_category": "forb_upright",
+    "height": 0.21750000000000003,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Gnaphalium indutum": {
+    "model_category": "forb_upright",
+    "height": 0.16571428571428573,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Isolepis marginata": {
+    "model_category": "tussock_grass",
+    "height": 0.091,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus flavidus": {
+    "model_category": "tussock_grass",
+    "height": 0.9875,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lagenophora stipitata": {
+    "model_category": "forb_upright",
+    "height": 0.2225,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidosperma laterale": {
+    "model_category": "forb_upright",
+    "height": 0.995,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptorhynchos elongatus": {
+    "model_category": "forb_upright",
+    "height": 0.31000000000000005,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leucophyta brownii": {
+    "model_category": "medium_shrub",
+    "height": 1.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Maireana enchylaenoides": {
+    "model_category": "forb_upright",
+    "height": 0.20714285714285713,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Mimulus repens": {
+    "model_category": "forb_upright",
+    "height": 0.1925,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Olearia axillaris": {
+    "model_category": "medium_shrub",
+    "height": 2.1,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rhagodia candolleana subsp. candolleana": {
+    "model_category": "medium_shrub",
+    "height": 3.6,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma auriculatum": {
+    "model_category": "forb_upright",
+    "height": 0.32599999999999996,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Salsola tragus subsp. pontica": {
+    "model_category": "forb_upright",
+    "height": 0.7642857142857142,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Trachymene composita var. composita": {
+    "model_category": "forb_upright",
+    "height": 2.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Veronica gracilis": {
+    "model_category": "forb_upright",
+    "height": 0.44999999999999996,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wahlenbergia gracilis": {
+    "model_category": "forb_upright",
+    "height": 0.45,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Atriplex suberecta": {
+    "model_category": "forb_upright",
+    "height": 0.5428571428571429,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa scabra subsp. falcata": {
+    "model_category": "forb_upright",
+    "height": 0.48,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Dysphania pumilio": {
+    "model_category": "forb_upright",
+    "height": 0.238,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Einadia nutans subsp. nutans": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eragrostis brownii": {
+    "model_category": "tussock_grass",
+    "height": 0.4399999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Erodium crinitum": {
+    "model_category": "forb_upright",
+    "height": 0.56875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Gonocarpus tetragynus": {
+    "model_category": "forb_upright",
+    "height": 0.2518230769230769,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hypoxis glabella var. glabella": {
+    "model_category": "forb_upright",
+    "height": 0.2208333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Juncus amabilis": {
+    "model_category": "tussock_grass",
+    "height": 0.975,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lachnagrostis aemula": {
+    "model_category": "forb_upright",
+    "height": 0.5437500000000001,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptinella longipes": {
+    "model_category": "forb_upright",
+    "height": 0.1,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptospermum myrsinoides": {
+    "model_category": "medium_shrub",
+    "height": 1.875,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Microseris walteri": {
+    "model_category": "forb_upright",
+    "height": 0.36,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Opercularia varia": {
+    "model_category": "forb_upright",
+    "height": 0.2966666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pteridium esculentum": {
+    "model_category": "fern",
+    "height": 1.5633333333333332,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Rytidosperma caespitosum": {
+    "model_category": "tussock_grass",
+    "height": 0.4717911810526316,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "woodlands_and_heathlands_on_sand",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Rytidosperma racemosum": {
+    "model_category": "forb_upright",
+    "height": 0.4183333333333333,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma setaceum var. setaceum": {
+    "model_category": "forb_upright",
+    "height": 0.48333333333333334,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "medium"
+  },
+  "Tricoryne elatior": {
+    "model_category": "forb_upright",
+    "height": 0.43596,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wilsonia humilis": {
+    "model_category": "low_shrub",
+    "height": 0.12200000000000003,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Amphibromus nervosus": {
+    "model_category": "tussock_grass",
+    "height": 1.0625,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Amyema pendula subsp. pendula": {
+    "model_category": "medium_shrub",
+    "height": 3.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Asplenium flabellifolium subsp. gracillimum": {
+    "model_category": "fern",
+    "height": 0.5,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Austrostipa mollis": {
+    "model_category": "tussock_grass",
+    "height": 0.7961538461538461,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Azolla filiculoides": {
+    "model_category": "fern",
+    "height": 0.065,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Caladenia parva": {
+    "model_category": "forb_upright",
+    "height": 0.10000000000000002,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Centrolepis strigosa subsp. strigosa": {
+    "model_category": "tussock_grass",
+    "height": 0.08,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dianella tasmanica": {
+    "model_category": "forb_upright",
+    "height": 0.8666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Epilobium hirtigerum": {
+    "model_category": "forb_upright",
+    "height": 0.9833333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus pallidus": {
+    "model_category": "tussock_grass",
+    "height": 1.6214285714285714,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lindsaea linearis": {
+    "model_category": "fern",
+    "height": 0.2425,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Linum marginale": {
+    "model_category": "forb_upright",
+    "height": 0.5272727272727272,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lobelia pratioides": {
+    "model_category": "forb_upright",
+    "height": 0.0679,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lythrum salicaria": {
+    "model_category": "forb_upright",
+    "height": 1.1857142857142857,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Melaleuca ericifolia": {
+    "model_category": "tall_shrub",
+    "height": 7.333333333333333,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "river_banks_and_creeklines",
+      "wet_heathland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Persicaria praetermissa": {
+    "model_category": "forb_upright",
+    "height": 0.6,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Platylobium obtusangulum": {
+    "model_category": "medium_shrub",
+    "height": 1.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Poa poiformis var. poiformis": {
+    "model_category": "tussock_grass",
+    "height": 0.602,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Rytidosperma fulvum": {
+    "model_category": "forb_upright",
+    "height": 0.5599999999999999,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma pilosum var. pilosum": {
+    "model_category": "forb_upright",
+    "height": 0.544,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Samolus repens": {
+    "model_category": "forb_upright",
+    "height": 0.4538461538461539,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Schenkia australis": {
+    "model_category": "forb_upright",
+    "height": 0.3175,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Triglochin striata": {
+    "model_category": "forb_upright",
+    "height": 0.3022222222222222,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Juncus australis": {
+    "model_category": "tussock_grass",
+    "height": 1.1,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Malva preissiana": {
+    "model_category": "forb_upright",
+    "height": 3.0,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Potamogeton crispus": {
+    "model_category": "forb_upright",
+    "height": 4.0,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rubus parvifolius": {
+    "model_category": "medium_shrub",
+    "height": 0.7749999999999999,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio hispidulus": {
+    "model_category": "forb_upright",
+    "height": 0.8500000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Spergularia marina": {
+    "model_category": "forb_upright",
+    "height": 0.21666666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Suaeda australis": {
+    "model_category": "forb_upright",
+    "height": 0.7857142857142857,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Triglochin minutissima": {
+    "model_category": "forb_upright",
+    "height": 0.0675,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Urtica incisa": {
+    "model_category": "forb_upright",
+    "height": 1.2,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Apium annuum": {
+    "model_category": "forb_upright",
+    "height": 2.6685714285714286,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Arthropodium strictum": {
+    "model_category": "forb_upright",
+    "height": 0.77295,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Austrostipa nodosa": {
+    "model_category": "tussock_grass",
+    "height": 0.9142857142857144,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Bossiaea cinerea": {
+    "model_category": "medium_shrub",
+    "height": 1.425,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Brunonia australis": {
+    "model_category": "forb_upright",
+    "height": 0.24749090820000003,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Caleana major": {
+    "model_category": "forb_upright",
+    "height": 0.30857142857142855,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cyrtostylis robusta": {
+    "model_category": "forb_upright",
+    "height": 0.174,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Daviesia leptophylla": {
+    "model_category": "medium_shrub",
+    "height": 1.7614285714285713,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dianella amoena": {
+    "model_category": "forb_upright",
+    "height": 0.45,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dillwynia glaberrima": {
+    "model_category": "medium_shrub",
+    "height": 1.5833333333333333,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Drosera aberrans": {
+    "model_category": "forb_upright",
+    "height": 0.04,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eucalyptus melliodora": {
+    "model_category": "canopy_tree",
+    "height": 27.85090909090909,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Glycine latrobeana": {
+    "model_category": "forb_upright",
+    "height": 0.16666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hardenbergia violacea": {
+    "model_category": "climber_scrambler",
+    "height": 1.0333333333333332,
+    "growth_form": "climber",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Apium prostratum subsp. prostratum var. filiforme": {
+    "model_category": "forb_upright",
+    "height": 0.3625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Atriplex cinerea": {
+    "model_category": "medium_shrub",
+    "height": 1.5545454545454547,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "saltmarsh"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Caesia calliantha": {
+    "model_category": "forb_upright",
+    "height": 0.373025,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calocephalus citreus": {
+    "model_category": "forb_upright",
+    "height": 0.375,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Cassytha melantha": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "climber_herbaceous",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Convolvulus angustissimus subsp. omnigracilis": {
+    "model_category": "forb_upright",
+    "height": 0.1,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Frankenia pauciflora var. gunnii": {
+    "model_category": "low_shrub",
+    "height": 0.1,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Gynatrix pulchella": {
+    "model_category": "medium_shrub",
+    "height": 4.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lomandra filiformis subsp. filiformis": {
+    "model_category": "forb_upright",
+    "height": 0.5,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia verticillata var. verticillata": {
+    "model_category": "subcanopy_tree",
+    "height": 7.666666666666667,
+    "growth_form": "shrub tree",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Acaena echinata": {
+    "model_category": "forb_upright",
+    "height": 0.32512105263157903,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Caladenia congesta": {
+    "model_category": "forb_upright",
+    "height": 0.45,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Correa reflexa var. reflexa": {
+    "model_category": "medium_shrub",
+    "height": 1.7166666666666668,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Hydrocotyle laxiflora": {
+    "model_category": "forb_upright",
+    "height": 0.1169,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus krausii subsp. australiensis": {
+    "model_category": "tussock_grass",
+    "height": 0.8924964028776976,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "saltmarsh",
+      "swamp_scrub"
+    ],
+    "prominence": 3.2,
+    "confidence": "medium"
+  },
+  "Lobelia irrigua": {
+    "model_category": "forb_upright",
+    "height": 0.05,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Mentha australis": {
+    "model_category": "forb_upright",
+    "height": 0.45,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Microtis parviflora": {
+    "model_category": "forb_upright",
+    "height": 0.305,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pentapogon quadrifidus var. quadrifidus": {
+    "model_category": "tussock_grass",
+    "height": 0.48,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pimelea glauca": {
+    "model_category": "medium_shrub",
+    "height": 1.0,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pimelea spinescens subsp. spinescens": {
+    "model_category": "low_shrub",
+    "height": 0.4,
+    "growth_form": "subshrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Portulaca oleracea": {
+    "model_category": "forb_upright",
+    "height": 0.1125,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Potamogeton cheesmanii": {
+    "model_category": "forb_upright",
+    "height": 3.0799999999999996,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Sebaea albidiflora": {
+    "model_category": "forb_upright",
+    "height": 0.164,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Stylidium inundatum": {
+    "model_category": "forb_upright",
+    "height": 0.066875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Triptilodiscus pygmaeus": {
+    "model_category": "forb_upright",
+    "height": 0.0758,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wahlenbergia stricta subsp. stricta": {
+    "model_category": "forb_upright",
+    "height": 0.49800000000000005,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lagenophora huegelii": {
+    "model_category": "forb_upright",
+    "height": 0.24714285714285716,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidium pseudohyssopifolium": {
+    "model_category": "forb_upright",
+    "height": 0.5599999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Poa labillardierei var. labillardierei": {
+    "model_category": "forb_upright",
+    "height": 0.9750000000000001,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Ranunculus lappaceus": {
+    "model_category": "forb_upright",
+    "height": 0.5399999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rumex bidens": {
+    "model_category": "forb_upright",
+    "height": 0.775,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma duttonianum": {
+    "model_category": "forb_upright",
+    "height": 0.7142857142857143,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma carphoides var. carphoides": {
+    "model_category": "forb_upright",
+    "height": 0.3083333333333333,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Rytidosperma erianthum": {
+    "model_category": "forb_upright",
+    "height": 0.47714285714285715,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Wurmbea dioica subsp. dioica": {
+    "model_category": "forb_upright",
+    "height": 0.13816666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia melanoxylon": {
+    "model_category": "canopy_tree",
+    "height": 23.4400000004,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Acianthus pusillus": {
+    "model_category": "forb_upright",
+    "height": 0.10750000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Apium prostratum subsp. prostratum var. prostratum": {
+    "model_category": "forb_upright",
+    "height": 0.3625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Asperula conferta": {
+    "model_category": "forb_upright",
+    "height": 0.15258,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa pubinodis": {
+    "model_category": "tussock_grass",
+    "height": 1.1333333333333333,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa semibarbata": {
+    "model_category": "tussock_grass",
+    "height": 0.8070166666666667,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Bolboschoenus caldwellii": {
+    "model_category": "tussock_grass",
+    "height": 0.8999999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Bothriochloa macra": {
+    "model_category": "tussock_grass",
+    "height": 0.8474999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Burchardia umbellata": {
+    "model_category": "forb_upright",
+    "height": 0.46549166666666664,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Callistemon sieberi": {
+    "model_category": "medium_shrub",
+    "height": 4.2,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Calotis anthemoides": {
+    "model_category": "forb_upright",
+    "height": 0.2,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Calotis scapigera": {
+    "model_category": "forb_upright",
+    "height": 0.3833333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Carex fascicularis": {
+    "model_category": "tussock_grass",
+    "height": 0.9199999999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Crassula helmsii": {
+    "model_category": "forb_upright",
+    "height": 0.2333333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cycnogeton alcockiae": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dianella longifolia var. grandis": {
+    "model_category": "forb_upright",
+    "height": 1.3,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dichondra repens": {
+    "model_category": "forb_upright",
+    "height": 0.057687499999999996,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines",
+      "wet_heathland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Drosera auriculata": {
+    "model_category": "forb_upright",
+    "height": 0.41,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Enchylaena tomentosa var. tomentosa": {
+    "model_category": "medium_shrub",
+    "height": 1.15,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Epacris impressa": {
+    "model_category": "medium_shrub",
+    "height": 1.20375,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia dealbata subsp. dealbata": {
+    "model_category": "canopy_tree",
+    "height": 30.0,
+    "growth_form": "shrub tree",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Acacia longifolia subsp. sophorae": {
+    "model_category": "medium_shrub",
+    "height": 3.022222222222222,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Allocasuarina paludosa": {
+    "model_category": "medium_shrub",
+    "height": 2.288888888888889,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa gibbosa": {
+    "model_category": "tussock_grass",
+    "height": 1.4,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa oligostachya": {
+    "model_category": "tussock_grass",
+    "height": 0.825,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa stipoides": {
+    "model_category": "forb_upright",
+    "height": 0.8500000000000001,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "saltmarsh",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Azolla pinnata": {
+    "model_category": "fern",
+    "height": 0.015,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Brachyscome parvula": {
+    "model_category": "forb_upright",
+    "height": 0.425,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cyrtostylis reniformis": {
+    "model_category": "forb_upright",
+    "height": 0.11000000000000001,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Damasonium minus": {
+    "model_category": "forb_upright",
+    "height": 0.8333333333333334,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dipodium roseum": {
+    "model_category": "forb_upright",
+    "height": 0.725,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Drosera peltata": {
+    "model_category": "forb_upright",
+    "height": 0.4144444444444445,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Kennedia prostrata": {
+    "model_category": "forb_upright",
+    "height": 1.06605,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lawrencia spicata": {
+    "model_category": "forb_upright",
+    "height": 1.0666666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Levenhookia dubia": {
+    "model_category": "forb_upright",
+    "height": 0.042574738812500006,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Myriophyllum verrucosum": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Ricinocarpos pinifolius": {
+    "model_category": "medium_shrub",
+    "height": 1.9957142857142856,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Schoenoplectus tabernaemontani": {
+    "model_category": "tussock_grass",
+    "height": 1.7,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Montia fontana subsp. chondrosperma": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Myriophyllum crispatum": {
+    "model_category": "forb_upright",
+    "height": 0.43,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Ornduffia reniformis": {
+    "model_category": "forb_upright",
+    "height": 0.7999999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Persicaria prostrata": {
+    "model_category": "forb_upright",
+    "height": 0.21000000000000002,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Arthropodium minus": {
+    "model_category": "forb_upright",
+    "height": 11.26,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Asperula scoparia subsp. scoparia": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Austrostipa setacea": {
+    "model_category": "tussock_grass",
+    "height": 0.6437499999999999,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Carex inversa": {
+    "model_category": "forb_upright",
+    "height": 0.5422222222222222,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Euchiton japonicus": {
+    "model_category": "forb_upright",
+    "height": 0.24139285714285716,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus gregiflorus": {
+    "model_category": "tussock_grass",
+    "height": 1.86,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lachnagrostis filiformis": {
+    "model_category": "forb_upright",
+    "height": 0.5987466666666668,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lomandra nana": {
+    "model_category": "forb_upright",
+    "height": 0.17,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Luzula meridionalis var. densiflora": {
+    "model_category": "tussock_grass",
+    "height": 0.3088888888888889,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Olearia glutinosa": {
+    "model_category": "medium_shrub",
+    "height": 2.25,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Isolepis cernua var. cernua": {
+    "model_category": "tussock_grass",
+    "height": 0.21471999999999997,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Lemna disperma": {
+    "model_category": "forb_upright",
+    "height": 0.030000000000000002,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidium hyssopifolium": {
+    "model_category": "forb_upright",
+    "height": 0.45999999999999996,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Melicytus angustifolius subsp. divaricatus": {
+    "model_category": "medium_shrub",
+    "height": 1.22,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Microtis arenaria": {
+    "model_category": "forb_upright",
+    "height": 0.4,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Myosotis australis": {
+    "model_category": "forb_upright",
+    "height": 0.29285714285714287,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Olearia ramulosa var. ramulosa": {
+    "model_category": "medium_shrub",
+    "height": 1.6999999999999997,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Ozothamnus ferrugineus": {
+    "model_category": "subcanopy_tree",
+    "height": 3.3333333333333335,
+    "growth_form": "shrub tree",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Pelargonium rodneyanum": {
+    "model_category": "forb_upright",
+    "height": 0.32295999999999997,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Persicaria hydropiper": {
+    "model_category": "forb_upright",
+    "height": 1.1555555555555557,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Rytidosperma penicillatum": {
+    "model_category": "forb_upright",
+    "height": 0.47000000000000003,
+    "growth_form": "tussock",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Schoenus apogon": {
+    "model_category": "forb_upright",
+    "height": 0.18521666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio cunninghamii var. cunninghamii": {
+    "model_category": "medium_shrub",
+    "height": 0.9,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio pinnatifolius var. lanceolatus": {
+    "model_category": "forb_upright",
+    "height": 1.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes",
+      "coastal_marshlands_and_brackish_flats"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Stackhousia spathulata": {
+    "model_category": "forb_upright",
+    "height": 0.39999999999999997,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Stuartina muelleri": {
+    "model_category": "forb_upright",
+    "height": 0.09833333333333333,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thysanotus patersonii": {
+    "model_category": "forb_upright",
+    "height": 0.4857142857142857,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Viola hederacea": {
+    "model_category": "forb_upright",
+    "height": 0.1294111111111111,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Acacia paradoxa": {
+    "model_category": "medium_shrub",
+    "height": 2.9285714285714284,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Carex gaudichaudiana": {
+    "model_category": "tussock_grass",
+    "height": 0.7618,
+    "growth_form": "graminoid",
+    "vegetation_types": [
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cassinia longifolia": {
+    "model_category": "medium_shrub",
+    "height": 2.811666666666667,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Centrolepis aristata": {
+    "model_category": "tussock_grass",
+    "height": 0.07408861868181818,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Clematis microphylla": {
+    "model_category": "climber_scrambler",
+    "height": 4.2,
+    "growth_form": "climber_woody",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Convolvulus angustissimus subsp. angustissimus": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Coronidium scorpioides": {
+    "model_category": "forb_upright",
+    "height": 0.3864545454545454,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Eucalyptus ovata var. ovata": {
+    "model_category": "canopy_tree",
+    "height": 24.5,
+    "growth_form": "tree",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Geranium gardneri": {
+    "model_category": "forb_upright",
+    "height": null,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Juncus holoshoenus": {
+    "model_category": "tussock_grass",
+    "height": 0.8924964028776976,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Juncus subsecundus": {
+    "model_category": "tussock_grass",
+    "height": 0.7264285714285714,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leptorhynchos tenuifolius": {
+    "model_category": "forb_upright",
+    "height": 0.30000000000000004,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Leucopogon parviflorus": {
+    "model_category": "medium_shrub",
+    "height": 2.6076923076923078,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Lotus australis var. australis": {
+    "model_category": "forb_upright",
+    "height": 0.6875,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Microlaena stipoides var. stipoides": {
+    "model_category": "tussock_grass",
+    "height": 0.6428571428571429,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "swamp_scrub",
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Rumex brownii": {
+    "model_category": "forb_upright",
+    "height": 0.7623529411764708,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Schizaea bifida": {
+    "model_category": "fern",
+    "height": null,
+    "growth_form": "fern",
+    "vegetation_types": [
+      "wet_heathland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio macrocarpus": {
+    "model_category": "forb_upright",
+    "height": 0.5199999999999999,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Senecio minimus": {
+    "model_category": "forb_upright",
+    "height": 0.9835714285714284,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Spinifex sericeus": {
+    "model_category": "tussock_grass",
+    "height": 0.6333333333333333,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Stuckenia pectinatus": {
+    "model_category": "forb_upright",
+    "height": 2.0,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "coastal_marshlands_and_brackish_flats",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Tetragonia tetragonioides": {
+    "model_category": "forb_upright",
+    "height": 0.4393478260869566,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Thelymitra arenaria": {
+    "model_category": "forb_upright",
+    "height": 0.2,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Thelymitra rubra": {
+    "model_category": "forb_upright",
+    "height": 0.3,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Wahlenbergia communis": {
+    "model_category": "forb_upright",
+    "height": 0.39813337649019614,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Bursaria spinosa subsp. spinosa": {
+    "model_category": "tall_shrub",
+    "height": 6.875555555555555,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments",
+      "river_banks_and_creeklines"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Carex appressa": {
+    "model_category": "forb_upright",
+    "height": 1.1785714285714286,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub",
+      "river_banks_and_creeklines",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Carex pumila": {
+    "model_category": "tussock_grass",
+    "height": 0.375,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "beach_and_dunes"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Centella cordifolia": {
+    "model_category": "forb_upright",
+    "height": 0.16666666666666666,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "swamp_scrub",
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Chrysocephalum apiculatum subsp. apiculatum": {
+    "model_category": "forb_upright",
+    "height": 0.4,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Cotula australis": {
+    "model_category": "forb_upright",
+    "height": 0.12181818181818181,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand",
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Dichelachne sieberiana": {
+    "model_category": "tussock_grass",
+    "height": 0.7000000000000001,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Diuris behrii": {
+    "model_category": "forb_upright",
+    "height": 0.5,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Lepidosperma concavum": {
+    "model_category": "tussock_grass",
+    "height": 0.6833333333333332,
+    "growth_form": "graminoid herb",
+    "vegetation_types": [
+      "woodlands_and_heathlands_on_sand"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Ptilotus macrocephalus": {
+    "model_category": "forb_upright",
+    "height": 0.6388888888888888,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Ptilotus spathulatus forma spathulatus": {
+    "model_category": "forb_upright",
+    "height": 0.108843191625,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains"
+    ],
+    "prominence": 3.1,
+    "confidence": "medium"
+  },
+  "Ranunculus inundatus": {
+    "model_category": "forb_upright",
+    "height": 0.21666666666666667,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "freshwater_wetland"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  },
+  "Tecticornia arbuscula": {
+    "model_category": "medium_shrub",
+    "height": 1.725,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Tecticornia pergranulata subsp. pergranulata": {
+    "model_category": "medium_shrub",
+    "height": 0.75,
+    "growth_form": "shrub",
+    "vegetation_types": [
+      "saltmarsh"
+    ],
+    "prominence": 3.2,
+    "confidence": "high"
+  },
+  "Wahlenbergia luteola": {
+    "model_category": "forb_upright",
+    "height": 0.44000000000000006,
+    "growth_form": "herb",
+    "vegetation_types": [
+      "grasslands_and_woodlands_on_fertile_plains",
+      "cliffs_and_escarpments"
+    ],
+    "prominence": 3.1,
+    "confidence": "high"
+  }
+}

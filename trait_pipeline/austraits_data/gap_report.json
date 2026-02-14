@@ -1,0 +1,65 @@
+[
+  {
+    "species": "Velleia paradoxa",
+    "common_name": "Spur Velleia",
+    "prominence": 3.2,
+    "is_prominent": true,
+    "match_type": "none",
+    "current_traits": {},
+    "suggested_category": null,
+    "vegetation_types": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "action_required": "manual_assignment"
+  },
+  {
+    "species": "Anthosacne scabra",
+    "common_name": "Common Wheat-grass",
+    "prominence": 3.1,
+    "is_prominent": false,
+    "match_type": "none",
+    "current_traits": {},
+    "suggested_category": null,
+    "vegetation_types": [
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains"
+    ],
+    "action_required": "manual_assignment"
+  },
+  {
+    "species": "Laphangium luteo-album",
+    "common_name": "Jersey Cudweed",
+    "prominence": 3.1,
+    "is_prominent": false,
+    "match_type": "none",
+    "current_traits": {},
+    "suggested_category": null,
+    "vegetation_types": [
+      "Beach and Dunes",
+      "Coastal Marshlands and Brackish Flats",
+      "Swamp Scrub",
+      "Woodlands and Heathlands on Sand",
+      "Woodlands and Forests on Sedimentary Hills",
+      "Grasslands and Woodlands on Fertile Plains",
+      "Cliffs and Escarpments",
+      "River Banks and Creeklines"
+    ],
+    "action_required": "manual_assignment"
+  },
+  {
+    "species": "Selliera radicans",
+    "common_name": "Shiny Swamp-mat, Swampweed",
+    "prominence": 3.1,
+    "is_prominent": false,
+    "match_type": "none",
+    "current_traits": {},
+    "suggested_category": null,
+    "vegetation_types": [
+      "Saltmarsh",
+      "Coastal Marshlands and Brackish Flats",
+      "Swamp Scrub"
+    ],
+    "action_required": "manual_assignment"
+  }
+]
