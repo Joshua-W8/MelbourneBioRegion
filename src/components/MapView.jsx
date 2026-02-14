@@ -1,332 +1,456 @@
-import { MapContainer, TileLayer, GeoJSON, useMapEvents, useMap } from 'react-leaflet';
-import { useState, useEffect, useRef, useCallback } from 'react';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import { useEffect, useRef, useCallback } from 'react';
+import maplibregl from 'maplibre-gl';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import useMapStore from '../store/useMapStore';
+import './MapView.css';
 
 // Melbourne coordinates
-const MELBOURNE_CENTER = [-37.8136, 144.9631];
+const MELBOURNE_CENTER = [144.9631, -37.8136]; // [lng, lat] for MapLibre
 const DEFAULT_ZOOM = 13;
+const MIN_ZOOM = 12;
+const MAX_ZOOM = 18;
 
 // Bounds to restrict panning (covers vegetation area with padding)
 const MAX_BOUNDS = [
-  [-37.95, 144.75],  // Southwest
-  [-37.65, 145.15],  // Northeast
+  [144.75, -37.95],  // Southwest [lng, lat]
+  [145.15, -37.65],  // Northeast [lng, lat]
 ];
 
 // Tile layer URLs for different themes
 const TILE_URLS = {
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png',
-  light: 'https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',
+  light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
 };
 
-// Urban context uses the same base but with labels overlaid
-const URBAN_LABEL_URLS = {
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png',
-  light: 'https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',
+// Vegetation type color palette
+const VEGETATION_COLORS = {
+  'Dry Forests': '#2d5a27',
+  'Grasslands and Woodlands on fertile plains': '#7cb342',
+  'Heathlands': '#8d6e63',
+  'Herb-rich Woodlands': '#558b2f',
+  'Rainforests': '#1b5e20',
+  'Riparian Scrubs or Swampy Scrubs and Woodlands': '#26a69a',
+  'Riverine Grassy Woodlands or Forests': '#66bb6a',
+  'Saline Wetlands': '#78909c',
+  'Salt-tolerant and/or Succulent Shrublands': '#a1887f',
+  'Wetlands': '#4dd0e1',
 };
 
-// Suburb boundary styles
-const SUBURB_STYLES = {
-  dark: { color: 'rgba(255,255,255,0.35)', weight: 1, fill: false },
-  light: { color: 'rgba(0,0,0,0.2)', weight: 1, fill: false },
-};
+const DEFAULT_COLOR = '#86efac';
 
-const SUBURB_LABEL_STYLES = {
-  dark: 'color:rgba(255,255,255,0.6);text-shadow:0 1px 3px rgba(0,0,0,0.8)',
-  light: 'color:rgba(0,0,0,0.45);text-shadow:0 1px 3px rgba(255,255,255,0.8)',
-};
-
-// Flora.ai inspired colors
-const THEME_COLORS = {
-  dark: {
-    fill: '#86efac',
-    fillHover: '#a7f3c9',
-    stroke: '#2d8a4e',
-    fillOpacity: 0.9,
-    fillOpacityHover: 1,
-  },
-  light: {
-    fill: '#86efac',
-    fillHover: '#4ade80',
-    stroke: '#2d8a4e',
-    fillOpacity: 0.85,
-    fillOpacityHover: 0.95,
-  },
-};
-
-// Assign a stable unique _fid to each feature
-function addFeatureIds(geojson) {
-  geojson.features.forEach((feature, i) => {
-    feature.properties._fid = i;
-  });
-  return geojson;
+// Build MapLibre color expression from vegetation types
+function buildColorExpression() {
+  const colorStops = [];
+  for (const [vegType, color] of Object.entries(VEGETATION_COLORS)) {
+    colorStops.push(vegType, color);
+  }
+  return ['match', ['get', 'vegetation_type'], ...colorStops, DEFAULT_COLOR];
 }
 
-// Compute stroke weight from zoom: thinner when zoomed out, thicker when zoomed in
-// zoom 12 → 0.5, zoom 13 → 0.75, zoom 15 → 1.25, zoom 17 → 1.75
-function weightForZoom(zoom) {
-  return Math.max(0.25, (zoom - 11) * 0.25);
+// Build raster source config for CartoDB tiles
+function buildRasterSource(theme) {
+  return {
+    type: 'raster',
+    tiles: [
+      TILE_URLS[theme].replace('{s}', 'a'),
+      TILE_URLS[theme].replace('{s}', 'b'),
+      TILE_URLS[theme].replace('{s}', 'c'),
+    ],
+    tileSize: 256,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  };
 }
 
-// Component to load and display GeoJSON with hover effects
-function EVCGeoJSON({ theme }) {
-  const [displayData, setDisplayData] = useState(null);
-  const geoJsonRef = useRef(null);
-  const selectedRef = useRef(null);
-  const colorsRef = useRef(THEME_COLORS[theme]);
-  const zoomRef = useRef(DEFAULT_ZOOM);
+function MapView() {
+  const mapContainerRef = useRef(null);
+  const mapRef = useRef(null);
+  const popupRef = useRef(null);
+  const selectedFeatureIdRef = useRef(null);
+
+  const theme = useMapStore((state) => state.theme);
+  const showNeighbourhoods = useMapStore((state) => state.showNeighbourhoods);
+  const showUrbanContext = useMapStore((state) => state.showUrbanContext);
   const setSelectedEVC = useMapStore((state) => state.setSelectedEVC);
   const selectedEVC = useMapStore((state) => state.selectedEVC);
 
-  const colors = THEME_COLORS[theme];
-  colorsRef.current = colors;
-
-  // Keep selectedRef in sync so event handlers always read current value
-  selectedRef.current = selectedEVC?._fid ?? null;
-
-  // Update fill styles imperatively when selection changes (no re-mount)
+  // Keep selectedEVC ref in sync for event handlers
   useEffect(() => {
-    if (!geoJsonRef.current) return;
-    const selFid = selectedEVC?._fid ?? null;
-    geoJsonRef.current.eachLayer((layer) => {
-      const fid = layer.feature?.properties?._fid;
-      const isSel = fid === selFid;
-      layer.setStyle({
-        fillColor: isSel ? colors.fillHover : colors.fill,
-        fillOpacity: isSel ? colors.fillOpacityHover : colors.fillOpacity,
-      });
+    selectedFeatureIdRef.current = selectedEVC?._fid ?? null;
+  }, [selectedEVC]);
+
+  // Reset view handler
+  const handleResetView = useCallback(() => {
+    if (!mapRef.current) return;
+    mapRef.current.flyTo({
+      center: MELBOURNE_CENTER,
+      zoom: DEFAULT_ZOOM,
+      duration: 1000,
     });
-  }, [selectedEVC?._fid, colors]);
+    setSelectedEVC(null);
+  }, [setSelectedEVC]);
 
-  // Track zoom changes and update stroke weight on all layers
-  useMapEvents({
-    zoomend: (e) => {
-      const z = e.target.getZoom();
-      zoomRef.current = z;
-      const w = weightForZoom(z);
-      if (geoJsonRef.current) {
-        geoJsonRef.current.eachLayer((layer) => {
-          layer.setStyle({ weight: w });
-        });
-      }
-    },
-  });
-
+  // Initialize map
   useEffect(() => {
-    fetch('/data/vegetation_polygons.geojson')
-      .then(response => response.json())
-      .then(data => {
-        console.log('GeoJSON loaded:', data.features?.length, 'features');
-        setDisplayData(addFeatureIds(data));
-      })
-      .catch(error => console.error('Error loading GeoJSON:', error));
-  }, []);
+    if (mapRef.current) return;
 
-  // Initial style (applied once when GeoJSON mounts)
-  const getFeatureStyle = useCallback(() => ({
-    fillColor: colors.fill,
-    fillOpacity: colors.fillOpacity,
-    stroke: true,
-    color: colors.stroke,
-    weight: weightForZoom(zoomRef.current),
-    opacity: 1,
-  }), [colors]);
+    const map = new maplibregl.Map({
+      container: mapContainerRef.current,
+      style: {
+        version: 8,
+        sources: {
+          'carto-tiles': buildRasterSource(theme),
+        },
+        layers: [
+          {
+            id: 'carto-basemap',
+            type: 'raster',
+            source: 'carto-tiles',
+          },
+        ],
+      },
+      center: MELBOURNE_CENTER,
+      zoom: DEFAULT_ZOOM,
+      minZoom: MIN_ZOOM,
+      maxZoom: MAX_ZOOM,
+      maxBounds: MAX_BOUNDS,
+    });
 
-  // Handle interactions — uses refs so handlers never go stale
-  const onEachFeature = useCallback((feature, layer) => {
-    layer.on({
-      click: (e) => {
-        const p = feature.properties;
+    // Add zoom controls
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
+
+    // Create popup for hover
+    popupRef.current = new maplibregl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: 15,
+    });
+
+    map.on('load', () => {
+      // Add vegetation polygons source
+      map.addSource('vegetation', {
+        type: 'geojson',
+        data: '/data/vegetation_polygons.geojson',
+        generateId: true,
+      });
+
+      // Add fill layer
+      map.addLayer({
+        id: 'vegetation-fill',
+        type: 'fill',
+        source: 'vegetation',
+        paint: {
+          'fill-color': buildColorExpression(),
+          'fill-opacity': [
+            'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            0.95,
+            ['boolean', ['feature-state', 'hover'], false],
+            0.85,
+            0.75,
+          ],
+        },
+      });
+
+      // Add stroke layer
+      map.addLayer({
+        id: 'vegetation-stroke',
+        type: 'line',
+        source: 'vegetation',
+        paint: {
+          'line-color': [
+            'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            '#ffffff',
+            '#2d8a4e',
+          ],
+          'line-width': [
+            'case',
+            ['boolean', ['feature-state', 'selected'], false],
+            2.5,
+            0.75,
+          ],
+          'line-opacity': 1,
+        },
+      });
+
+      // Add suburb boundaries source (conditional)
+      map.addSource('suburbs', {
+        type: 'geojson',
+        data: '/data/melbourne_suburbs.geojson',
+      });
+
+      map.addLayer({
+        id: 'suburbs-boundary',
+        type: 'line',
+        source: 'suburbs',
+        paint: {
+          'line-color': theme === 'dark' ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.2)',
+          'line-width': 1,
+        },
+        layout: {
+          visibility: showNeighbourhoods ? 'visible' : 'none',
+        },
+      });
+
+      // Add suburb labels
+      map.addLayer({
+        id: 'suburbs-labels',
+        type: 'symbol',
+        source: 'suburbs',
+        layout: {
+          'text-field': ['get', 'name'],
+          'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
+          'text-size': 11,
+          'text-anchor': 'center',
+          visibility: showNeighbourhoods ? 'visible' : 'none',
+        },
+        paint: {
+          'text-color': theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.45)',
+          'text-halo-color': theme === 'dark' ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)',
+          'text-halo-width': 1.5,
+        },
+      });
+
+      // Hover handlers
+      let hoveredFeatureId = null;
+
+      map.on('mousemove', 'vegetation-fill', (e) => {
+        if (e.features.length > 0) {
+          map.getCanvas().style.cursor = 'pointer';
+
+          // Clear previous hover
+          if (hoveredFeatureId !== null) {
+            map.setFeatureState(
+              { source: 'vegetation', id: hoveredFeatureId },
+              { hover: false }
+            );
+          }
+
+          hoveredFeatureId = e.features[0].id;
+          map.setFeatureState(
+            { source: 'vegetation', id: hoveredFeatureId },
+            { hover: true }
+          );
+
+          // Show tooltip
+          const props = e.features[0].properties;
+          const evcName = props.evc_name || 'Unknown';
+          popupRef.current
+            .setLngLat(e.lngLat)
+            .setHTML(evcName)
+            .addTo(map);
+        }
+      });
+
+      map.on('mouseleave', 'vegetation-fill', () => {
+        map.getCanvas().style.cursor = '';
+        if (hoveredFeatureId !== null) {
+          map.setFeatureState(
+            { source: 'vegetation', id: hoveredFeatureId },
+            { hover: false }
+          );
+        }
+        hoveredFeatureId = null;
+        popupRef.current.remove();
+      });
+
+      // Click handler
+      map.on('click', 'vegetation-fill', (e) => {
+        if (e.features.length === 0) return;
+
+        const feature = e.features[0];
+        const props = feature.properties;
+        const featureId = feature.id;
+
+        // Clear previous selection
+        if (selectedFeatureIdRef.current !== null) {
+          map.setFeatureState(
+            { source: 'vegetation', id: selectedFeatureIdRef.current },
+            { selected: false }
+          );
+        }
+
+        // Set new selection
+        map.setFeatureState(
+          { source: 'vegetation', id: featureId },
+          { selected: true }
+        );
+        selectedFeatureIdRef.current = featureId;
+
         // Parse soil_types_all if it's a JSON string
         let soilTypesAll = null;
-        if (p.soil_types_all) {
+        if (props.soil_types_all) {
           try {
-            soilTypesAll = JSON.parse(p.soil_types_all);
+            soilTypesAll = JSON.parse(props.soil_types_all);
           } catch (err) {
             soilTypesAll = null;
           }
         }
+
+        // Update store with selected EVC data
         setSelectedEVC({
-          _fid: p._fid,
-          patchId: p.patch_id,
-          evc: p.evc_number,
-          evcName: p.evc_name,
-          vegetationType: p.vegetation_type,
-          bioregion: p.bioregion,
-          bcs: p.bcs,
-          bcsDesc: p.bcs_desc,
-          hectares: p.hectares,
-          soilType: p.soil_type,
-          soilSubBase: p.soil_sub_base,
+          _fid: featureId,
+          patchId: props.patch_id,
+          evc: props.evc_number,
+          evcName: props.evc_name,
+          vegetationType: props.vegetation_type,
+          bioregion: props.bioregion,
+          bcs: props.bcs,
+          bcsDesc: props.bcs_desc,
+          hectares: props.hectares,
+          soilType: props.soil_type,
+          soilSubBase: props.soil_sub_base,
           soilTypesAll: soilTypesAll,
         });
-        L.DomEvent.stopPropagation(e);
-      },
-      mouseover: (e) => {
-        const c = colorsRef.current;
-        e.target.setStyle({
-          fillColor: c.fillHover,
-          fillOpacity: c.fillOpacityHover,
-        });
-      },
-      mouseout: (e) => {
-        const c = colorsRef.current;
-        const isSelected = selectedRef.current === feature.properties?._fid;
-        e.target.setStyle({
-          fillColor: isSelected ? c.fillHover : c.fill,
-          fillOpacity: isSelected ? c.fillOpacityHover : c.fillOpacity,
-        });
-      },
-    });
-  }, [setSelectedEVC]);
 
-  if (!displayData) {
-    return null;
-  }
-
-  return (
-    <GeoJSON
-      ref={geoJsonRef}
-      key={`geojson-${theme}`}
-      data={displayData}
-      style={getFeatureStyle}
-      onEachFeature={onEachFeature}
-    />
-  );
-}
-
-// Theme-aware tile layer component
-function ThemeTileLayer({ theme }) {
-  const url = TILE_URLS[theme];
-
-  return (
-    <TileLayer
-      key={`tiles-${theme}`}
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-      url={url}
-      maxZoom={19}
-    />
-  );
-}
-
-// Compute minimum zoom at which a suburb label should appear based on its area
-function minZoomForArea(boundsArea) {
-  if (boundsArea > 0.001) return 12;  // very large suburbs — always visible
-  if (boundsArea > 0.0004) return 13;
-  if (boundsArea > 0.0001) return 14;
-  return 15;                           // small suburbs — only when zoomed in
-}
-
-// Suburb boundaries with zoom-aware labels overlay
-function SuburbBoundaries({ theme }) {
-  const [suburbData, setSuburbData] = useState(null);
-  const labelsRef = useRef([]);     // { marker, minZoom }[]
-  const map = useMap();
-
-  useEffect(() => {
-    fetch('/data/melbourne_suburbs.geojson')
-      .then(r => r.json())
-      .then(data => setSuburbData(data))
-      .catch(err => console.error('Error loading suburbs:', err));
-  }, []);
-
-  // Create labels once and manage visibility by zoom
-  useEffect(() => {
-    if (!suburbData || !map) return;
-
-    const entries = [];
-    suburbData.features.forEach(feature => {
-      const name = feature.properties.name;
-      if (!name) return;
-
-      const bounds = L.geoJSON(feature).getBounds();
-      const center = bounds.getCenter();
-      const boundsArea =
-        (bounds.getNorth() - bounds.getSouth()) *
-        (bounds.getEast() - bounds.getWest());
-      const minZoom = minZoomForArea(boundsArea);
-
-      const marker = L.marker(center, {
-        icon: L.divIcon({
-          className: 'suburb-label',
-          html: `<span style="font-size:11px;font-weight:500;font-family:Inter,sans-serif;white-space:nowrap;${SUBURB_LABEL_STYLES[theme]}">${name}</span>`,
-          iconSize: null,
-        }),
-        interactive: false,
-      });
-
-      entries.push({ marker, minZoom });
-    });
-
-    labelsRef.current = entries;
-
-    // Initial visibility pass
-    const zoom = map.getZoom();
-    entries.forEach(({ marker, minZoom }) => {
-      if (zoom >= minZoom) marker.addTo(map);
-    });
-
-    // Update visibility on zoom
-    const onZoom = () => {
-      const z = map.getZoom();
-      entries.forEach(({ marker, minZoom }) => {
-        if (z >= minZoom && !map.hasLayer(marker)) {
-          marker.addTo(map);
-        } else if (z < minZoom && map.hasLayer(marker)) {
-          map.removeLayer(marker);
+        // Fly to feature bounds with padding for info panel
+        const bounds = getBoundsFromFeature(feature);
+        if (bounds) {
+          map.fitBounds(bounds, {
+            padding: { top: 80, bottom: 80, left: 80, right: 400 },
+            maxZoom: 16,
+            duration: 800,
+          });
         }
       });
-    };
-    map.on('zoomend', onZoom);
+
+      // Clear selection when clicking outside polygons
+      map.on('click', (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ['vegetation-fill'],
+        });
+        if (features.length === 0 && selectedFeatureIdRef.current !== null) {
+          map.setFeatureState(
+            { source: 'vegetation', id: selectedFeatureIdRef.current },
+            { selected: false }
+          );
+          selectedFeatureIdRef.current = null;
+          setSelectedEVC(null);
+        }
+      });
+    });
+
+    mapRef.current = map;
 
     return () => {
-      map.off('zoomend', onZoom);
-      entries.forEach(({ marker }) => {
-        if (map.hasLayer(marker)) map.removeLayer(marker);
-      });
-      labelsRef.current = [];
+      map.remove();
+      mapRef.current = null;
     };
-  }, [suburbData, map, theme]);
+  }, []);
 
-  if (!suburbData) return null;
+  // Update theme
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.isStyleLoaded()) return;
+
+    // Update basemap tiles
+    if (map.getSource('carto-tiles')) {
+      map.removeLayer('carto-basemap');
+      map.removeSource('carto-tiles');
+      map.addSource('carto-tiles', buildRasterSource(theme));
+
+      // Re-add basemap as first layer
+      const layers = map.getStyle().layers;
+      const firstLayerId = layers.find(l => l.id !== 'carto-basemap')?.id;
+      map.addLayer({
+        id: 'carto-basemap',
+        type: 'raster',
+        source: 'carto-tiles',
+      }, firstLayerId);
+    }
+
+    // Update suburb styles
+    if (map.getLayer('suburbs-boundary')) {
+      map.setPaintProperty(
+        'suburbs-boundary',
+        'line-color',
+        theme === 'dark' ? 'rgba(255,255,255,0.35)' : 'rgba(0,0,0,0.2)'
+      );
+    }
+    if (map.getLayer('suburbs-labels')) {
+      map.setPaintProperty(
+        'suburbs-labels',
+        'text-color',
+        theme === 'dark' ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.45)'
+      );
+      map.setPaintProperty(
+        'suburbs-labels',
+        'text-halo-color',
+        theme === 'dark' ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)'
+      );
+    }
+  }, [theme]);
+
+  // Toggle suburb boundaries visibility
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.isStyleLoaded()) return;
+
+    const visibility = showNeighbourhoods ? 'visible' : 'none';
+    if (map.getLayer('suburbs-boundary')) {
+      map.setLayoutProperty('suburbs-boundary', 'visibility', visibility);
+    }
+    if (map.getLayer('suburbs-labels')) {
+      map.setLayoutProperty('suburbs-labels', 'visibility', visibility);
+    }
+  }, [showNeighbourhoods]);
+
+  // Toggle urban context (currently basemap includes labels, so this is a no-op)
+  // If needed, we could add a separate labels-only layer here
+  useEffect(() => {
+    // Urban context is included in the basemap (light_all/dark_all includes labels)
+    // If you want labels-only overlay, switch basemap to light_nolabels/dark_nolabels
+    // and add a separate labels layer here
+  }, [showUrbanContext]);
 
   return (
-    <GeoJSON
-      key={`suburbs-${theme}`}
-      data={suburbData}
-      style={() => SUBURB_STYLES[theme]}
-      interactive={false}
-    />
+    <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
+      <div ref={mapContainerRef} className="map-container" />
+      <button
+        className="reset-view-btn"
+        onClick={handleResetView}
+        title="Reset view"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+        </svg>
+      </button>
+    </div>
   );
 }
 
-function MapView() {
-  const theme = useMapStore((state) => state.theme);
-  const showNeighbourhoods = useMapStore((state) => state.showNeighbourhoods);
-  const showUrbanContext = useMapStore((state) => state.showUrbanContext);
+// Calculate bounds from a GeoJSON feature
+function getBoundsFromFeature(feature) {
+  const coords = [];
 
-  return (
-    <MapContainer
-      center={MELBOURNE_CENTER}
-      zoom={DEFAULT_ZOOM}
-      minZoom={12}
-      maxBounds={MAX_BOUNDS}
-      maxBoundsViscosity={1.0}
-      className="map-container"
-    >
-      <ThemeTileLayer theme={theme} />
-      <EVCGeoJSON theme={theme} />
-      {showNeighbourhoods && <SuburbBoundaries theme={theme} />}
-      {showUrbanContext && (
-        <TileLayer
-          key={`urban-labels-${theme}`}
-          url={URBAN_LABEL_URLS[theme]}
-          maxZoom={19}
-        />
-      )}
-    </MapContainer>
-  );
+  function extractCoords(geometry) {
+    if (!geometry) return;
+
+    if (geometry.type === 'Polygon') {
+      geometry.coordinates[0].forEach(coord => coords.push(coord));
+    } else if (geometry.type === 'MultiPolygon') {
+      geometry.coordinates.forEach(polygon => {
+        polygon[0].forEach(coord => coords.push(coord));
+      });
+    }
+  }
+
+  extractCoords(feature.geometry);
+
+  if (coords.length === 0) return null;
+
+  let minLng = Infinity, minLat = Infinity;
+  let maxLng = -Infinity, maxLat = -Infinity;
+
+  coords.forEach(([lng, lat]) => {
+    if (lng < minLng) minLng = lng;
+    if (lng > maxLng) maxLng = lng;
+    if (lat < minLat) minLat = lat;
+    if (lat > maxLat) maxLat = lat;
+  });
+
+  return [[minLng, minLat], [maxLng, maxLat]];
 }
 
 export default MapView;

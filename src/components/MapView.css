@@ -1,0 +1,71 @@
+.map-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.maplibregl-canvas {
+  outline: none;
+}
+
+/* Reset button */
+.reset-view-btn {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  background: var(--panel-bg, rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--panel-border, rgba(0, 0, 0, 0.1));
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.reset-view-btn:hover {
+  background: var(--card-hover, rgba(240, 240, 240, 0.95));
+  transform: scale(1.05);
+}
+
+.reset-view-btn svg {
+  width: 18px;
+  height: 18px;
+  color: var(--text-primary, #333);
+}
+
+/* Hover tooltip */
+.maplibregl-popup {
+  z-index: 999;
+}
+
+.maplibregl-popup-content {
+  padding: 8px 12px;
+  background: var(--panel-bg, rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary, #333);
+  border: 1px solid var(--panel-border, rgba(0, 0, 0, 0.1));
+}
+
+.maplibregl-popup-tip {
+  border-top-color: var(--panel-bg, rgba(255, 255, 255, 0.95));
+}
+
+.maplibregl-popup-close-button {
+  display: none;
+}
+
+/* Hide default attribution for cleaner look */
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+  opacity: 0.7;
+}
