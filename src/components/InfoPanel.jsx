@@ -165,6 +165,33 @@ function VegetationTypeTag({ vegetationType }) {
   );
 }
 
+function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
+  if (!soilType) return null;
+
+  return (
+    <div className="site-conditions">
+      <span className="field-label">Site Conditions</span>
+      <div className="condition-content">
+        <div className="condition-item">
+          <span className="condition-key">Soil</span>
+          <span className="condition-val">{soilType}</span>
+        </div>
+        {soilSubBase && (
+          <div className="condition-item">
+            <span className="condition-key">Substrate</span>
+            <span className="condition-val">{soilSubBase}</span>
+          </div>
+        )}
+        {soilTypesAll && soilTypesAll.length > 1 && (
+          <div className="condition-overlap">
+            Also overlaps: {soilTypesAll.slice(1).join(', ')}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function InfoPanel() {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
 
@@ -179,6 +206,12 @@ function InfoPanel() {
           </div>
 
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
+
+          <SiteConditions
+            soilType={selectedEVC.soilType}
+            soilSubBase={selectedEVC.soilSubBase}
+            soilTypesAll={selectedEVC.soilTypesAll}
+          />
 
           <PlantAccordions />
           <DioramaButton />

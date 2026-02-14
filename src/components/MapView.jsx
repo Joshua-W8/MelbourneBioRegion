@@ -138,6 +138,15 @@ function EVCGeoJSON({ theme }) {
     layer.on({
       click: (e) => {
         const p = feature.properties;
+        // Parse soil_types_all if it's a JSON string
+        let soilTypesAll = null;
+        if (p.soil_types_all) {
+          try {
+            soilTypesAll = JSON.parse(p.soil_types_all);
+          } catch (err) {
+            soilTypesAll = null;
+          }
+        }
         setSelectedEVC({
           _fid: p._fid,
           patchId: p.patch_id,
@@ -148,6 +157,9 @@ function EVCGeoJSON({ theme }) {
           bcs: p.bcs,
           bcsDesc: p.bcs_desc,
           hectares: p.hectares,
+          soilType: p.soil_type,
+          soilSubBase: p.soil_sub_base,
+          soilTypesAll: soilTypesAll,
         });
         L.DomEvent.stopPropagation(e);
       },
