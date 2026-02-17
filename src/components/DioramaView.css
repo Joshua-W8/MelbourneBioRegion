@@ -55,7 +55,7 @@
   height: 100%;
 }
 
-/* Legend - pill style */
+/* Legend - pill style with scroll for variable-length list */
 .diorama-legend {
   position: absolute;
   bottom: 24px;
@@ -68,37 +68,63 @@
   border: 1px solid var(--panel-border);
   z-index: 100;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 320px;
 }
 
-.legend-item {
+.legend-lf-list {
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.legend-lf-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.legend-lf-list::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 2px;
+}
+
+.legend-lf-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  gap: 8px;
+  font-size: 12px;
   color: var(--text-primary);
-  margin: 6px 0;
+  padding: 3px 0;
 }
 
-.legend-canopy,
-.legend-shrub,
-.legend-ground {
-  width: 10px;
-  height: 10px;
+.legend-dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  display: inline-block;
+  flex-shrink: 0;
   box-shadow: 0 0 0 2px var(--panel-bg);
 }
 
-.legend-canopy {
-  background: #1B5E20;
+.legend-lf-code {
+  font-weight: 600;
+  font-size: 11px;
+  min-width: 28px;
+  color: var(--text-secondary);
+  font-family: 'SF Mono', 'Fira Code', monospace;
 }
 
-.legend-shrub {
-  background: #388E3C;
+.legend-lf-name {
+  flex: 1;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.legend-ground {
-  background: #66BB6A;
+.legend-lf-count {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--text-secondary);
+  min-width: 20px;
+  text-align: right;
 }
 
 .legend-scene {

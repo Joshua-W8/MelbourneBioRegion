@@ -24,14 +24,35 @@ export default function DioramaInfoPanel({ selectedPlant, onClose }) {
     speciesName = 'Unknown species',
     commonName = '',
     layer = 'ground',
+    lifeFormCode,
+    height,
     prominence = 3.1,
   } = selectedPlant;
 
   // Layer labels
   const layerLabels = {
     canopy: 'Canopy Layer',
+    subcanopy: 'Subcanopy Layer',
     shrub: 'Shrub Layer',
     ground: 'Ground Cover',
+  };
+
+  // Life form code display names
+  const lfNames = {
+    IT:  'Immature Canopy Tree',
+    T:   'Understorey Tree',
+    MS:  'Medium Shrub',
+    SS:  'Small Shrub',
+    PS:  'Prostrate Shrub',
+    LH:  'Large Herb',
+    MH:  'Medium Herb',
+    SH:  'Small Herb',
+    LTG: 'Large Tussock',
+    LNG: 'Large Non-tufted Gram.',
+    MTG: 'Medium Tussock',
+    MNG: 'Medium Non-tufted Gram.',
+    GF:  'Ground Fern',
+    SC:  'Scrambler/Climber',
   };
 
   // Prominence colors
@@ -66,6 +87,21 @@ export default function DioramaInfoPanel({ selectedPlant, onClose }) {
       {commonName && (
         <div className="species-common-name">
           {commonName}
+        </div>
+      )}
+
+      {/* Life form code badge */}
+      {lifeFormCode && (
+        <div className="lf-code-badge">
+          <span className="lf-code-tag">{lifeFormCode}</span>
+          {lfNames[lifeFormCode] || lifeFormCode}
+        </div>
+      )}
+
+      {/* Height */}
+      {height != null && (
+        <div className="plant-height">
+          {height < 1 ? `${Math.round(height * 100)}cm` : `${height.toFixed(1)}m`}
         </div>
       )}
 

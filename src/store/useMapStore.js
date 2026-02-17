@@ -1,6 +1,9 @@
 import { create } from 'zustand';
 import { fetchPlantsForEVC } from '../services/plantService';
 import { logSpeciesForVegetationType } from '../services/speciesService';
+import { getBenchmark } from '../services/benchmarkService';
+import { matchSpeciesToBenchmark } from '../services/lifeFormMapping';
+import { initModelResolver } from '../services/modelResolver';
 
 /**
  * Convert vegetation type display name to snake_case key
@@ -20,6 +23,7 @@ const useMapStore = create((set, get) => ({
   isLoadingPlants: false,
   viewMode: 'map', // 'map' | 'diorama'
   speciesData: null, // Species with traits for selected vegetation type
+  benchmarkData: null, // EVC benchmark for selected polygon
   theme: 'light', // 'dark' | 'light'
   showNeighbourhoods: false,
   showUrbanContext: false,
@@ -43,22 +47,40 @@ const useMapStore = create((set, get) => ({
       selectedEVC: evc,
       plants: [],  // Clear plants when selection changes
       speciesData: null,
+      benchmarkData: null,
     });
 
     if (evc) {
       // Auto-fetch plants when an EVC is selected
       get().fetchPlants();
 
-      // Log species data with traits for the vegetation type
+      // Ensure model registry is loaded before logging species
+      await initModelResolver();
+
+      // Fetch benchmark and species data concurrently
+      const benchmarkPromise = (evc.evc && evc.bioregion)
+        ? getBenchmark(evc.evc, evc.bioregion)
+        : Promise.resolve(null);
+
       const vegType = evc.vegetationType || evc.groupName;
-      if (vegType) {
-        const vegKey = vegetationTypeToKey(vegType);
-        if (vegKey) {
-          const speciesResult = await logSpeciesForVegetationType(vegKey);
-          if (speciesResult) {
-            set({ speciesData: speciesResult });
-          }
-        }
+      const vegKey = vegType ? vegetationTypeToKey(vegType) : null;
+      const speciesPromise = vegKey
+        ? logSpeciesForVegetationType(vegKey)
+        : Promise.resolve(null);
+
+      const [benchmark, speciesResult] = await Promise.all([benchmarkPromise, speciesPromise]);
+
+      if (benchmark) {
+        set({ benchmarkData: benchmark });
+      }
+      if (speciesResult) {
+        set({ speciesData: speciesResult });
+      }
+
+      // Run comparison once both are available
+      if (benchmark && speciesResult) {
+        const allSpecies = [...speciesResult.prominent, ...speciesResult.present];
+        matchSpeciesToBenchmark(allSpecies, benchmark);
       }
     }
   },

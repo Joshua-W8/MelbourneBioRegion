@@ -2,6 +2,8 @@
  * Species Service - Loads species data with traits from AusTraits
  */
 
+import { resolveModel } from './modelResolver.js';
+
 // Cache for species data
 let speciesData = null;
 let speciesTraits = null;
@@ -103,15 +105,23 @@ export async function logSpeciesForVegetationType(vegetationTypeKey) {
 
       if (traitData) {
         const t = traitData.traits;
-        const model = traitData.model_category;
+        const lfCode = traitData.life_form_code || 'MH';
 
-        // Model and growth form
-        console.log(`    Model: ${model} | Growth form: ${t.plant_growth_form || 'unknown'}`);
+        // Life form and growth form
+        console.log(`    Life form: ${lfCode} | Growth form: ${t.plant_growth_form || 'unknown'}`);
 
         // Physical traits
         const height = formatHeight(t.plant_height);
         const leafLen = t.leaf_length ? `${t.leaf_length.toFixed(0)}mm` : 'unknown';
         console.log(`    Height: ${height} | Leaf length: ${leafLen}`);
+
+        // Model resolution
+        const model = resolveModel(s.species, lfCode);
+        if (model) {
+          console.log(`    Model: ${model.path} [${model.level} match]`);
+        } else {
+          console.log(`    Model: (no model resolved)`);
+        }
 
         // Life history
         const traits_summary = [
@@ -191,7 +201,7 @@ export async function getSpeciesForVegetationType(vegetationTypeKey) {
       species: s.species,
       commonName: s.common_name,
       prominenceCode: s.prominence_code,
-      model: traitData?.model_category || 'forb_upright',
+      life_form_code: traitData?.life_form_code || 'MH',
       traits: traitData?.traits || null,
       matchType: traitData?.match_type || null,
     };

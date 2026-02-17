@@ -20,7 +20,7 @@
       "leaf_length": 129.54545454545453,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -43,7 +43,7 @@
       "leaf_length": 12.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -70,7 +70,7 @@
       "leaf_length": 8.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -92,7 +92,7 @@
       "leaf_length": 130.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -112,7 +112,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -164,7 +164,7 @@
       "leaf_length": 5.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -188,7 +188,7 @@
       "leaf_length": 2750.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -227,7 +227,7 @@
       "leaf_length": 47.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -255,7 +255,7 @@
       "leaf_length": 125.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -283,7 +283,7 @@
       "leaf_area": 790.929,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -307,7 +307,7 @@
       "leaf_length": 134.85,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -346,7 +346,7 @@
       "leaf_length": 180.9090909090909,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -380,7 +380,7 @@
       "leaf_length": 27.166666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "climber_scrambler",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -431,7 +431,7 @@
     ],
     "match_type": "none",
     "traits": {},
-    "model_category": null,
+    "life_form_code": "MH",
     "needs_manual_review": true
   },
   {
@@ -455,7 +455,7 @@
       "leaf_length": 60.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -497,7 +497,7 @@
       "leaf_length": 262.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -521,7 +521,7 @@
       "leaf_length": 350.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -545,7 +545,7 @@
       "leaf_length": 65.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -579,7 +579,7 @@
       "leaf_length": 14.357142857142858,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -601,7 +601,7 @@
       "leaf_length": 32.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -624,7 +624,7 @@
       "leaf_length": 11.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -648,7 +648,7 @@
       "leaf_length": 13.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -672,7 +672,7 @@
       "leaf_length": 148.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -706,7 +706,7 @@
       "leaf_length": 139.0909090909091,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -730,7 +730,7 @@
       "leaf_length": 7.55,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -753,7 +753,7 @@
       "leaf_length": 21.166666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -777,7 +777,7 @@
       "leaf_length": 10.571428571428571,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -806,7 +806,7 @@
       "leaf_length": 14.542857142857143,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -840,7 +840,7 @@
       "leaf_length": 732.0526315789474,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -862,7 +862,7 @@
       "leaf_length": 173.33333333333334,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -885,7 +885,7 @@
       "leaf_length": 144.58333333333334,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -913,7 +913,7 @@
       "leaf_length": 41.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -937,7 +937,7 @@
       "leaf_length": 43.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -959,7 +959,7 @@
       "leaf_length": 77.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -988,7 +988,7 @@
       "leaf_length": 55.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -1011,7 +1011,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1049,7 +1049,7 @@
       "leaf_length": 216.66666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1073,7 +1073,7 @@
       "leaf_length": 48.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -1096,7 +1096,7 @@
       "leaf_length": 11.272727272727273,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -1120,7 +1120,7 @@
       "leaf_length": 5.431818181818182,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -1143,7 +1143,7 @@
       "leaf_area": 31415.9,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -1166,7 +1166,7 @@
       "leaf_length": 62.57403589769231,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1205,7 +1205,7 @@
       "leaf_length": 149.44444444444446,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -1239,7 +1239,7 @@
       "leaf_length": 60.27272727272727,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -1268,7 +1268,7 @@
       "leaf_length": 88.66666666666667,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -1307,7 +1307,7 @@
       "leaf_length": 450.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LNG",
     "needs_manual_review": false
   },
   {
@@ -1346,7 +1346,7 @@
       "leaf_length": 11.666666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -1370,7 +1370,7 @@
       "leaf_length": 93.46153846153847,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1392,7 +1392,7 @@
       "leaf_length": 240.83333333333334,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -1414,7 +1414,7 @@
       "leaf_length": 247.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -1436,7 +1436,7 @@
       "leaf_length": 22.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1463,7 +1463,7 @@
       "leaf_length": 200.6,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -1487,7 +1487,7 @@
       "leaf_length": 35.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -1508,7 +1508,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1532,7 +1532,7 @@
       "leaf_length": 32.6,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -1556,7 +1556,7 @@
       "leaf_length": 23.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1600,7 +1600,7 @@
       "leaf_length": 12.033333333333333,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -1629,7 +1629,7 @@
       "leaf_length": 39.75,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -1652,7 +1652,7 @@
       "leaf_length": 267.85714285714283,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -1676,7 +1676,7 @@
       "leaf_length": 13.6,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -1703,7 +1703,7 @@
       "leaf_length": 70.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -1732,7 +1732,7 @@
       "leaf_length": 350.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1761,7 +1761,7 @@
       "leaf_length": 63.125,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1784,7 +1784,7 @@
       "leaf_length": 2.75,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -1816,7 +1816,7 @@
       "leaf_length": 35.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1840,7 +1840,7 @@
       "leaf_length": 54.54545454545455,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -1874,7 +1874,7 @@
       "leaf_length": 50.266666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -1908,7 +1908,7 @@
       "leaf_length": 23.27777777777778,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "subcanopy_tree",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -1931,7 +1931,7 @@
       "leaf_length": 333.3333333333333,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -1960,7 +1960,7 @@
       "leaf_length": 88.33333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -1982,7 +1982,7 @@
       "leaf_length": 8.88888888888889,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2005,7 +2005,7 @@
       "leaf_length": 287.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2027,7 +2027,7 @@
       "leaf_length": 35.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2056,7 +2056,7 @@
       "leaf_length": 7.444444444444445,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -2078,7 +2078,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2099,7 +2099,7 @@
       "leaf_length": 50.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2128,7 +2128,7 @@
       "leaf_length": 7.769230769230769,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2156,7 +2156,7 @@
       "leaf_length": 22.166666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2194,7 +2194,7 @@
       "leaf_length": 47.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2223,7 +2223,7 @@
       "leaf_length": 5.724876190428572,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2252,7 +2252,7 @@
       "leaf_length": 13.181818181818182,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2284,7 +2284,7 @@
       "leaf_length": 25.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2305,7 +2305,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2334,7 +2334,7 @@
       "leaf_length": 10.375,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2358,7 +2358,7 @@
       "leaf_length": 173.33333333333334,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2381,7 +2381,7 @@
       "leaf_length": 24.666666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2408,7 +2408,7 @@
       "leaf_length": 24.25,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -2442,7 +2442,7 @@
       "leaf_length": 16.77777777777778,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2466,7 +2466,7 @@
       "leaf_length": 546.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2503,7 +2503,7 @@
       "leaf_length": 70.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -2527,7 +2527,7 @@
       "leaf_length": 50.21052631578947,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -2561,7 +2561,7 @@
       "leaf_length": 50.21052631578947,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -2590,7 +2590,7 @@
       "leaf_length": 14.142857142857142,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "PS",
     "needs_manual_review": false
   },
   {
@@ -2624,7 +2624,7 @@
       "leaf_length": 215.625,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2647,7 +2647,7 @@
       "leaf_length": 9.25,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -2671,7 +2671,7 @@
       "leaf_length": 26.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -2700,7 +2700,7 @@
       "leaf_length": 35.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "climber_scrambler",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -2723,7 +2723,7 @@
       "leaf_area": 377.646,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2749,7 +2749,7 @@
       "woodiness": "herbaceous",
       "life_history": "perennial"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2772,7 +2772,7 @@
       "leaf_length": 85.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2796,7 +2796,7 @@
       "leaf_length": 57.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2830,7 +2830,7 @@
       "leaf_length": 10.923076923076923,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2854,7 +2854,7 @@
       "leaf_length": 18.857142857142858,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -2882,7 +2882,7 @@
       "leaf_length": 110.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -2911,7 +2911,7 @@
       "leaf_length": 110.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -2939,7 +2939,7 @@
       "leaf_length": 164.28571428571428,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -2962,7 +2962,7 @@
       "leaf_length": 70.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -2986,7 +2986,7 @@
       "leaf_length": 131.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3008,7 +3008,7 @@
       "leaf_length": 12.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3032,7 +3032,7 @@
       "leaf_length": 125.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -3058,7 +3058,7 @@
     ],
     "match_type": "none",
     "traits": {},
-    "model_category": null,
+    "life_form_code": "MH",
     "needs_manual_review": true
   },
   {
@@ -3080,7 +3080,7 @@
       "leaf_length": 62.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3103,7 +3103,7 @@
       "leaf_area": 306.305,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -3132,7 +3132,7 @@
       "leaf_length": 10.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -3156,7 +3156,7 @@
       "leaf_length": 75.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3179,7 +3179,7 @@
       "leaf_length": 76.42857142857143,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3203,7 +3203,7 @@
       "leaf_length": 84.28571428571429,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -3226,7 +3226,7 @@
       "leaf_length": 72.81818181818181,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3249,7 +3249,7 @@
       "leaf_length": 257.14285714285717,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -3278,7 +3278,7 @@
       "leaf_length": 39.55555555555556,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -3302,7 +3302,7 @@
       "leaf_length": 27.142857142857142,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3325,7 +3325,7 @@
       "leaf_length": 3.8777777777777778,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -3354,7 +3354,7 @@
       "leaf_length": 10.545454545454545,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -3376,7 +3376,7 @@
       "leaf_length": 24.875,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -3415,7 +3415,7 @@
       "leaf_length": 4.414285714285714,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3444,7 +3444,7 @@
       "leaf_length": 127.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3473,7 +3473,7 @@
       "leaf_length": 118.57142857142857,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3494,7 +3494,7 @@
       "life_history": "annual perennial",
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -3523,7 +3523,7 @@
       "leaf_length": 27.363636363636363,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3570,7 +3570,7 @@
       "leaf_length": 400.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -3602,7 +3602,7 @@
       "leaf_length": 46.666666666666664,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -3629,7 +3629,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3652,7 +3652,7 @@
       "leaf_length": 341.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3680,7 +3680,7 @@
       "leaf_length": 27.636363636363637,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3703,7 +3703,7 @@
       "leaf_length": 56.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3726,7 +3726,7 @@
       "leaf_length": 29.166666666666668,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3753,7 +3753,7 @@
       "leaf_length": 120.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3787,7 +3787,7 @@
       "leaf_length": 32.18181818181818,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -3811,7 +3811,7 @@
       "leaf_length": 46.25,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -3834,7 +3834,7 @@
       "leaf_length": 58.6,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -3855,7 +3855,7 @@
       "life_history": "annual perennial",
       "leaf_length": 125.0
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -3879,7 +3879,7 @@
       "leaf_length": 418.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3912,7 +3912,7 @@
       "leaf_length": 34.375,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -3941,7 +3941,7 @@
       "leaf_length": 8.375,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4000,7 +4000,7 @@
       "leaf_length": 99.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4022,7 +4022,7 @@
       "leaf_length": 240.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4061,7 +4061,7 @@
       "leaf_length": 234.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -4085,7 +4085,7 @@
       "leaf_length": 1334.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4109,7 +4109,7 @@
       "leaf_length": 2000.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4133,7 +4133,7 @@
       "leaf_length": 14.625,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4154,7 +4154,7 @@
       "life_history": "short_lived_perennial",
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4177,7 +4177,7 @@
       "leaf_length": 140.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4199,7 +4199,7 @@
       "leaf_length": 188.33333333333334,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4222,7 +4222,7 @@
       "leaf_length": 8.4,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -4246,7 +4246,7 @@
       "leaf_length": 33.63869743615385,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4279,7 +4279,7 @@
       "leaf_length": 133.88888888888889,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4301,7 +4301,7 @@
       "leaf_length": 140.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4324,7 +4324,7 @@
       "leaf_length": 2.66,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -4348,7 +4348,7 @@
       "leaf_length": 150.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4381,7 +4381,7 @@
       "leaf_length": 264.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -4409,7 +4409,7 @@
       "leaf_length": 27.83853333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -4432,7 +4432,7 @@
       "leaf_length": 92.5,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4455,7 +4455,7 @@
       "leaf_length": 10.4,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -4476,7 +4476,7 @@
       "life_history": "perennial",
       "leaf_length": 41.25
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4499,7 +4499,7 @@
       "leaf_length": 186.66666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4532,7 +4532,7 @@
       "leaf_area": 2170.73,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LNG",
     "needs_manual_review": false
   },
   {
@@ -4554,7 +4554,7 @@
       "leaf_length": 10.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -4578,7 +4578,7 @@
       "leaf_length": 36.23076923076923,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -4601,7 +4601,7 @@
       "leaf_length": 8.166666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -4622,7 +4622,7 @@
       "life_history": "perennial",
       "leaf_length": 262.5
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4645,7 +4645,7 @@
       "leaf_length": 66.66666666666667,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4667,7 +4667,7 @@
       "leaf_length": 70.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4696,7 +4696,7 @@
       "leaf_length": 630.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4725,7 +4725,7 @@
       "leaf_length": 33.075,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4749,7 +4749,7 @@
       "leaf_length": 101.42857142857143,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -4773,7 +4773,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -4797,7 +4797,7 @@
       "leaf_length": 55.833333333333336,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -4821,7 +4821,7 @@
       "leaf_length": 95.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -4840,7 +4840,7 @@
       "plant_growth_form": "graminoid herb",
       "life_history": "perennial"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4864,7 +4864,7 @@
       "leaf_length": 13.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4886,7 +4886,7 @@
       "leaf_length": 87.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4914,7 +4914,7 @@
       "leaf_length": 146.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -4936,7 +4936,7 @@
       "leaf_length": 279.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4960,7 +4960,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -4982,7 +4982,7 @@
       "leaf_length": 49.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -5006,7 +5006,7 @@
       "leaf_length": 115.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5030,7 +5030,7 @@
       "leaf_length": 65.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -5053,7 +5053,7 @@
       "leaf_length": 12.714285714285714,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5077,7 +5077,7 @@
       "leaf_length": 11.955555555555556,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -5100,7 +5100,7 @@
       "leaf_area": 585.122,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -5129,7 +5129,7 @@
       "leaf_length": 47.354555555833336,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -5153,7 +5153,7 @@
       "leaf_length": 6.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5176,7 +5176,7 @@
       "leaf_length": 345.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -5205,7 +5205,7 @@
       "leaf_length": 127.27272727272727,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "subcanopy_tree",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -5234,7 +5234,7 @@
       "leaf_length": 8.428571428571429,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -5255,7 +5255,7 @@
     ],
     "match_type": "none",
     "traits": {},
-    "model_category": null,
+    "life_form_code": "MH",
     "needs_manual_review": true
   },
   {
@@ -5283,7 +5283,7 @@
       "leaf_length": 30.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -5312,7 +5312,7 @@
       "leaf_length": 316.6666666666667,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -5340,7 +5340,7 @@
       "leaf_length": 118.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5362,7 +5362,7 @@
       "leaf_length": 116.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5385,7 +5385,7 @@
       "leaf_length": 30.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5407,7 +5407,7 @@
       "leaf_length": 2500.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -5431,7 +5431,7 @@
       "leaf_length": 15.333333333333334,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5470,7 +5470,7 @@
       "leaf_length": 147.5909090909091,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5494,7 +5494,7 @@
       "leaf_length": 16.142857142857142,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -5543,7 +5543,7 @@
       "leaf_length": 1.83,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "subcanopy_tree",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -5571,7 +5571,7 @@
       "leaf_area": 1570.8,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5599,7 +5599,7 @@
       "leaf_length": 63.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5623,7 +5623,7 @@
       "leaf_length": 10.75,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5657,7 +5657,7 @@
       "leaf_length": 40.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5684,7 +5684,7 @@
       "leaf_area": 762.3333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5708,7 +5708,7 @@
       "leaf_length": 52.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5736,7 +5736,7 @@
       "leaf_area": 2614.6116666666667,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -5759,7 +5759,7 @@
       "leaf_length": 35.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5782,7 +5782,7 @@
       "leaf_area": 131.947,
       "leaf_length": 8.857142857142858
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -5804,7 +5804,7 @@
       "leaf_length": 10.428571428571429,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5826,7 +5826,7 @@
       "leaf_length": 21.428571428571427,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -5850,7 +5850,7 @@
       "leaf_length": 20.11111111111111,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -5877,7 +5877,7 @@
       "leaf_length": 21.666666666666668,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -5899,7 +5899,7 @@
       "leaf_length": 72.85714285714286,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -5922,7 +5922,7 @@
       "leaf_length": 23.42657777777778,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -5943,7 +5943,7 @@
       "life_history": "annual biennial",
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -5972,7 +5972,7 @@
       "leaf_length": 19.166666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6001,7 +6001,7 @@
       "leaf_length": 125.83333333333333,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6029,7 +6029,7 @@
       "leaf_length": 27.88888888888889,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6057,7 +6057,7 @@
       "leaf_length": 375.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6085,7 +6085,7 @@
       "leaf_length": 15.181818181818182,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6122,7 +6122,7 @@
       "leaf_length": 16.666666666666668,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6156,7 +6156,7 @@
       "leaf_length": 167.75,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6179,7 +6179,7 @@
       "leaf_length": 39.54652222166667,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6208,7 +6208,7 @@
       "leaf_length": 10.727272727272727,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6237,7 +6237,7 @@
       "leaf_length": 163.94736842105263,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6260,7 +6260,7 @@
       "leaf_area": 2376.04,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6284,7 +6284,7 @@
       "leaf_length": 170.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6308,7 +6308,7 @@
       "leaf_length": 102.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -6331,7 +6331,7 @@
       "leaf_length": 8.428571428571429,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -6368,7 +6368,7 @@
       "leaf_length": 175.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6392,7 +6392,7 @@
       "leaf_length": 10.333333333333334,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6430,7 +6430,7 @@
       "leaf_length": 1275.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -6464,7 +6464,7 @@
       "leaf_length": 160.1875,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6503,7 +6503,7 @@
       "leaf_length": 100.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6542,7 +6542,7 @@
       "leaf_length": 138.88888888888889,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6576,7 +6576,7 @@
       "leaf_length": 92.72727272727273,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -6599,7 +6599,7 @@
       "leaf_length": 2.888888888888889,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -6622,7 +6622,7 @@
       "leaf_length": 242.85714285714286,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -6664,7 +6664,7 @@
       "leaf_area": 1048.1,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -6692,7 +6692,7 @@
       "leaf_length": 108.83333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -6726,7 +6726,7 @@
       "leaf_length": 300.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6749,7 +6749,7 @@
       "leaf_length": 2.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -6771,7 +6771,7 @@
       "leaf_length": 65.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -6798,7 +6798,7 @@
       "leaf_length": 21.75,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -6822,7 +6822,7 @@
       "leaf_length": 578.5714285714286,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6856,7 +6856,7 @@
       "leaf_length": 41.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6894,7 +6894,7 @@
       "leaf_area": 5301.44,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -6922,7 +6922,7 @@
       "leaf_length": 212.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -6946,7 +6946,7 @@
       "leaf_length": 15.416666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -6969,7 +6969,7 @@
       "leaf_length": 21.2,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -6993,7 +6993,7 @@
       "leaf_length": 43.7,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7032,7 +7032,7 @@
       "leaf_length": 13.4,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -7060,7 +7060,7 @@
       "leaf_length": 73.33333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7084,7 +7084,7 @@
       "leaf_length": 22.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7111,7 +7111,7 @@
       "leaf_length": 550.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -7145,7 +7145,7 @@
       "leaf_length": 204.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -7169,7 +7169,7 @@
       "leaf_length": 110.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -7203,7 +7203,7 @@
       "leaf_length": 22.166666666666668,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7226,7 +7226,7 @@
       "leaf_length": 18.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7260,7 +7260,7 @@
       "leaf_length": 210.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7269,27 +7269,20 @@
     "max_prominence": 3.2,
     "vegetation_types": [
       {
+        "type": "woodlands_and_forests_on_sedimentary_hills_valleys_and_ridges",
+        "name": "Woodlands and Forests on Sedimentary Hills",
+        "prominence_code": 3.1
+      },
+      {
         "type": "grasslands_and_woodlands_on_fertile_plains",
         "name": "Grasslands and Woodlands on Fertile Plains",
         "prominence_code": 3.2
-      },
-      {
-        "type": "woodlands_and_heathlands_on_sand",
-        "name": "Woodlands and Heathlands on Sand",
-        "prominence_code": 1
       }
     ],
-    "match_type": "manual",
-    "traits": {
-      "plant_growth_form": "rosette herb",
-      "plant_height": 0.25,
-      "woodiness": "herbaceous",
-      "life_history": "perennial",
-      "leaf_area": null,
-      "resprouting_capacity": null
-    },
-    "model_category": "forb_rosette",
-    "needs_manual_review": false
+    "match_type": "none",
+    "traits": {},
+    "life_form_code": "MH",
+    "needs_manual_review": true
   },
   {
     "species": "Juncus australis",
@@ -7311,7 +7304,7 @@
       "leaf_area": 2356.19,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -7333,7 +7326,7 @@
       "leaf_length": 103.33333333333333,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7356,7 +7349,7 @@
       "leaf_length": 49.375,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7380,7 +7373,7 @@
       "leaf_length": 27.77777777777778,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7404,7 +7397,7 @@
       "leaf_length": 74.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7426,7 +7419,7 @@
       "leaf_length": 25.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7460,7 +7453,7 @@
       "leaf_length": 24.3,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7483,7 +7476,7 @@
       "leaf_length": 24.833333333333332,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -7507,7 +7500,7 @@
       "leaf_length": 95.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7529,7 +7522,7 @@
       "leaf_length": 32.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7563,7 +7556,7 @@
       "leaf_length": 365.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -7587,7 +7580,7 @@
       "leaf_length": 262.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -7611,7 +7604,7 @@
       "leaf_length": 14.333333333333334,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7635,7 +7628,7 @@
       "leaf_length": 84.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7658,7 +7651,7 @@
       "leaf_length": 88.57142857142857,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7690,7 +7683,7 @@
       "leaf_length": 38.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7714,7 +7707,7 @@
       "leaf_length": 66.44285714285715,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7742,7 +7735,7 @@
       "leaf_length": 285.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7766,7 +7759,7 @@
       "leaf_length": 16.142857142857142,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7794,7 +7787,7 @@
       "leaf_length": 19.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -7833,7 +7826,7 @@
       "leaf_length": 94.0909090909091,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -7857,7 +7850,7 @@
       "leaf_length": 21.25,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7881,7 +7874,7 @@
       "leaf_length": 67.77777777777777,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "climber_scrambler",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -7905,7 +7898,7 @@
       "leaf_length": 136.66666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7934,7 +7927,7 @@
       "leaf_length": 42.07692307692308,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -7963,7 +7956,7 @@
       "leaf_length": 290.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -7987,7 +7980,7 @@
       "leaf_length": 44.666666666666664,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8010,7 +8003,7 @@
       "leaf_length": 1.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -8031,7 +8024,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8054,7 +8047,7 @@
       "leaf_length": 5.2875,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -8078,7 +8071,7 @@
       "leaf_length": 86.66666666666667,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -8101,7 +8094,7 @@
       "leaf_length": 136.66666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8135,7 +8128,7 @@
       "leaf_length": 15.333333333333334,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "subcanopy_tree",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -8169,7 +8162,7 @@
       "leaf_length": 53.6,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8192,7 +8185,7 @@
       "leaf_length": 132.85714285714286,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8215,7 +8208,7 @@
       "leaf_length": 29.9,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -8249,7 +8242,7 @@
       "leaf_length": 24.8,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8278,7 +8271,7 @@
       "leaf_length": 222.91666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8301,7 +8294,7 @@
       "leaf_length": 19.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8325,7 +8318,7 @@
       "leaf_length": 28.333333333333332,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8353,7 +8346,7 @@
       "leaf_length": 281.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8380,7 +8373,7 @@
       "leaf_length": 123.33333333333333,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8409,7 +8402,7 @@
       "leaf_length": 11.555555555555555,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -8431,7 +8424,7 @@
       "leaf_length": 10.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "low_shrub",
+    "life_form_code": "SS",
     "needs_manual_review": false
   },
   {
@@ -8454,7 +8447,7 @@
       "leaf_length": 19.160111111666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8478,7 +8471,7 @@
       "leaf_length": 62.204081632653065,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -8502,7 +8495,7 @@
       "leaf_length": 5.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8525,7 +8518,7 @@
       "leaf_length": 4.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8554,7 +8547,7 @@
       "leaf_length": 16.2,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8577,7 +8570,7 @@
       "leaf_length": 37.5,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8601,7 +8594,7 @@
       "leaf_length": 83.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8623,7 +8616,7 @@
       "leaf_length": 31.11111111111111,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -8666,7 +8659,7 @@
       "leaf_length": 590.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8690,7 +8683,7 @@
       "leaf_length": 40.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -8713,7 +8706,7 @@
       "leaf_length": 178.57142857142858,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -8741,7 +8734,7 @@
       "leaf_length": 190.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8765,7 +8758,7 @@
       "leaf_length": 78.6,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8798,7 +8791,7 @@
       "leaf_length": 143.16666666666666,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -8826,7 +8819,7 @@
       "leaf_length": 180.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8875,7 +8868,7 @@
       "leaf_length": 104.61538461538461,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -8903,7 +8896,7 @@
       "leaf_length": 22.166666666666668,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -8927,7 +8920,7 @@
       "leaf_length": 136.66666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8951,7 +8944,7 @@
       "leaf_length": 5.833333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -8975,7 +8968,7 @@
       "leaf_length": 325.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -8999,7 +8992,7 @@
       "leaf_length": 280.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9023,7 +9016,7 @@
       "leaf_length": 500.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9051,7 +9044,7 @@
       "leaf_length": 111.875,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9095,7 +9088,7 @@
       "leaf_length": 280.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9119,7 +9112,7 @@
       "leaf_length": 40.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -9141,7 +9134,7 @@
       "leaf_length": 93.33333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9163,7 +9156,7 @@
       "leaf_length": 66.66666666666667,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9187,7 +9180,7 @@
       "leaf_length": 1033.3333333333333,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9216,7 +9209,7 @@
       "leaf_length": 8.333333333333334,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9238,7 +9231,7 @@
       "leaf_length": 585.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9259,7 +9252,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -9323,7 +9316,7 @@
       "leaf_length": 15.3,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9355,7 +9348,7 @@
       "leaf_length": 8.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9377,7 +9370,7 @@
       "leaf_length": 12.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -9411,7 +9404,7 @@
       "leaf_length": 9.714285714285714,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -9433,7 +9426,7 @@
       "leaf_length": 37.25,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -9457,7 +9450,7 @@
       "leaf_length": 81.66666666666667,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -9481,7 +9474,7 @@
       "leaf_length": 8.414285714285715,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -9503,7 +9496,7 @@
       "leaf_length": 250.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -9524,7 +9517,7 @@
       "life_history": "perennial",
       "leaf_length": 184.0
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9557,7 +9550,7 @@
       "leaf_area": 818.651,
       "leaf_length": 600.0
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -9579,7 +9572,7 @@
       "leaf_length": 2.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -9602,7 +9595,7 @@
       "leaf_length": 57.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9625,7 +9618,7 @@
       "leaf_length": 26.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9647,7 +9640,7 @@
       "life_history": "annual short_lived_perennial",
       "leaf_length": 71.42857142857143
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -9674,7 +9667,7 @@
       "leaf_area": 353.429,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -9718,7 +9711,7 @@
       "leaf_length": 8.846153846153847,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9747,7 +9740,7 @@
       "leaf_length": 24.625,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -9770,7 +9763,7 @@
       "leaf_length": 40.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -9798,7 +9791,7 @@
       "leaf_length": 4.7,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9818,7 +9811,7 @@
       "life_history": "perennial",
       "leaf_length": 7.6
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9842,7 +9835,7 @@
       "leaf_length": 28.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -9865,7 +9858,7 @@
       "leaf_length": 100.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -9886,7 +9879,7 @@
       "leaf_length": 15.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -9908,7 +9901,7 @@
       "leaf_length": 15.916666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9932,7 +9925,7 @@
       "leaf_length": 61.25,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -9956,7 +9949,7 @@
       "leaf_length": 33.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -9985,7 +9978,7 @@
       "leaf_length": 182.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -10006,7 +9999,7 @@
       "leaf_length": 6.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -10029,7 +10022,7 @@
       "leaf_length": 270.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10063,7 +10056,7 @@
       "leaf_length": 50.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10102,7 +10095,7 @@
       "leaf_length": 75.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10130,7 +10123,7 @@
       "leaf_area": 1975.8926923,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "LTG",
     "needs_manual_review": false
   },
   {
@@ -10179,7 +10172,7 @@
       "leaf_length": 237.14285714285714,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10203,7 +10196,7 @@
       "leaf_length": 105.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10227,7 +10220,7 @@
       "leaf_length": 57.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10250,7 +10243,7 @@
       "leaf_length": 32.6,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -10274,7 +10267,7 @@
       "leaf_length": 40.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10298,7 +10291,7 @@
       "leaf_length": 2.4,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -10322,7 +10315,7 @@
       "leaf_length": 25.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10349,7 +10342,7 @@
       "leaf_length": 15.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -10376,7 +10369,7 @@
       "leaf_length": 375.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10400,7 +10393,7 @@
       "leaf_length": 54.75,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10424,7 +10417,7 @@
       "leaf_length": 8.454545454545455,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -10448,7 +10441,7 @@
       "leaf_length": 40.714285714285715,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "subcanopy_tree",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -10476,7 +10469,7 @@
       "leaf_length": 39.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10505,7 +10498,7 @@
       "leaf_length": 86.875,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -10534,7 +10527,7 @@
       "leaf_length": 104.4,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10573,7 +10566,7 @@
       "leaf_length": 150.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10595,7 +10588,7 @@
       "leaf_length": 87.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -10622,7 +10615,7 @@
       "leaf_length": 110.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -10645,7 +10638,7 @@
       "leaf_length": 23.833333333333332,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10673,7 +10666,7 @@
       "leaf_length": 12.666666666666666,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -10702,7 +10695,7 @@
       "leaf_length": 158.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10731,7 +10724,7 @@
       "leaf_length": 13.875,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -10755,7 +10748,7 @@
       "leaf_length": 17.454545454545453,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -10778,7 +10771,7 @@
       "leaf_area": 871.5297011400002,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10822,7 +10815,7 @@
       "leaf_length": 65.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -10851,7 +10844,7 @@
       "leaf_length": 36.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -10875,7 +10868,7 @@
       "leaf_length": 29.545454545454547,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "climber_scrambler",
+    "life_form_code": "SC",
     "needs_manual_review": false
   },
   {
@@ -10897,7 +10890,7 @@
       "leaf_length": 3.5,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10921,7 +10914,7 @@
       "leaf_length": 57.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -10950,7 +10943,7 @@
       "leaf_length": 121.36363636363636,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "canopy_tree",
+    "life_form_code": "IT",
     "needs_manual_review": false
   },
   {
@@ -10976,7 +10969,7 @@
       "leaf_length": 25.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -11000,7 +10993,7 @@
       "leaf_length": 222.91666666666666,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11038,7 +11031,7 @@
       "leaf_area": 1413.72,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11060,7 +11053,7 @@
       "leaf_length": 32.5,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11084,7 +11077,7 @@
       "leaf_length": 22.22222222222222,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -11107,7 +11100,7 @@
       "leaf_length": 19.555555555555557,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11155,7 +11148,7 @@
       "leaf_length": 123.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MNG",
     "needs_manual_review": false
   },
   {
@@ -11179,7 +11172,7 @@
       "leaf_length": 117.22222222222223,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11201,7 +11194,7 @@
       "leaf_length": 222.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "fern",
+    "life_form_code": "GF",
     "needs_manual_review": false
   },
   {
@@ -11224,7 +11217,7 @@
       "leaf_length": 98.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11248,7 +11241,7 @@
       "leaf_length": 108.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11272,7 +11265,7 @@
       "leaf_length": 262.5,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11301,7 +11294,7 @@
       "leaf_length": 102.85714285714286,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11325,7 +11318,7 @@
       "leaf_length": 42.344562573157894,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11353,7 +11346,7 @@
       "leaf_length": 225.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11376,7 +11369,7 @@
       "leaf_length": 155.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11400,7 +11393,7 @@
       "leaf_length": 38.87443606557377,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11443,7 +11436,7 @@
       "leaf_length": 26.833333333333332,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tall_shrub",
+    "life_form_code": "T",
     "needs_manual_review": false
   },
   {
@@ -11477,7 +11470,7 @@
       "leaf_length": 950.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11500,7 +11493,7 @@
       "leaf_length": 500.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11529,7 +11522,7 @@
       "leaf_length": 20.833333333333332,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11556,7 +11549,7 @@
       "leaf_length": 100.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11590,7 +11583,7 @@
       "leaf_length": 25.555555555555557,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -11613,7 +11606,7 @@
       "leaf_length": 158.0,
       "resprouting_capacity": "partial_resprouting"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11635,7 +11628,7 @@
       "leaf_length": 200.0,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11658,7 +11651,7 @@
       "leaf_area": 639.0838461538461,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "tussock_grass",
+    "life_form_code": "MTG",
     "needs_manual_review": false
   },
   {
@@ -11681,7 +11674,7 @@
       "leaf_length": 72.0875,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "LH",
     "needs_manual_review": false
   },
   {
@@ -11705,7 +11698,7 @@
       "leaf_length": 53.625,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "SH",
     "needs_manual_review": false
   },
   {
@@ -11727,7 +11720,7 @@
       "leaf_length": 23.75,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   },
   {
@@ -11750,7 +11743,7 @@
       "leaf_length": 6.0,
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -11771,7 +11764,7 @@
       "life_history": "perennial",
       "resprouting_capacity": "fire_killed"
     },
-    "model_category": "medium_shrub",
+    "life_form_code": "MS",
     "needs_manual_review": false
   },
   {
@@ -11798,7 +11791,7 @@
       "leaf_length": 32.166666666666664,
       "resprouting_capacity": "resprouts"
     },
-    "model_category": "forb_upright",
+    "life_form_code": "MH",
     "needs_manual_review": false
   }
 ]

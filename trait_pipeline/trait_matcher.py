@@ -42,41 +42,18 @@ TARGET_TRAITS = [
     'resprouting_capacity'
 ]
 
-# Growth form to model category mapping
-GROWTH_FORM_MAPPING = {
-    # Trees
-    'tree': 'canopy_tree',
-    'mallee': 'subcanopy_tree',
-    
-    # Shrubs
-    'shrub': 'medium_shrub',  # Default, refined by height
-    'subshrub': 'low_shrub',
-    'prostrate_shrub': 'low_shrub',
-    
-    # Graminoids
-    'graminoid': 'tussock_grass',
-    'grass': 'tussock_grass',
-    'sedge': 'sedge_rush',
-    'rush': 'sedge_rush',
-    
-    # Herbs
-    'herb': 'forb_upright',
-    'forb': 'forb_upright',
-    'geophyte': 'forb_upright',
-    'annual': 'forb_upright',
-    
-    # Special forms
-    'fern': 'fern',
-    'climber': 'climber_scrambler',
-    'vine': 'climber_scrambler',
-    'scrambler': 'climber_scrambler',
-    'aquatic': 'aquatic',
-    'emergent': 'aquatic',
-    'floating': 'aquatic',
-    'succulent': 'succulent_saltmarsh',
-    'parasite': 'parasitic_epiphyte',
-    'hemiparasite': 'parasitic_epiphyte',
-    'epiphyte': 'parasitic_epiphyte'
+# Hardcoded species overrides — these override all rule-based assignment
+SPECIES_OVERRIDES = {
+    'Microlaena stipoides': 'MNG',      # non-tufted spreading grass
+    'Gahnia radula': 'LNG',             # large saw-sedge
+    'Gahnia sieberiana': 'LNG',         # large saw-sedge
+    'Gahnia filum': 'LNG',             # chaffy saw-sedge, large non-tufted
+    'Gahnia clarkei': 'LNG',           # tall saw-sedge
+    'Gahnia trifida': 'LNG',           # coast saw-sedge
+    'Phragmites australis': 'LNG',     # common reed, rhizomatous spreading
+    'Tetrarrhena juncea': 'LNG',       # forest wire-grass, non-tufted
+    'Bossiaea prostrata': 'PS',         # prostrate shrub
+    'Dichondra repens': 'SH',           # prostrate herb/groundcover
 }
 
 
@@ -153,57 +130,101 @@ def get_consensus_value(values):
     return counts.most_common(1)[0][0] if counts else None
 
 
-def determine_model_category(traits, height=None):
+def determine_life_form_code(species_name, traits, height=None):
     """
-    Determine 3D model category from traits.
-    Priority: growth_form > height refinement > woodiness
+    Assign a DSE benchmark life form code directly from traits.
+
+    Returns one of: IT, T, MS, SS, PS, LH, MH, SH, LTG, MTG, LNG, MNG, GF, SC, BL
+
+    Priority order:
+      1. Hardcoded species overrides
+      2. Growth-form + height rules (21 rules)
+      3. Woodiness fallback
+      4. Default: MH
     """
+    # 1. Check hardcoded species overrides (match base name without var./subsp.)
+    base = get_base_species_name(species_name)
+    if base in SPECIES_OVERRIDES:
+        return SPECIES_OVERRIDES[base]
+    # Also check full name
+    if species_name in SPECIES_OVERRIDES:
+        return SPECIES_OVERRIDES[species_name]
+
     growth_form = traits.get('plant_growth_form')
     woodiness = traits.get('woodiness')
-    
-    # Start with growth form mapping
+    h = height or 0
+
     if growth_form:
-        # Normalize growth form
-        gf_lower = growth_form.lower().strip()
-        
-        # Direct mapping
-        if gf_lower in GROWTH_FORM_MAPPING:
-            category = GROWTH_FORM_MAPPING[gf_lower]
-        else:
-            # Try partial match
-            category = None
-            for key, value in GROWTH_FORM_MAPPING.items():
-                if key in gf_lower or gf_lower in key:
-                    category = value
-                    break
-            
-            if not category:
-                category = 'forb_upright'  # Default fallback
-        
-        # Refine by height
-        if height:
-            if category == 'canopy_tree' and height < 10:
-                category = 'subcanopy_tree'
-            elif category == 'medium_shrub':
-                if height > 5:
-                    category = 'tall_shrub'
-                elif height > 2:
-                    category = 'medium_shrub'
-                elif height > 0.5:
-                    category = 'medium_shrub'
-                else:
-                    category = 'low_shrub'
-        
-        return category
-    
+        gf = growth_form.lower().strip()
+
+        # Rule 1-3: Trees
+        if 'tree' in gf:
+            if h >= 10:
+                return 'IT'   # Immature Canopy Tree / canopy tier
+            return 'T'        # Understorey Tree or Large Shrub
+
+        # Rule 4-7: Shrubs (check before graminoid — "subshrub" contains "shrub")
+        if 'shrub' in gf:
+            if h >= 2:
+                return 'T'    # Large shrub = understorey tree tier
+            if h >= 0.5:
+                return 'MS'   # Medium Shrub
+            if h >= 0.1:
+                return 'SS'   # Small Shrub
+            return 'PS'       # Prostrate Shrub
+
+        # Rule 8-9: Tussock grasses
+        if 'tussock' in gf:
+            return 'LTG' if h >= 1.0 else 'MTG'
+
+        # Rule 10-11: Other graminoids
+        if 'graminoid' in gf:
+            # "graminoid_not_tussock" or forms with "non-tufted" / "spreading" → non-tufted
+            if 'not_tussock' in gf or 'non' in gf or 'spreading' in gf or 'rhizom' in gf:
+                return 'LNG' if h >= 0.5 else 'MNG'
+            # Default graminoid → tufted
+            return 'LTG' if h >= 1.0 else 'MTG'
+
+        # Rule 12: Ferns
+        if 'fern' in gf:
+            return 'GF'
+
+        # Rule 13: Climbers / scramblers
+        if 'climber' in gf or 'scrambler' in gf or 'vine' in gf:
+            return 'SC'
+
+        # Rule 14: Aquatic
+        if 'aquatic' in gf or 'emergent' in gf or 'floating' in gf:
+            return 'MNG'
+
+        # Rule 15: Rosette herbs
+        if 'rosette' in gf:
+            return 'SH'
+
+        # Rule 16-18: Herbs (including "herb", "forb", "geophyte", "annual")
+        if 'herb' in gf or 'forb' in gf or 'geophyte' in gf or 'annual' in gf:
+            if h >= 0.5:
+                return 'LH'
+            if h >= 0.15:
+                return 'MH'
+            return 'SH'
+
+        # Rule 19: Succulent / saltmarsh
+        if 'succulent' in gf or 'saltmarsh' in gf:
+            return 'SH'
+
+        # Rule 20: Parasitic / epiphytic
+        if 'parasite' in gf or 'hemiparasite' in gf or 'epiphyte' in gf:
+            return 'MS'
+
     # Fallback to woodiness
     if woodiness:
         if 'woody' in woodiness.lower():
-            return 'medium_shrub'
-        else:
-            return 'forb_upright'
-    
-    return None
+            return 'MS'
+        return 'MH'
+
+    # Rule 21: Default fallback
+    return 'MH'
 
 
 def match_species(species_list, austraits_data):
@@ -253,10 +274,10 @@ def match_species(species_list, austraits_data):
             if trait in raw_traits:
                 traits[trait] = get_consensus_value(raw_traits[trait])
         
-        # Determine model category
+        # Determine life form code
         height = traits.get('plant_height')
-        model_category = determine_model_category(traits, height)
-        
+        life_form_code = determine_life_form_code(name, traits, height)
+
         # Update counters
         if match_type in ['exact', 'base_species']:
             matched += 1
@@ -264,7 +285,7 @@ def match_species(species_list, austraits_data):
             genus_fallback += 1
         else:
             no_match += 1
-        
+
         results.append({
             'species': name,
             'common_name': sp.get('common_name', ''),
@@ -272,8 +293,8 @@ def match_species(species_list, austraits_data):
             'vegetation_types': sp.get('vegetation_types', []),
             'match_type': match_type,
             'traits': traits,
-            'model_category': model_category,
-            'needs_manual_review': match_type == 'none' or model_category is None
+            'life_form_code': life_form_code,
+            'needs_manual_review': match_type == 'none'
         })
     
     print(f"\nMatching results:")
@@ -300,7 +321,7 @@ def generate_gap_report(matched_species, prominent_only=False):
                 'is_prominent': is_prominent,
                 'match_type': sp['match_type'],
                 'current_traits': sp['traits'],
-                'suggested_category': sp['model_category'],
+                'life_form_code': sp['life_form_code'],
                 'vegetation_types': [vt['name'] for vt in sp['vegetation_types']],
                 'action_required': 'manual_assignment' if sp['match_type'] == 'none' else 'verify_genus_fallback'
             })
@@ -312,21 +333,21 @@ def generate_gap_report(matched_species, prominent_only=False):
 
 
 def generate_model_assignments(matched_species):
-    """Generate final model assignments for species with valid categories."""
+    """Generate final model assignments for species with valid life form codes."""
     assignments = {}
-    
+
     for sp in matched_species:
-        if sp['model_category']:
+        if sp['life_form_code']:
             assignments[sp['species']] = {
-                'model_category': sp['model_category'],
+                'life_form_code': sp['life_form_code'],
                 'height': sp['traits'].get('plant_height'),
                 'growth_form': sp['traits'].get('plant_growth_form'),
                 'vegetation_types': [vt['type'] for vt in sp['vegetation_types']],
                 'prominence': sp['max_prominence'],
-                'confidence': 'high' if sp['match_type'] == 'exact' else 
+                'confidence': 'high' if sp['match_type'] == 'exact' else
                              'medium' if sp['match_type'] in ['base_species', 'genus'] else 'low'
             }
-    
+
     return assignments
 
 
@@ -385,16 +406,13 @@ def main():
     print("SUMMARY")
     print("=" * 60)
     
-    category_counts = defaultdict(int)
+    lf_counts = defaultdict(int)
     for sp in matched:
-        if sp['model_category']:
-            category_counts[sp['model_category']] += 1
-        else:
-            category_counts['unassigned'] += 1
-    
-    print("\nSpecies by model category:")
-    for category, count in sorted(category_counts.items(), key=lambda x: -x[1]):
-        print(f"  {category}: {count}")
+        lf_counts[sp['life_form_code']] += 1
+
+    print("\nSpecies by life form code:")
+    for code, count in sorted(lf_counts.items(), key=lambda x: -x[1]):
+        print(f"  {code}: {count}")
     
     prominent_gaps = [g for g in gaps if g['is_prominent']]
     print(f"\nProminent species (3.2) needing review: {len(prominent_gaps)}")
@@ -425,7 +443,7 @@ def generate_sample_output():
                 'plant_height': None,
                 'woodiness': None
             },
-            'model_category': None,
+            'life_form_code': None,
             'needs_manual_review': True,
             'note': 'SAMPLE - Awaiting AusTraits integration'
         })

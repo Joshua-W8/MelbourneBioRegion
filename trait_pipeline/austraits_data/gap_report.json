@@ -6,7 +6,7 @@
     "is_prominent": true,
     "match_type": "none",
     "current_traits": {},
-    "suggested_category": null,
+    "life_form_code": "MH",
     "vegetation_types": [
       "Woodlands and Forests on Sedimentary Hills",
       "Grasslands and Woodlands on Fertile Plains"
@@ -20,7 +20,7 @@
     "is_prominent": false,
     "match_type": "none",
     "current_traits": {},
-    "suggested_category": null,
+    "life_form_code": "MH",
     "vegetation_types": [
       "Woodlands and Forests on Sedimentary Hills",
       "Grasslands and Woodlands on Fertile Plains"
@@ -34,7 +34,7 @@
     "is_prominent": false,
     "match_type": "none",
     "current_traits": {},
-    "suggested_category": null,
+    "life_form_code": "MH",
     "vegetation_types": [
       "Beach and Dunes",
       "Coastal Marshlands and Brackish Flats",
@@ -54,7 +54,7 @@
     "is_prominent": false,
     "match_type": "none",
     "current_traits": {},
-    "suggested_category": null,
+    "life_form_code": "MH",
     "vegetation_types": [
       "Saltmarsh",
       "Coastal Marshlands and Brackish Flats",

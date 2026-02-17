@@ -150,6 +150,20 @@ function DioramaButton() {
   );
 }
 
+function EVCDescription() {
+  const benchmarkData = useMapStore((state) => state.benchmarkData);
+
+  if (!benchmarkData || !benchmarkData.description) return null;
+
+  return (
+    <div className="evc-description-card">
+      <div className="evc-description-heading">{benchmarkData.evc_name}</div>
+      <div className="evc-description-bioregion">{benchmarkData.bioregion} bioregion</div>
+      <div className="evc-description-text">{benchmarkData.description}</div>
+    </div>
+  );
+}
+
 function VegetationTypeTag({ vegetationType }) {
   if (!vegetationType) return null;
 
@@ -205,6 +219,7 @@ function InfoPanel() {
             {selectedEVC.evcName}
           </div>
 
+          <EVCDescription />
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
           <SiteConditions
