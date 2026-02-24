@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "description": "3D model registry for diorama rendering. Lookup order: species → genus → life_form fallback.",
+    "model_base_path": "models/",
+    "version": "2.0",
+    "notes": [
+      "Species entries override genus entries override life_form defaults",
+      "life_form codes follow DSE EVC benchmark standard (IT, T, MS, SS, PS, LH, MH, SH, LTG, LNG, MTG, MNG, GF, SC, BL)",
+      "Each entry has 'folder' and 'default' — path is folder/default",
+      "Species entries may have 'variants' with named files and optional height_range",
+      "Generic fallbacks live in '_generic' folder",
+      "Add new species/genus entries as bespoke models are built — no code changes needed"
+    ]
+  },
+
+  "species": {
+    "Eucalyptus camaldulensis": {
+      "folder": "eucalyptus_camaldulensis",
+      "default": "mature.glb",
+      "variants": {
+        "mature": { "file": "mature.glb", "height_range": [10, 30] },
+        "sapling": { "file": "sapling.glb", "height_range": [2, 10] }
+      },
+      "priority": "keystone",
+      "notes": "River Red Gum — character species for plains grassy woodlands (VVP + GipP)"
+    },
+    "Eucalyptus tereticornis": {
+      "folder": "eucalyptus_camaldulensis",
+      "default": "mature.glb",
+      "variants": {},
+      "priority": "keystone",
+      "notes": "Gippsland Red-gum — shares model with River Red Gum for now, similar form"
+    },
+    "Themeda triandra": {
+      "folder": "themeda_triandra",
+      "default": "tussock_01.glb",
+      "variants": {},
+      "priority": "keystone",
+      "notes": "Kangaroo Grass — dominant tussock across all grassland/woodland EVCs"
+    }
+  },
+
+  "genus": {
+    "Allocasuarina": {
+      "folder": "allocasuarina",
+      "default": "sheoak.glb",
+      "priority": "high",
+      "notes": "Sheoak — drooping needle-like branchlets. Covers verticillata, littoralis, luehmannii"
+    },
+    "Banksia": {
+      "folder": "banksia",
+      "default": "banksia.glb",
+      "priority": "high",
+      "notes": "Banksia — serrated leaves, distinctive flower spikes. Covers integrifolia, marginata"
+    },
+    "Melaleuca": {
+      "folder": "melaleuca",
+      "default": "paperbark.glb",
+      "priority": "high",
+      "notes": "Paperbark/Tea-tree — defines swamp scrub and riparian. Covers ericifolia, squarrosa"
+    },
+    "Leptospermum": {
+      "folder": "leptospermum",
+      "default": "teatree.glb",
+      "priority": "medium",
+      "notes": "Tea-tree — dense shrub form, small leaves. Covers laevigatum, continentale, lanigerum"
+    },
+    "Acacia": {
+      "folder": "acacia",
+      "default": "wattle.glb",
+      "priority": "medium",
+      "notes": "Wattle — covers mearnsii, melanoxylon, pycnantha"
+    },
+    "Eucalyptus": {
+      "folder": "eucalyptus_generic",
+      "default": "eucalypt.glb",
+      "priority": "medium",
+      "notes": "Generic eucalypt — fallback for species without bespoke models"
+    }
+  },
+
+  "life_form": {
+    "IT":  { "folder": "_generic", "default": "canopy_tree.glb",      "notes": "Immature Canopy Tree" },
+    "T":   { "folder": "_generic", "default": "subcanopy_tree.glb",   "notes": "Understorey Tree or Large Shrub" },
+    "MS":  { "folder": "_generic", "default": "shrub_medium.glb",     "notes": "Medium Shrub (0.5–2m)" },
+    "SS":  { "folder": "_generic", "default": "shrub_small.glb",      "notes": "Small Shrub (<0.5m)" },
+    "PS":  { "folder": "_generic", "default": "shrub_small.glb",      "notes": "Prostrate Shrub — shares model with SS" },
+    "LTG": { "folder": "_generic", "default": "tussock_large.glb",    "notes": "Large Tufted Graminoid (>1m)" },
+    "MTG": { "folder": "_generic", "default": "tussock_medium.glb",   "notes": "Medium to Small Tufted Graminoid (<1m)" },
+    "LNG": { "folder": "_generic", "default": "grass_spreading.glb",  "notes": "Large Non-tufted Graminoid" },
+    "MNG": { "folder": "_generic", "default": "grass_spreading.glb",  "notes": "Medium to Tiny Non-tufted Graminoid" },
+    "LH":  { "folder": "_generic", "default": "herb_tall.glb",        "notes": "Large Herb (>0.5m)" },
+    "MH":  { "folder": "_generic", "default": "herb_medium.glb",      "notes": "Medium Herb (0.15–0.5m)" },
+    "SH":  { "folder": "_generic", "default": "herb_prostrate.glb",   "notes": "Small or Prostrate Herb (<0.15m)" },
+    "GF":  { "folder": "_generic", "default": "fern.glb",             "notes": "Ground Fern" },
+    "SC":  { "folder": "_generic", "default": "climber.glb",          "notes": "Scrambler or Climber" },
+    "BL":  null
+  }
+}

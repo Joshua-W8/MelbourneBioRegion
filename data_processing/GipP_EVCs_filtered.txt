@@ -1,0 +1,1103 @@
+EVC 3: Damp Sands Herb-rich Woodland
+
+Description:
+A low, grassy or bracken-dominated eucalypt forest or open woodland to 15 m tall with a large shrub layer and ground layer
+rich in herbs, grasses, and orchids. Occurs mainly on flat or undulating areas on moderately fertile, relatively well-drained, deep
+sandy or loamy topsoils over heavier subsoils (duplex soils).
+
+Large trees:
+  Species                                            DBH(cm)            #/ha
+  Eucalyptus spp.                                    70 cm              15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                   Common Name
+  15%               Eucalyptus viminalis ssp. pryoriana                           Rough-barked Manna Gum
+
+Understorey:
+  Life form                                                      #Spp          %Cover         LF code
+  Immature Canopy Tree                                                         5%             IT
+  Understorey Tree or Large Shrub                                1             5%             T
+  Medium Shrub                                                   5             25%            MS
+  Small Shrub                                                    3             5%             SS
+  Prostrate Shrub                                                1             1%             PS
+  Large Herb                                                     2             5%             LH
+  Medium Herb                                                    8             15%            MH
+  Small or Prostrate Herb                                        5             10%            SH
+  Large Tufted Graminoid                                         2             10%            LTG
+  Large Non-tufted Graminoid                                     1             1%             LNG
+  Medium to Small Tufted Graminoid                               4             10%            MTG
+  Medium to Tiny Non-tufted Graminoid                            2             10%            MNG
+  Ground Fern                                                    1             15%            GF
+  Bryophytes/Lichens                                             na            10%            BL
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 3: Damp Sands Herb-rich Woodland - Gippsland Plain bioregion
+
+
+LF Code                  Species typical of at least part of EVC range                                             Common Name
+   T                     Acacia mearnsii                                                                           Black Wattle
+   T                     Acacia melanoxylon                                                                        Blackwood
+   MS                    Epacris impressa                                                                          Common Heath
+   MS                    Leptospermum continentale                                                                 Prickly Tea-tree
+   MS                    Banksia marginata                                                                         Silver Banksia
+   MS                    Leptospermum myrsinoides                                                                  Heath Tea-tree
+   SS                    Leucopogon virgatus                                                                       Common Beard-heath
+   SS                    Dillwynia glaberrima                                                                      Smooth Parrot-pea
+   SS                    Amperea xiphoclada var. xiphoclada                                                        Broom Spurge
+   PS                    Astroloma humifusum                                                                       Cranberry Heath
+   MH                    Gonocarpus tetragynus                                                                     Common Raspwort
+   MH                    Drosera peltata ssp. auriculata                                                           Tall Sundew
+   MH                    Viola hederacea sensu Willis (1972)                                                       Ivy-leaf Violet
+   MH                    Geranium solanderi s.l.                                                                   Austral Cranesbill
+   SH                    Hydrocotyle laxiflora                                                                     Stinking Pennywort
+   SH                    Opercularia varia                                                                         Variable Stinkweed
+   SH                    Dichondra repens                                                                          Kidney-weed
+   SH                    Poranthera microphylla                                                                    Small Poranthera
+   LTG                   Lomandra longifolia                                                                       Spiny-headed Mat-rush
+   LTG                   Austrostipa mollis                                                                        Supple Spear-grass
+   LNG                   Tetrarrhena juncea                                                                        Forest Wire-grass
+   MTG                   Lepidosperma concavum                                                                     Sandhill Sword-sedge
+   MTG                   Dianella revoluta s.l.                                                                    Black-anther Flax-lily
+   MTG                   Lomandra filiformis                                                                       Wattle-headed Mat-rush
+   MTG                   Poa sieberiana                                                                            Grey Tussock-grass
+   MNG                   Microlaena stipoides var. stipoides                                                       Weeping Grass
+   GF                    Pteridium esculentum                                                                      Austral Bracken
+
+Recruitment:
+   Continuous
+
+Organic Litter:
+   40 % cover
+
+Logs:
+   15 m/0.1 ha.
+
+Weediness:
+ LF Code                Typical Weed Species                                        Common Name                                Invasive              Impact
+   MH                   Hypochoeris radicata                                        Cat's Ear                                  high                  low
+   LTG                  Anthoxanthum odoratum                                       Sweet Vernal Grass                         high                  high
+   LNG                  Holcus lanatus                                              Yorkshire Fog                              high                  high
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 9: Coastal Saltmarsh
+
+Description:
+Occurs on and immediately above marine and estuarine tidal flats and contains distinct floristic communities as bands or zones
+in the same location, depending on the positioning of the various floristic communities in relation to the saline environment.
+Consists of a range of life forms including succulent herbs, low succulent shrubs, rushes and sedges.
+
+Life Forms:
+   Life form                                                   #Spp          %Cover        LF code
+  Medium Shrub                                                 2             20%           MS
+  Small Shrub                                                  1             1%            SS
+  Medium Herb                                                  3             20%           MH
+  Small or Prostrate Herb                                      2             15%           SH
+  Large Non-tufted Graminoid                                   1             1%            LNG
+  Medium to Small Tufted Graminoid                             1             5%            MTG
+  Medium to Tiny Non-tufted Graminoid                          2             10%           MNG
+  Soil Crust                                                   na            10%           S/C
+  Total understorey projective foliage cover                                 70%
+
+LF Code           Species typical of at least part of EVC range                     Common Name
+  MS              Sclerostegia arbuscula                                            Shrubby Glasswort
+  SS              Suaeda australis                                                  Austral Seablite
+  MH              Sarcocornia quinqueflora                                          Beaded Glasswort
+  MH              Samolus repens                                                    Creeping Brookweed
+  MH              Hemichroa pentandra                                               Trailing Hemichroa
+  SH              Disphyma crassifolium ssp. clavellatum                            Rounded Noon-flower
+  MNG             Triglochin striatum                                               Streaked Arrowgrass
+  MNG             Distichlis distichophylla                                         Australian Salt-grass
+
+Recruitment:
+  Continuous
+
+Organic Litter:
+  10 % cover
+
+Weediness:
+          There are no consistent weeds in this EVC.
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 9: Coastal Saltmarsh - Gippsland Plain bioregion
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 56: Floodplain Riparian Woodland
+
+Description:
+An open eucalypt woodland to 20 m tall over a medium to tall shrub layer with a ground layer consisting of amphibious and
+aquatic herbs and sedges. Occurs along the banks and floodplains of the larger meandering rivers and major creeks, often in
+conjunction with one or more floodplain wetland communities. Elevation and rainfall are relatively low and soils are fertile
+alluviums subject to periodic flooding and inundation.
+
+Large trees:
+  Species                                             DBH(cm)         #/ha
+  Eucalyptus spp.                                     80 cm           15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                 Common Name
+  20%                Eucalyptus camaldulensis                                   River Red-gum
+                     Eucalyptus tereticornis ssp. mediana                       Gippsland Red Gum
+                     Eucalyptus ovata                                           Swamp Gum
+
+Understorey:
+  Life form                                                    #Spp          %Cover        LF code
+  Immature Canopy Tree                                                       5%            IT
+  Understorey Tree or Large Shrub                              2             10%           T
+  Medium Shrub                                                 5             15%           MS
+  Large Herb                                                   7             15%           LH
+  Medium Herb                                                  5             10%           MH
+  Small or Prostrate Herb                                      2             5%            SH
+  Large Tufted Graminoid                                       2             10%           LTG
+  Large Non-tufted Graminoid                                   1             10%           LNG
+  Medium to Small Tufted Graminoid                             5             10%           MTG
+  Medium to Tiny Non-tufted Graminoid                          2             10%           MNG
+  Scrambler or Climber                                         2             5%            SC
+  Bryophytes/Lichens                                           na            10%           BL
+
+LF Code             Species typical of at least part of EVC range                   Common Name
+  T                 Acacia implexa                                                  Lightwood
+  T                 Acacia melanoxylon                                              Blackwood
+  MS                Ozothamnus ferrugineus                                          Tree Everlasting
+  MS                Bursaria spinosa ssp. spinosa                                   Sweet Bursaria
+  MS                Hymenanthera dentata s.l.                                       Tree Violet
+  LH                Urtica incisa                                                   Scrub Nettle
+  LH                Persicaria subsessilis                                          Hairy Knotweed
+  LH                Senecio quadridentatus                                          Cottony Fireweed
+  MH                Acaena novae-zelandiae                                          Bidgee-widgee
+  MH                Hydrocotyle hirta                                               Hairy Pennywort
+  MH                Stellaria pungens                                               Prickly Starwort
+  MH                Veronica plebeia                                                Trailing Speedwell
+  SH                Oxalis corniculata s.l.                                         Yellow Wood-sorrel
+  SH                Dichondra repens                                                Kidney-weed
+  LTG               Carex appressa                                                  Tall Sedge
+  LTG               Poa labillardierei                                              Common Tussock-grass
+  LNG               Phragmites australis                                            Common Reed
+  MTG               Juncus amabilis                                                 Hollow Rush
+  MTG               Cyperus spp.                                                    Flat-sedge
+  MNG               Microlaena stipoides var. stipoides                             Weeping Grass
+  MNG               Eleocharis acuta                                                Common Spike-sedge
+  SC                Calystegia sepium                                               Large Bindweed
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 56: Floodplain Riparian Woodland - Gippsland Plain bioregion
+
+
+Recruitment:
+   Episodic/Flood. Desirable period between disturbances is 5 years.
+
+Organic Litter:
+   40 % cover
+
+Logs:
+   30 m/0.1 ha.
+
+Weediness:
+ LF Code                Typical Weed Species                                             Common Name                                Invasive            Impact
+   T                    Crataegus monogyna                                               Hawthorn                                   high                high
+   T                    Fraxinus spp.                                                    Ash                                        high                high
+   MS                   Solanum pseudocapsicum                                           Madeira Winter-cherry                      high                low
+   MS                   Prunus cerasifera                                                Cherry Plum                                high                high
+   MS                   Rubus fruticosus spp. agg.                                       Blackberry                                 high                high
+   LH                   Rumex conglomeratus                                              Clustered Dock                             high                low
+   LH                   Sonchus oleraceus                                                Common Sow-thistle                         high                low
+   LH                   Plantago lanceolata                                              Ribwort                                    high                low
+   LH                   Rumex crispus                                                    Curled Dock                                high                low
+   LH                   Rorippa palustris                                                Marsh Yellow-cress                         high                high
+   LH                   Helminthotheca echioides                                         Ox-tongue                                  high                low
+   LH                   Verbena bonariensis s.l.                                         Purple-top Verbena                         high                high
+   LH                   Aster subulatus                                                  Aster-weed                                 high                low
+   MH                   Ranunculus repens                                                Creeping Buttercup                         high                high
+   MH                   Leontodon taraxacoides ssp. taraxacoides                         Hairy Hawkbit                              high                low
+   MH                   Taraxacum officinale spp. agg.                                   Garden Dandelion                           high                low
+   MH                   Hypochoeris radicata                                             Cat's Ear                                  high                low
+   SH                   Trifolium repens var. repens                                     White Clover                               high                low
+   SH                   Modiola caroliniana                                              Red-flower Mallow                          high                low
+   LNG                  Holcus lanatus                                                   Yorkshire Fog                              high                high
+   MTG                  Bromus catharticus                                               Prairie Grass                              high                low
+   MTG                  Ehrharta erecta var. erecta                                      Panic Veldt-grass                          high                high
+   MTG                  Cyperus eragrostis                                               Drain Flat-sedge                           high                high
+   MTG                  Paspalum dilatatum                                               Paspalum                                   high                high
+   MTG                  Lolium perenne                                                   Perennial Rye-grass                        high                low
+   MTG                  Agrostis capillaris s.l.                                         Brown-top Bent                             high                high
+   MNG                  Paspalum distichum                                               Water Couch                                high                high
+   SC                   Galium aparine                                                   Cleavers                                   high                low
+   SC                   Tradescantia fluminensis                                         Wandering Jew                              high                high
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 68: Creekline Grassy Woodland
+
+Description:
+Eucalypt-dominated woodland to 15 m tall with occasional scattered shrub layer over a mostly grassy/sedgy to herbaceous
+ground-layer. Occurs on low-gradient ephemeral to intermittent drainage lines, typically on fertile colluvial/alluvial soils, on a
+wide range of suitably fertile geological substrates. These minor drainage lines can include a range of graminoid and
+herbaceous species tolerant of waterlogged soils, and are presumed to have sometimes resembled a linear wetland or system
+of interconnected small ponds.
+
+Large trees:
+  Species                                             DBH(cm)           #/ha
+  Eucalyptus spp.                                     80 cm             15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                   Common Name
+  15%                Eucalyptus camaldulensis                                     River Red Gum
+                     Eucalyptus ovata                                             Swamp Gum
+
+Understorey:
+  Life form                                                      #Spp           %Cover        LF code
+  Immature Canopy Tree                                                          5%            IT
+  Understorey Tree or Large Shrub                                2              10%           T
+  Medium Shrub                                                   2              5%            MS
+  Small Shrub                                                    2              1%            SS
+  Large Herb                                                     2              5%            LH
+  Medium Herb                                                    8              15%           MH
+  Small or Prostrate Herb                                        1              1%            SH
+  Large Tufted Graminoid                                         3              15%           LTG
+  Medium to Small Tufted Graminoid                               12             20%           MTG
+  Medium to Tiny Non-tufted Graminoid                            3              15%           MNG
+  Bryophytes/Lichens                                             na             10%           BL
+
+LF Code             Species typical of at least part of EVC range                      Common Name
+  T                 Acacia mearnsii                                                    Black Wattle
+  MS                Ozothamnus ferrugineus                                             Tree Everlasting
+  MS                Acacia pycnantha                                                   Golden Wattle
+  SS                Pimelea humilis                                                    Common Rice-flower
+  MH                Gonocarpus tetragynus                                              Common Raspwort
+  MH                Acaena echinata                                                    Sheep's Burr
+  SH                Hydrocotyle laxiflora                                              Stinking Pennywort
+  LTG               Carex appressa                                                     Tall Sedge
+  LTG               Poa labillardierei                                                 Common Tussock-grass
+  MTG               Elymus scaber var. scaber                                          Common Wheat-grass
+  MTG               Lachnagrostis filiformis                                           Common Blown-grass
+  MNG               Microlaena stipoides var. stipoides                                Weeping Grass
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 68: Creekline Grassy Woodland - Gippsland Plain bioregion
+
+
+Recruitment:
+  Continuous
+
+Organic Litter:
+   40% cover
+
+Logs:
+   20m/0.1 ha
+
+Weediness:
+ LF Code                Typical Weed Species                                     Common Name                                      Invasive           Impact
+   LH                   Sonchus oleraceus                                        Common Sow-thistle                               high               low
+   LH                   Cirsium vulgare                                          Spear Thistle                                    high               low
+   LH                   Plantago lanceolata                                      Ribwort                                          high               low
+   MH                   Hypochoeris radicata                                     Cat's Ear                                        low                low
+   MH                   Anagallis arvensis                                       Pimpernel                                        low                low
+   LTG                  Phalaris aquatica                                        Toowoomba Canary-grass                           low                high
+   MNG                  Briza maxima                                             Large Quaking-grass                              high               low
+   MNG                  Romulea rosea                                            Onion Grass                                      high               low
+   MNG                  Vulpia bromoides                                         Squirrel-tail Fescue                             high               low
+   MNG                  Briza minor                                              Lesser Quaking-grass                             high               low
+   MNG                  Aira elegantissima                                       Delicate Hair-grass                              high               low
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 83: Swampy Riparian Woodland
+
+Description:
+Woodland to 15 m tall generally occupying low energy streams of the foothills and plains. The lower strata are variously locally
+dominated by a range of large and medium shrub species on the stream levees in combination with large tussock grasses and
+sedges in the ground layer.
+
+Large trees:
+  Species                                             DBH(cm)          #/ha
+  Eucalyptus spp.                                     70 cm            15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                  Common Name
+  20%                Eucalyptus ovata                                            Swamp Gum
+                     Eucalyptus radiata s.l.                                     Narrow-leaf Peppermint
+
+Understorey:
+  Life form                                                     #Spp          %Cover        LF code
+  Immature Canopy Tree                                                        5%            IT
+  Understorey Tree or Large Shrub                               4             30%           T
+  Medium Shrub                                                  5             20%           MS
+  Small Shrub                                                   1             1%            SS
+  Prostrate Shrub                                               1             1%            PS
+  Large Herb                                                    3             5%            LH
+  Medium Herb                                                   7             10%           MH
+  Small or Prostrate Herb                                       3             5%            SH
+  Large Tufted Graminoid                                        3             15%           LTG
+  Large Non-tufted Graminoid                                    1             5%            LNG
+  Medium to Small Tufted Graminoid                              5             10%           MTG
+  Medium to Tiny Non-tufted Graminoid                           2             10%           MNG
+  Ground Fern                                                   2             10%           GF
+  Scrambler or Climber                                          2             5%            SC
+  Bryophytes/Lichens                                            na            10%           BL
+
+LF Code             Species typical of at least part of EVC range                    Common Name
+  T                 Acacia melanoxylon                                               Blackwood
+  T                 Melaleuca ericifolia                                             Swamp Paperbark
+  T                 Leptospermum lanigerum                                           Woolly Tea-tree
+  MS                Leptospermum continentale                                        Prickly Tea-tree
+  MS                Coprosma quadrifida                                              Prickly Currant-bush
+  MS                Bursaria spinosa                                                 Sweet Bursaria
+  LH                Senecio minimus                                                  Shrubby Fireweed
+  MH                Gonocarpus tetragynus                                            Common Raspwort
+  MH                Acaena novae-zelandiae                                           Bidgee-widgee
+  MH                Hydrocotyle hirta                                                Hairy Pennywort
+  SH                Dichondra repens                                                 Kidney-weed
+  LTG               Carex appressa                                                   Tall Sedge
+  LTG               Cyperus lucidus                                                  Leafy Flat-sedge
+  LTG               Lepidosperma elatius                                             Tall Sword-sedge
+  LTG               Juncus procerus                                                  Tall Rush
+  LNG               Phragmites australis                                             Common Reed
+  MTG               Themeda triandra                                                 Kangaroo Grass
+  MTG               Lomandra filiformis                                              Wattle Mat-rush
+  MNG               Microlaena stipoides var. stipoides                              Weeping Grass
+  GF                Pteridium esculentum                                             Austral Bracken
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 83: Swampy Riparian Woodland - Gippsland Plain bioregion
+
+
+Recruitment:
+   Continuous
+
+Organic Litter:
+   20 % cover
+
+Logs:
+   20 m/0.1 ha.
+
+Weediness:
+ LF Code                Typical Weed Species                                     Common Name                                      Invasive              Impact
+   LH                   Cirsium vulgare                                          Spear Thistle                                    high                  high
+   LH                   Sonchus oleraceus                                        Common Sow-thistle                               high                  low
+   MH                   Hypochoeris radicata                                     Cat's Ear                                        high                  low
+   MH                   Prunella vulgaris                                        Self-heal                                        high                  high
+   LNG                  Holcus lanatus                                           Yorkshire Fog                                    high                  high
+   MTG                  Anthoxanthum odoratum                                    Sweet Vernal-grass                               high                  high
+   MTG                  Briza maxima                                             Large Quaking-grass                              high                  low
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 175: Grassy Woodland
+
+Description:
+A variable open eucalypt woodland to 15 m tall or occasionally Sheoak woodland to 10 m tall over a diverse ground layer of
+grasses and herbs. The shrub component is usually sparse. It occurs on sites with moderate fertility on gentle slopes or
+undulating hills on a range of geologies.
+
+Large trees:
+  Species                                           DBH(cm)          #/ha
+  Eucalyptus spp.                                   70 cm            15 / ha
+  Allocasuarina spp.                                40 cm
+
+Tree Canopy Cover:
+  %cover      Character Species                                                Common Name
+  15%              Eucalyptus radiata s.l.                                     Narrow-leaf Peppermint
+                   Allocasuarina verticillata                                  Drooping Sheoak
+
+Understorey:
+  Life form                                                   #Spp          %Cover        LF code
+  Immature Canopy Tree                                                      5%            IT
+  Understorey Tree or Large Shrub                             2             10%           T
+  Medium Shrub                                                6             15%           MS
+  Small Shrub                                                 2             5%            SS
+  Prostrate Shrub                                             2             1%            PS
+  Large Herb                                                  2             5%            LH
+  Medium Herb                                                 8             10%           MH
+  Small or Prostrate Herb                                     3             5%            SH
+  Large Tufted Graminoid                                      2             10%           LTG
+  Large Non-tufted Graminoid                                  1             10%           LNG
+  Medium to Small Tufted Graminoid                            6             20%           MTG
+  Medium to Tiny Non-tufted Graminoid                         2             10%           MNG
+  Ground Fern                                                 1             5%            GF
+  Scrambler or Climber                                        2             5%            SC
+  Bryophytes/Lichens                                          na            10%           BL
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 175: Grassy Woodland - Gippsland Plain bioregion
+
+
+LF Code                  Species typical of at least part of EVC range                                             Common Name
+   T                     Acacia mearnsii                                                                           Black Wattle
+   T                     Allocasuarina littoralis                                                                  Black Sheoak
+   T                     Exocarpos cupressiformis                                                                  Cherry Ballart
+   MS                    Leptospermum continentale                                                                 Prickly Tea-tree
+   MS                    Epacris impressa                                                                          Common Heath
+   MS                    Cassinia aculeata                                                                         Common Cassinia
+   MS                    Acacia paradoxa                                                                           Hedge Wattle
+   SS                    Pimelea humilis                                                                           Common Rice-flower
+   SS                    Hibbertia riparia                                                                         Erect Guinea-flower
+   PS                    Bossiaea prostrata                                                                        Creeping Bossiaea
+   PS                    Astroloma humifusum                                                                       Cranberry Heath
+   PS                    Acrotriche serrulata                                                                      Honey-pots
+   LH                    Pterostylis longifolia s.l.                                                               Tall Greenhood
+   MH                    Gonocarpus tetragynus                                                                     Common Raspwort
+   MH                    Drosera peltata ssp. auriculata                                                           Tall Sundew
+   SH                    Dichondra repens                                                                          Kidney-weed
+   SH                    Opercularia varia                                                                         Variable Stinkweed
+   SH                    Drosera whittakeri ssp. aberrans                                                          Scented Sundew
+   LTG                   Deyeuxia quadriseta                                                                       Reed Bent-grass
+   LTG                   Xanthorrhoea minor ssp. lutea                                                             Small Grass-tree
+   LTG                   Lomandra longifolia                                                                       Spiny-headed Mat-rush
+   LNG                   Gahnia radula                                                                             Thatch Saw-sedge
+   MTG                   Lomandra filiformis                                                                       Wattle Mat-rush
+   MTG                   Themeda triandra                                                                          Kangaroo Grass
+   MTG                   Poa sieberiana                                                                            Grey Tussock-grass
+   MTG                   Lepidosperma laterale                                                                     Variable Sword-sedge
+   MNG                   Microlaena stipoides var. stipoides                                                       Weeping Grass
+   GF                    Pteridium esculentum                                                                      Austral Bracken
+   SC                    Comesperma volubile                                                                       Love Creeper
+   SC                    Billardiera scandens                                                                      Common Apple-berry
+
+Recruitment:
+   Continuous
+
+Organic Litter:
+   20 % cover
+
+Logs:
+   15 m/0.1 ha.
+
+Weediness:
+ LF Code                Typical Weed Species                                     Common Name                                   Invasive              Impact
+   T                    Pinus radiata                                            Radiata Pine                                  high                  high
+   T                    Pittosporum undulatum                                    Sweet Pittosporum                             high                  high
+   MS                   Chrysanthemoides monilifera                              Boneseed                                      high                  high
+   MH                   Hypochoeris radicata                                     Cat's Ear                                     high                  low
+   MTG                  Anthoxanthum odoratum                                    Sweet Vernal-grass                            high                  high
+   MTG                  Briza maxima                                             Large Quaking-grass                           high                  low
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 641: Riparian Woodland
+
+Description:
+Occurs beside permanent streams, typically on narrow alluvial deposits. Woodland to 20 m tall generally dominated by
+Eucalyptus camaldulensis over a tussock grass-dominated understorey. Tall shrubs may be present and amphibious herbs may
+occur in occasional ponds and beside creeks. While flooding may be common, sites are rarely inundated for lengthy periods.
+
+Large trees:
+  Species                                               DBH(cm)        #/ha
+  Eucalyptus spp.                                       80 cm          15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                  Common Name
+  20%                Eucalyptus camaldulensis                                    River Red-gum
+                     Eucalyptus viminalis ssp. viminalis                         Manna Gum
+                     Eucalyptus tereticornis                                     Gippsland Red Gum
+
+Understorey:
+  Life form                                                     #Spp          %Cover        LF code
+  Immature Canopy Tree                                                        5%            IT
+  Understorey Tree or Large Shrub                               2             10%           T
+  Medium Shrub                                                  4             10%           MS
+  Small Shrub                                                   1             5%            SS
+  Large Herb                                                    4             15%           LH
+  Medium Herb                                                   5             10%           MH
+  Small or Prostrate Herb                                       1             5%            SH
+  Large Tufted Graminoid                                        3             15%           LTG
+  Large Non-tufted Graminoid                                    1             5%            LNG
+  Medium to Small Tufted Graminoid                              4             20%           MTG
+  Medium to Tiny Non-tufted Graminoid                           2             5%            MNG
+  Scrambler or Climber                                          1             5%            SC
+  Bryophytes/Lichens                                            na            10%           BL
+
+LF Code             Species typical of at least part of EVC range                     Common Name
+  T                 Acacia mearnsii                                                   Black Wattle
+  T                 Melaleuca ericifolia                                              Swamp Paperbark
+  MS                Bursaria spinosa ssp. spinosa                                     Sweet Bursaria
+  MS                Hymenanthera dentata                                              Tree Violet
+  MS                Callistemon sieberi                                               River Bottlebrush
+  MS                Gynatrix pulchella                                                Hemp Bush
+  SS                Rubus parvifolius                                                 Small-leaf Bramble
+  LH                Wahlenbergia gracilis s.s.                                        Sprawling Bluebell
+  LH                Senecio minimus                                                   Shrubby Groundsel
+  LH                Myriophyllum crispatum                                            Upright Water-milfoil
+  MH                Rumex brownii                                                     Slender Dock
+  MH                Oxalis perennans                                                  Grassland Wood-sorrel
+  MH                Mentha australis                                                  River Mint
+  MH                Acaena novae-zelandiae                                            Bidgee-widgee
+  SH                Dichondra repens                                                  Kidneyweed
+  LTG               Poa labillardierei                                                Common Tussock-grass
+  LTG               Carex appressa                                                    Tall Sedge
+  LNG               Phragmites australis                                              Common Reed
+  MTG               Lachnagrostis filiformis var. filiformis                          Common Blown-grass
+  MTG               Triglochin procerum s.l.                                          Water-ribbons
+  MNG               Eleocharis acuta                                                  Common Spike-sedge
+  SC                Calystegia sepium                                                 Large Bindweed
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 641: Riparian Woodland - Gippsland Plain bioregion
+
+
+Recruitment:
+   Continuous
+
+Organic Litter:
+   30% cover
+
+Logs:
+   20m / 0.1 ha
+
+Weediness:
+ LF Code Typical Weed Species                                                         Common Name                                   Invasive            Impact
+   MS                Rosa rubiginosa                                                  Sweet Briar                                   high                high
+   LH                Sonchus oleraceus                                                Common Sow-thistle                            high                low
+   LH                Cirsium vulgare                                                  Spear Thistle                                 high                high
+   LH                Plantago lanceolata                                              Ribwort                                       high                low
+   LH                Helminthotheca echioides                                         Ox-tongue                                     high                low
+   LH                Rumex crispus                                                    Curled Dock                                   high                low
+   LH                Aster subulatus                                                  Aster-weed                                    high                low
+   LH                Rorippa palustris                                                Marsh Yellow-cress                            high                high
+   MH                Leontodon taraxacoides ssp. taraxacoides                         Hairy Hawkbit                                 high                low
+   MH                Hypochoeris radicata                                             Cat's Ear                                     high                low
+   LTG               Phalaris aquatica                                                Toowoomba Canary-grass                        high                high
+   LNG               Holcus lanatus                                                   Yorkshire Fog                                 high                high
+   MTG               Bromus hordeaceus ssp. hordeaceus                                Soft Brome                                    high                low
+   MTG               Anthoxanthum odoratum                                            Sweet Vernal-grass                            high                high
+   MNG               Paspalum distichum                                               Water Couch                                   high                high
+   SC                Galium aparine                                                   Cleavers                                      high                low
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment December 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 656: Brackish Wetland
+
+Description:
+Sedgeland or herbland, occasionally grassland, dominated by salt-tolerant species, but samphires, if present usually with low
+cover. Typically occurs on heavy, at least seasonally shallowly inundated to waterlogged soils, on a range of geologies.
+Common in estuaries, along the shorelines of saline/brackish lakes and along poorly defined drainage lines near the coast.
+
+Life Forms:
+   Life form                                                   #Spp           %Cover        LF code
+  Large Herb                                                   1              5%            LH
+  Medium Herb                                                  4              20%           MH
+  Small or Prostrate Herb                                      2              5%            SH
+  Large Tufted Graminoid                                       1              15%           LTG
+  Large Non-tufted Graminoid                                   1              10%           LNG
+  Medium to Small Tufted Graminoid                             2              5%            MTG
+  Medium to Tiny Non-tufted Graminoid                          3              15%           MNG
+  Scrambler or Climber                                         1              5%            SC
+  Total understorey projective foliage cover                                  80%
+
+LF Code           Species typical of at least part of EVC range                      Common Name
+  LH              Epilobium billardierianum                                          Variable Willow-herb
+  MH              Myriophyllum verrucosum                                            Red Water-milfoil
+  MH              Myriophyllum muelleri                                              Hooded Water-milfoil
+  MH              Lilaeopsis polyantha                                               Australian Lilaeopsis
+  MH              Samolus repens                                                     Creeping Brookweed
+  SH              Mimulus repens                                                     Creeping Monkey-flower
+  SH              Selliera radicans                                                  Shiny Swamp-mat
+  LTG             Juncus kraussii ssp. australiensis                                 Sea Rush
+  LNG             Phragmites australis                                               Common Reed
+  MTG             Triglochin procerum s.l.                                           Water Ribbons
+  MTG             Poa poiformis                                                      Coast Tussock-grass
+  MNG             Bolboschoenus caldwellii                                           Salt Club-sedge
+  MNG             Ruppia polycarpa                                                   Many-fruit Tassel
+  MNG             Ruppia megacarpa                                                   Large-fruit Tassel
+  MNG             Triglochin striatum                                                Streaked Arrowgrass
+  SC              Calystegia sepium                                                  Large Bindweed
+
+Recruitment:
+  Episodic/Flood. Desirable period between disturbances is 5 years.
+
+Organic Litter:
+  10% cover
+
+Weediness:
+ LF Code Typical Weed Species                                      Common Name                    Invasive      Impact
+  MH            Cicendia filiformis                                Slender Cicendia               high          low
+  MH            Anagallis arvensis                                 Pimpernel                      high          low
+  SH            Anagallis minima                                   Chaffweed                      high          low
+  MTG           Bromus hordeaceus ssp. hordeaceus                  Soft Brome                     high          low
+  MTG           Polypogon maritimus var. subspathaceus             Coast Beard-grass              high          low
+  MTG           Romulea rosea                                      Onion Grass                    high          low
+  MTG           Briza minor                                        Lesser Quaking-grass           high          low
+  MNG           Aira cupaniana                                     Quicksilver Grass              high          low
+  TTG           Cyperus tenellus                                   Tiny Flat-sedge                high          low
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 656: Brackish Wetland - Gippsland Plain bioregion
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 895: Escarpment Shrubland
+
+Description:
+Occurs on rocky escarpments in steep valleys or gorges, associated with limestone or basalt. Sites have moderate to high
+fertility, are well-drained but subject to regular summer drought due to shallow soils. . Eucalypt woodland to 15 m tall or non-
+eucalypt shrubland to 8 m tall, sometimes with occasional eucalypts; lichen-covered rock outcrops are common.
++
+    eucalypt woodland only components (ignore when assessing shrubland areas and standardise site condition score as required)
+
+Large trees+:
+    Species                                           DBH(cm)          #/ha
+    Eucalyptus spp.                                   70 cm            15 / ha
+
+Tree Canopy Cover:
+  %cover      Character Species                                                   Common Name
+    15%                Acacia implexa                                             Lightwood
+                       Allocasuarina verticillata                                 Drooping Sheoak
+                       Acacia mearnsii                                            Black Wattle
+                       Bursaria spinosa                                           Sweet Bursaria
+                       Eucalyptus radiata                                         Narrow-leaf Peppermint
+
+Understorey:
+  Life form                                                     #Spp           %Cover        LF code
+    Immature Canopy Tree+                                                        5%          IT
+    Understorey Tree or Large Shrub+                            3                10%         T
+    Medium Shrub                                                3                10%         MS
+    Small Shrub                                                 2                5%          SS
+    Large Herb                                                  3                5%          LH
+    Medium Herb                                                 4                10%         MH
+    Small or Prostrate Herb                                     5                5%          SH
+    Large Tufted Graminoid                                      1                5%          LTG
+    Large Non-tufted Graminoid                                  1                5%          LNG
+    Medium to Small Tufted Graminoid                            9                25%         MTG
+    Medium to Tiny Non-tufted Graminoid                         3                5%          MNG
+    Ground Fern                                                 1                5%          GF
+    Scrambler or Climber                                        1                5%          SC
+    Bryophytes/Lichens                                          na               20%         BL
+    Soil Crust                                                  na               10%         S/C
+
+LF Code               Species typical of at least part of EVC range                    Common Name
+    MS           r Rhagodia parabolica                                                 Fragrant Saltbush
+    MS                Hymenanthera dentata s.l.                                        Tree Violet
+    SS                Enchylaena tomentosa var. tomentosa                              Ruby Saltbush
+    LH                Wahlenbergia communis s.l.                                       Tufted Bluebell
+    MH                Oxalis perennans                                                 Grassland Wood-sorrel
+    MH                Maireana enchylaenoides                                          Wingless Bluebush
+    MH                Einadia nutans ssp. nutans                                       Nodding Saltbush
+    SH                Chamaesyce drummondii                                            Flat Spurge
+    SH                Dichondra repens                                                 Kidney-weed
+    LTG               Austrostipa bigeniculata                                         Kneed Spear-grass
+    MTG               Austrodanthonia racemosa var. racemosa                           Stiped Wallaby-grass
+    MTG               Austrodanthonia setacea                                          Bristly Wallaby-grass
+    MNG               Panicum effusum                                                  Hairy Panic
+    GF                Cheilanthes distans                                              Bristly Cloak-fern
+    SC                Clematis microphylla                                             Small-leaved Clematis
+    SC                Convolvulus erubescens spp. agg.                                 Pink Bindweed
+
+
+
+
+    Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 895: Escarpment Shrubland - Gippsland Plain bioregion
+
+
+Recruitment:
+Continuous
+
+Organic Litter:
+             20 % cover
+Logs:
+   15 m/0.1 ha+.
+   5 m/0.1 ha. (note: large log class does not apply)
+
+Weediness:
+ LF Code Typical Weed Species                                                         Common Name                                       Invasive           Impact
+   T                 Schinus molle                                                    Pepper Tree                                       high               high
+   MS                Lycium ferocissimum                                              African Box-thorn                                 high               high
+   MS                Genista monspessulana                                            Montpellier Broom                                 high               high
+   SS                Marrubium vulgare                                                Horehound                                         high               high
+   LH                Sonchus oleraceus                                                Common Sow-thistle                                high               low
+   LH                Helminthotheca echioides                                         Ox-tongue                                         high               low
+   LH                Lactuca serriola                                                 Prickly Lettuce                                   high               low
+   LH                Sisymbrium officinale                                            Hedge Mustard                                     high               high
+   LH                Sonchus asper s.l.                                               Rough Sow-thistle                                 high               low
+   LH                Verbascum thapsus ssp. thapsus                                   Great Mullein                                     high               high
+   LH                Echium plantagineum                                              Paterson's Curse                                  high               high
+   LH                Centaurium tenuiflorum                                           Slender Centaury                                  high               low
+   LH                Foeniculum vulgare                                               Fennel                                            high               high
+   MH                Hypochoeris radicata                                             Cat's Ear                                         high               low
+   MH                Trifolium arvense var. arvense                                   Hare's-foot Clover                                high               low
+   MH                Trifolium subterraneum                                           Subterranean Clover                               high               low
+   MH                Trifolium campestre var. campestre                               Hop Clover                                        high               low
+   MH                Trifolium angustifolium var. angustifolium                       Narrow-leaf Clover                                high               low
+   MH                Lotus suaveolens                                                 Hairy Bird's-foot Trefoil                         high               low
+   MH                Cerastium glomeratum s.l.                                        Common Mouse-ear Chickweed                        high               low
+   SH                Medicago polymorpha                                              Burr Medic                                        high               low
+   SH                Trifolium glomeratum                                             Cluster Clover                                    high               low
+   SH                Modiola caroliniana                                              Red-flower Mallow                                 high               low
+   SH                Aptenia cordifolia                                               Heart-leaf Ice-plant                              high               high
+   LTG               Phalaris aquatica                                                Toowoomba Canary-grass                            high               high
+   LNG               Holcus lanatus                                                   Yorkshire Fog                                     high               high
+   LNG               Avena fatua                                                      Wild Oat                                          high               low
+   MTG               Nassella trichotoma                                              Serrated Tussock                                  high               high
+   MTG               Ehrharta longiflora                                              Annual Veldt-grass                                high               low
+   MTG               Briza maxima                                                     Large Quaking-grass                               high               low
+   MTG               Bromus hordeaceus ssp. hordeaceus                                Soft Brome                                        high               low
+   MTG               Sporobolus africanus                                             Rat-tail Grass                                    high               high
+   MTG               Vulpia bromoides                                                 Squirrel-tail Fescue                              high               low
+   MTG               Romulea rosea                                                    Onion Grass                                       high               low
+   MTG               Pentaschistis airoides ssp. airoides                             False Hair-grass                                  high               low
+   MTG               Lolium perenne                                                   Perennial Rye-grass                               high               low
+   MTG               Dactylis glomerata                                               Cocksfoot                                         high               high
+   MTG               Vulpia myuros                                                    Rat's-tail Fescue                                 high               low
+   MTG               Bromus rubens                                                    Red Brome                                         high               low
+   MTG               Avena barbata                                                    Bearded Oat                                       high               low
+   MTG               Aira caryophyllea                                                Silvery Hair-grass                                high               low
+   SC                Vicia sativa ssp. sativa                                         Common Vetch                                      low                low
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment February 2005
+© The State of Victoria Department of Sustainability and Environment 2005
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+
+EVC 914: Estuarine Flats Grassland
+
+Description:
+Closed to open grassland to 1.5 m tall with occasional shrubs occurring on estuarine flats often associated with current or old
+beach berms or sand sheets that are occasionally inundated by high tides. Occupies areas on marginally higher ground inland
+from Coastal Saltmarsh.
+
+Life Forms:
+   Life form                                                     #Spp          %Cover       LF code
+  Medium Shrub                                                   2             5%           MS
+  Small Shrub                                                    1             5%           SS
+  Large Herb                                                     1             1%           LH
+  Medium Herb                                                    3             15%          MH
+  Small Herb                                                     4             15%          SH
+  Large Tufted Graminoid                                         2             15%          LTG
+  Medium to Small Tufted Graminoid                               2             20%          MTG
+  Medium to Tiny Non-tufted Graminoid                            3             15%          MNG
+  Total understorey projective foliage cover                                   85%
+
+LF Code           Species typical of at least part of EVC range                       Common Name
+  MS              Atriplex cinerea                                                    Coast Saltbush
+  MS              Rhagodia candolleana ssp. candolleana                               Seaberry Saltbush
+  SS              Frankenia pauciflora var. gunnii                                    Southern Sea-heath
+  LH              Senecio pinnatifolius                                               Variable Groundsel
+  MH              Sarcocornia quinqueflora ssp. quinqueflora                          Beaded Glasswort
+  MH              Suaeda australis                                                    Austral Seablite
+  MH              Samolus repens                                                      Creeping Brookweed
+  SH              Disphyma crassifolium ssp. clavellatum                              Rounded Noon-flower
+  SH              Selliera radicans                                                   Shiny Swamp-mat
+  SH              Hemichroa pentandra                                                 Trailing Hemichroa
+  LTG             Austrostipa stipoides                                               Prickly Spear-grass
+  LTG             Gahnia filum                                                        Chaffy Saw-sedge
+  MTG             Poa poiformis                                                       Coast Tussock-grass
+  MTG             Lachnagrostis billardierei ssp. billardierei                        Coast Blown-grass
+  MNG             Spinifex sericeus                                                   Hairy Spinifex
+  MNG             Distichlis distichophylla                                           Australian Salt-grass
+  MNG             Ficinia nodosa                                                      Knobby Club-sedge
+
+Recruitment:
+  Continuous
+
+Organic Litter:
+  10% Cover
+
+Weediness:
+ LF Code Typical Weed Species                                        Common Name                  Invasive       Impact
+  MS            Chrysanthemoides monilifera ssp. monilifera          Boneseed                     high           high
+  LH            Sonchus oleraceus                                    Common Sow-thistle           high           low
+  LH            Conyza albida                                        Tall Fleabane                high           low
+  MH            Polycarpon tetraphyllum                              Four-leaved Allseed          high           low
+  MH            Hypochoeris radicata                                 Cat's Ear                    high           low
+  MH            Anagallis arvensis                                   Pimpernel                    high           low
+  MNG           Vulpia myuros                                        Rat's-tail Fescue            high           low
+  MNG           Lagurus ovatus                                       Hare's-tail Grass            high           low
+
+
+
+
+  Ecological Vegetation Class bioregion benchmark
+
+---
+
+EVC 914: Estuarine Flats Grassland - Gippsland Plain bioregion
+
+
+
+
+Published by the Victorian Government Department of Sustainability and Environment April 2004
+© The State of Victoria Department of Sustainability and Environment 2004
+This publication is copyright. Reproduction and the making available of this material for personal, in-house or non-commercial purposes is authorised, on condition that:
+       •      the copyright owner is acknowledged;
+       •      no official connection is claimed;
+       •      the material is made available without charge or at cost; and
+       •      the material is not subject to inaccurate, misleading or derogatory treatment.
+Requests for permission to reproduce or communicate this material in any way not permitted by this licence (or by the fair dealing provisions of the Copyright Act 1968) should be
+directed to the Nominated Officer, Copyright, 8 Nicholson Street, East Melbourne, Victoria, 3002.
+
+
+For more information contact: Customer Service Centre, 136 186
+This publication may be of assistance to you but the State of Victoria and its employees do not guarantee that the publication is without flaw of any kind or is wholly appropriate
+for your particular purposes and therefore disclaims all liability for any error, loss or other consequence which may arise from you relying on any information in this publication.
+
+
+www.dse.vic.gov.au
+EVC/Bioregion Benchmark for Vegetation Quality Assessment
+
+Gippsland Plain bioregion
+
+---
+

@@ -1,0 +1,58 @@
+/*
+ * EcosystemSidebar wrapper — floating card over the diorama scene,
+ * matching .info-panel styling exactly (same position, radius, shadow).
+ * All interior styling comes from InfoPanel.css.
+ */
+
+.eco-sidebar-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  max-height: calc(100vh - 40px);
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  padding: 24px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+}
+
+/* Green dot indicating a 3D model is available for this species */
+.plant-card-image {
+  position: relative;
+}
+
+/* Thumbnail image rendered from GLB model */
+.plant-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.model-available-dot {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 0 2px var(--card-bg);
+}
+
+/* Responsive: narrower on small screens */
+@media (max-width: 768px) {
+  .eco-sidebar-wrapper {
+    width: calc(100% - 40px);
+    max-height: 50vh;
+    top: auto;
+    bottom: 20px;
+  }
+}

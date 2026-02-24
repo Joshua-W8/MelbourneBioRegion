@@ -1,0 +1,3130 @@
+{
+  "_meta": {
+    "description": "EVC bioregional benchmarks for diorama scene composition",
+    "source": "Vegetation Quality Assessment Manual (DSE 2004), EVC/Bioregion Benchmark sheets",
+    "schema_version": "1.0",
+    "key_format": "evc_{number}_{bioregion_slug}",
+    "notes": [
+      "Benchmarks describe reference (pre-disturbance) condition of each EVC within a specific bioregion",
+      "Cover percentages refer to projected foliage cover, not mutually exclusive — total can exceed 100%",
+      "Species listed under 'typical_species' are characteristic of at least part of the EVC range in this bioregion",
+      "Life form codes follow DSE standard: IT=Immature Canopy Tree, T=Understorey Tree/Large Shrub, MS=Medium Shrub, SS=Small Shrub, PS=Prostrate Shrub, LH=Large Herb, MH=Medium Herb, SH=Small/Prostrate Herb, LTG=Large Tufted Graminoid, LNG=Large Non-tufted Graminoid, MTG=Medium-Small Tufted Graminoid, MNG=Medium-Tiny Non-tufted Graminoid, BL=Bryophytes/Lichens, SC=Soil Crust, GF=Ground Fern"
+    ]
+  },
+  "evc_55_victorian_volcanic_plain": {
+    "evc_number": 55,
+    "evc_name": "Plains Grassy Woodland",
+    "bioregion": "Victorian Volcanic Plain",
+    "vegetation_type": "Grasslands and Woodlands on fertile plains",
+    "description": "An open, eucalypt woodland to 15 m tall. Occupies poorly drained, fertile soils on flat or gently undulating plains at low elevations. The understorey consists of a few sparse shrubs over a species-rich grassy and herbaceous ground layer. This variant occupies areas receiving approximately 500–700 mm annual rainfall.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 10,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus camaldulensis",
+          "common_name": "River Red Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 80,
+      "density_per_ha": 8
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 3,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 8,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 12,
+        "cover_pct": 45
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Soil Crust",
+        "code": "SC",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Acacia pycnantha",
+        "common_name": "Golden Wattle"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Acacia paradoxa",
+        "common_name": "Hedge Wattle"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Pimelea humilis",
+        "common_name": "Common Rice-flower"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Astroloma humifusum",
+        "common_name": "Cranberry Heath"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Bossiaea prostrata",
+        "common_name": "Creeping Bossiaea"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Oxalis perennans",
+        "common_name": "Grassland Wood-sorrel"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena echinata",
+        "common_name": "Sheep's Burr"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Hydrocotyle laxiflora",
+        "common_name": "Stinking Pennywort"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa mollis",
+        "common_name": "Supple Spear-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa bigeniculata",
+        "common_name": "Kneed Spear-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Themeda triandra",
+        "common_name": "Kangaroo Grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Elymus scaber var. scaber",
+        "common_name": "Common Wheat-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia setacea",
+        "common_name": "Bristly Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia racemosa var. racemosa",
+        "common_name": "Stiped Wallaby-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10,
+      "logs_m_per_0_1_ha": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_55_gippsland_plain": {
+    "evc_number": 55,
+    "evc_name": "Plains Grassy Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Grasslands and Woodlands on fertile plains",
+    "description": "An open, eucalypt woodland to 15 m tall occurring on a number of geologies and soil types. Occupies poorly drained, fertile soils on flat or gently undulating plains at low elevations. The understorey consists of a few sparse shrubs over a species-rich grassy and herbaceous ground layer.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 20,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus tereticornis ssp. mediana",
+          "common_name": "Gippsland Red-gum"
+        },
+        {
+          "scientific_name": "Eucalyptus camaldulensis",
+          "common_name": "River Red-gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 80,
+      "density_per_ha": 10
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 10,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 9,
+        "cover_pct": 35
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Allocasuarina littoralis",
+        "common_name": "Black Sheoak"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Acacia mearnsii",
+        "common_name": "Black Wattle"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Acacia melanoxylon",
+        "common_name": "Blackwood"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Kunzea ericoides",
+        "common_name": "Burgan"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Pimelea humilis",
+        "common_name": "Common Rice-flower"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Bossiaea prostrata",
+        "common_name": "Creeping Bossiaea"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hypericum gramineum",
+        "common_name": "Small St John's Wort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Oxalis perennans",
+        "common_name": "Grassland Wood-sorrel"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Poranthera microphylla",
+        "common_name": "Small Poranthera"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa rudis",
+        "common_name": "Veined Spear-grass"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Gahnia radula",
+        "common_name": "Thatch Saw-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Themeda triandra",
+        "common_name": "Kangaroo Grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Carex breviculmis",
+        "common_name": "Common Grass-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lomandra filiformis",
+        "common_name": "Wattle Mat-rush"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Schoenus apogon",
+        "common_name": "Common Bog-sedge"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10,
+      "logs_m_per_0_1_ha": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_53_victorian_volcanic_plain": {
+    "evc_number": 53,
+    "evc_name": "Swamp Scrub",
+    "bioregion": "Victorian Volcanic Plain",
+    "vegetation_type": "Freshwater wetlands",
+    "description": "Closed scrub to 8 m tall at low elevations on alluvial deposits along streams or on poorly drained sites with high nutrient and water availability. Soils vary from organic loams to fine silts and peats which are inundated during the wetter months of the year and is dominated by Woolly Tea-tree Leptospermun lanigerum which often forms a dense impenetrable thicket, out- competing other species. Emergent trees (eg. Swamp Gum Eucalyptus ovata) may some times be present. Where light penetrates to ground level, a moss/lichen/liverwort herbaceous ground cover is often present.",
+    "canopy": {
+      "height_m": 8,
+      "cover_pct": 60,
+      "character_species": [
+        {
+          "scientific_name": "Leptospermum lanigerum",
+          "common_name": "Woolly Tea-tree"
+        },
+        {
+          "scientific_name": "Melaleuca squarrosa",
+          "common_name": "Scented Paperbark"
+        },
+        {
+          "scientific_name": "Acacia melanoxylon",
+          "common_name": "Blackwood"
+        }
+      ]
+    },
+    "understorey": [
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 13,
+        "cover_pct": 30
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 9,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 7,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 20
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "LH",
+        "scientific_name": "Persicaria decipiens",
+        "common_name": "Slender Knotweed"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Villarsia reniformis",
+        "common_name": "Running Marsh-flower"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Epilobium pallidiflorum",
+        "common_name": "Showy Willow-herb"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hydrocotyle pterocarpa",
+        "common_name": "Wing Pennywort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Lilaeopsis polyantha",
+        "common_name": "Australian Lilaeopsis"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hydrocotyle muscosa",
+        "common_name": "Mossy Pennywort"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Lobelia pedunculata s.l.",
+        "common_name": "Matted Pratia"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Crassula helmsii",
+        "common_name": "Swamp Crassula"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Juncus procerus",
+        "common_name": "Tall Rush"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Gahnia clarkei",
+        "common_name": "Tall Saw-sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Deyeuxia quadriseta",
+        "common_name": "Reed Bent-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Amphibromus recurvatus",
+        "common_name": "Dark Swamp Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Schoenus maschalinus",
+        "common_name": "Leafy Bog-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lachnagrostis filiformis (perennial variety)",
+        "common_name": "Wetland Blown-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Juncus planifolius",
+        "common_name": "Broad-leaf Rush"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 20
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_132_victorian_volcanic_plain": {
+    "evc_number": 132,
+    "evc_name": "Riverina Plains Grassy Woodland",
+    "bioregion": "Victorian Volcanic Plain",
+    "vegetation_type": "Grasslands and Woodlands on fertile plains",
+    "description": "Grassy or sedgy woodland to 15 m tall with large inter-tussock spaces potentially supporting a range of annual or geophytic herbs adapted to low summer rainfall, with low overall biomass. Mostly occurs on terrain of low relief in areas receiving <600 mm rainfall per annum. Fertile, sometimes seasonally waterlogged, mostly silty, loamy or clay topsoils, with heavy subsoils, derived largely from former Quaternary swamp deposits.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 15,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus melliodora",
+          "common_name": "Yellow Box"
+        },
+        {
+          "scientific_name": "Eucalyptus microcarpa",
+          "common_name": "Grey Box"
+        },
+        {
+          "scientific_name": "Allocasuarina luehmannii",
+          "common_name": "Buloke"
+        },
+        {
+          "scientific_name": "Eucalyptus leucoxylon",
+          "common_name": "Yellow Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Allocasuarina luehmannii",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 20,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 4,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 16,
+        "cover_pct": 45
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Soil Crust",
+        "code": "SC",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Acacia acinacea s.l.",
+        "common_name": "Gold-dust Wattle"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Acacia pycnantha",
+        "common_name": "Golden Wattle"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Eutaxia microphylla var. microphylla",
+        "common_name": "Common Eutaxia"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Astroloma humifusum",
+        "common_name": "Cranberry Heath"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Senecio quadridentatus",
+        "common_name": "Cotton Fireweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena echinata",
+        "common_name": "Sheep's Burr"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Calocephalus citreus",
+        "common_name": "Lemon Beauty-heads"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Maireana enchylaenoides",
+        "common_name": "Wingless Bluebush"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Plantago gaudichaudii",
+        "common_name": "Narrow Plantain"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Daucus glochidiatus",
+        "common_name": "Australian Carrot"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Goodenia pinnatifida",
+        "common_name": "Cut-leaf Goodenia"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Oxalis perennans",
+        "common_name": "Grassland Wood-sorrel"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Solenogyne dominii",
+        "common_name": "Smooth Solenogyne"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa bigeniculata",
+        "common_name": "Kneed Spear-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia caespitosa",
+        "common_name": "Common Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia setacea",
+        "common_name": "Bristly Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrostipa scabra",
+        "common_name": "Rough Spear-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Dianella revoluta var. revoluta s.l.",
+        "common_name": "Black-anther Flax-lily"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Wurmbea dioica",
+        "common_name": "Common Early Nancy"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10,
+      "logs_m_per_0_1_ha": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_897_victorian_volcanic_plain": {
+    "evc_number": 897,
+    "evc_name": "Higher Rainfall Plains Grassy Woodland",
+    "bioregion": "Victorian Volcanic Plain",
+    "vegetation_type": "Grasslands and Woodlands on fertile plains",
+    "description": "An open, eucalypt woodland to 15 m tall or acacia/sheoak woodland to 10 m tall. Occupies poorly drained, fertile soils on flat or gently undulating plains at low elevations. The understorey consists of a few sparse shrubs over a species-rich grassy and herbaceous ground layer. This variant occupies areas receiving greater than 700 mm annual rainfall.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 20,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus ovata",
+          "common_name": "Swamp Gum"
+        },
+        {
+          "scientific_name": "Eucalyptus viminalis",
+          "common_name": "Manna Gum"
+        },
+        {
+          "scientific_name": "Acacia melanoxylon",
+          "common_name": "Blackwood"
+        },
+        {
+          "scientific_name": "Allocasuarina verticillata",
+          "common_name": "Drooping Sheoak"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 3,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 8,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 12,
+        "cover_pct": 45
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Soil Crust",
+        "code": "SC",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Acacia pycnantha",
+        "common_name": "Golden Wattle"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Acacia paradoxa",
+        "common_name": "Hedge Wattle"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Pimelea humilis",
+        "common_name": "Common Rice-flower"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Astroloma humifusum",
+        "common_name": "Cranberry Heath"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Bossiaea prostrata",
+        "common_name": "Creeping Bossiaea"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Leptorhynchos squamatus",
+        "common_name": "Scaly Buttons"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Chysocephalum apiculatum",
+        "common_name": "Common Everlasting"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena echinata",
+        "common_name": "Sheep's Burr"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Hydrocotyle laxiflora",
+        "common_name": "Stinking Pennywort"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa mollis",
+        "common_name": "Supple Spear-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa bigeniculata",
+        "common_name": "Kneed Spear-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Themeda triandra",
+        "common_name": "Kangaroo Grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa morrisii",
+        "common_name": "Soft Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia setacea",
+        "common_name": "Bristly Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia racemosa var. racemosa",
+        "common_name": "Stiped Wallaby-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10,
+      "logs_m_per_0_1_ha": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_934_victorian_volcanic_plain": {
+    "evc_number": 934,
+    "evc_name": "Brackish Grassland",
+    "bioregion": "Victorian Volcanic Plain",
+    "vegetation_type": "Saltmarsh and coastal grasslands",
+    "description": "Grassland or sedgeland occurring on silts in low-lying areas within brackish floodplains. Often occurs in association with Brackish Wetland.",
+    "understorey": [
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 5,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 4,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 1,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "LH",
+        "scientific_name": "Senecio glomeratus",
+        "common_name": "Annual Fireweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Calocephalus lacteus",
+        "common_name": "Milky Beauty-heads"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Samolus repens",
+        "common_name": "Creeping Brookweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Sarcocornia quinqueflora",
+        "common_name": "Beaded Glasswort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Sebaea albidiflora",
+        "common_name": "White Sebaea"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Selliera radicans",
+        "common_name": "Shiny Swamp-mat"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Utricularia tenella",
+        "common_name": "Pink Bladderwort"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Gahnia filum",
+        "common_name": "Chaffy Saw-sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Gahnia trifida",
+        "common_name": "Coast Saw-sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Poa labillardierei",
+        "common_name": "Common Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia geniculata",
+        "common_name": "Kneed Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa poiformis",
+        "common_name": "Coast Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Schoenus apogon",
+        "common_name": "Common Bog-sedge"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Distichlis distichophylla",
+        "common_name": "Australian Salt-grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_3_gippsland_plain": {
+    "evc_number": 3,
+    "evc_name": "Damp Sands Herb-rich Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Woodlands and heathlands on sand",
+    "description": "A low, grassy or bracken-dominated eucalypt forest or open woodland to 15 m tall with a large shrub layer and ground layer rich in herbs, grasses, and orchids. Occurs mainly on flat or undulating areas on moderately fertile, relatively well-drained, deep sandy or loamy topsoils over heavier subsoils (duplex soils).",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 15,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus viminalis ssp. pryoriana",
+          "common_name": "Rough-barked Manna Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 5,
+        "cover_pct": 25
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 8,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 4,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Ground Fern",
+        "code": "GF",
+        "num_species": 1,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia mearnsii",
+        "common_name": "Black Wattle"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Acacia melanoxylon",
+        "common_name": "Blackwood"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Epacris impressa",
+        "common_name": "Common Heath"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Leptospermum continentale",
+        "common_name": "Prickly Tea-tree"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Banksia marginata",
+        "common_name": "Silver Banksia"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Leptospermum myrsinoides",
+        "common_name": "Heath Tea-tree"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Leucopogon virgatus",
+        "common_name": "Common Beard-heath"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Dillwynia glaberrima",
+        "common_name": "Smooth Parrot-pea"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Amperea xiphoclada var. xiphoclada",
+        "common_name": "Broom Spurge"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Astroloma humifusum",
+        "common_name": "Cranberry Heath"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Drosera peltata ssp. auriculata",
+        "common_name": "Tall Sundew"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Viola hederacea sensu Willis (1972)",
+        "common_name": "Ivy-leaf Violet"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Geranium solanderi s.l.",
+        "common_name": "Austral Cranesbill"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Hydrocotyle laxiflora",
+        "common_name": "Stinking Pennywort"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Opercularia varia",
+        "common_name": "Variable Stinkweed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Poranthera microphylla",
+        "common_name": "Small Poranthera"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Lomandra longifolia",
+        "common_name": "Spiny-headed Mat-rush"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa mollis",
+        "common_name": "Supple Spear-grass"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Tetrarrhena juncea",
+        "common_name": "Forest Wire-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lepidosperma concavum",
+        "common_name": "Sandhill Sword-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Dianella revoluta s.l.",
+        "common_name": "Black-anther Flax-lily"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lomandra filiformis",
+        "common_name": "Wattle-headed Mat-rush"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa sieberiana",
+        "common_name": "Grey Tussock-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      },
+      {
+        "code": "GF",
+        "scientific_name": "Pteridium esculentum",
+        "common_name": "Austral Bracken"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 40,
+      "logs_m_per_0_1_ha": 15
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_9_gippsland_plain": {
+    "evc_number": 9,
+    "evc_name": "Coastal Saltmarsh",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Saltmarsh and coastal grasslands",
+    "description": "Occurs on and immediately above marine and estuarine tidal flats and contains distinct floristic communities as bands or zones in the same location, depending on the positioning of the various floristic communities in relation to the saline environment. Consists of a range of life forms including succulent herbs, low succulent shrubs, rushes and sedges.",
+    "understorey": [
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 2,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 3,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 2,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Soil Crust",
+        "code": "SC",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Sclerostegia arbuscula",
+        "common_name": "Shrubby Glasswort"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Suaeda australis",
+        "common_name": "Austral Seablite"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Sarcocornia quinqueflora",
+        "common_name": "Beaded Glasswort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Samolus repens",
+        "common_name": "Creeping Brookweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hemichroa pentandra",
+        "common_name": "Trailing Hemichroa"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Disphyma crassifolium ssp. clavellatum",
+        "common_name": "Rounded Noon-flower"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Triglochin striatum",
+        "common_name": "Streaked Arrowgrass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Distichlis distichophylla",
+        "common_name": "Australian Salt-grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_56_gippsland_plain": {
+    "evc_number": 56,
+    "evc_name": "Floodplain Riparian Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "River banks and creeklines",
+    "description": "An open eucalypt woodland to 20 m tall over a medium to tall shrub layer with a ground layer consisting of amphibious and aquatic herbs and sedges. Occurs along the banks and floodplains of the larger meandering rivers and major creeks, often in conjunction with one or more floodplain wetland communities. Elevation and rainfall are relatively low and soils are fertile alluviums subject to periodic flooding and inundation.",
+    "canopy": {
+      "height_m": 20,
+      "cover_pct": 20,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus camaldulensis",
+          "common_name": "River Red-gum"
+        },
+        {
+          "scientific_name": "Eucalyptus tereticornis ssp. mediana",
+          "common_name": "Gippsland Red Gum"
+        },
+        {
+          "scientific_name": "Eucalyptus ovata",
+          "common_name": "Swamp Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 80,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 5,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 7,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia implexa",
+        "common_name": "Lightwood"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Acacia melanoxylon",
+        "common_name": "Blackwood"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Ozothamnus ferrugineus",
+        "common_name": "Tree Everlasting"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Bursaria spinosa ssp. spinosa",
+        "common_name": "Sweet Bursaria"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Hymenanthera dentata s.l.",
+        "common_name": "Tree Violet"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Urtica incisa",
+        "common_name": "Scrub Nettle"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Persicaria subsessilis",
+        "common_name": "Hairy Knotweed"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Senecio quadridentatus",
+        "common_name": "Cottony Fireweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena novae-zelandiae",
+        "common_name": "Bidgee-widgee"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hydrocotyle hirta",
+        "common_name": "Hairy Pennywort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Stellaria pungens",
+        "common_name": "Prickly Starwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Veronica plebeia",
+        "common_name": "Trailing Speedwell"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Oxalis corniculata s.l.",
+        "common_name": "Yellow Wood-sorrel"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Carex appressa",
+        "common_name": "Tall Sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Poa labillardierei",
+        "common_name": "Common Tussock-grass"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Phragmites australis",
+        "common_name": "Common Reed"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Juncus amabilis",
+        "common_name": "Hollow Rush"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Cyperus spp.",
+        "common_name": "Flat-sedge"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Eleocharis acuta",
+        "common_name": "Common Spike-sedge"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Calystegia sepium",
+        "common_name": "Large Bindweed"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 40,
+      "logs_m_per_0_1_ha": 30
+    },
+    "recruitment": "Episodic/Flood. Desirable period between disturbances is 5 years"
+  },
+  "evc_68_gippsland_plain": {
+    "evc_number": 68,
+    "evc_name": "Creekline Grassy Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "River banks and creeklines",
+    "description": "Eucalypt-dominated woodland to 15 m tall with occasional scattered shrub layer over a mostly grassy/sedgy to herbaceous ground-layer. Occurs on low-gradient ephemeral to intermittent drainage lines, typically on fertile colluvial/alluvial soils, on a wide range of suitably fertile geological substrates. These minor drainage lines can include a range of graminoid and herbaceous species tolerant of waterlogged soils, and are presumed to have sometimes resembled a linear wetland or system of interconnected small ponds.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 15,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus camaldulensis",
+          "common_name": "River Red Gum"
+        },
+        {
+          "scientific_name": "Eucalyptus ovata",
+          "common_name": "Swamp Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 80,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 8,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 12,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia mearnsii",
+        "common_name": "Black Wattle"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Ozothamnus ferrugineus",
+        "common_name": "Tree Everlasting"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Acacia pycnantha",
+        "common_name": "Golden Wattle"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Pimelea humilis",
+        "common_name": "Common Rice-flower"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena echinata",
+        "common_name": "Sheep's Burr"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Hydrocotyle laxiflora",
+        "common_name": "Stinking Pennywort"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Carex appressa",
+        "common_name": "Tall Sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Poa labillardierei",
+        "common_name": "Common Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Elymus scaber var. scaber",
+        "common_name": "Common Wheat-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lachnagrostis filiformis",
+        "common_name": "Common Blown-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 40,
+      "logs_m_per_0_1_ha": 20
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_83_gippsland_plain": {
+    "evc_number": 83,
+    "evc_name": "Swampy Riparian Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "River banks and creeklines",
+    "description": "Woodland to 15 m tall generally occupying low energy streams of the foothills and plains. The lower strata are variously locally dominated by a range of large and medium shrub species on the stream levees in combination with large tussock grasses and sedges in the ground layer.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 20,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus ovata",
+          "common_name": "Swamp Gum"
+        },
+        {
+          "scientific_name": "Eucalyptus radiata s.l.",
+          "common_name": "Narrow-leaf Peppermint"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 4,
+        "cover_pct": 30
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 5,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 7,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Ground Fern",
+        "code": "GF",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia melanoxylon",
+        "common_name": "Blackwood"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Melaleuca ericifolia",
+        "common_name": "Swamp Paperbark"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Leptospermum lanigerum",
+        "common_name": "Woolly Tea-tree"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Leptospermum continentale",
+        "common_name": "Prickly Tea-tree"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Coprosma quadrifida",
+        "common_name": "Prickly Currant-bush"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Bursaria spinosa",
+        "common_name": "Sweet Bursaria"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Senecio minimus",
+        "common_name": "Shrubby Fireweed"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena novae-zelandiae",
+        "common_name": "Bidgee-widgee"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Hydrocotyle hirta",
+        "common_name": "Hairy Pennywort"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Carex appressa",
+        "common_name": "Tall Sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Cyperus lucidus",
+        "common_name": "Leafy Flat-sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Lepidosperma elatius",
+        "common_name": "Tall Sword-sedge"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Juncus procerus",
+        "common_name": "Tall Rush"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Phragmites australis",
+        "common_name": "Common Reed"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Themeda triandra",
+        "common_name": "Kangaroo Grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lomandra filiformis",
+        "common_name": "Wattle Mat-rush"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      },
+      {
+        "code": "GF",
+        "scientific_name": "Pteridium esculentum",
+        "common_name": "Austral Bracken"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 20,
+      "logs_m_per_0_1_ha": 20
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_175_gippsland_plain": {
+    "evc_number": 175,
+    "evc_name": "Grassy Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Grasslands and Woodlands on fertile plains",
+    "description": "A variable open eucalypt woodland to 15 m tall or occasionally Sheoak woodland to 10 m tall over a diverse ground layer of grasses and herbs. The shrub component is usually sparse. It occurs on sites with moderate fertility on gentle slopes or undulating hills on a range of geologies.",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 15,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus radiata s.l.",
+          "common_name": "Narrow-leaf Peppermint"
+        },
+        {
+          "scientific_name": "Allocasuarina verticillata",
+          "common_name": "Drooping Sheoak"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 6,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Prostrate Shrub",
+        "code": "PS",
+        "num_species": 2,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 8,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 6,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Ground Fern",
+        "code": "GF",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia mearnsii",
+        "common_name": "Black Wattle"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Allocasuarina littoralis",
+        "common_name": "Black Sheoak"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Exocarpos cupressiformis",
+        "common_name": "Cherry Ballart"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Leptospermum continentale",
+        "common_name": "Prickly Tea-tree"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Epacris impressa",
+        "common_name": "Common Heath"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Cassinia aculeata",
+        "common_name": "Common Cassinia"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Acacia paradoxa",
+        "common_name": "Hedge Wattle"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Pimelea humilis",
+        "common_name": "Common Rice-flower"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Hibbertia riparia",
+        "common_name": "Erect Guinea-flower"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Bossiaea prostrata",
+        "common_name": "Creeping Bossiaea"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Astroloma humifusum",
+        "common_name": "Cranberry Heath"
+      },
+      {
+        "code": "PS",
+        "scientific_name": "Acrotriche serrulata",
+        "common_name": "Honey-pots"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Pterostylis longifolia s.l.",
+        "common_name": "Tall Greenhood"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Gonocarpus tetragynus",
+        "common_name": "Common Raspwort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Drosera peltata ssp. auriculata",
+        "common_name": "Tall Sundew"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Opercularia varia",
+        "common_name": "Variable Stinkweed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Drosera whittakeri ssp. aberrans",
+        "common_name": "Scented Sundew"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Deyeuxia quadriseta",
+        "common_name": "Reed Bent-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Xanthorrhoea minor ssp. lutea",
+        "common_name": "Small Grass-tree"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Lomandra longifolia",
+        "common_name": "Spiny-headed Mat-rush"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Gahnia radula",
+        "common_name": "Thatch Saw-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lomandra filiformis",
+        "common_name": "Wattle Mat-rush"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Themeda triandra",
+        "common_name": "Kangaroo Grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa sieberiana",
+        "common_name": "Grey Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lepidosperma laterale",
+        "common_name": "Variable Sword-sedge"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Microlaena stipoides var. stipoides",
+        "common_name": "Weeping Grass"
+      },
+      {
+        "code": "GF",
+        "scientific_name": "Pteridium esculentum",
+        "common_name": "Austral Bracken"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Comesperma volubile",
+        "common_name": "Love Creeper"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Billardiera scandens",
+        "common_name": "Common Apple-berry"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 20,
+      "logs_m_per_0_1_ha": 15
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_641_gippsland_plain": {
+    "evc_number": 641,
+    "evc_name": "Riparian Woodland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "River banks and creeklines",
+    "description": "Occurs beside permanent streams, typically on narrow alluvial deposits. Woodland to 20 m tall generally dominated by Eucalyptus camaldulensis over a tussock grass-dominated understorey. Tall shrubs may be present and amphibious herbs may occur in occasional ponds and beside creeks. While flooding may be common, sites are rarely inundated for lengthy periods.",
+    "canopy": {
+      "height_m": 20,
+      "cover_pct": 20,
+      "character_species": [
+        {
+          "scientific_name": "Eucalyptus camaldulensis",
+          "common_name": "River Red-gum"
+        },
+        {
+          "scientific_name": "Eucalyptus viminalis ssp. viminalis",
+          "common_name": "Manna Gum"
+        },
+        {
+          "scientific_name": "Eucalyptus tereticornis",
+          "common_name": "Gippsland Red Gum"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 80,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 2,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 4,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 4,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 5,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 4,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "T",
+        "scientific_name": "Acacia mearnsii",
+        "common_name": "Black Wattle"
+      },
+      {
+        "code": "T",
+        "scientific_name": "Melaleuca ericifolia",
+        "common_name": "Swamp Paperbark"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Bursaria spinosa ssp. spinosa",
+        "common_name": "Sweet Bursaria"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Hymenanthera dentata",
+        "common_name": "Tree Violet"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Callistemon sieberi",
+        "common_name": "River Bottlebrush"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Gynatrix pulchella",
+        "common_name": "Hemp Bush"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Rubus parvifolius",
+        "common_name": "Small-leaf Bramble"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Wahlenbergia gracilis s.s.",
+        "common_name": "Sprawling Bluebell"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Senecio minimus",
+        "common_name": "Shrubby Groundsel"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Myriophyllum crispatum",
+        "common_name": "Upright Water-milfoil"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Rumex brownii",
+        "common_name": "Slender Dock"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Oxalis perennans",
+        "common_name": "Grassland Wood-sorrel"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Mentha australis",
+        "common_name": "River Mint"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Acaena novae-zelandiae",
+        "common_name": "Bidgee-widgee"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidneyweed"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Poa labillardierei",
+        "common_name": "Common Tussock-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Carex appressa",
+        "common_name": "Tall Sedge"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Phragmites australis",
+        "common_name": "Common Reed"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lachnagrostis filiformis var. filiformis",
+        "common_name": "Common Blown-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Triglochin procerum s.l.",
+        "common_name": "Water-ribbons"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Eleocharis acuta",
+        "common_name": "Common Spike-sedge"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Calystegia sepium",
+        "common_name": "Large Bindweed"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 30,
+      "logs_m_per_0_1_ha": 20
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_656_gippsland_plain": {
+    "evc_number": 656,
+    "evc_name": "Brackish Wetland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Freshwater wetlands",
+    "description": "Sedgeland or herbland, occasionally grassland, dominated by salt-tolerant species, but samphires, if present usually with low cover. Typically occurs on heavy, at least seasonally shallowly inundated to waterlogged soils, on a range of geologies. Common in estuaries, along the shorelines of saline/brackish lakes and along poorly defined drainage lines near the coast.",
+    "understorey": [
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 4,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 1,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 1,
+        "cover_pct": 5
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "LH",
+        "scientific_name": "Epilobium billardierianum",
+        "common_name": "Variable Willow-herb"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Myriophyllum verrucosum",
+        "common_name": "Red Water-milfoil"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Myriophyllum muelleri",
+        "common_name": "Hooded Water-milfoil"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Lilaeopsis polyantha",
+        "common_name": "Australian Lilaeopsis"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Samolus repens",
+        "common_name": "Creeping Brookweed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Mimulus repens",
+        "common_name": "Creeping Monkey-flower"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Selliera radicans",
+        "common_name": "Shiny Swamp-mat"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Juncus kraussii ssp. australiensis",
+        "common_name": "Sea Rush"
+      },
+      {
+        "code": "LNG",
+        "scientific_name": "Phragmites australis",
+        "common_name": "Common Reed"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Triglochin procerum s.l.",
+        "common_name": "Water Ribbons"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa poiformis",
+        "common_name": "Coast Tussock-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Bolboschoenus caldwellii",
+        "common_name": "Salt Club-sedge"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Ruppia polycarpa",
+        "common_name": "Many-fruit Tassel"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Ruppia megacarpa",
+        "common_name": "Large-fruit Tassel"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Triglochin striatum",
+        "common_name": "Streaked Arrowgrass"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Calystegia sepium",
+        "common_name": "Large Bindweed"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10
+    },
+    "recruitment": "Episodic/Flood. Desirable period between disturbances is 5 years"
+  },
+  "evc_895_gippsland_plain": {
+    "evc_number": 895,
+    "evc_name": "Escarpment Shrubland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Woodlands and heathlands on sand",
+    "description": "Occurs on rocky escarpments in steep valleys or gorges, associated with limestone or basalt. Sites have moderate to high fertility, are well-drained but subject to regular summer drought due to shallow soils. . Eucalypt woodland to 15 m tall or non- eucalypt shrubland to 8 m tall, sometimes with occasional eucalypts; lichen-covered rock outcrops are common. + eucalypt woodland only components (ignore when assessing shrubland areas and standardise site condition score as required)",
+    "canopy": {
+      "height_m": 15,
+      "cover_pct": 15,
+      "character_species": [
+        {
+          "scientific_name": "Acacia implexa",
+          "common_name": "Lightwood"
+        },
+        {
+          "scientific_name": "Allocasuarina verticillata",
+          "common_name": "Drooping Sheoak"
+        },
+        {
+          "scientific_name": "Acacia mearnsii",
+          "common_name": "Black Wattle"
+        },
+        {
+          "scientific_name": "Bursaria spinosa",
+          "common_name": "Sweet Bursaria"
+        },
+        {
+          "scientific_name": "Eucalyptus radiata",
+          "common_name": "Narrow-leaf Peppermint"
+        }
+      ]
+    },
+    "large_trees": {
+      "genus": "Eucalyptus spp.",
+      "dbh_cm": 70,
+      "density_per_ha": 15
+    },
+    "understorey": [
+      {
+        "life_form": "Immature Canopy Tree",
+        "code": "IT",
+        "num_species": null,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Understorey Tree or Large Shrub",
+        "code": "T",
+        "num_species": 3,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 3,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 4,
+        "cover_pct": 10
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 5,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Non-tufted Graminoid",
+        "code": "LNG",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 9,
+        "cover_pct": 25
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 3,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Ground Fern",
+        "code": "GF",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Scrambler or Climber",
+        "code": "SC",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Bryophytes/Lichens",
+        "code": "BL",
+        "num_species": null,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Soil Crust",
+        "code": "SC",
+        "num_species": null,
+        "cover_pct": 10
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Rhagodia parabolica",
+        "common_name": "Fragrant Saltbush"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Hymenanthera dentata s.l.",
+        "common_name": "Tree Violet"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Enchylaena tomentosa var. tomentosa",
+        "common_name": "Ruby Saltbush"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Wahlenbergia communis s.l.",
+        "common_name": "Tufted Bluebell"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Oxalis perennans",
+        "common_name": "Grassland Wood-sorrel"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Maireana enchylaenoides",
+        "common_name": "Wingless Bluebush"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Einadia nutans ssp. nutans",
+        "common_name": "Nodding Saltbush"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Chamaesyce drummondii",
+        "common_name": "Flat Spurge"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Dichondra repens",
+        "common_name": "Kidney-weed"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa bigeniculata",
+        "common_name": "Kneed Spear-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia racemosa var. racemosa",
+        "common_name": "Stiped Wallaby-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Austrodanthonia setacea",
+        "common_name": "Bristly Wallaby-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Panicum effusum",
+        "common_name": "Hairy Panic"
+      },
+      {
+        "code": "GF",
+        "scientific_name": "Cheilanthes distans",
+        "common_name": "Bristly Cloak-fern"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Clematis microphylla",
+        "common_name": "Small-leaved Clematis"
+      },
+      {
+        "code": "SC",
+        "scientific_name": "Convolvulus erubescens spp. agg.",
+        "common_name": "Pink Bindweed"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 20,
+      "logs_m_per_0_1_ha": 15
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_914_gippsland_plain": {
+    "evc_number": 914,
+    "evc_name": "Estuarine Flats Grassland",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Saltmarsh and coastal grasslands",
+    "description": "Closed to open grassland to 1.5 m tall with occasional shrubs occurring on estuarine flats often associated with current or old beach berms or sand sheets that are occasionally inundated by high tides. Occupies areas on marginally higher ground inland from Coastal Saltmarsh.",
+    "understorey": [
+      {
+        "life_form": "Medium Shrub",
+        "code": "MS",
+        "num_species": 2,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Small Shrub",
+        "code": "SS",
+        "num_species": 1,
+        "cover_pct": 5
+      },
+      {
+        "life_form": "Large Herb",
+        "code": "LH",
+        "num_species": 1,
+        "cover_pct": 1
+      },
+      {
+        "life_form": "Medium Herb",
+        "code": "MH",
+        "num_species": 3,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Small or Prostrate Herb",
+        "code": "SH",
+        "num_species": 4,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Large Tufted Graminoid",
+        "code": "LTG",
+        "num_species": 2,
+        "cover_pct": 15
+      },
+      {
+        "life_form": "Medium to Small Tufted Graminoid",
+        "code": "MTG",
+        "num_species": 2,
+        "cover_pct": 20
+      },
+      {
+        "life_form": "Medium to Tiny Non-tufted Graminoid",
+        "code": "MNG",
+        "num_species": 3,
+        "cover_pct": 15
+      }
+    ],
+    "typical_species": [
+      {
+        "code": "MS",
+        "scientific_name": "Atriplex cinerea",
+        "common_name": "Coast Saltbush"
+      },
+      {
+        "code": "MS",
+        "scientific_name": "Rhagodia candolleana ssp. candolleana",
+        "common_name": "Seaberry Saltbush"
+      },
+      {
+        "code": "SS",
+        "scientific_name": "Frankenia pauciflora var. gunnii",
+        "common_name": "Southern Sea-heath"
+      },
+      {
+        "code": "LH",
+        "scientific_name": "Senecio pinnatifolius",
+        "common_name": "Variable Groundsel"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Sarcocornia quinqueflora ssp. quinqueflora",
+        "common_name": "Beaded Glasswort"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Suaeda australis",
+        "common_name": "Austral Seablite"
+      },
+      {
+        "code": "MH",
+        "scientific_name": "Samolus repens",
+        "common_name": "Creeping Brookweed"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Disphyma crassifolium ssp. clavellatum",
+        "common_name": "Rounded Noon-flower"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Selliera radicans",
+        "common_name": "Shiny Swamp-mat"
+      },
+      {
+        "code": "SH",
+        "scientific_name": "Hemichroa pentandra",
+        "common_name": "Trailing Hemichroa"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Austrostipa stipoides",
+        "common_name": "Prickly Spear-grass"
+      },
+      {
+        "code": "LTG",
+        "scientific_name": "Gahnia filum",
+        "common_name": "Chaffy Saw-sedge"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Poa poiformis",
+        "common_name": "Coast Tussock-grass"
+      },
+      {
+        "code": "MTG",
+        "scientific_name": "Lachnagrostis billardierei ssp. billardierei",
+        "common_name": "Coast Blown-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Spinifex sericeus",
+        "common_name": "Hairy Spinifex"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Distichlis distichophylla",
+        "common_name": "Australian Salt-grass"
+      },
+      {
+        "code": "MNG",
+        "scientific_name": "Ficinia nodosa",
+        "common_name": "Knobby Club-sedge"
+      }
+    ],
+    "ground_surface": {
+      "organic_litter_pct": 10
+    },
+    "recruitment": "Continuous"
+  },
+  "evc_300_gippsland_plain": {
+    "_status": "benchmark_not_found",
+    "evc_number": 300,
+    "evc_name": "Reed Swamp",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Freshwater wetlands",
+    "description": null,
+    "canopy": null,
+    "large_trees": null,
+    "understorey": null,
+    "typical_species": null,
+    "ground_surface": null,
+    "recruitment": null
+  },
+  "evc_636_gippsland_plain": {
+    "_status": "benchmark_not_found",
+    "evc_number": 636,
+    "evc_name": "Brackish Lake Aggregate",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Freshwater wetlands",
+    "description": null,
+    "canopy": null,
+    "large_trees": null,
+    "understorey": null,
+    "typical_species": null,
+    "ground_surface": null,
+    "recruitment": null
+  },
+  "evc_892_gippsland_plain": {
+    "_status": "benchmark_not_found",
+    "evc_number": 892,
+    "evc_name": "Heathy Woodland/Sand Heathland Mosaic",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Woodlands and heathlands on sand",
+    "description": null,
+    "canopy": null,
+    "large_trees": null,
+    "understorey": null,
+    "typical_species": null,
+    "ground_surface": null,
+    "recruitment": null
+  },
+  "evc_921_gippsland_plain": {
+    "_status": "benchmark_not_found",
+    "evc_number": 921,
+    "evc_name": "Coast Banksia Woodland/Coastal Dune Scrub Mosaic",
+    "bioregion": "Gippsland Plain",
+    "vegetation_type": "Coastal scrubs and dunes",
+    "description": null,
+    "canopy": null,
+    "large_trees": null,
+    "understorey": null,
+    "typical_species": null,
+    "ground_surface": null,
+    "recruitment": null
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "models": [
+    "eucalyptus_camaldulensis/mature.glb",
+    "themeda_triandra/temp.glb",
+    "themeda_triandra/tussock_01.glb"
+  ],
+  "thumbnails": {
+    "eucalyptus_camaldulensis/mature.glb": "_thumbnails/eucalyptus_camaldulensis_mature.png"
+  }
+}
