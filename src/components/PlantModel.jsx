@@ -306,7 +306,7 @@ function GeometryByLayer({ layer, speciesName, prominence, height, scale }) {
 
 // ── GLB Model loader ──────────────────────────────────────────────────────────
 
-function GLBModel({ modelPath, scale = 1 }) {
+function GLBModel({ modelPath, height = 1, scale = 1 }) {
   const { scene } = useGLTF(`/models/${modelPath}`);
   const clonedScene = useMemo(() => {
     const clone = scene.clone(true);
@@ -319,7 +319,8 @@ function GLBModel({ modelPath, scale = 1 }) {
     return clone;
   }, [scene]);
 
-  return <primitive object={clonedScene} scale={scale} />;
+  const finalScale = height || scale;
+  return <primitive object={clonedScene} scale={finalScale} />;
 }
 
 // ── Main PlantModel Component ─────────────────────────────────────────────────
@@ -366,7 +367,7 @@ export default function PlantModel({
   if (modelPath) {
     return (
       <group position={position} onClick={handleClick}>
-        <GLBModel modelPath={modelPath} scale={scale} />
+        <GLBModel modelPath={modelPath} height={height} scale={scale} />
       </group>
     );
   }

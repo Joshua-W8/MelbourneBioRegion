@@ -42,7 +42,7 @@ function PlantCard({ plant, onClick }) {
   const commonName = plant.common_name_s || plant.commonName || plant.common_name || 'Unknown';
   const scientificName = plant.species || '';
 
-  const thumbSlug = scientificName.toLowerCase().replace(/\s+/g, '_');
+  const thumbSlug = scientificName.toLowerCase().split(" ").slice(0, 2).join("_");
   const thumbPath = `/models/_thumbnails/${thumbSlug}.png`;
 
   const [hasThumb, setHasThumb] = useState(true);
