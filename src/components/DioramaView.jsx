@@ -19,9 +19,15 @@ function DioramaView() {
   const [selectedPlant, setSelectedPlant] = useState(null);
 
   const handlePlantClick = useCallback((plantData) => {
-    console.log("handlePlantClick:", plantData);
+    const allSpecies = [...(speciesData?.prominent || []), ...(speciesData?.present || [])];
+    const match = allSpecies.find(s => s.species === plantData.speciesName || s.species?.startsWith(plantData.speciesName?.split(" ").slice(0,2).join(" ")));
+    if (match) {
+      plantData.commonName = plantData.commonName || match.common_name || match.commonName || "";
+      plantData.height = plantData.height || match.traits?.plant_height || 0;
+    }
+    
     setSelectedPlant(plantData);
-  }, []);
+  }, [speciesData]);
 
   const handleClosePanel = useCallback(() => {
     setSelectedPlant(null);
@@ -95,7 +101,7 @@ function DioramaView() {
       )}
 
       <PlantModal
-        plant={selectedPlant ? { species: selectedPlant.speciesName, common_name_s: selectedPlant.commonName, growth_form: selectedPlant.lifeFormCode, _likelihoodCode: String(selectedPlant.prominence) } : null}
+        plant={selectedPlant ? { species: selectedPlant.speciesName, common_name_s: selectedPlant.commonName || selectedPlant.common_name || selectedPlant.speciesName, growth_form: selectedPlant.lifeFormCode, _likelihoodCode: String(selectedPlant.prominence) } : null}
         onClose={handleClosePanel}
       />
 
