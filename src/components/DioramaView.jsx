@@ -75,7 +75,7 @@ function DioramaView() {
               prominence={inst.prominence}
               height={inst.height}
               position={inst.position}
-              modelPath={inst.model_path}
+              modelPath={inst.model_available ? inst.model_path : null}
               onClick={handlePlantClick}
             />
           ))}

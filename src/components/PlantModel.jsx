@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import * as THREE from 'three';
+import { useGLTF } from '@react-three/drei';
 
 /**
  * Stylized 3D Plant Models — dispatches geometry by life_form_code.
@@ -303,6 +304,24 @@ function GeometryByLayer({ layer, speciesName, prominence, height, scale }) {
   }
 }
 
+// ── GLB Model loader ──────────────────────────────────────────────────────────
+
+function GLBModel({ modelPath, scale = 1 }) {
+  const { scene } = useGLTF(`/models/${modelPath}`);
+  const clonedScene = useMemo(() => {
+    const clone = scene.clone(true);
+    clone.traverse((child) => {
+      if (child.isMesh) {
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+    return clone;
+  }, [scene]);
+
+  return <primitive object={clonedScene} scale={scale} />;
+}
+
 // ── Main PlantModel Component ─────────────────────────────────────────────────
 
 /**
@@ -327,7 +346,7 @@ export default function PlantModel({
   height,
   position = [0, 0, 0],
   scale = 1,
-  modelPath, // TODO: load GLB when model_path is provided
+  modelPath,
   onClick,
 }) {
   const handleClick = (e) => {
@@ -343,6 +362,14 @@ export default function PlantModel({
       });
     }
   };
+
+  if (modelPath) {
+    return (
+      <group position={position} onClick={handleClick}>
+        <GLBModel modelPath={modelPath} scale={scale} />
+      </group>
+    );
+  }
 
   return (
     <group position={position} onClick={handleClick}>
@@ -368,3 +395,6 @@ export default function PlantModel({
 }
 
 export { CanopyTree, ShrubCluster, TussockGrass as GroundCover };
+
+useGLTF.preload('/models/eucalyptus_camaldulensis/mature.glb');
+useGLTF.preload('/models/themeda_triandra/tussock_01.glb');
