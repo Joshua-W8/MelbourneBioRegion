@@ -1,7 +1,9 @@
 import { createPortal } from 'react-dom';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
+import { useMemo } from 'react';
 import PlantModel from './PlantModel';
+import { resolveModel } from '../services/modelResolver';
 import './PlantModal.css';
 
 // Determine plant layer based on growth form or name
@@ -29,6 +31,9 @@ export default function PlantModal({ plant, onClose }) {
   const layer = getPlantLayer(plant);
   const prominence = parseFloat(plant._likelihoodCode) || 3.1;
 
+  const resolved = useMemo(() => resolveModel(plant.species, plant.growth_form), [plant.species, plant.growth_form]);
+  const modelPath = resolved?.available ? resolved.path : null;
+
   return createPortal(
     <div className="plant-modal-overlay">
       <div className="plant-modal">
@@ -53,12 +58,15 @@ export default function PlantModal({ plant, onClose }) {
             <pointLight position={[-5, 5, -5]} intensity={0.3} />
 
             <PlantModel
+              modelPath={modelPath}
+              lifeFormCode={plant.growth_form}
               layer={layer}
               speciesName={plant.species || 'Unknown'}
               commonName={plant.common_name_s || ''}
               prominence={prominence}
               position={[0, 0, 0]}
-              scale={layer === 'canopy' ? 0.3 : layer === 'shrub' ? 0.8 : 2}
+              height={modelPath ? 5 : undefined}
+              scale={modelPath ? 1 : (layer === 'canopy' ? 0.3 : layer === 'shrub' ? 0.8 : 2)}
             />
 
             {/* Ground plane */}
