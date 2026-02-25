@@ -7,11 +7,8 @@ import { resolveModel } from '../services/modelResolver';
 import PlantModel from './PlantModel';
 import GroundPlane from './GroundPlane';
 import DioramaInfoPanel from './DioramaInfoPanel';
-import EVCHeader from './shared/EVCHeader';
-import UnderstoreyStructure from './shared/UnderstoreyStructure';
-import SceneLegend from './shared/SceneLegend';
+import InfoPanel from './InfoPanel';
 import './DioramaView.css';
-import './InfoPanel.css';
 
 function DioramaView() {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
@@ -101,11 +98,7 @@ function DioramaView() {
         onClose={handleClosePanel}
       />
 
-      <div className="diorama-sidebar">
-        <EVCHeader />
-        <UnderstoreyStructure />
-        <SceneLegend stats={sceneData?.stats} />
-      </div>
+      <InfoPanel mode="diorama" />
     </div>
   );
 }

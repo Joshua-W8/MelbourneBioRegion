@@ -2,10 +2,15 @@ import { useState, useMemo, useCallback } from 'react';
 import useMapStore from '../store/useMapStore';
 import { LIKELIHOOD_CODES } from '../data/evcMappings';
 import PlantModal from './PlantModal';
-import EVCHeader from './shared/EVCHeader';
-import UnderstoreyStructure from './shared/UnderstoreyStructure';
-import VegetationTypeLabel from './shared/VegetationTypeLabel';
 import './InfoPanel.css';
+
+const BCS_COLORS = {
+  Endangered: '#ef4444',
+  Vulnerable: '#f97316',
+  Depleted: '#eab308',
+  'Least Concern': '#22c55e',
+  Rare: '#7b1fa2',
+};
 
 // Group plants by likelihood code
 function groupPlantsByLikelihood(plants) {
@@ -182,6 +187,9 @@ function DioramaButton() {
 
 function EVCDescription() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
+  const selectedEVC = useMapStore((state) => state.selectedEVC);
+
+  const bcsColor = BCS_COLORS[selectedEVC?.bcsDesc] || '#666';
 
   // Build description text from benchmark or show fallback
   let descriptionText;
@@ -203,11 +211,82 @@ function EVCDescription() {
   }
 
   return (
-    <EVCHeader>
+    <div className="evc-description-card">
+      <div className="evc-description-heading">
+        {benchmarkData?.evc_name || selectedEVC?.evcName}
+      </div>
+      <div className="evc-description-bioregion">
+        {benchmarkData?.bioregion || selectedEVC?.bioregion} bioregion
+        {selectedEVC?.bcsDesc && (
+          <span
+            className="conservation-badge"
+            style={{
+              backgroundColor: `${bcsColor}20`,
+              color: bcsColor,
+              borderColor: `${bcsColor}40`,
+            }}
+          >
+            {selectedEVC.bcsDesc}
+          </span>
+        )}
+      </div>
       <div className="evc-description-text">
         {descriptionText || 'Benchmark data not yet available for this EVC/bioregion combination.'}
       </div>
-    </EVCHeader>
+    </div>
+  );
+}
+
+// Understorey Structure Component
+function UnderstoreyStructure() {
+  const benchmarkData = useMapStore((state) => state.benchmarkData);
+  const understorey = benchmarkData?.understorey;
+
+  if (!understorey || understorey.length === 0) return null;
+
+  const maxCover = Math.max(...understorey.map(u => u.cover_pct || 0));
+
+  return (
+    <div className="understorey-structure">
+      <span className="field-label">Understorey Structure</span>
+      <div className="understorey-rows">
+        {understorey.map(row => (
+          <div key={row.life_form_code} className="understorey-row">
+            <div className="understorey-name">
+              <span className="understorey-lf-name">{row.life_form_name}</span>
+              <span className="understorey-lf-code">{row.life_form_code}</span>
+            </div>
+            <div className="understorey-bar-track">
+              <div
+                className="understorey-bar"
+                style={{ width: `${maxCover > 0 ? (row.cover_pct / maxCover) * 100 : 0}%` }}
+              />
+            </div>
+            <div className="understorey-stats">
+              <span className="understorey-cover">{row.cover_pct}%</span>
+              {row.num_species != null && (
+                <span className="understorey-spp">{row.num_species} spp</span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function VegetationTypeTag({ vegetationType }) {
+  if (!vegetationType) return null;
+
+  return (
+    <div className="evc-list-container">
+      <span className="field-label">Vegetation Type</span>
+      <div className="evc-list">
+        <div className="evc-item">
+          <span className="evc-item-name">{vegetationType}</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -238,12 +317,13 @@ function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
   );
 }
 
-function InfoPanel() {
+function InfoPanel({ mode = 'map' }) {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
+  const isDiorama = mode === 'diorama';
 
   return (
     <div className="info-panel">
-      <h2 className="info-panel-title">Pre-Colonial Melbourne</h2>
+      {!isDiorama && <h2 className="info-panel-title">Pre-Colonial Melbourne</h2>}
 
       {selectedEVC ? (
         <div className="evc-details">
@@ -252,23 +332,29 @@ function InfoPanel() {
           </div>
 
           <EVCDescription />
-          <VegetationTypeLabel />
+          <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
           <UnderstoreyStructure />
 
-          <SiteConditions
-            soilType={selectedEVC.soilType}
-            soilSubBase={selectedEVC.soilSubBase}
-            soilTypesAll={selectedEVC.soilTypesAll}
-          />
+          {!isDiorama && (
+            <>
+              <SiteConditions
+                soilType={selectedEVC.soilType}
+                soilSubBase={selectedEVC.soilSubBase}
+                soilTypesAll={selectedEVC.soilTypesAll}
+              />
 
-          <PlantAccordions />
-          <DioramaButton />
+              <PlantAccordions />
+              <DioramaButton />
+            </>
+          )}
         </div>
       ) : (
-        <div className="empty-state">
-          Click on the map to discover what grew here before colonisation
-        </div>
+        !isDiorama && (
+          <div className="empty-state">
+            Click on the map to discover what grew here before colonisation
+          </div>
+        )
       )}
     </div>
   );
