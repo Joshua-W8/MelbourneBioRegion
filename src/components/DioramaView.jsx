@@ -6,7 +6,7 @@ import { composeScene } from '../services/sceneComposer';
 import { resolveModel } from '../services/modelResolver';
 import PlantModel from './PlantModel';
 import GroundPlane from './GroundPlane';
-import DioramaInfoPanel from './DioramaInfoPanel';
+import PlantModal from './PlantModal';
 import InfoPanel from './InfoPanel';
 import './DioramaView.css';
 
@@ -19,6 +19,7 @@ function DioramaView() {
   const [selectedPlant, setSelectedPlant] = useState(null);
 
   const handlePlantClick = useCallback((plantData) => {
+    console.log("handlePlantClick:", plantData);
     setSelectedPlant(plantData);
   }, []);
 
@@ -93,8 +94,8 @@ function DioramaView() {
         </Canvas>
       )}
 
-      <DioramaInfoPanel
-        selectedPlant={selectedPlant}
+      <PlantModal
+        plant={selectedPlant ? { species: selectedPlant.speciesName, common_name_s: selectedPlant.commonName, growth_form: selectedPlant.lifeFormCode, _likelihoodCode: String(selectedPlant.prominence) } : null}
         onClose={handleClosePanel}
       />
 

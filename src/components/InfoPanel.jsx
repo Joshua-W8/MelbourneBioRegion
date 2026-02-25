@@ -384,6 +384,7 @@ function DioramaSpeciesList({ onSpeciesClick }) {
   };
 
   const handleClick = useCallback((sp) => {
+    console.log("handleClick fired", sp.species, "onSpeciesClick:", typeof onSpeciesClick);
     if (!onSpeciesClick) return;
     onSpeciesClick({
       speciesName: sp.species,
