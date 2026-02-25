@@ -98,7 +98,7 @@ function DioramaView() {
         onClose={handleClosePanel}
       />
 
-      <InfoPanel mode="diorama" />
+      <InfoPanel mode="diorama" onSpeciesClick={handlePlantClick} />
     </div>
   );
 }

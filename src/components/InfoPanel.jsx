@@ -89,20 +89,20 @@ function LikelihoodAccordion({ group, isOpen, onToggle, onPlantClick }) {
 }
 
 // Copy Species List Button
-function CopySpeciesButton({ plants }) {
+function CopySpeciesButton({ plants, formatLine }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(() => {
-    const lines = plants.map(p => {
+    const lines = plants.map(formatLine || (p => {
       const common = p.common_name_s || 'Unknown';
       const scientific = p.species || '';
       return `${common} — ${scientific}`;
-    });
+    }));
     navigator.clipboard.writeText(lines.join('\n')).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
-  }, [plants]);
+  }, [plants, formatLine]);
 
   if (plants.length === 0) return null;
 
@@ -317,7 +317,133 @@ function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
   );
 }
 
-function InfoPanel({ mode = 'map' }) {
+// Layer classification for diorama species grouping
+const CANOPY_CODES = new Set(['T', 'IT']);
+const UNDERSTOREY_CODES = new Set(['MS', 'SS', 'PS', 'LH', 'MH', 'SH']);
+// Ground: everything else (MTG, LTG, MNG, LNG, GF, BL, SC, etc.)
+
+const LAYER_META = [
+  { key: 'Canopy', label: 'Canopy', color: '#1B5E20', codes: CANOPY_CODES },
+  { key: 'Understorey', label: 'Understorey', color: '#43A047', codes: UNDERSTOREY_CODES },
+  { key: 'Ground', label: 'Ground cover', color: '#8BC34A', codes: null },
+];
+
+function groupSpeciesByLayer(species) {
+  const canopy = [];
+  const understorey = [];
+  const ground = [];
+
+  for (const sp of species) {
+    const code = sp.life_form_code || '';
+    if (CANOPY_CODES.has(code)) canopy.push(sp);
+    else if (UNDERSTOREY_CODES.has(code)) understorey.push(sp);
+    else ground.push(sp);
+  }
+
+  return [
+    { ...LAYER_META[0], species: canopy },
+    { ...LAYER_META[1], species: understorey },
+    { ...LAYER_META[2], species: ground },
+  ].filter(g => g.species.length > 0);
+}
+
+function layerFromCode(code) {
+  if (CANOPY_CODES.has(code)) return 'canopy';
+  if (UNDERSTOREY_CODES.has(code)) return 'shrub';
+  return 'ground';
+}
+
+function DioramaSpeciesList({ onSpeciesClick }) {
+  const speciesData = useMapStore((state) => state.speciesData);
+  const [openAccordions, setOpenAccordions] = useState({});
+
+  const prominent = speciesData?.prominent || [];
+  const grouped = useMemo(() => groupSpeciesByLayer(prominent), [prominent]);
+
+  // All accordions open by default — track only explicit closes
+  const isOpen = (key) => openAccordions[key] !== false;
+
+  const toggleAccordion = (key) => {
+    setOpenAccordions(prev => ({ ...prev, [key]: prev[key] === false ? true : false }));
+  };
+
+  const handleClick = useCallback((sp) => {
+    if (!onSpeciesClick) return;
+    onSpeciesClick({
+      speciesName: sp.species,
+      commonName: sp.commonName || '',
+      layer: layerFromCode(sp.life_form_code || ''),
+      lifeFormCode: sp.life_form_code || '',
+      height: 0,
+      prominence: parseFloat(sp.prominenceCode) || 3.1,
+    });
+  }, [onSpeciesClick]);
+
+  const allSpecies = useMemo(() => grouped.flatMap(g => g.species), [grouped]);
+
+  const formatLine = useCallback((sp) => {
+    const common = sp.commonName || 'Unknown';
+    const scientific = sp.species || '';
+    const lf = sp.life_form_code || '';
+    return `${common} (${scientific}) - ${lf}`;
+  }, []);
+
+  if (prominent.length === 0) return null;
+
+  return (
+    <div className="plant-list-container">
+      <h3 className="plant-list-title">
+        Species in Scene ({prominent.length})
+      </h3>
+      <div className="likelihood-accordions">
+        {grouped.map(group => (
+          <div key={group.key} className="likelihood-accordion">
+            <button className="accordion-header" onClick={() => toggleAccordion(group.key)}>
+              <div className="accordion-title">
+                <span
+                  className="likelihood-dot"
+                  style={{ backgroundColor: group.color }}
+                />
+                <span className="accordion-label">{group.label}</span>
+                <span className="accordion-count">{group.species.length}</span>
+              </div>
+              <span className={`accordion-chevron ${isOpen(group.key) ? 'open' : ''}`}>▼</span>
+            </button>
+            <div className={`accordion-content ${isOpen(group.key) ? 'open' : ''}`}>
+              <div className="accordion-content-inner">
+                {group.species.map((sp, i) => (
+                  <div
+                    key={`${sp.species}-${i}`}
+                    className="plant-card"
+                    style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', padding: '8px 10px', borderRadius: '12px' }}
+                    onClick={() => handleClick(sp)}
+                  >
+                    <div className="plant-card-info" style={{ padding: 0, flex: 1, minWidth: 0 }}>
+                      <div className="plant-card-common">
+                        {sp.commonName ? sp.commonName.split(',')[0].trim() : 'Unknown'}
+                      </div>
+                      <div className="plant-card-scientific">
+                        {sp.species}
+                      </div>
+                    </div>
+                    {sp.life_form_code && (
+                      <span className="accordion-count" style={{ marginLeft: '8px', flexShrink: 0 }}>
+                        {sp.life_form_code}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <CopySpeciesButton plants={allSpecies} formatLine={formatLine} />
+    </div>
+  );
+}
+
+function InfoPanel({ mode = 'map', onSpeciesClick }) {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
   const isDiorama = mode === 'diorama';
 
@@ -336,7 +462,9 @@ function InfoPanel({ mode = 'map' }) {
 
           <UnderstoreyStructure />
 
-          {!isDiorama && (
+          {isDiorama ? (
+            <DioramaSpeciesList onSpeciesClick={onSpeciesClick} />
+          ) : (
             <>
               <SiteConditions
                 soilType={selectedEVC.soilType}
