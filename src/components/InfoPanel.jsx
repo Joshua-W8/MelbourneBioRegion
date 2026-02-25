@@ -39,7 +39,7 @@ function groupPlantsByLikelihood(plants) {
 
 // Plant Card Component
 function PlantCard({ plant, onClick }) {
-  const commonName = plant.common_name_s || plant.commonName || 'Unknown';
+  const commonName = plant.common_name_s || plant.commonName || plant.common_name || 'Unknown';
   const scientificName = plant.species || '';
 
   const thumbSlug = scientificName.toLowerCase().replace(/\s+/g, '_');
