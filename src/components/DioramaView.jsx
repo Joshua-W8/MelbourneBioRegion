@@ -7,28 +7,11 @@ import { resolveModel } from '../services/modelResolver';
 import PlantModel from './PlantModel';
 import GroundPlane from './GroundPlane';
 import DioramaInfoPanel from './DioramaInfoPanel';
+import EVCHeader from './shared/EVCHeader';
+import UnderstoreyStructure from './shared/UnderstoreyStructure';
+import SceneLegend from './shared/SceneLegend';
 import './DioramaView.css';
-
-// Scene dimensions (10m × 10m)
-const SCENE_SIZE = 10;
-
-/** Life form code colour swatches for legend */
-const LF_COLORS = {
-  IT:  '#1B5E20',
-  T:   '#2E7D32',
-  MS:  '#43A047',
-  SS:  '#66BB6A',
-  PS:  '#81C784',
-  LH:  '#558B2F',
-  MH:  '#689F38',
-  SH:  '#7CB342',
-  LTG: '#8BC34A',
-  LNG: '#9CCC65',
-  MTG: '#AED581',
-  MNG: '#C5E1A5',
-  GF:  '#388E3C',
-  SC:  '#795548',
-};
+import './InfoPanel.css';
 
 function DioramaView() {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
@@ -118,26 +101,11 @@ function DioramaView() {
         onClose={handleClosePanel}
       />
 
-      {sceneData?.stats && (
-        <div className="diorama-legend">
-          <div className="legend-lf-list">
-            {Object.entries(sceneData.stats)
-              .sort((a, b) => (b[1].cover_pct || 0) - (a[1].cover_pct || 0))
-              .map(([code, s]) => (
-                <div key={code} className="legend-lf-item">
-                  <span
-                    className="legend-dot"
-                    style={{ backgroundColor: LF_COLORS[code] || '#666' }}
-                  />
-                  <span className="legend-lf-code">{code}</span>
-                  <span className="legend-lf-name">{s.name}</span>
-                  <span className="legend-lf-count">{s.count}</span>
-                </div>
-              ))}
-          </div>
-          <div className="legend-scene">{SCENE_SIZE}m × {SCENE_SIZE}m scene</div>
-        </div>
-      )}
+      <div className="diorama-sidebar">
+        <EVCHeader />
+        <UnderstoreyStructure />
+        <SceneLegend stats={sceneData?.stats} />
+      </div>
     </div>
   );
 }
