@@ -39,21 +39,37 @@ function groupPlantsByLikelihood(plants) {
 
 // Plant Card Component
 function PlantCard({ plant, onClick }) {
+  const commonName = plant.common_name_s || plant.commonName || 'Unknown';
+  const scientificName = plant.species || '';
+
+  const thumbSlug = scientificName.toLowerCase().replace(/\s+/g, '_');
+  const thumbPath = `/models/_thumbnails/${thumbSlug}.png`;
+
+  const [hasThumb, setHasThumb] = useState(true);
+
   return (
     <div className="plant-card" onClick={() => onClick(plant)}>
       <div className="plant-card-image">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path d="M12 22V12M12 12C12 12 8 8 8 5C8 2 12 2 12 2C12 2 16 2 16 5C16 8 12 12 12 12Z" />
-          <path d="M12 12C12 12 16 10 19 10C22 10 22 14 22 14C22 14 22 18 19 18C16 18 12 12 12 12Z" />
-          <path d="M12 12C12 12 8 10 5 10C2 10 2 14 2 14C2 14 2 18 5 18C8 18 12 12 12 12Z" />
-        </svg>
+        {hasThumb ? (
+          <img
+            src={thumbPath}
+            alt={commonName}
+            onError={() => setHasThumb(false)}
+          />
+        ) : (
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+            <path d="M12 22V12M12 12C12 12 8 8 8 5C8 2 12 2 12 2C12 2 16 2 16 5C16 8 12 12 12 12Z" />
+            <path d="M12 12C12 12 16 10 19 10C22 10 22 14 22 14C22 14 22 18 19 18C16 18 12 12 12 12Z" />
+            <path d="M12 12C12 12 8 10 5 10C2 10 2 14 2 14C2 14 2 18 5 18C8 18 12 12 12 12Z" />
+          </svg>
+        )}
       </div>
       <div className="plant-card-info">
         <div className="plant-card-common">
-          {plant.common_name_s || 'Unknown'}
+          {commonName.split(',')[0].trim()}
         </div>
         <div className="plant-card-scientific">
-          {plant.species}
+          {scientificName}
         </div>
       </div>
     </div>
@@ -411,28 +427,15 @@ function DioramaSpeciesList({ onSpeciesClick }) {
             </button>
             <div className={`accordion-content ${isOpen(group.key) ? 'open' : ''}`}>
               <div className="accordion-content-inner">
-                {group.species.map((sp, i) => (
-                  <div
-                    key={`${sp.species}-${i}`}
-                    className="plant-card"
-                    style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', padding: '8px 10px', borderRadius: '12px' }}
-                    onClick={() => handleClick(sp)}
-                  >
-                    <div className="plant-card-info" style={{ padding: 0, flex: 1, minWidth: 0 }}>
-                      <div className="plant-card-common">
-                        {sp.commonName ? sp.commonName.split(',')[0].trim() : 'Unknown'}
-                      </div>
-                      <div className="plant-card-scientific">
-                        {sp.species}
-                      </div>
-                    </div>
-                    {sp.life_form_code && (
-                      <span className="accordion-count" style={{ marginLeft: '8px', flexShrink: 0 }}>
-                        {sp.life_form_code}
-                      </span>
-                    )}
-                  </div>
-                ))}
+                <div className="plant-cards-grid">
+                  {group.species.map((sp, i) => (
+                    <PlantCard
+                      key={`${sp.species}-${i}`}
+                      plant={sp}
+                      onClick={() => handleClick(sp)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
