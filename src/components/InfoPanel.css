@@ -412,3 +412,114 @@
   font-style: italic;
   line-height: 1.4;
 }
+
+/* Conservation status badge */
+.conservation-badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  border: 1px solid;
+  vertical-align: middle;
+}
+
+/* Understorey Structure */
+.understorey-structure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.understorey-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.understorey-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.understorey-name {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  min-width: 0;
+}
+
+.understorey-lf-name {
+  font-size: 11px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.understorey-lf-code {
+  font-size: 9px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.understorey-bar-track {
+  height: 5px;
+  background: var(--card-bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.understorey-bar {
+  height: 100%;
+  background: var(--accent-green);
+  border-radius: 3px;
+  min-width: 2px;
+}
+
+.understorey-stats {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.understorey-cover {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  min-width: 24px;
+  text-align: right;
+}
+
+.understorey-spp {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+/* Copy Species List Button */
+.copy-species-btn {
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 12px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.copy-species-btn:hover {
+  background: var(--card-hover);
+  border-color: var(--accent-green);
+}
