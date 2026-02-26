@@ -1,0 +1,127 @@
+/* Vegetation Profile Cross-Section */
+.veg-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.veg-profile-scene {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.veg-profile-svg {
+  display: block;
+}
+
+/* Tooltip */
+.veg-profile-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--panel-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  max-width: 160px;
+}
+
+.veg-profile-tooltip-common {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.veg-profile-tooltip-sci {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+.veg-profile-tooltip-meta {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Layer toggle buttons */
+.veg-profile-layers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.veg-profile-layer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.veg-profile-layer-btn:hover {
+  background: var(--card-hover);
+}
+
+.veg-profile-layer-btn--active {
+  background: var(--panel-bg);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.veg-profile-layer-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Layer detail card */
+.veg-profile-detail {
+  background: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  border-left: 3px solid;
+  padding: 10px 12px;
+}
+
+.veg-profile-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.veg-profile-detail-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.veg-profile-detail-stats {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.veg-profile-detail-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

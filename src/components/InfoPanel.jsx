@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback } from 'react';
 import useMapStore from '../store/useMapStore';
 import { LIKELIHOOD_CODES } from '../data/evcMappings';
 import PlantModal from './PlantModal';
+import VegetationProfile from './VegetationProfile';
 import './InfoPanel.css';
 
 const BCS_COLORS = {
@@ -529,9 +530,27 @@ function DioramaSpeciesList({ onSpeciesClick }) {
   );
 }
 
+// Map UnderstoreyStructure life form codes to VegetationProfile group keys
+function lifeFormToProfileGroup(code) {
+  if (!code) return null;
+  if (code === 'IT') return 'canopy';
+  if (code === 'T') return 'subcanopy';
+  if (['MS', 'SS', 'PS'].includes(code)) return 'shrub';
+  if (['LTG', 'LNG', 'MTG', 'MNG'].includes(code)) return 'graminoid';
+  if (['LH', 'MH', 'SH'].includes(code)) return 'herb';
+  if (['GF', 'BL', 'SC'].includes(code)) return 'ground';
+  return null;
+}
+
 function InfoPanel({ mode = 'map', onSpeciesClick }) {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
   const isDiorama = mode === 'diorama';
+  const [activeLayer, setActiveLayer] = useState(null);
+
+  // Sync UnderstoreyStructure hover → VegetationProfile highlight
+  const handleLayerHover = useCallback((code) => {
+    setActiveLayer(code ? lifeFormToProfileGroup(code) : null);
+  }, []);
 
   return (
     <div className="info-panel">
@@ -546,7 +565,8 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
           <EVCDescription />
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
-          <UnderstoreyStructure />
+          <UnderstoreyStructure onLayerHover={handleLayerHover} />
+          <VegetationProfile activeLayer={activeLayer} onLayerChange={setActiveLayer} />
 
           {isDiorama ? (
             <DioramaSpeciesList onSpeciesClick={onSpeciesClick} />
