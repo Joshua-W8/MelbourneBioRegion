@@ -1,6 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
 import useMapStore from '../store/useMapStore';
-import { LIKELIHOOD_CODES } from '../data/evcMappings';
 import PlantModal from './PlantModal';
 import VegetationProfile from './VegetationProfile';
 import './InfoPanel.css';
@@ -13,32 +12,69 @@ const BCS_COLORS = {
   Rare: '#7b1fa2',
 };
 
-// Group plants by likelihood code
-function groupPlantsByLikelihood(plants) {
-  const groups = {};
+// ── Life form metadata ──────────────────────────────────────────────────────
 
-  // Define the order of likelihood codes (highest first)
-  const order = ['3.2', '3.1', '2.2', '2.1', '-'];
+const LIFE_FORM_META = {
+  IT:  { label: 'Immature Canopy Tree',           group: 'canopy',    heightRange: '5–15m' },
+  T:   { label: 'Understorey Tree / Large Shrub', group: 'canopy',    heightRange: '2–8m' },
+  MS:  { label: 'Medium Shrub',                   group: 'shrub',     heightRange: '1–2m' },
+  SS:  { label: 'Small Shrub',                    group: 'shrub',     heightRange: '0.25–1m' },
+  PS:  { label: 'Prostrate Shrub',                group: 'shrub',     heightRange: '0–0.25m' },
+  LH:  { label: 'Large Herb',                     group: 'herb',      heightRange: '0.5–1m' },
+  MH:  { label: 'Medium Herb',                    group: 'herb',      heightRange: '0.1–0.5m' },
+  SH:  { label: 'Small / Prostrate Herb',         group: 'herb',      heightRange: '0–0.1m' },
+  LTG: { label: 'Large Tufted Graminoid',         group: 'graminoid', heightRange: '0.5–1.5m' },
+  LNG: { label: 'Large Non-tufted Graminoid',     group: 'graminoid', heightRange: '0.3–1m' },
+  MTG: { label: 'Medium Tufted Graminoid',        group: 'graminoid', heightRange: '0.1–0.5m' },
+  MNG: { label: 'Medium Non-tufted Graminoid',    group: 'graminoid', heightRange: '0–0.3m' },
+  GF:  { label: 'Ground Fern',                    group: 'ground',    heightRange: '0–0.3m' },
+  SC:  { label: 'Soil Crust',                     group: 'ground',    heightRange: '0–0.05m' },
+  BL:  { label: 'Bryophytes / Lichens',           group: 'ground',    heightRange: '0–0.05m' },
+};
 
-  plants.forEach(plant => {
-    const code = plant._likelihoodCode || '-';
-    if (!groups[code]) {
-      groups[code] = [];
-    }
-    groups[code].push(plant);
-  });
+// ── Layer group definitions (5 groups for accordion structure) ───────────────
 
-  // Return ordered array of groups
-  return order
-    .filter(code => groups[code] && groups[code].length > 0)
-    .map(code => ({
-      code,
-      plants: groups[code],
-      ...LIKELIHOOD_CODES[code] || { label: code, color: '#999' }
-    }));
+const LAYER_GROUPS = {
+  canopy:    { label: 'Canopy Trees',        color: '#1B5E20', codes: new Set(['IT', 'T']) },
+  shrub:     { label: 'Shrubs',              color: '#66BB6A', codes: new Set(['MS', 'SS', 'PS']) },
+  graminoid: { label: 'Graminoids',          color: '#b8860b', codes: new Set(['LTG', 'LNG', 'MTG', 'MNG']) },
+  herb:      { label: 'Herbs & Wildflowers', color: '#7c5db2', codes: new Set(['LH', 'MH', 'SH']) },
+  ground:    { label: 'Ferns & Ground Cover', color: '#228b22', codes: new Set(['GF', 'BL', 'SC']) },
+};
+
+const LAYER_GROUP_ORDER = ['canopy', 'shrub', 'graminoid', 'herb', 'ground'];
+
+const LAYER_DESCRIPTIONS = {
+  canopy: 'The structural canopy \u2014 eucalypts that define the woodland character. Their shade regime determines which understorey species can grow beneath.',
+  shrub: 'Dense woody layer providing nesting habitat and wind protection. Many are host plants for butterfly larvae.',
+  graminoid: 'The dominant ground layer \u2014 tussock grasses hold soil, manage water infiltration, and fuel the cool burns that maintained this ecosystem for millennia.',
+  herb: 'The diversity engine \u2014 seasonal blooms support pollinators that sustain the entire food web. Often the most species-rich layer.',
+  ground: 'Nutrient cycling, moisture retention, and microhabitat for invertebrates. Indicators of overall ecosystem health.',
+};
+
+// Map life form code → accordion group key
+function lifeFormToGroup(code) {
+  if (!code) return 'ground';
+  for (const [key, g] of Object.entries(LAYER_GROUPS)) {
+    if (g.codes.has(code)) return key;
+  }
+  return 'ground';
 }
 
-// Plant Card Component
+// Map life form code → VegetationProfile group key (6-group, with subcanopy)
+function lifeFormToProfileGroup(code) {
+  if (!code) return null;
+  if (code === 'IT') return 'canopy';
+  if (code === 'T') return 'subcanopy';
+  if (['MS', 'SS', 'PS'].includes(code)) return 'shrub';
+  if (['LTG', 'LNG', 'MTG', 'MNG'].includes(code)) return 'graminoid';
+  if (['LH', 'MH', 'SH'].includes(code)) return 'herb';
+  if (['GF', 'BL', 'SC'].includes(code)) return 'ground';
+  return null;
+}
+
+// ── Plant Card Component ────────────────────────────────────────────────────
+
 function PlantCard({ plant, onClick }) {
   const commonName = plant.common_name_s || plant.commonName || plant.common_name || 'Unknown';
   const scientificName = plant.species || '';
@@ -77,41 +113,14 @@ function PlantCard({ plant, onClick }) {
   );
 }
 
-// Likelihood Accordion Component
-function LikelihoodAccordion({ group, isOpen, onToggle, onPlantClick }) {
-  return (
-    <div className="likelihood-accordion">
-      <button className="accordion-header" onClick={onToggle}>
-        <div className="accordion-title">
-          <span
-            className="likelihood-dot"
-            style={{ backgroundColor: group.color }}
-          />
-          <span className="accordion-label">{group.label}</span>
-          <span className="accordion-count">{group.plants.length}</span>
-        </div>
-        <span className={`accordion-chevron ${isOpen ? 'open' : ''}`}>▼</span>
-      </button>
-      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
-        <div className="accordion-content-inner">
-          <div className="plant-cards-grid">
-            {group.plants.map((plant, index) => (
-              <PlantCard key={index} plant={plant} onClick={onPlantClick} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+// ── Copy Species List Button ────────────────────────────────────────────────
 
-// Copy Species List Button
 function CopySpeciesButton({ plants, formatLine }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = useCallback(() => {
     const lines = plants.map(formatLine || (p => {
-      const common = p.common_name_s || 'Unknown';
+      const common = p.commonName || p.common_name_s || 'Unknown';
       const scientific = p.species || '';
       return `${common} — ${scientific}`;
     }));
@@ -130,65 +139,301 @@ function CopySpeciesButton({ plants, formatLine }) {
   );
 }
 
-function PlantAccordions() {
-  const plants = useMapStore((state) => state.plants);
-  const isLoadingPlants = useMapStore((state) => state.isLoadingPlants);
-  const [openAccordions, setOpenAccordions] = useState({});
-  const [selectedPlant, setSelectedPlant] = useState(null);
+// ── Understorey bar rows (reusable per-group rendering) ─────────────────────
 
-  const groupedPlants = useMemo(() => groupPlantsByLikelihood(plants), [plants]);
+function LifeFormRows({ rows, maxCover, color, hoveredCode, onHover, onLeave }) {
+  return (
+    <div className="understorey-rows">
+      {rows.map(row => (
+        <div
+          key={row.code}
+          className={`understorey-row ${hoveredCode === row.code ? 'understorey-row--hover' : ''}`}
+          onMouseEnter={() => onHover(row.code)}
+          onMouseLeave={onLeave}
+        >
+          <div className="understorey-name">
+            <span className="understorey-lf-name">{row.meta.label}</span>
+            {row.meta.heightRange && (
+              <span className="understorey-lf-height">{row.meta.heightRange}</span>
+            )}
+          </div>
+          <div className="understorey-bar-track">
+            <div
+              className="understorey-bar"
+              style={{
+                width: `${maxCover > 0 ? (row.cover_pct / maxCover) * 100 : 0}%`,
+                backgroundColor: color,
+                opacity: hoveredCode === row.code ? 1 : 0.5,
+              }}
+            />
+          </div>
+          <div className="understorey-stats">
+            <span className="understorey-cover">{row.cover_pct}%</span>
+            {row.num_species != null && (
+              <span className="understorey-spp">{row.num_species} spp</span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
-  const toggleAccordion = (code) => {
-    setOpenAccordions(prev => ({
-      ...prev,
-      [code]: !prev[code]
-    }));
-  };
+// ── Layer Accordion ─────────────────────────────────────────────────────────
 
-  if (isLoadingPlants) {
-    return <div className="loading-plants">Loading plants...</div>;
-  }
+const MAX_VISIBLE_SPECIES = 6;
 
-  if (plants.length === 0) {
-    return null;
-  }
+function LayerAccordion({
+  groupKey, label, color, totalCover, totalSpecies,
+  isOpen, onToggle, children
+}) {
+  return (
+    <div className="likelihood-accordion">
+      <button className="accordion-header" onClick={() => onToggle(groupKey)}>
+        <div className="accordion-title">
+          <span className="likelihood-dot" style={{ backgroundColor: color }} />
+          <span className="accordion-label">{label}</span>
+        </div>
+        <div className="layer-accordion-right">
+          <span className="accordion-stats-summary">
+            {totalCover > 0 && `${totalCover}% cover`}
+            {totalCover > 0 && totalSpecies > 0 && ' · '}
+            {totalSpecies > 0 && `${totalSpecies} spp`}
+          </span>
+          <span className={`accordion-chevron ${isOpen ? 'open' : ''}`}>▼</span>
+        </div>
+      </button>
+      <div className={`accordion-content ${isOpen ? 'open' : ''}`}>
+        <div className="accordion-content-inner layer-accordion-body" style={{ borderLeftColor: color }}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Species cards section within an accordion ───────────────────────────────
+
+function AccordionSpeciesCards({ species, onPlantClick, isDiorama }) {
+  const [showAll, setShowAll] = useState(false);
+
+  if (species.length === 0) return null;
+
+  const visible = showAll ? species : species.slice(0, MAX_VISIBLE_SPECIES);
+  const hasMore = species.length > MAX_VISIBLE_SPECIES;
 
   return (
-    <>
-      <div className="plant-list-container">
-        <h3 className="plant-list-title">
-          Pre-colonial Plants ({plants.length})
-        </h3>
-        <div className="likelihood-accordions">
-          {groupedPlants.map(group => (
-            <LikelihoodAccordion
-              key={group.code}
-              group={group}
-              isOpen={openAccordions[group.code] || false}
-              onToggle={() => toggleAccordion(group.code)}
-              onPlantClick={setSelectedPlant}
-            />
-          ))}
-        </div>
+    <div className="layer-species-section">
+      <div className="plant-cards-grid">
+        {visible.map((sp, i) => (
+          <PlantCard
+            key={`${sp.species}-${i}`}
+            plant={sp}
+            onClick={onPlantClick}
+          />
+        ))}
+      </div>
+      {hasMore && !showAll && (
+        <button
+          className="show-all-species-btn"
+          onClick={(e) => { e.stopPropagation(); setShowAll(true); }}
+        >
+          Show all {species.length} species
+        </button>
+      )}
+    </div>
+  );
+}
 
-        <CopySpeciesButton plants={plants} />
+// ── Vegetation Layers (unified section) ─────────────────────────────────────
+
+function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHover, isDiorama, onSpeciesClick }) {
+  const speciesData = useMapStore((state) => state.speciesData);
+  const benchmarkData = useMapStore((state) => state.benchmarkData);
+  const understorey = benchmarkData?.understorey;
+
+  const [hoveredCode, setHoveredCode] = useState(null);
+  const [selectedPlant, setSelectedPlant] = useState(null);
+
+  // Build per-group benchmark stats and life form rows
+  const { groupStats, maxCover } = useMemo(() => {
+    if (!understorey || understorey.length === 0) return { groupStats: {}, maxCover: 0 };
+
+    const max = Math.max(...understorey.map(u => u.cover_pct || 0));
+    const stats = {};
+
+    for (const row of understorey) {
+      const meta = LIFE_FORM_META[row.code] || { label: row.life_form || row.code, group: 'ground', heightRange: '' };
+      const groupKey = meta.group;
+      if (!stats[groupKey]) stats[groupKey] = { lifeForms: [], totalCover: 0, totalSpecies: 0 };
+      stats[groupKey].lifeForms.push({ ...row, meta });
+      stats[groupKey].totalCover += row.cover_pct || 0;
+      if (row.num_species != null) stats[groupKey].totalSpecies += row.num_species;
+    }
+
+    // Add canopy tree benchmark data if available
+    if (benchmarkData?.canopy_cover_pct != null && !stats.canopy) {
+      stats.canopy = { lifeForms: [], totalCover: 0, totalSpecies: 0 };
+    }
+    if (benchmarkData?.canopy_cover_pct != null && stats.canopy) {
+      stats.canopy.totalCover = Math.max(stats.canopy.totalCover, benchmarkData.canopy_cover_pct);
+    }
+
+    return { groupStats: stats, maxCover: max };
+  }, [understorey, benchmarkData]);
+
+  // Group species by layer — use speciesData.prominent (has life_form_code)
+  const speciesByGroup = useMemo(() => {
+    const prominent = speciesData?.prominent || [];
+    const present = speciesData?.present || [];
+    const allSpecies = [...prominent, ...present];
+
+    const groups = {};
+    for (const key of LAYER_GROUP_ORDER) groups[key] = [];
+
+    for (const sp of allSpecies) {
+      const code = sp.life_form_code || '';
+      const group = lifeFormToGroup(code);
+      groups[group].push(sp);
+    }
+
+    return groups;
+  }, [speciesData]);
+
+  // Total species count for the section header
+  const totalSpecies = useMemo(() =>
+    LAYER_GROUP_ORDER.reduce((sum, key) => sum + speciesByGroup[key].length, 0),
+    [speciesByGroup]
+  );
+
+  const handleBarHover = useCallback((code) => {
+    setHoveredCode(code);
+    if (onLayerHover) onLayerHover(code);
+  }, [onLayerHover]);
+
+  const handleBarLeave = useCallback(() => {
+    setHoveredCode(null);
+    if (onLayerHover) onLayerHover(null);
+  }, [onLayerHover]);
+
+  const handleToggle = useCallback((groupKey) => {
+    // Normalize profile 6-group keys to accordion 5-group keys
+    const accordionKey = groupKey === 'subcanopy' ? 'canopy' : groupKey;
+    onLayerChange(activeLayer === accordionKey ? null : accordionKey);
+  }, [activeLayer, onLayerChange]);
+
+  const handlePlantClick = useCallback((plant) => {
+    if (isDiorama && onSpeciesClick) {
+      onSpeciesClick({
+        speciesName: plant.species,
+        commonName: plant.commonName || '',
+        layer: lifeFormToGroup(plant.life_form_code || ''),
+        lifeFormCode: plant.life_form_code || '',
+        height: 0,
+        prominence: parseFloat(plant.prominenceCode) || 3.1,
+      });
+    } else {
+      setSelectedPlant(plant);
+    }
+  }, [isDiorama, onSpeciesClick]);
+
+  // Which groups have content (benchmark rows or species)
+  const activeGroups = useMemo(() =>
+    LAYER_GROUP_ORDER.filter(key =>
+      (groupStats[key]?.lifeForms.length > 0) || (speciesByGroup[key].length > 0)
+    ),
+    [groupStats, speciesByGroup]
+  );
+
+  if (activeGroups.length === 0) return null;
+
+  return (
+    <div className="vegetation-layers">
+      <span className="field-label">Vegetation Layers ({totalSpecies} species)</span>
+
+      {/* Profile cross-section at top */}
+      <VegetationProfile activeLayer={profileLayer} onLayerChange={handleToggle} />
+
+      {/* Layer accordions */}
+      <div className="likelihood-accordions">
+        {activeGroups.map(key => {
+          const group = LAYER_GROUPS[key];
+          const stats = groupStats[key] || { lifeForms: [], totalCover: 0, totalSpecies: 0 };
+          const species = speciesByGroup[key];
+
+          return (
+            <LayerAccordion
+              key={key}
+              groupKey={key}
+              label={group.label}
+              color={group.color}
+              totalCover={stats.totalCover}
+              totalSpecies={stats.totalSpecies || species.length}
+              isOpen={activeLayer === key}
+              onToggle={handleToggle}
+            >
+              {/* Benchmark bar chart rows */}
+              {stats.lifeForms.length > 0 && (
+                <LifeFormRows
+                  rows={stats.lifeForms}
+                  maxCover={maxCover}
+                  color={group.color}
+                  hoveredCode={hoveredCode}
+                  onHover={handleBarHover}
+                  onLeave={handleBarLeave}
+                />
+              )}
+
+              {/* Ecological description */}
+              {LAYER_DESCRIPTIONS[key] && (
+                <div className="layer-description">
+                  {LAYER_DESCRIPTIONS[key]}
+                </div>
+              )}
+
+              {/* Species cards */}
+              <AccordionSpeciesCards
+                species={species}
+                onPlantClick={handlePlantClick}
+                isDiorama={isDiorama}
+              />
+            </LayerAccordion>
+          );
+        })}
       </div>
 
-      {selectedPlant && (
+      <div className="understorey-footer">
+        <span>% cover = projected canopy cover at benchmark condition</span>
+        <span>spp = expected species count per life form</span>
+      </div>
+
+      <CopySpeciesButton
+        plants={LAYER_GROUP_ORDER.flatMap(k => speciesByGroup[k])}
+        formatLine={(sp) => {
+          const common = sp.commonName || sp.common_name_s || 'Unknown';
+          const scientific = sp.species || '';
+          const lf = sp.life_form_code || '';
+          return `${common} (${scientific}) - ${lf}`;
+        }}
+      />
+
+      {!isDiorama && selectedPlant && (
         <PlantModal
           plant={selectedPlant}
           onClose={() => setSelectedPlant(null)}
         />
       )}
-    </>
+    </div>
   );
 }
 
+// ── Diorama Button ──────────────────────────────────────────────────────────
+
 function DioramaButton() {
-  const plants = useMapStore((state) => state.plants);
+  const speciesData = useMapStore((state) => state.speciesData);
   const setViewMode = useMapStore((state) => state.setViewMode);
 
-  if (plants.length === 0) {
+  if (!speciesData?.prominent?.length) {
     return null;
   }
 
@@ -202,13 +447,14 @@ function DioramaButton() {
   );
 }
 
+// ── EVC Description ─────────────────────────────────────────────────────────
+
 function EVCDescription() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
   const selectedEVC = useMapStore((state) => state.selectedEVC);
 
   const bcsColor = BCS_COLORS[selectedEVC?.bcsDesc] || '#666';
 
-  // Build description text from benchmark or show fallback
   let descriptionText;
   if (benchmarkData?.description) {
     const parts = [benchmarkData.description];
@@ -254,125 +500,7 @@ function EVCDescription() {
   );
 }
 
-// Understorey Structure Component
-
-const LIFE_FORM_META = {
-  IT:  { label: 'Immature Canopy Tree',           group: 'woody',      heightRange: '5–15m' },
-  T:   { label: 'Understorey Tree / Large Shrub', group: 'woody',      heightRange: '2–8m' },
-  MS:  { label: 'Medium Shrub',                   group: 'woody',      heightRange: '1–2m' },
-  SS:  { label: 'Small Shrub',                    group: 'woody',      heightRange: '0.25–1m' },
-  PS:  { label: 'Prostrate Shrub',                group: 'woody',      heightRange: '0–0.25m' },
-  LH:  { label: 'Large Herb',                     group: 'herbaceous', heightRange: '0.5–1m' },
-  MH:  { label: 'Medium Herb',                    group: 'herbaceous', heightRange: '0.1–0.5m' },
-  SH:  { label: 'Small / Prostrate Herb',         group: 'herbaceous', heightRange: '0–0.1m' },
-  LTG: { label: 'Large Tufted Graminoid',         group: 'graminoid',  heightRange: '0.5–1.5m' },
-  LNG: { label: 'Large Non-tufted Graminoid',     group: 'graminoid',  heightRange: '0.3–1m' },
-  MTG: { label: 'Medium Tufted Graminoid',        group: 'graminoid',  heightRange: '0.1–0.5m' },
-  MNG: { label: 'Medium Non-tufted Graminoid',    group: 'graminoid',  heightRange: '0–0.3m' },
-  GF:  { label: 'Ground Fern',                    group: 'ground',     heightRange: '0–0.3m' },
-  SC:  { label: 'Soil Crust',                     group: 'ground',     heightRange: '0–0.05m' },
-  BL:  { label: 'Bryophytes / Lichens',           group: 'ground',     heightRange: '0–0.05m' },
-};
-
-const GROUP_META = {
-  woody:      { label: 'Woody Plants', color: '#2d5a27' },
-  herbaceous: { label: 'Herbaceous',   color: '#7c5db2' },
-  graminoid:  { label: 'Graminoids',   color: '#b8860b' },
-  ground:     { label: 'Ground Layer', color: '#228b22' },
-};
-
-const GROUP_ORDER = ['woody', 'herbaceous', 'graminoid', 'ground'];
-
-function UnderstoreyStructure({ onLayerHover }) {
-  const benchmarkData = useMapStore((state) => state.benchmarkData);
-  const understorey = benchmarkData?.understorey;
-  const [hoveredCode, setHoveredCode] = useState(null);
-
-  const { grouped, maxCover } = useMemo(() => {
-    if (!understorey || understorey.length === 0) return { grouped: [], maxCover: 0 };
-
-    const max = Math.max(...understorey.map(u => u.cover_pct || 0));
-    const byGroup = {};
-
-    for (const row of understorey) {
-      const meta = LIFE_FORM_META[row.code] || { label: row.life_form || row.code, group: 'ground', heightRange: '' };
-      const groupKey = meta.group;
-      if (!byGroup[groupKey]) byGroup[groupKey] = [];
-      byGroup[groupKey].push({ ...row, meta });
-    }
-
-    const result = GROUP_ORDER
-      .filter(key => byGroup[key]?.length > 0)
-      .map(key => ({ key, ...GROUP_META[key], rows: byGroup[key] }));
-
-    return { grouped: result, maxCover: max };
-  }, [understorey]);
-
-  if (grouped.length === 0) return null;
-
-  const handleHover = (code) => {
-    setHoveredCode(code);
-    if (onLayerHover) onLayerHover(code);
-  };
-
-  const handleLeave = () => {
-    setHoveredCode(null);
-    if (onLayerHover) onLayerHover(null);
-  };
-
-  return (
-    <div className="understorey-structure">
-      <span className="field-label">Understorey Structure</span>
-      <div className="understorey-groups">
-        {grouped.map(group => (
-          <div key={group.key} className="understorey-group">
-            <div className="understorey-group-header">
-              <span className="understorey-group-dot" style={{ backgroundColor: group.color }} />
-              <span className="understorey-group-label">{group.label}</span>
-            </div>
-            <div className="understorey-rows">
-              {group.rows.map(row => (
-                <div
-                  key={row.code}
-                  className={`understorey-row ${hoveredCode === row.code ? 'understorey-row--hover' : ''}`}
-                  onMouseEnter={() => handleHover(row.code)}
-                  onMouseLeave={handleLeave}
-                >
-                  <div className="understorey-name">
-                    <span className="understorey-lf-name">{row.meta.label}</span>
-                    {row.meta.heightRange && (
-                      <span className="understorey-lf-height">{row.meta.heightRange}</span>
-                    )}
-                  </div>
-                  <div className="understorey-bar-track">
-                    <div
-                      className="understorey-bar"
-                      style={{
-                        width: `${maxCover > 0 ? (row.cover_pct / maxCover) * 100 : 0}%`,
-                        backgroundColor: group.color,
-                        opacity: hoveredCode === row.code ? 1 : 0.5,
-                      }}
-                    />
-                  </div>
-                  <div className="understorey-stats">
-                    <span className="understorey-cover">{row.cover_pct}%</span>
-                    {row.num_species != null && (
-                      <span className="understorey-spp">{row.num_species} spp</span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="understorey-footer">
-        <span>% cover = projected canopy cover at benchmark condition</span>
-        <span>spp = expected species count per life form</span>
-      </div>
-    </div>
-  );
-}
+// ── Vegetation Type Tag ─────────────────────────────────────────────────────
 
 function VegetationTypeTag({ vegetationType }) {
   if (!vegetationType) return null;
@@ -388,6 +516,8 @@ function VegetationTypeTag({ vegetationType }) {
     </div>
   );
 }
+
+// ── Site Conditions ─────────────────────────────────────────────────────────
 
 function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
   if (!soilType) return null;
@@ -416,141 +546,21 @@ function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
   );
 }
 
-// Layer classification for diorama species grouping
-const CANOPY_CODES = new Set(['T', 'IT']);
-const UNDERSTOREY_CODES = new Set(['MS', 'SS', 'PS', 'LH', 'MH', 'SH']);
-// Ground: everything else (MTG, LTG, MNG, LNG, GF, BL, SC, etc.)
-
-const LAYER_META = [
-  { key: 'Canopy', label: 'Canopy', color: '#1B5E20', codes: CANOPY_CODES },
-  { key: 'Understorey', label: 'Understorey', color: '#43A047', codes: UNDERSTOREY_CODES },
-  { key: 'Ground', label: 'Ground cover', color: '#8BC34A', codes: null },
-];
-
-function groupSpeciesByLayer(species) {
-  const canopy = [];
-  const understorey = [];
-  const ground = [];
-
-  for (const sp of species) {
-    const code = sp.life_form_code || '';
-    if (CANOPY_CODES.has(code)) canopy.push(sp);
-    else if (UNDERSTOREY_CODES.has(code)) understorey.push(sp);
-    else ground.push(sp);
-  }
-
-  return [
-    { ...LAYER_META[0], species: canopy },
-    { ...LAYER_META[1], species: understorey },
-    { ...LAYER_META[2], species: ground },
-  ].filter(g => g.species.length > 0);
-}
-
-function layerFromCode(code) {
-  if (CANOPY_CODES.has(code)) return 'canopy';
-  if (UNDERSTOREY_CODES.has(code)) return 'shrub';
-  return 'ground';
-}
-
-function DioramaSpeciesList({ onSpeciesClick }) {
-  const speciesData = useMapStore((state) => state.speciesData);
-  const [openAccordions, setOpenAccordions] = useState({});
-
-  const prominent = speciesData?.prominent || [];
-  const grouped = useMemo(() => groupSpeciesByLayer(prominent), [prominent]);
-
-  // All accordions open by default — track only explicit closes
-  const isOpen = (key) => openAccordions[key] !== false;
-
-  const toggleAccordion = (key) => {
-    setOpenAccordions(prev => ({ ...prev, [key]: prev[key] === false ? true : false }));
-  };
-
-  const handleClick = useCallback((sp) => {
-    console.log("handleClick fired", sp.species, "onSpeciesClick:", typeof onSpeciesClick);
-    if (!onSpeciesClick) return;
-    onSpeciesClick({
-      speciesName: sp.species,
-      commonName: sp.commonName || '',
-      layer: layerFromCode(sp.life_form_code || ''),
-      lifeFormCode: sp.life_form_code || '',
-      height: 0,
-      prominence: parseFloat(sp.prominenceCode) || 3.1,
-    });
-  }, [onSpeciesClick]);
-
-  const allSpecies = useMemo(() => grouped.flatMap(g => g.species), [grouped]);
-
-  const formatLine = useCallback((sp) => {
-    const common = sp.commonName || 'Unknown';
-    const scientific = sp.species || '';
-    const lf = sp.life_form_code || '';
-    return `${common} (${scientific}) - ${lf}`;
-  }, []);
-
-  if (prominent.length === 0) return null;
-
-  return (
-    <div className="plant-list-container">
-      <h3 className="plant-list-title">
-        Species in Scene ({prominent.length})
-      </h3>
-      <div className="likelihood-accordions">
-        {grouped.map(group => (
-          <div key={group.key} className="likelihood-accordion">
-            <button className="accordion-header" onClick={() => toggleAccordion(group.key)}>
-              <div className="accordion-title">
-                <span
-                  className="likelihood-dot"
-                  style={{ backgroundColor: group.color }}
-                />
-                <span className="accordion-label">{group.label}</span>
-                <span className="accordion-count">{group.species.length}</span>
-              </div>
-              <span className={`accordion-chevron ${isOpen(group.key) ? 'open' : ''}`}>▼</span>
-            </button>
-            <div className={`accordion-content ${isOpen(group.key) ? 'open' : ''}`}>
-              <div className="accordion-content-inner">
-                <div className="plant-cards-grid">
-                  {group.species.map((sp, i) => (
-                    <PlantCard
-                      key={`${sp.species}-${i}`}
-                      plant={sp}
-                      onClick={() => handleClick(sp)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <CopySpeciesButton plants={allSpecies} formatLine={formatLine} />
-    </div>
-  );
-}
-
-// Map UnderstoreyStructure life form codes to VegetationProfile group keys
-function lifeFormToProfileGroup(code) {
-  if (!code) return null;
-  if (code === 'IT') return 'canopy';
-  if (code === 'T') return 'subcanopy';
-  if (['MS', 'SS', 'PS'].includes(code)) return 'shrub';
-  if (['LTG', 'LNG', 'MTG', 'MNG'].includes(code)) return 'graminoid';
-  if (['LH', 'MH', 'SH'].includes(code)) return 'herb';
-  if (['GF', 'BL', 'SC'].includes(code)) return 'ground';
-  return null;
-}
+// ── InfoPanel ───────────────────────────────────────────────────────────────
 
 function InfoPanel({ mode = 'map', onSpeciesClick }) {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
   const isDiorama = mode === 'diorama';
-  const [activeLayer, setActiveLayer] = useState(null);
+  const [activeLayer, setActiveLayer] = useState(null);     // accordion open state (5-group)
+  const [hoveredLayer, setHoveredLayer] = useState(null);   // profile highlight (6-group)
 
-  // Sync UnderstoreyStructure hover → VegetationProfile highlight
+  // Bar hover → profile highlight (transient, doesn't open accordions)
   const handleLayerHover = useCallback((code) => {
-    setActiveLayer(code ? lifeFormToProfileGroup(code) : null);
+    setHoveredLayer(code ? lifeFormToProfileGroup(code) : null);
   }, []);
+
+  // Profile active layer = explicit click OR hover
+  const profileLayer = hoveredLayer || activeLayer;
 
   return (
     <div className="info-panel">
@@ -565,20 +575,22 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
           <EVCDescription />
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
-          <UnderstoreyStructure onLayerHover={handleLayerHover} />
-          <VegetationProfile activeLayer={activeLayer} onLayerChange={setActiveLayer} />
+          <VegetationLayers
+            activeLayer={activeLayer}
+            profileLayer={profileLayer}
+            onLayerChange={setActiveLayer}
+            onLayerHover={handleLayerHover}
+            isDiorama={isDiorama}
+            onSpeciesClick={onSpeciesClick}
+          />
 
-          {isDiorama ? (
-            <DioramaSpeciesList onSpeciesClick={onSpeciesClick} />
-          ) : (
+          {!isDiorama && (
             <>
               <SiteConditions
                 soilType={selectedEVC.soilType}
                 soilSubBase={selectedEVC.soilSubBase}
                 soilTypesAll={selectedEVC.soilTypesAll}
               />
-
-              <PlantAccordions />
               <DioramaButton />
             </>
           )}

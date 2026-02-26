@@ -549,6 +549,80 @@
   line-height: 1.4;
 }
 
+/* Vegetation Layers section */
+.vegetation-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Layer accordion body with coloured left border */
+.layer-accordion-body {
+  border-left: 3px solid;
+  padding-left: 9px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Accordion header right side: stats + chevron */
+.layer-accordion-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.accordion-stats-summary {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Ecological description inside accordion */
+.layer-description {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 6px 0;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* Species section inside accordion */
+.layer-species-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Show all species button */
+.show-all-species-btn {
+  width: 100%;
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px dashed var(--card-border);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.show-all-species-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-green);
+  background: var(--card-bg);
+}
+
+/* Increase max-height for layer accordions which have more content */
+.vegetation-layers .accordion-content.open {
+  max-height: 800px;
+}
+
 /* Copy Species List Button */
 .copy-species-btn {
   width: 100%;
