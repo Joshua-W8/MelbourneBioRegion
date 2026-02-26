@@ -433,24 +433,57 @@
   gap: 8px;
 }
 
+.understorey-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.understorey-group-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 2px;
+}
+
+.understorey-group-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.understorey-group-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .understorey-rows {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .understorey-row {
   display: grid;
-  grid-template-columns: 1fr 60px 60px;
+  grid-template-columns: 140px 1fr 55px;
   align-items: center;
   gap: 6px;
-  padding: 3px 0;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.understorey-row--hover {
+  background: var(--card-bg);
 }
 
 .understorey-name {
   display: flex;
-  align-items: baseline;
-  gap: 4px;
+  flex-direction: column;
   min-width: 0;
 }
 
@@ -460,16 +493,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.3;
 }
 
-.understorey-lf-code {
+.understorey-lf-height {
   font-size: 9px;
   color: var(--text-muted);
-  flex-shrink: 0;
+  line-height: 1.2;
 }
 
 .understorey-bar-track {
-  height: 5px;
+  height: 6px;
   background: var(--card-bg);
   border-radius: 3px;
   overflow: hidden;
@@ -477,9 +511,9 @@
 
 .understorey-bar {
   height: 100%;
-  background: var(--accent-green);
   border-radius: 3px;
   min-width: 2px;
+  transition: opacity 0.15s ease;
 }
 
 .understorey-stats {
@@ -501,6 +535,18 @@
 .understorey-spp {
   font-size: 9px;
   color: var(--text-muted);
+}
+
+.understorey-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  font-size: 9px;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 /* Copy Species List Button */

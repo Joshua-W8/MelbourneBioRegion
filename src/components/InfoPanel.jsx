@@ -254,38 +254,120 @@ function EVCDescription() {
 }
 
 // Understorey Structure Component
-function UnderstoreyStructure() {
+
+const LIFE_FORM_META = {
+  IT:  { label: 'Immature Canopy Tree',           group: 'woody',      heightRange: '5–15m' },
+  T:   { label: 'Understorey Tree / Large Shrub', group: 'woody',      heightRange: '2–8m' },
+  MS:  { label: 'Medium Shrub',                   group: 'woody',      heightRange: '1–2m' },
+  SS:  { label: 'Small Shrub',                    group: 'woody',      heightRange: '0.25–1m' },
+  PS:  { label: 'Prostrate Shrub',                group: 'woody',      heightRange: '0–0.25m' },
+  LH:  { label: 'Large Herb',                     group: 'herbaceous', heightRange: '0.5–1m' },
+  MH:  { label: 'Medium Herb',                    group: 'herbaceous', heightRange: '0.1–0.5m' },
+  SH:  { label: 'Small / Prostrate Herb',         group: 'herbaceous', heightRange: '0–0.1m' },
+  LTG: { label: 'Large Tufted Graminoid',         group: 'graminoid',  heightRange: '0.5–1.5m' },
+  LNG: { label: 'Large Non-tufted Graminoid',     group: 'graminoid',  heightRange: '0.3–1m' },
+  MTG: { label: 'Medium Tufted Graminoid',        group: 'graminoid',  heightRange: '0.1–0.5m' },
+  MNG: { label: 'Medium Non-tufted Graminoid',    group: 'graminoid',  heightRange: '0–0.3m' },
+  GF:  { label: 'Ground Fern',                    group: 'ground',     heightRange: '0–0.3m' },
+  SC:  { label: 'Soil Crust',                     group: 'ground',     heightRange: '0–0.05m' },
+  BL:  { label: 'Bryophytes / Lichens',           group: 'ground',     heightRange: '0–0.05m' },
+};
+
+const GROUP_META = {
+  woody:      { label: 'Woody Plants', color: '#2d5a27' },
+  herbaceous: { label: 'Herbaceous',   color: '#7c5db2' },
+  graminoid:  { label: 'Graminoids',   color: '#b8860b' },
+  ground:     { label: 'Ground Layer', color: '#228b22' },
+};
+
+const GROUP_ORDER = ['woody', 'herbaceous', 'graminoid', 'ground'];
+
+function UnderstoreyStructure({ onLayerHover }) {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
   const understorey = benchmarkData?.understorey;
+  const [hoveredCode, setHoveredCode] = useState(null);
 
-  if (!understorey || understorey.length === 0) return null;
+  const { grouped, maxCover } = useMemo(() => {
+    if (!understorey || understorey.length === 0) return { grouped: [], maxCover: 0 };
 
-  const maxCover = Math.max(...understorey.map(u => u.cover_pct || 0));
+    const max = Math.max(...understorey.map(u => u.cover_pct || 0));
+    const byGroup = {};
+
+    for (const row of understorey) {
+      const meta = LIFE_FORM_META[row.code] || { label: row.life_form || row.code, group: 'ground', heightRange: '' };
+      const groupKey = meta.group;
+      if (!byGroup[groupKey]) byGroup[groupKey] = [];
+      byGroup[groupKey].push({ ...row, meta });
+    }
+
+    const result = GROUP_ORDER
+      .filter(key => byGroup[key]?.length > 0)
+      .map(key => ({ key, ...GROUP_META[key], rows: byGroup[key] }));
+
+    return { grouped: result, maxCover: max };
+  }, [understorey]);
+
+  if (grouped.length === 0) return null;
+
+  const handleHover = (code) => {
+    setHoveredCode(code);
+    if (onLayerHover) onLayerHover(code);
+  };
+
+  const handleLeave = () => {
+    setHoveredCode(null);
+    if (onLayerHover) onLayerHover(null);
+  };
 
   return (
     <div className="understorey-structure">
       <span className="field-label">Understorey Structure</span>
-      <div className="understorey-rows">
-        {understorey.map(row => (
-          <div key={row.life_form_code} className="understorey-row">
-            <div className="understorey-name">
-              <span className="understorey-lf-name">{row.life_form_name}</span>
-              <span className="understorey-lf-code">{row.life_form_code}</span>
+      <div className="understorey-groups">
+        {grouped.map(group => (
+          <div key={group.key} className="understorey-group">
+            <div className="understorey-group-header">
+              <span className="understorey-group-dot" style={{ backgroundColor: group.color }} />
+              <span className="understorey-group-label">{group.label}</span>
             </div>
-            <div className="understorey-bar-track">
-              <div
-                className="understorey-bar"
-                style={{ width: `${maxCover > 0 ? (row.cover_pct / maxCover) * 100 : 0}%` }}
-              />
-            </div>
-            <div className="understorey-stats">
-              <span className="understorey-cover">{row.cover_pct}%</span>
-              {row.num_species != null && (
-                <span className="understorey-spp">{row.num_species} spp</span>
-              )}
+            <div className="understorey-rows">
+              {group.rows.map(row => (
+                <div
+                  key={row.code}
+                  className={`understorey-row ${hoveredCode === row.code ? 'understorey-row--hover' : ''}`}
+                  onMouseEnter={() => handleHover(row.code)}
+                  onMouseLeave={handleLeave}
+                >
+                  <div className="understorey-name">
+                    <span className="understorey-lf-name">{row.meta.label}</span>
+                    {row.meta.heightRange && (
+                      <span className="understorey-lf-height">{row.meta.heightRange}</span>
+                    )}
+                  </div>
+                  <div className="understorey-bar-track">
+                    <div
+                      className="understorey-bar"
+                      style={{
+                        width: `${maxCover > 0 ? (row.cover_pct / maxCover) * 100 : 0}%`,
+                        backgroundColor: group.color,
+                        opacity: hoveredCode === row.code ? 1 : 0.5,
+                      }}
+                    />
+                  </div>
+                  <div className="understorey-stats">
+                    <span className="understorey-cover">{row.cover_pct}%</span>
+                    {row.num_species != null && (
+                      <span className="understorey-spp">{row.num_species} spp</span>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}
+      </div>
+      <div className="understorey-footer">
+        <span>% cover = projected canopy cover at benchmark condition</span>
+        <span>spp = expected species count per life form</span>
       </div>
     </div>
   );
