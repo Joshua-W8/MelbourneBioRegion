@@ -556,6 +556,21 @@
   gap: 8px;
 }
 
+.veg-layers-subtitle {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: -4px;
+}
+
+.veg-layers-prominent {
+  cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--text-muted);
+  text-underline-offset: 2px;
+}
+
 /* Layer accordion body with coloured left border */
 .layer-accordion-body {
   border-left: 3px solid;

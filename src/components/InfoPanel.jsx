@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import useMapStore from '../store/useMapStore';
 import PlantModal from './PlantModal';
 import VegetationProfile from './VegetationProfile';
@@ -187,8 +187,16 @@ function LayerAccordion({
   groupKey, label, color, totalCover, totalSpecies,
   isOpen, onToggle, children
 }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (isOpen && ref.current) {
+      setTimeout(() => ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }, [isOpen]);
+
   return (
-    <div className="likelihood-accordion">
+    <div className="likelihood-accordion" ref={ref}>
       <button className="accordion-header" onClick={() => onToggle(groupKey)}>
         <div className="accordion-title">
           <span className="likelihood-dot" style={{ backgroundColor: color }} />
@@ -271,12 +279,11 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
       if (row.num_species != null) stats[groupKey].totalSpecies += row.num_species;
     }
 
-    // Add canopy tree benchmark data if available
-    if (benchmarkData?.canopy_cover_pct != null && !stats.canopy) {
-      stats.canopy = { lifeForms: [], totalCover: 0, totalSpecies: 0 };
-    }
-    if (benchmarkData?.canopy_cover_pct != null && stats.canopy) {
-      stats.canopy.totalCover = Math.max(stats.canopy.totalCover, benchmarkData.canopy_cover_pct);
+    // Merge top-level canopy benchmark data into the canopy group
+    const canopyCover = benchmarkData?.canopy?.cover_pct;
+    if (canopyCover != null) {
+      if (!stats.canopy) stats.canopy = { lifeForms: [], totalCover: 0, totalSpecies: 0 };
+      stats.canopy.totalCover = Math.max(stats.canopy.totalCover, canopyCover);
     }
 
     return { groupStats: stats, maxCover: max };
@@ -300,11 +307,8 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
     return groups;
   }, [speciesData]);
 
-  // Total species count for the section header
-  const totalSpecies = useMemo(() =>
-    LAYER_GROUP_ORDER.reduce((sum, key) => sum + speciesByGroup[key].length, 0),
-    [speciesByGroup]
-  );
+  const prominentCount = (speciesData?.prominent || []).length + (speciesData?.present || []).length;
+  const totalRecorded = useMapStore((state) => state.plants)?.length || 0;
 
   const handleBarHover = useCallback((code) => {
     setHoveredCode(code);
@@ -349,7 +353,16 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
 
   return (
     <div className="vegetation-layers">
-      <span className="field-label">Vegetation Layers ({totalSpecies} species)</span>
+      <span className="field-label">Vegetation Layers</span>
+      <span className="veg-layers-subtitle">
+        <span
+          className="veg-layers-prominent"
+          title="Species that were certainly present and formed a significant part of this ecosystem (prominence 3.1+)"
+        >
+          {prominentCount} prominent species
+        </span>
+        {totalRecorded > 0 && ` · ${totalRecorded} recorded in this vegetation type`}
+      </span>
 
       {/* Profile cross-section at top */}
       <VegetationProfile activeLayer={profileLayer} onLayerChange={handleToggle} />
@@ -368,7 +381,7 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
               label={group.label}
               color={group.color}
               totalCover={stats.totalCover}
-              totalSpecies={stats.totalSpecies || species.length}
+              totalSpecies={Math.max(stats.totalSpecies, species.length)}
               isOpen={activeLayer === key}
               onToggle={handleToggle}
             >
@@ -458,17 +471,18 @@ function EVCDescription() {
   let descriptionText;
   if (benchmarkData?.description) {
     const parts = [benchmarkData.description];
-    if (benchmarkData.canopy_cover_pct != null) {
-      parts.push(`Canopy cover approximately ${benchmarkData.canopy_cover_pct}%`);
-      if (benchmarkData.tree_density_ha != null) {
-        parts[parts.length - 1] += `, with ${benchmarkData.tree_density_ha} large trees per hectare`;
+    if (benchmarkData.canopy?.cover_pct != null) {
+      parts.push(`Canopy cover approximately ${benchmarkData.canopy.cover_pct}%`);
+      if (benchmarkData.large_trees?.density_per_ha != null) {
+        parts[parts.length - 1] += `, with ${benchmarkData.large_trees.density_per_ha} large trees per hectare`;
       }
-      if (benchmarkData.canopy_height_m != null) {
-        parts[parts.length - 1] += ` reaching ${benchmarkData.canopy_height_m}m`;
+      if (benchmarkData.canopy?.height_m != null) {
+        parts[parts.length - 1] += ` reaching ${benchmarkData.canopy.height_m}m`;
       }
     }
-    if (benchmarkData.tree_species?.length > 0) {
-      parts.push(`Dominant canopy species: ${benchmarkData.tree_species.join(', ')}`);
+    if (benchmarkData.canopy?.character_species?.length > 0) {
+      const names = benchmarkData.canopy.character_species.map(s => s.scientific_name);
+      parts.push(`Dominant canopy species: ${names.join(', ')}`);
     }
     descriptionText = parts.join('. ') + '.';
   }
@@ -569,7 +583,7 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
       {selectedEVC ? (
         <div className="evc-details">
           <div className="vegetation-type-name">
-            {selectedEVC.evcName}
+            {selectedEVC.evc ? `EVC ${selectedEVC.evc} · ${selectedEVC.evcName}` : selectedEVC.evcName}
           </div>
 
           <EVCDescription />

@@ -270,7 +270,7 @@ export default function VegetationProfile({ activeLayer, onLayerChange }) {
 
   const maxHeight = useMemo(() => {
     if (instances.length === 0) return 10;
-    const canopyH = benchmarkData?.canopy_height_m || 0;
+    const canopyH = benchmarkData?.canopy?.height_m || 0;
     const tallest = Math.max(...instances.map(i => i.heightM), canopyH);
     return Math.max(tallest, 2);
   }, [instances, benchmarkData]);
