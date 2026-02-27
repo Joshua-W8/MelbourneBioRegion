@@ -364,9 +364,6 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
         {totalRecorded > 0 && ` · ${totalRecorded} recorded in this vegetation type`}
       </span>
 
-      {/* Profile cross-section at top */}
-      <VegetationProfile activeLayer={profileLayer} onLayerChange={handleToggle} />
-
       {/* Layer accordions */}
       <div className="likelihood-accordions">
         {activeGroups.map(key => {
@@ -588,6 +585,8 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
 
           <EVCDescription />
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
+
+          <VegetationProfile activeLayer={profileLayer} onLayerChange={setActiveLayer} />
 
           {isDiorama ? (
             <>
