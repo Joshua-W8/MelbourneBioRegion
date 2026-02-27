@@ -589,24 +589,24 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
           <EVCDescription />
           <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
 
-          <VegetationLayers
-            activeLayer={activeLayer}
-            profileLayer={profileLayer}
-            onLayerChange={setActiveLayer}
-            onLayerHover={handleLayerHover}
-            isDiorama={isDiorama}
-            onSpeciesClick={onSpeciesClick}
-          />
-
-          {!isDiorama && (
+          {isDiorama ? (
             <>
+              <VegetationLayers
+                activeLayer={activeLayer}
+                profileLayer={profileLayer}
+                onLayerChange={setActiveLayer}
+                onLayerHover={handleLayerHover}
+                isDiorama={isDiorama}
+                onSpeciesClick={onSpeciesClick}
+              />
               <SiteConditions
                 soilType={selectedEVC.soilType}
                 soilSubBase={selectedEVC.soilSubBase}
                 soilTypesAll={selectedEVC.soilTypesAll}
               />
-              <DioramaButton />
             </>
+          ) : (
+            <DioramaButton />
           )}
         </div>
       ) : (
