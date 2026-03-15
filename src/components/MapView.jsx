@@ -24,19 +24,19 @@ const TILE_URLS = {
 
 // Vegetation type color palette
 const VEGETATION_COLORS = {
-  'Dry Forests': '#2d5a27',
-  'Grasslands and Woodlands on fertile plains': '#7cb342',
-  'Heathlands': '#8d6e63',
-  'Herb-rich Woodlands': '#558b2f',
-  'Rainforests': '#1b5e20',
-  'Riparian Scrubs or Swampy Scrubs and Woodlands': '#26a69a',
-  'Riverine Grassy Woodlands or Forests': '#66bb6a',
-  'Saline Wetlands': '#78909c',
-  'Salt-tolerant and/or Succulent Shrublands': '#a1887f',
-  'Wetlands': '#4dd0e1',
+  'Grasslands and Woodlands on fertile plains': '#7aad4a',
+  'River banks and creeklines': '#3d8a6e',
+  'Woodlands and heathlands on sand': '#8fb040',
+  'Freshwater wetland': '#4a8a8a',
+  'Swamp scrub': '#6b8c3a',
+  'Coastal marshlands and brackish flats': '#5a9da0',
+  'Saltmarsh': '#5c8c3a',
+  'Saltwater wetland': '#2e6b3e',
+  'Beach and Dunes': '#a4c43e',
+  'Cliffs and escarpments': '#4a7c59',
 };
 
-const DEFAULT_COLOR = '#86efac';
+const DEFAULT_COLOR = '#7aad4a';
 
 // Build MapLibre color expression from vegetation types
 function buildColorExpression() {
@@ -102,9 +102,20 @@ function MapView() {
         },
         layers: [
           {
+            id: 'background',
+            type: 'background',
+            paint: {
+              'background-color': '#d8d5ce',
+              'background-opacity': 1,
+            },
+          },
+          {
             id: 'carto-basemap',
             type: 'raster',
             source: 'carto-tiles',
+            paint: {
+              'raster-opacity': 0.35,
+            },
           },
         ],
       },
@@ -145,8 +156,8 @@ function MapView() {
             ['boolean', ['feature-state', 'selected'], false],
             0.95,
             ['boolean', ['feature-state', 'hover'], false],
-            0.85,
-            0.75,
+            0.9,
+            0.82,
           ],
         },
       });
@@ -172,6 +183,7 @@ function MapView() {
           'line-opacity': 1,
         },
       });
+
 
       // Add suburb boundaries source (conditional)
       map.addSource('suburbs', {
@@ -356,6 +368,9 @@ function MapView() {
         id: 'carto-basemap',
         type: 'raster',
         source: 'carto-tiles',
+        paint: {
+          'raster-opacity': 0.35,
+        },
       }, firstLayerId);
     }
 

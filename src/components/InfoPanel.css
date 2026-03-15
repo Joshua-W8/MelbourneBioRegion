@@ -5,9 +5,10 @@
   width: 320px;
   max-height: calc(100vh - 40px);
   background: var(--panel-bg);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   border: 1px solid var(--panel-border);
-  border-radius: 20px;
+  border-radius: 12px;
   box-shadow: var(--shadow-lg);
   z-index: 1000;
   padding: 24px;
