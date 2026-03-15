@@ -65,6 +65,12 @@
       "priority": "medium",
       "notes": "Tea-tree — dense shrub form, small leaves. Covers laevigatum, continentale, lanigerum"
     },
+    "Austrostipa": {
+      "folder": "austrostipa_bigeniculata",
+      "default": "grass_01.glb",
+      "priority": "medium",
+      "notes": "Spear Grass — tussock-forming native grass. Covers bigeniculata, mollis, rudis, scabra"
+    },
     "Acacia": {
       "folder": "acacia",
       "default": "wattle.glb",

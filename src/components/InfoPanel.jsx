@@ -457,72 +457,91 @@ function DioramaButton() {
   );
 }
 
-// ── EVC Description ─────────────────────────────────────────────────────────
+// ── Bioregion + Conservation Status subtitle ────────────────────────────────
 
-function EVCDescription() {
+function BioregionSubtitle() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
   const selectedEVC = useMapStore((state) => state.selectedEVC);
-
   const bcsColor = BCS_COLORS[selectedEVC?.bcsDesc] || '#666';
 
-  let descriptionText;
-  if (benchmarkData?.description) {
-    const parts = [benchmarkData.description];
+  return (
+    <div className="evc-subtitle">
+      {benchmarkData?.bioregion || selectedEVC?.bioregion} bioregion
+      {selectedEVC?.bcsDesc && (
+        <span
+          className="conservation-badge"
+          style={{
+            backgroundColor: `${bcsColor}20`,
+            color: bcsColor,
+            borderColor: `${bcsColor}40`,
+          }}
+        >
+          {selectedEVC.bcsDesc}
+        </span>
+      )}
+    </div>
+  );
+}
+
+// ── EVC Description ─────────────────────────────────────────────────────────
+
+function EVCDescription({ isDiorama }) {
+  const benchmarkData = useMapStore((state) => state.benchmarkData);
+
+  const ecoDescription = benchmarkData?.description || null;
+
+  // Benchmark structural summary — only shown in diorama view
+  let benchmarkSummary = null;
+  if (isDiorama && benchmarkData) {
+    const parts = [];
     if (benchmarkData.canopy?.cover_pct != null) {
-      parts.push(`Canopy cover approximately ${benchmarkData.canopy.cover_pct}%`);
+      let line = `Canopy cover approximately ${benchmarkData.canopy.cover_pct}%`;
       if (benchmarkData.large_trees?.density_per_ha != null) {
-        parts[parts.length - 1] += `, with ${benchmarkData.large_trees.density_per_ha} large trees per hectare`;
+        line += `, with ${benchmarkData.large_trees.density_per_ha} large trees per hectare`;
       }
       if (benchmarkData.canopy?.height_m != null) {
-        parts[parts.length - 1] += ` reaching ${benchmarkData.canopy.height_m}m`;
+        line += ` reaching ${benchmarkData.canopy.height_m}m`;
       }
+      parts.push(line);
     }
     if (benchmarkData.canopy?.character_species?.length > 0) {
       const names = benchmarkData.canopy.character_species.map(s => s.scientific_name);
       parts.push(`Dominant canopy species: ${names.join(', ')}`);
     }
-    descriptionText = parts.join('. ') + '.';
+    if (parts.length > 0) benchmarkSummary = parts.join('. ') + '.';
+  }
+
+  if (!ecoDescription && !benchmarkSummary) {
+    return (
+      <div className="evc-description-text">
+        Benchmark data not yet available for this EVC/bioregion combination.
+      </div>
+    );
   }
 
   return (
-    <div className="evc-description-card">
-      <div className="evc-description-heading">
-        {benchmarkData?.evc_name || selectedEVC?.evcName}
-      </div>
-      <div className="evc-description-bioregion">
-        {benchmarkData?.bioregion || selectedEVC?.bioregion} bioregion
-        {selectedEVC?.bcsDesc && (
-          <span
-            className="conservation-badge"
-            style={{
-              backgroundColor: `${bcsColor}20`,
-              color: bcsColor,
-              borderColor: `${bcsColor}40`,
-            }}
-          >
-            {selectedEVC.bcsDesc}
-          </span>
-        )}
-      </div>
-      <div className="evc-description-text">
-        {descriptionText || 'Benchmark data not yet available for this EVC/bioregion combination.'}
-      </div>
+    <div className="evc-description-text">
+      {ecoDescription}
+      {benchmarkSummary && (
+        <>
+          {ecoDescription && ' '}
+          {benchmarkSummary}
+        </>
+      )}
     </div>
   );
 }
 
-// ── Vegetation Type Tag ─────────────────────────────────────────────────────
+// ── Vegetation Community Tag (diorama only) ─────────────────────────────────
 
-function VegetationTypeTag({ vegetationType }) {
+function VegetationCommunityTag({ vegetationType }) {
   if (!vegetationType) return null;
 
   return (
     <div className="evc-list-container">
-      <span className="field-label">Vegetation Type</span>
-      <div className="evc-list">
-        <div className="evc-item">
-          <span className="evc-item-name">{vegetationType}</span>
-        </div>
+      <span className="field-label">Vegetation Community</span>
+      <div className="evc-community-detail">
+        Part of the broader <strong>{vegetationType}</strong> community
       </div>
     </div>
   );
@@ -582,9 +601,11 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
           <div className="vegetation-type-name">
             {selectedEVC.evc ? `EVC ${selectedEVC.evc} · ${selectedEVC.evcName}` : selectedEVC.evcName}
           </div>
+          <BioregionSubtitle />
 
-          <EVCDescription />
-          <VegetationTypeTag vegetationType={selectedEVC.vegetationType} />
+          <EVCDescription isDiorama={isDiorama} />
+
+          {isDiorama && <VegetationCommunityTag vegetationType={selectedEVC.vegetationType} />}
 
           <VegetationProfile activeLayer={profileLayer} onLayerChange={setActiveLayer} />
 

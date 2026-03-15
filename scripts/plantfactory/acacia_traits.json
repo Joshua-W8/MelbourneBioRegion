@@ -1,0 +1,327 @@
+{
+  "Acacia mearnsii": {
+    "traits": {
+      "huber_value": {
+        "mean": 0.0004,
+        "median": 0.0004,
+        "min": 0.0003,
+        "max": 0.0005,
+        "n": 12,
+        "unit": "mm2{sapwood}/mm2{leaf}",
+        "stdev": 0.0001
+      },
+      "leaf_area": {
+        "mean": 3.1416,
+        "median": 3.1416,
+        "min": 3.1416,
+        "max": 3.1416,
+        "n": 1,
+        "unit": "mm2"
+      },
+      "leaf_length": {
+        "mean": 12.0333,
+        "median": 3.5,
+        "min": 1.0,
+        "max": 60.0,
+        "n": 15,
+        "unit": "mm",
+        "stdev": 19.979
+      },
+      "leaf_mass_per_area": {
+        "mean": 141.3911,
+        "median": 141.3911,
+        "min": 141.3911,
+        "max": 141.3911,
+        "n": 1,
+        "unit": "g/m2"
+      },
+      "leaf_width": {
+        "mean": 0.6682,
+        "median": 0.75,
+        "min": 0.5,
+        "max": 0.8,
+        "n": 11,
+        "unit": "mm",
+        "stdev": 0.1454
+      },
+      "life_history": {
+        "values": {
+          "perennial": 11,
+          "short_lived_perennial": 1
+        },
+        "most_common": "perennial",
+        "n": 12
+      },
+      "plant_growth_form": {
+        "values": {
+          "tree": 10,
+          "shrub tree": 4,
+          "shrub": 4
+        },
+        "most_common": "tree",
+        "n": 18
+      },
+      "plant_height": {
+        "mean": 11.5,
+        "median": 10.0,
+        "min": 3.0,
+        "max": 25.0,
+        "n": 14,
+        "unit": "m",
+        "stdev": 5.6535
+      },
+      "wood_density": {
+        "mean": 0.6439,
+        "median": 0.65,
+        "min": 0.566,
+        "max": 0.713,
+        "n": 7,
+        "unit": "mg/mm3",
+        "stdev": 0.0438
+      },
+      "woodiness": {
+        "values": {
+          "woody": 2
+        },
+        "most_common": "woody",
+        "n": 2
+      }
+    },
+    "plantfactory_params": {
+      "species": "Acacia mearnsii",
+      "notes": [
+        "Height 11.5m / 5 iterations = 2.3m per segment",
+        "Leaf/phyllode length 12.0333mm -> PF scale 0.0120",
+        "Leaf/phyllode width 0.6682mm"
+      ],
+      "total_height_m": 11.5,
+      "suggested_iterations": 5,
+      "segment_length": 2.3,
+      "leaf_length_m": 0.012,
+      "leaf_scale_pf": 0.012,
+      "leaf_width_m": 0.6682,
+      "leaf_area_mm2": 3.1416,
+      "wood_density_kg_m3": 0.6439
+    }
+  },
+  "Acacia melanoxylon": {
+    "traits": {
+      "huber_value": {
+        "mean": 0.0003,
+        "median": 0.0002,
+        "min": 0.0002,
+        "max": 0.0006,
+        "n": 5,
+        "unit": "mm2{sapwood}/mm2{leaf}",
+        "stdev": 0.0001
+      },
+      "leaf_area": {
+        "mean": 1284.2059,
+        "median": 1140.0,
+        "min": 550.575,
+        "max": 3298.67,
+        "n": 27,
+        "unit": "mm2",
+        "stdev": 577.0691
+      },
+      "leaf_length": {
+        "mean": 104.6154,
+        "median": 140.0,
+        "min": 40.0,
+        "max": 160.0,
+        "n": 13,
+        "unit": "mm",
+        "stdev": 56.6591
+      },
+      "leaf_mass_per_area": {
+        "mean": 134.3378,
+        "median": 132.2,
+        "min": 69.1004,
+        "max": 197.6285,
+        "n": 39,
+        "unit": "g/m2",
+        "stdev": 23.9342
+      },
+      "leaf_thickness": {
+        "mean": 0.2626,
+        "median": 0.27,
+        "min": 0.189,
+        "max": 0.31,
+        "n": 17,
+        "unit": "mm",
+        "stdev": 0.0432
+      },
+      "leaf_width": {
+        "mean": 17.6857,
+        "median": 19.8,
+        "min": 6.0,
+        "max": 30.0,
+        "n": 14,
+        "unit": "mm",
+        "stdev": 10.2701
+      },
+      "life_history": {
+        "values": {
+          "perennial": 14
+        },
+        "most_common": "perennial",
+        "n": 14
+      },
+      "plant_growth_form": {
+        "values": {
+          "tree": 19,
+          "shrub tree": 5,
+          "shrub": 4
+        },
+        "most_common": "tree",
+        "n": 28
+      },
+      "plant_height": {
+        "mean": 23.44,
+        "median": 30.0,
+        "min": 1.5,
+        "max": 45.0,
+        "n": 25,
+        "unit": "m",
+        "stdev": 13.7123
+      },
+      "wood_density": {
+        "mean": 0.5509,
+        "median": 0.545,
+        "min": 0.41,
+        "max": 0.7928,
+        "n": 23,
+        "unit": "mg/mm3",
+        "stdev": 0.0909
+      },
+      "woodiness": {
+        "values": {
+          "woody": 3
+        },
+        "most_common": "woody",
+        "n": 3
+      }
+    },
+    "plantfactory_params": {
+      "species": "Acacia melanoxylon",
+      "notes": [
+        "Height 23.44m / 5 iterations = 4.688m per segment",
+        "Leaf/phyllode length 104.6154mm -> PF scale 0.1046",
+        "Leaf/phyllode width 17.6857mm"
+      ],
+      "total_height_m": 23.44,
+      "suggested_iterations": 5,
+      "segment_length": 4.688,
+      "leaf_length_m": 0.1046,
+      "leaf_scale_pf": 0.1046,
+      "leaf_width_m": 0.0177,
+      "leaf_area_mm2": 1284.2059,
+      "wood_density_kg_m3": 0.5509
+    }
+  },
+  "Acacia pycnantha": {
+    "traits": {
+      "leaf_area": {
+        "mean": 2334.1971,
+        "median": 1932.5235,
+        "min": 832.0,
+        "max": 5989.92,
+        "n": 32,
+        "unit": "mm2",
+        "stdev": 1203.7155
+      },
+      "leaf_length": {
+        "mean": 127.2727,
+        "median": 150.0,
+        "min": 60.0,
+        "max": 200.0,
+        "n": 11,
+        "unit": "mm",
+        "stdev": 49.4148
+      },
+      "leaf_mass_per_area": {
+        "mean": 233.0482,
+        "median": 235.563,
+        "min": 147.7105,
+        "max": 305.5118,
+        "n": 36,
+        "unit": "g/m2",
+        "stdev": 34.7883
+      },
+      "leaf_thickness": {
+        "mean": 0.368,
+        "median": 0.368,
+        "min": 0.368,
+        "max": 0.368,
+        "n": 1,
+        "unit": "mm"
+      },
+      "leaf_width": {
+        "mean": 24.0909,
+        "median": 35.0,
+        "min": 5.0,
+        "max": 50.0,
+        "n": 11,
+        "unit": "mm",
+        "stdev": 16.0963
+      },
+      "life_history": {
+        "values": {
+          "perennial": 10
+        },
+        "most_common": "perennial",
+        "n": 10
+      },
+      "plant_growth_form": {
+        "values": {
+          "shrub tree": 9,
+          "tree": 2,
+          "shrub": 1
+        },
+        "most_common": "shrub tree",
+        "n": 12
+      },
+      "plant_height": {
+        "mean": 6.1333,
+        "median": 8.0,
+        "min": 2.0,
+        "max": 10.0,
+        "n": 15,
+        "unit": "m",
+        "stdev": 2.722
+      },
+      "wood_density": {
+        "mean": 0.6209,
+        "median": 0.6106,
+        "min": 0.5952,
+        "max": 0.6564,
+        "n": 5,
+        "unit": "mg/mm3",
+        "stdev": 0.0262
+      },
+      "woodiness": {
+        "values": {
+          "woody": 1
+        },
+        "most_common": "woody",
+        "n": 1
+      }
+    },
+    "plantfactory_params": {
+      "species": "Acacia pycnantha",
+      "notes": [
+        "Height 6.1333m / 4 iterations = 1.533m per segment",
+        "Leaf/phyllode length 127.2727mm -> PF scale 0.1273",
+        "Leaf/phyllode width 24.0909mm"
+      ],
+      "total_height_m": 6.1333,
+      "suggested_iterations": 4,
+      "segment_length": 1.533,
+      "leaf_length_m": 0.1273,
+      "leaf_scale_pf": 0.1273,
+      "leaf_width_m": 0.0241,
+      "leaf_area_mm2": 2334.1971,
+      "wood_density_kg_m3": 0.6209
+    }
+  }
+}

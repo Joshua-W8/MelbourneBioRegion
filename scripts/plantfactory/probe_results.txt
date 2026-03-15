@@ -1,0 +1,1144 @@
+
+============================================================
+TEST: GetSpecialNode('root')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150bd0>
+
+============================================================
+TEST: GetSpecialNode('Root')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: GetSpecialNode('trunk')
+============================================================
+FAILED: RuntimeError: Node "trunk" not found
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 54, in <lambda>
+    test(f"GetSpecialNode('{name}')", lambda n=name: child.GetSpecialNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1418, in GetSpecialNode
+    return _eon.EONChild_GetSpecialNode(self, nodeName)
+RuntimeError: Node "trunk" not found
+
+
+============================================================
+TEST: GetSpecialNode('Trunk')
+============================================================
+FAILED: RuntimeError: Node "Trunk" not found
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 54, in <lambda>
+    test(f"GetSpecialNode('{name}')", lambda n=name: child.GetSpecialNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1418, in GetSpecialNode
+    return _eon.EONChild_GetSpecialNode(self, nodeName)
+RuntimeError: Node "Trunk" not found
+
+
+============================================================
+TEST: GetSpecialNode('main')
+============================================================
+FAILED: RuntimeError: Node "main" not found
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 54, in <lambda>
+    test(f"GetSpecialNode('{name}')", lambda n=name: child.GetSpecialNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1418, in GetSpecialNode
+    return _eon.EONChild_GetSpecialNode(self, nodeName)
+RuntimeError: Node "main" not found
+
+
+============================================================
+TEST: GetSpecialNode('plant')
+============================================================
+FAILED: RuntimeError: Node "plant" not found
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 54, in <lambda>
+    test(f"GetSpecialNode('{name}')", lambda n=name: child.GetSpecialNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1418, in GetSpecialNode
+    return _eon.EONChild_GetSpecialNode(self, nodeName)
+RuntimeError: Node "plant" not found
+
+
+============================================================
+TEST: GetSpecialNode('scene')
+============================================================
+FAILED: RuntimeError: Node "scene" not found
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 54, in <lambda>
+    test(f"GetSpecialNode('{name}')", lambda n=name: child.GetSpecialNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1418, in GetSpecialNode
+    return _eon.EONChild_GetSpecialNode(self, nodeName)
+RuntimeError: Node "scene" not found
+
+
+============================================================
+TEST: NewScene()
+============================================================
+SUCCESS: None
+
+============================================================
+TEST: GetSpecialNode('root') after NewScene
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c00>
+
+============================================================
+TEST: Enumerate nodes by index
+============================================================
+SUCCESS: Found 4 nodes:
+  index 0: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150bd0> (type: SwigPyObject)
+  index 1: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c60> (type: SwigPyObject)
+  index 2: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150bd0> (type: SwigPyObject)
+  index 3: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c60> (type: SwigPyObject)
+
+============================================================
+TEST: Inspect root node object
+============================================================
+SUCCESS: Root node attributes (5):
+  acquire
+  append
+  disown
+  next
+  own
+
+============================================================
+TEST: AddNode(8037)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8004)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8005)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8006)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8022)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8017)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8011)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 93, in <lambda>
+    test(f"AddNode({node_id})", lambda nid=node_id: child.AddNode(nid))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode('Segment')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('segment')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('Ball')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('ball')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('Hydra')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('hydra')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('Urchin')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('urchin')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('Warpboard')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('warpboard')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('Root')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('root')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('Next')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('next')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('Last')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('last')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('RandomNumber')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('Random Number')
+============================================================
+FAILED: RuntimeError: An error occured, see previous message in python console.
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 100, in <lambda>
+    test(f"AddNode('{name}')", lambda n=name: child.AddNode(n))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+RuntimeError: An error occured, see previous message in python console.
+
+
+============================================================
+TEST: AddNode('Object')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode('object')
+============================================================
+SUCCESS: <Swig Object of type 'VUEFunctionNode_Ptr *' at 0x133150c30>
+
+============================================================
+TEST: AddNode(root_node, 8037)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 104, in <lambda>
+    test("AddNode(root_node, 8037)", lambda: child.AddNode(root_node, 8037))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(root_node, 'Segment')
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 105, in <lambda>
+    test("AddNode(root_node, 'Segment')", lambda: child.AddNode(root_node, "Segment"))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddNode(8037, 'trunk')
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 106, in <lambda>
+    test("AddNode(8037, 'trunk')", lambda: child.AddNode(8037, "trunk"))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1427, in AddNode
+    return _eon.EONChild_AddNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddNode(EONString const &)
+
+
+
+============================================================
+TEST: AddAndConnectNode(root_node, 8037)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 113, in <lambda>
+    lambda: child.AddAndConnectNode(root_node, 8037))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1424, in AddAndConnectNode
+    return _eon.EONChild_AddAndConnectNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+
+
+============================================================
+TEST: AddAndConnectNode(root_node, 'Segment')
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 115, in <lambda>
+    lambda: child.AddAndConnectNode(root_node, "Segment"))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1424, in AddAndConnectNode
+    return _eon.EONChild_AddAndConnectNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+
+
+============================================================
+TEST: AddAndConnectNode(8037, root_node)
+============================================================
+FAILED: TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 117, in <lambda>
+    lambda: child.AddAndConnectNode(8037, root_node))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1424, in AddAndConnectNode
+    return _eon.EONChild_AddAndConnectNode(self, *args)
+TypeError: Wrong number or type of arguments for overloaded function 'EONChild_AddAndConnectNode'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &,size_t)
+    VUEChildPythonTPF::python_AddAndConnectNode(EONString const &)
+
+
+
+============================================================
+TEST: NodeSetParam(root, 'segment/length', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group segment
+param length
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group segment
+param length
+
+
+============================================================
+TEST: NodeSetParam(root, 'SbCount', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group 
+param SbCount
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group 
+param SbCount
+
+
+============================================================
+TEST: NodeSetParam(root, 'BranchAngle', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group 
+param BranchAngle
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group 
+param BranchAngle
+
+
+============================================================
+TEST: NodeSetParam(root, 'length', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group 
+param length
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group 
+param length
+
+
+============================================================
+TEST: NodeSetParam(root, 'radius', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group 
+param radius
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group 
+param radius
+
+
+============================================================
+TEST: NodeSetParam(root, 'height', 5.0)
+============================================================
+FAILED: RuntimeError: Node not found using :
+tab 
+group 
+param height
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 127, in <lambda>
+    lambda p=param: child.NodeSetParam(root_node, p, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: Node not found using :
+tab 
+group 
+param height
+
+
+============================================================
+TEST: NodeSetParam(root, 0, 5.0)
+============================================================
+FAILED: RuntimeError: PyObject is not an integer, but a "float"
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 132, in <lambda>
+    lambda i=idx: child.NodeSetParam(root_node, i, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: PyObject is not an integer, but a "float"
+
+
+============================================================
+TEST: NodeSetParam(root, 1, 5.0)
+============================================================
+FAILED: RuntimeError: No input parameter at index 1
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 132, in <lambda>
+    lambda i=idx: child.NodeSetParam(root_node, i, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: No input parameter at index 1
+
+
+============================================================
+TEST: NodeSetParam(root, 2, 5.0)
+============================================================
+FAILED: RuntimeError: No input parameter at index 2
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 132, in <lambda>
+    lambda i=idx: child.NodeSetParam(root_node, i, 5.0))
+  File "/Applications/PlantFactory/Python/PythonLib/eon.py", line 1521, in NodeSetParam
+    return _eon.EONChild_NodeSetParam(self, *args)
+RuntimeError: No input parameter at index 2
+
+
+============================================================
+TEST: ConnectOutputToInput(node0, node1)
+============================================================
+SUCCESS: Could not test: No input available !
+
+============================================================
+TEST: ConnectOutputToInput(node0, 0, node1, 0)
+============================================================
+SUCCESS: Could not test: Wrong number or type of arguments for overloaded function 'EONChild_ConnectOutputToInput'.
+  Possible C/C++ prototypes are:
+    VUEChildPythonTPF::python_ConnectOutputToInput(VUEFunctionNode_Ptr,EONString const &,VUEFunctionNode_Ptr,EONString const &)
+    VUEChildPythonTPF::python_ConnectOutputToInput(VUEFunctionNode_Ptr,VUEFunctionNode_Ptr,EONString const &)
+    VUEChildPythonTPF::python_ConnectOutputToInput(VUEFunctionNode_Ptr,EONString const &,VUEFunctionNode_Ptr)
+    VUEChildPythonTPF::python_ConnectOutputToInput(VUEFunctionNode_Ptr,VUEFunctionNode_Ptr)
+
+
+============================================================
+TEST: JsonRPC('help')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 165, in test_jsonrpc_help
+    return eon.JsonRPC(msg)
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('system.listMethods')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 172, in test_jsonrpc_list
+    return eon.JsonRPC(msg)
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getMethods')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 179, in test_jsonrpc_getmethods
+    return eon.JsonRPC(msg)
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getNodeTypes')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('listNodeTypes')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getNodes')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('listNodes')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getParams')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getNodeParams')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('getScene')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: JsonRPC('introspect')
+============================================================
+FAILED: AttributeError: module 'eon' has no attribute 'JsonRPC'
+Traceback (most recent call last):
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 31, in test
+    result = fn()
+  File "/Users/joshuawait/Documents/melbourne_bioregion/MelbourneBioRegion/scripts/plantfactory/pf_runtime_probe.py", line 187, in <lambda>
+    lambda m=method: eon.JsonRPC(
+AttributeError: module 'eon' has no attribute 'JsonRPC'
+
+
+============================================================
+TEST: GetPlantHeight()
+============================================================
+SUCCESS: 0.0
+
+============================================================
+TEST: GetNumberOfPolygons()
+============================================================
+SUCCESS: 0
+
+============================================================
+TEST: GetLeafNumber()
+============================================================
+SUCCESS: 0
+
+============================================================
+TEST: GetPrimitiveNumber()
+============================================================
+SUCCESS: 0
+
+============================================================
+TEST: GetAgeRatio()
+============================================================
+SUCCESS: 0.5
+
+============================================================
+TEST: GetHealth()
+============================================================
+SUCCESS: 1.0
+
+============================================================
+TEST: GetSeason()
+============================================================
+SUCCESS: 0.25
+
+============================================================
+TEST: Inspect eon module
+============================================================
+SUCCESS: eon module attributes (199):
+  BVHS_Full
+  BVHS_OnlyPrim
+  BVHS_PrimAndMesh
+  EAlphaTreatment_ENUM_END
+  EAlphaTreatment_Extract
+  EAlphaTreatment_Merge
+  EAlphaTreatment_Unchanged
+  EAnimationFormat_AnimatedBones
+  EAnimationFormat_AnimatedPoints
+  EAnimationFormat_ENUM_END
+  EAnimationFormat_None_DEPRECATED
+  EAnimationFormat_StaticBones
+  EAxesSystem_ENUM_END
+  EAxesSystem_XYZ
+  EAxesSystem_XZY
+  EAxesSystem_X_ZY
+  EAxesSystem_YXZ
+  EAxesSystem_YZX
+  EAxesSystem_ZXY
+  EAxesSystem_ZYX
+  EDoubleSidedFaceMode_DuplicatedFace
+  EDoubleSidedFaceMode_DuplicatedFace_IfTwoSidedMaterial
+  EDoubleSidedFaceMode_ENUM_END
+  EDoubleSidedFaceMode_TwoSidedFace
+  EExportPreset_EP_Blender
+  EExportPreset_EP_Cinema4D
+  EExportPreset_EP_Clarisse_USD
+  EExportPreset_EP_DAZ_Studio
+  EExportPreset_EP_ENUM_MAX
+  EExportPreset_EP_LightWave
+  EExportPreset_EP_Max_Basic
+  EExportPreset_EP_Max_Mental_Ray
+  EExportPreset_EP_Max_VRay
+  EExportPreset_EP_Maya_Mental_Ray
+  EExportPreset_EP_Maya_VRay
+  EExportPreset_EP_Modo
+  EExportPreset_EP_None
+  EExportPreset_EP_Omniverse_USD
+  EExportPreset_EP_Pixologic_ZBrush
+  EExportPreset_EP_Poser
+  EExportPreset_EP_SoftImage
+  EExportPreset_EP_Unity
+  EExportPreset_EP_Unreal_Engine
+  EExportPreset_EP_VUE
+  EM_Alpha
+  EM_BackGI
+  EM_Backlight
+  EM_Bump
+  EM_ClearcoatContribution
+  EM_ClearcoatFlatten
+  EM_ClearcoatIOR
+  EM_ClearcoatNormal
+  EM_ClearcoatRoughness
+  EM_ClearcoatTint
+  EM_Color
+  EM_Depth
+  EM_Displacement
+  EM_FrontGI
+  EM_Highlight
+  EM_Luminous
+  EM_Max
+  EM_Metallic
+  EM_Normal
+  EM_Occlusion
+  EM_Reflection
+  EM_Roughness
+  EMaterialExportMode_Automatic
+  EMaterialExportMode_BakeToTextureMaps
+  EMaterialExportMode_ConvertExistingMaps
+  EMaterialExportMode_ENUM_END
+  EMaterialExportMode_MaterialX
+  EONAppBase
+  EONApplication
+  EONChild
+  EOcclusionTreatment_Both
+  EOcclusionTreatment_ENUM_END
+  EOcclusionTreatment_Skydome
+  EOcclusionTreatment_Texture
+  EPreBakingPurpose_ConvertTool
+  EPreBakingPurpose_EcoSpecimenUpdate
+  EPreBakingPurpose_Export
+  EPreBakingPurpose_HydraRender
+  EPreBakingPurpose_Preview
+  EPreBakingPurpose_SetOptionsFromEditor
+  ET_AllPrimitives
+  ET_LeavesAndBlades
+  ET_OnlyLeaves
+  ETexturePathMode_Absolute
+  ETexturePathMode_ENUM_END
+  ETexturePathMode_Relative
+  EUnit_Automatic
+  EUnit_Centimeters
+  EUnit_ENUM_END
+  EUnit_Feet
+  EUnit_Inches
+  EUnit_Kilometers
+  EUnit_Meters
+  EUnit_Miles
+  EUnit_Millimeters
+  EUnit_Yards
+  EVCExportMode_BakedMap
+  EVCExportMode_ENUM_END
+  EVCExportMode_VertexColor
+  ExportCateg_Animation
+  ExportCateg_Billboard
+  ExportCateg_Cloud
+  ExportCateg_ENUM_END
+  ExportCateg_Geometry
+  ExportCateg_LOD
+  ExportCateg_Materials
+  ExportCateg_TPFSpecies
+  ExportCateg_Terrain
+  ExportCateg_UV
+  GT_ENUM_MAX
+  GT_envelope
+  GT_offline
+  GT_realtime
+  GeneralParameterGetAge
+  GeneralParameterGetAgeMax
+  GeneralParameterGetHealth
+  GeneralParameterGetSeason
+  GeneralParameterSetAge
+  GeneralParameterSetAgeMax
+  GeneralParameterSetHealth
+  GeneralParameterSetSeason
+  GeneralParameterSetSeed
+  LSM_UseFixedRadius
+  LSM_UseVegBoundingSphere
+  MT_alpha
+  MT_ambient
+  MT_ambientocclusion
+  MT_backlight
+  MT_bump
+  MT_clearcoatContribution
+  MT_clearcoatFlatten
+  MT_clearcoatIOR
+  MT_clearcoatNormal
+  MT_clearcoatRoughness
+  MT_clearcoatTint
+  MT_color
+  MT_disp
+  MT_highlight
+  MT_luminous
+  MT_maxType
+  MT_metallic
+  MT_none
+  MT_normal
+  MT_reflection
+  MT_roughness
+  MT_shininess
+  MT_transparency
+  MapExportMode_ENUM_END
+  MapExportMode_NOMAP
+  MapExportMode_PTEX
+  MapExportMode_UVS
+  MaterialSide_Back
+  MaterialSide_Both
+  MaterialSide_Front
+  MaterialType_Cloud
+  MaterialType_Ecosystem
+  MaterialType_Material
+  MaterialType_Mixed
+  MaterialType_PBR_Glossy
+  MaterialType_Poser
+  MaterialType_TwoSided
+  MaterialType_Volumetric
+  MeshPart_ENUM_END
+  MeshPart_OneMesh
+  MeshPart_OneMeshPerPrim
+  MeshPart_OnePartPerNode
+  MeshPart_WithHierarchyLevels
+  MeshingParameterIncreaseSubdivision
+  MeshingParameterSetLODForRender
+  MeshingParameterSetSubdivision
+  NULL
+  SDM_Animation
+  SDM_CurrentPreview
+  SDM_CurrentPreviewAdapt
+  SDM_HighAutomatic
+  SDM_StaticPreset
+  SDM_StaticPresetAdapt
+  SM_Automatic
+  SM_AutomaticUniform
+  SM_Manual
+  SOM_Quality
+  SPM_MixedQuadsTriangles
+  SPM_MixedQuadsTrianglesWithoutDummyTriangles
+  SPM_Quads
+  SPM_Triangles
+  SwigPyIterator
+  VUE_CORE_EXPORT_DEFINES_122010_
+  map_int_string
+  pair_wstring_wstring
+  vector_double
+  vector_float
+  vector_int
+  vector_long
+  vector_pair_wstring_wstring
+  vector_string
+
+============================================================
+TEST: hasattr(eon, 'JsonRPC')
+============================================================
+SUCCESS: False
+
+
+============================================================
+PROBE COMPLETE
+============================================================
