@@ -1,6 +1,5 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import useMapStore from '../store/useMapStore';
-import PlantModal from './PlantModal';
 import VegetationProfile from './VegetationProfile';
 import './InfoPanel.css';
 
@@ -75,7 +74,7 @@ function lifeFormToProfileGroup(code) {
 
 // ── Plant Card Component ────────────────────────────────────────────────────
 
-function PlantCard({ plant, onClick }) {
+function PlantCard({ plant }) {
   const commonName = plant.common_name_s || plant.commonName || plant.common_name || 'Unknown';
   const scientificName = plant.species || '';
 
@@ -85,7 +84,7 @@ function PlantCard({ plant, onClick }) {
   const [hasThumb, setHasThumb] = useState(true);
 
   return (
-    <div className="plant-card" onClick={() => onClick(plant)}>
+    <div className="plant-card">
       <div className="plant-card-image">
         {hasThumb ? (
           <img
@@ -222,7 +221,7 @@ function LayerAccordion({
 
 // ── Species cards section within an accordion ───────────────────────────────
 
-function AccordionSpeciesCards({ species, onPlantClick, isDiorama }) {
+function AccordionSpeciesCards({ species }) {
   const [showAll, setShowAll] = useState(false);
 
   if (species.length === 0) return null;
@@ -237,7 +236,6 @@ function AccordionSpeciesCards({ species, onPlantClick, isDiorama }) {
           <PlantCard
             key={`${sp.species}-${i}`}
             plant={sp}
-            onClick={onPlantClick}
           />
         ))}
       </div>
@@ -255,13 +253,12 @@ function AccordionSpeciesCards({ species, onPlantClick, isDiorama }) {
 
 // ── Vegetation Layers (unified section) ─────────────────────────────────────
 
-function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHover, isDiorama, onSpeciesClick }) {
+function VegetationLayers({ activeLayer, onLayerChange, onLayerHover }) {
   const speciesData = useMapStore((state) => state.speciesData);
   const benchmarkData = useMapStore((state) => state.benchmarkData);
   const understorey = benchmarkData?.understorey;
 
   const [hoveredCode, setHoveredCode] = useState(null);
-  const [selectedPlant, setSelectedPlant] = useState(null);
 
   // Build per-group benchmark stats and life form rows
   const { groupStats, maxCover } = useMemo(() => {
@@ -326,21 +323,6 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
     onLayerChange(activeLayer === accordionKey ? null : accordionKey);
   }, [activeLayer, onLayerChange]);
 
-  const handlePlantClick = useCallback((plant) => {
-    if (isDiorama && onSpeciesClick) {
-      onSpeciesClick({
-        speciesName: plant.species,
-        commonName: plant.commonName || '',
-        layer: lifeFormToGroup(plant.life_form_code || ''),
-        lifeFormCode: plant.life_form_code || '',
-        height: 0,
-        prominence: parseFloat(plant.prominenceCode) || 3.1,
-      });
-    } else {
-      setSelectedPlant(plant);
-    }
-  }, [isDiorama, onSpeciesClick]);
-
   // Which groups have content (benchmark rows or species)
   const activeGroups = useMemo(() =>
     LAYER_GROUP_ORDER.filter(key =>
@@ -404,8 +386,6 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
               {/* Species cards */}
               <AccordionSpeciesCards
                 species={species}
-                onPlantClick={handlePlantClick}
-                isDiorama={isDiorama}
               />
             </LayerAccordion>
           );
@@ -426,34 +406,7 @@ function VegetationLayers({ activeLayer, profileLayer, onLayerChange, onLayerHov
           return `${common} (${scientific}) - ${lf}`;
         }}
       />
-
-      {!isDiorama && selectedPlant && (
-        <PlantModal
-          plant={selectedPlant}
-          onClose={() => setSelectedPlant(null)}
-        />
-      )}
     </div>
-  );
-}
-
-// ── Diorama Button ──────────────────────────────────────────────────────────
-
-function DioramaButton() {
-  const speciesData = useMapStore((state) => state.speciesData);
-  const setViewMode = useMapStore((state) => state.setViewMode);
-
-  if (!speciesData?.prominent?.length) {
-    return null;
-  }
-
-  return (
-    <button
-      className="diorama-btn"
-      onClick={() => setViewMode('diorama')}
-    >
-      View 3D Ecosystem
-    </button>
   );
 }
 
@@ -547,38 +500,9 @@ function VegetationCommunityTag({ vegetationType }) {
   );
 }
 
-// ── Site Conditions ─────────────────────────────────────────────────────────
-
-function SiteConditions({ soilType, soilSubBase, soilTypesAll }) {
-  if (!soilType) return null;
-
-  return (
-    <div className="site-conditions">
-      <span className="field-label">Site Conditions</span>
-      <div className="condition-content">
-        <div className="condition-item">
-          <span className="condition-key">Soil</span>
-          <span className="condition-val">{soilType}</span>
-        </div>
-        {soilSubBase && (
-          <div className="condition-item">
-            <span className="condition-key">Substrate</span>
-            <span className="condition-val">{soilSubBase}</span>
-          </div>
-        )}
-        {soilTypesAll && soilTypesAll.length > 1 && (
-          <div className="condition-overlap">
-            Also overlaps: {soilTypesAll.slice(1).join(', ')}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 // ── InfoPanel ───────────────────────────────────────────────────────────────
 
-function InfoPanel({ mode = 'map', onSpeciesClick }) {
+function InfoPanel({ mode = 'map' }) {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
   const isDiorama = mode === 'diorama';
   const [activeLayer, setActiveLayer] = useState(null);     // accordion open state (5-group)
@@ -609,25 +533,11 @@ function InfoPanel({ mode = 'map', onSpeciesClick }) {
 
           <VegetationProfile activeLayer={profileLayer} onLayerChange={setActiveLayer} />
 
-          {isDiorama ? (
-            <>
-              <VegetationLayers
-                activeLayer={activeLayer}
-                profileLayer={profileLayer}
-                onLayerChange={setActiveLayer}
-                onLayerHover={handleLayerHover}
-                isDiorama={isDiorama}
-                onSpeciesClick={onSpeciesClick}
-              />
-              <SiteConditions
-                soilType={selectedEVC.soilType}
-                soilSubBase={selectedEVC.soilSubBase}
-                soilTypesAll={selectedEVC.soilTypesAll}
-              />
-            </>
-          ) : (
-            <DioramaButton />
-          )}
+          <VegetationLayers
+            activeLayer={activeLayer}
+            onLayerChange={setActiveLayer}
+            onLayerHover={handleLayerHover}
+          />
         </div>
       ) : (
         !isDiorama && (

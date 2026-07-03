@@ -3,7 +3,6 @@ import { fetchPlantsForEVC } from '../services/plantService';
 import { logSpeciesForVegetationType } from '../services/speciesService';
 import { getBenchmark } from '../services/benchmarkService';
 import { matchSpeciesToBenchmark } from '../services/lifeFormMapping';
-import { initModelResolver } from '../services/modelResolver';
 
 /**
  * Convert vegetation type display name to snake_case key
@@ -53,9 +52,6 @@ const useMapStore = create((set, get) => ({
     if (evc) {
       // Auto-fetch plants when an EVC is selected
       get().fetchPlants();
-
-      // Ensure model registry is loaded before logging species
-      await initModelResolver();
 
       // Fetch benchmark and species data concurrently
       const benchmarkPromise = (evc.evc && evc.bioregion)

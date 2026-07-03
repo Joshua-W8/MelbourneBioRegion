@@ -1,6 +1,31 @@
 # Verdea — MVP Readiness Audit
 
-Read-only assessment. No source files were modified. This document is the only file created.
+Read-only assessment. No source files were modified (original audit pass). This document was later edited once more to record the 3D-excision update below.
+
+---
+
+## UPDATE — 3D diorama excised (post-audit change pass)
+
+The 3D diorama path was removed from MVP scope and physically excised. All 3D code is
+preserved on branch `parked/3d-diorama` and at commit `6c3c13c`. Deleted: `DioramaView.jsx`
+(+css), `PlantModel.jsx`, `GroundPlane.jsx`, `sceneComposer.js`, `PlantModal.jsx` (+css),
+`modelResolver.js`, and the dead S3 set (`Diorama3D.*`, `SpeciesPopup.*`, `DioramaInfoPanel.*`).
+3D references were removed from `App.jsx`, `InfoPanel.jsx`, `useMapStore.js`, `speciesService.js`,
+`lifeFormMapping.js`; `@react-three/*` + `three` dropped from `package.json`. Build passes; the
+map → click → InfoPanel → 2.5D `VegetationProfile` flow is unchanged (verified by code trace).
+
+**CORRECTION (retraction).** An earlier reconciliation note claimed `PlantModal` was "also used
+in map mode" / "conditionally mounted, so that path is safe" — implying a live map-mode render.
+That was **wrong**. The `InfoPanel` `<PlantModal>` render was **dead code**: it sat inside
+`VegetationLayers`, which only mounts when `isDiorama === true`, yet its own guard required
+`!isDiorama` — so it could never render. It is not a live map-mode path. `PlantModal` has now been
+deleted entirely, so the question is moot either way.
+
+**Status changes** (see rows below, tagged `[RESOLVED — 3D excision]`):
+- **B1** (no Suspense around GLB loader) — RESOLVED: the entire 3D loader path is deleted.
+- **B2** (`PlantModal` Rules-of-Hooks crash) — RESOLVED: `PlantModal` deleted; map-mode claim retracted above.
+- **S3** (dead 3D components) — RESOLVED: all deleted. `scene_parameters.json` was **kept** (data file; now orphaned — pending decision, not deleted).
+- **Still open**: S1 (address-search / B3 runtime APIs — not part of the 3D excision) and S2 (GLB pipeline + assets — reported as orphaned, awaiting go/no-go). Lint still fails on **pre-existing** errors in constraint-protected files (`VegetationProfile.jsx`, `MapView.jsx`) and other unrelated pre-existing unused-vars; the excision introduced none.
 
 ---
 
@@ -106,8 +131,8 @@ Severity: **[MVP-BLOCKER]** blocks core flow end-to-end · **[QUALITY]** works b
 
 | # | Sev | Finding | Evidence | Why it matters | Recommended action |
 |---|---|---|---|---|---|
-| **B1** | **MVP-BLOCKER** | **3D diorama has no `Suspense` boundary around the GLB loader.** `GLBModel` uses `useGLTF`, which suspends while loading. There is **zero** `Suspense` in the entire `src/` tree. The flagship grassland diorama is confirmed to mount a real GLB (Themeda triandra → `tussock_01.glb`). | `PlantModel.jsx:309-324` (`useGLTF`); `DioramaView.jsx:60-100` (Canvas, no Suspense); `grep Suspense src/` → none | When a real GLB renders with no Suspense boundary, React throws _"A component suspended while responding to synchronous input"_ — likely white-screening the 3D view for the primary type. | Wrap diorama/model contents in `<Suspense fallback={…}>`. **Verify at runtime first.** |
-| **B2** | **MVP-BLOCKER** | **`PlantModal` violates Rules of Hooks** — early `return null` (line 29) precedes `useMemo` (line 34). In `DioramaView` the modal is **always mounted** and `plant` transitions `null → object` on click, changing hook count. | `PlantModal.jsx:29,34`; mounted at `DioramaView.jsx:103-106`; lint `react-hooks/rules-of-hooks` | React throws _"Rendered more hooks than during the previous render"_ when a user clicks a species in the diorama → crash. (In map mode the modal is conditionally mounted, so that path is safe.) | Move the `if (!plant) return null` **below** all hooks. **Verify at runtime.** |
+| **B1** | **MVP-BLOCKER** · **RESOLVED — 3D excision** | **3D diorama has no `Suspense` boundary around the GLB loader.** `GLBModel` uses `useGLTF`, which suspends while loading. There is **zero** `Suspense` in the entire `src/` tree. The flagship grassland diorama is confirmed to mount a real GLB (Themeda triandra → `tussock_01.glb`). | `PlantModel.jsx:309-324` (`useGLTF`); `DioramaView.jsx:60-100` (Canvas, no Suspense); `grep Suspense src/` → none | When a real GLB renders with no Suspense boundary, React throws _"A component suspended while responding to synchronous input"_ — likely white-screening the 3D view for the primary type. | Wrap diorama/model contents in `<Suspense fallback={…}>`. **Verify at runtime first.** |
+| **B2** | **MVP-BLOCKER** · **RESOLVED — 3D excision** | **`PlantModal` violates Rules of Hooks** — early `return null` (line 29) precedes `useMemo` (line 34). In `DioramaView` the modal is **always mounted** and `plant` transitions `null → object` on click, changing hook count. | `PlantModal.jsx:29,34`; mounted at `DioramaView.jsx:103-106`; lint `react-hooks/rules-of-hooks` | React throws _"Rendered more hooks than during the previous render"_ when a user clicks a species in the diorama → crash. (RETRACTED: an earlier note said the map-mode render was "conditionally mounted / safe" — in fact the `InfoPanel` `<PlantModal>` was **dead code**, unreachable, per the UPDATE section above.) | ~~Move the `if (!plant) return null` below all hooks.~~ Resolved by deleting `PlantModal` in the 3D excision. |
 | **B3** | **MVP-BLOCKER** | **Runtime external API calls violate the "fully static, no runtime API" MVP requirement.** `AddressSearch` calls Nominatim (geocoding) and the Victoria government WMS `GetFeatureInfo` (EVC lookup) live, on every use. It can also return EVCs **outside** the 84 curated polygons, which then have no benchmark/species → dead-ends. | `AddressSearch.jsx:42` (Vic WMS), `:73` (Nominatim); rendered by default `App.jsx:32` | Breaks the stated static-architecture criterion and the offline/deploy-anywhere promise; introduces two fragile third-party dependencies and inconsistent data shapes. (The map click-flow does not depend on it.) | For MVP: cut the address search feature (see S1), or gate it behind the curated dataset only. |
 | **Q1** | QUALITY | **Lint fails: 22 errors + 1 warning.** Mostly unused vars, plus `set-state-in-effect` (AddressSearch, SpeciesPopup, DioramaInfoPanel) and `Cannot call impure function during render` (`Math.random()` in `PlantModel` shrub layout; Diorama3D). | `npm run lint`; e.g. `PlantModel.jsx:118,120`, `VegetationProfile.jsx:188,218,326`, `speciesService.js:64,98` | Portfolio code should lint clean; the impure-render and set-state-in-effect items are real React smells. | Fix the two real categories; delete dead files (S3) to clear ~6 of them. |
 | **Q2** | QUALITY | **Heavy console logging on every polygon click** — full benchmark dump, per-species trait dump, scene-composition table, registry stats. | `benchmarkService.js:46-141`, `speciesService.js:93-160`, `sceneComposer.js:394-408`, `modelResolver.js:196-197` | Production console spam; reads as debug-grade, not portfolio-grade. | Gate logs behind a `DEBUG` flag or remove. |
@@ -119,7 +144,7 @@ Severity: **[MVP-BLOCKER]** blocks core flow end-to-end · **[QUALITY]** works b
 | **Q8** | QUALITY | **`sceneComposer` computes per-instance variation that is never applied.** `instance_height`, `rotation_y`, `xz_skew` are produced per instance but `DioramaView`/`PlantModel` ignore them (no rotation/scale variation). `matchSpeciesToBenchmark` is called for side effect and its return discarded. | `sceneComposer.js:154-175,245-258`; `DioramaView.jsx:75-88`; `useMapStore.js:83` | Dead computation; trees/tussocks render identical and axis-aligned, undercutting the diorama's realism. | Apply the variation in `PlantModel`, or remove it. |
 | **S1** | SCOPE-CREEP | **Address search feature** (Nominatim + WMS) is beyond the MVP flow and is the sole source of B3. | `AddressSearch.jsx` (whole file) | Maintenance + external-dependency cost; the documented primary risk (scope creep) made concrete. | **Cut for MVP** (resolves B3 too), or park behind a flag. |
 | **S2** | SCOPE-CREEP | **Bespoke-GLB model pipeline**: `scripts/build-model-manifest.js`, `scripts/generate-model-thumbnails.js`, `scripts/plantfactory/*` (10+ Python probe scripts), `trait_pipeline/`, 8 GLBs incl. a 4.8 MB `themeda_triandra/temp.glb`. | `scripts/`, `trait_pipeline/`, `public/models/` | This is the "full diorama" ambition still being pursued — highest scope-creep / maintenance cost in the repo. | Park; keep pipeline out of the app critical path. Remove `temp.glb`. |
-| **S3** | SCOPE-CREEP | **Dead components + their only data consumer.** `Diorama3D.jsx`, `SpeciesPopup.jsx`, `DioramaInfoPanel.jsx` (+ 3 CSS files) imported nowhere; `scene_parameters.json` (360 KB) is read **only** by dead `Diorama3D.jsx`. Also dead exports `getSpeciesForVegetationType`, `getVegetationTypeKeys` (`speciesService.js`). | `grep` import graph; `Diorama3D.jsx:` fetch of `scene_parameters` | Confuses "which visual is real"; carries lint errors and 360 KB of orphaned data. | Delete the 3 dead components + CSS; drop `scene_parameters.json` unless the pipeline needs it. |
+| **S3** | SCOPE-CREEP · **RESOLVED — 3D excision** | **Dead components + their only data consumer.** `Diorama3D.jsx`, `SpeciesPopup.jsx`, `DioramaInfoPanel.jsx` (+ 3 CSS files) imported nowhere; `scene_parameters.json` (360 KB) is read **only** by dead `Diorama3D.jsx`. Also dead exports `getSpeciesForVegetationType`, `getVegetationTypeKeys` (`speciesService.js`). | `grep` import graph; `Diorama3D.jsx:` fetch of `scene_parameters` | Confuses "which visual is real"; carries lint errors and 360 KB of orphaned data. | Delete the 3 dead components + CSS; drop `scene_parameters.json` unless the pipeline needs it. |
 | **S4** | SCOPE-CREEP | **Orphan data files** not referenced in `src/`: `soil_types.geojson`, `melbourne_vegetation_types_ari.geojson`, and the two untracked `study_area_*.geojson`. | `grep /data/... src/` | ~430 KB + two untracked files shipped/managed for nothing. | Remove from `public/data`, or move to a data-source folder outside the build. |
 | **N1** | NICE-TO-HAVE | Copy-species-list button, model thumbnails, theme toggle, suburb overlay + `ContextFilters` toggles. | `InfoPanel.jsx:118-140`, `ThemeToggle.jsx`, `ContextFilters.jsx` | Genuine polish; not required for MVP but not harmful. | Keep. |
 

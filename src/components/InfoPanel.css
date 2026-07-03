@@ -291,7 +291,6 @@
   overflow: hidden;
   border: 1px solid var(--card-border);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
 }
 
 .plant-card:hover {

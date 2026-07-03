@@ -2,8 +2,6 @@
  * Species Service - Loads species data with traits from AusTraits
  */
 
-import { resolveModel } from './modelResolver.js';
-
 // Cache for species data
 let speciesData = null;
 let speciesTraits = null;
@@ -115,14 +113,6 @@ export async function logSpeciesForVegetationType(vegetationTypeKey) {
         const leafLen = t.leaf_length ? `${t.leaf_length.toFixed(0)}mm` : 'unknown';
         console.log(`    Height: ${height} | Leaf length: ${leafLen}`);
 
-        // Model resolution
-        const model = resolveModel(s.species, lfCode);
-        if (model) {
-          console.log(`    Model: ${model.path} [${model.level} match]`);
-        } else {
-          console.log(`    Model: (no model resolved)`);
-        }
-
         // Life history
         const traits_summary = [
           t.woodiness,
@@ -159,7 +149,7 @@ export async function logSpeciesForVegetationType(vegetationTypeKey) {
   console.log(`  Prominent: ${vegType.prominent_count} | Present: ${vegType.present_count}`);
   console.log('='.repeat(70) + '\n');
 
-  // Return enriched data for 3D rendering
+  // Return enriched data for the vegetation profile / species list
   return {
     name: vegType.name,
     prominent: vegType.prominent.map(s => ({
@@ -170,50 +160,5 @@ export async function logSpeciesForVegetationType(vegetationTypeKey) {
       ...s,
       ...(traits?.[s.species] || {}),
     })),
-  };
-}
-
-/**
- * Get all vegetation type keys
- */
-export async function getVegetationTypeKeys() {
-  const data = await loadSpeciesData();
-  if (!data) return [];
-  return Object.keys(data);
-}
-
-/**
- * Get species with traits for a vegetation type (without console logging)
- */
-export async function getSpeciesForVegetationType(vegetationTypeKey) {
-  const [vegData, traits] = await Promise.all([
-    loadSpeciesData(),
-    loadSpeciesTraits()
-  ]);
-
-  if (!vegData || !vegData[vegetationTypeKey]) return null;
-
-  const vegType = vegData[vegetationTypeKey];
-
-  const enrichSpecies = (s) => {
-    const traitData = traits?.[s.species];
-    return {
-      species: s.species,
-      commonName: s.common_name,
-      prominenceCode: s.prominence_code,
-      life_form_code: traitData?.life_form_code || 'MH',
-      traits: traitData?.traits || null,
-      matchType: traitData?.match_type || null,
-    };
-  };
-
-  return {
-    key: vegetationTypeKey,
-    name: vegType.name,
-    prominentCount: vegType.prominent_count,
-    presentCount: vegType.present_count,
-    totalCount: vegType.total_count,
-    prominent: vegType.prominent.map(enrichSpecies),
-    present: vegType.present.map(enrichSpecies),
   };
 }

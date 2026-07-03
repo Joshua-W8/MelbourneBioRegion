@@ -7,8 +7,6 @@
  * benchmark data and species data.
  */
 
-import { resolveModel } from './modelResolver.js';
-
 // ── Life form display names ───────────────────────────────────────────────────
 
 const LF_NAMES = {
@@ -136,12 +134,8 @@ export function matchSpeciesToBenchmark(species, benchmark) {
     if (r.matched.length > 0) {
       console.groupCollapsed(`         ${r.code} species detail (${r.matched.length})`);
       r.matched.forEach(s => {
-        const model = resolveModel(s.species, s.life_form_code);
-        const modelStr = model
-          ? `${model.path} [${model.level}] (available: ${model.available})`
-          : 'no model';
         const cn = s.common_name ? s.common_name.split(',')[0].trim() : '';
-        console.log(`→ ${s.species}${cn ? ` (${cn})` : ''} — ${modelStr}`);
+        console.log(`→ ${s.species}${cn ? ` (${cn})` : ''}`);
       });
       console.groupEnd();
     }
