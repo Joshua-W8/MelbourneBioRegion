@@ -20,7 +20,6 @@ const useMapStore = create((set, get) => ({
   selectedEVC: null,
   plants: [],
   isLoadingPlants: false,
-  viewMode: 'map', // 'map' | 'diorama'
   speciesData: null, // Species with traits for selected vegetation type
   benchmarkData: null, // EVC benchmark for selected polygon
   theme: 'light', // 'dark' | 'light'
@@ -80,8 +79,6 @@ const useMapStore = create((set, get) => ({
       }
     }
   },
-
-  setViewMode: (mode) => set({ viewMode: mode }),
 
   fetchPlants: async () => {
     const { selectedEVC } = get();

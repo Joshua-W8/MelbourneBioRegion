@@ -518,7 +518,7 @@ function InfoPanel({ mode = 'map' }) {
 
   return (
     <div className="info-panel">
-      {!isDiorama && <h2 className="info-panel-title">Pre-Colonial Melbourne</h2>}
+      <h2 className="info-panel-title">Pre-Colonial Melbourne</h2>
 
       {selectedEVC ? (
         <div className="evc-details">
@@ -540,11 +540,9 @@ function InfoPanel({ mode = 'map' }) {
           />
         </div>
       ) : (
-        !isDiorama && (
-          <div className="empty-state">
-            Click on the map to discover what grew here before colonisation
-          </div>
-        )
+        <div className="empty-state">
+          Click on the map to discover what grew here before colonisation
+        </div>
       )}
     </div>
   );
