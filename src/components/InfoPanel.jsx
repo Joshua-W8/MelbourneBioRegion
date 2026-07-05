@@ -438,14 +438,17 @@ function BioregionSubtitle() {
 
 // ── EVC Description ─────────────────────────────────────────────────────────
 
-function EVCDescription({ isDiorama }) {
+function EVCDescription() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
 
   const ecoDescription = benchmarkData?.description || null;
 
-  // Benchmark structural summary — only shown in diorama view
+  // Benchmark structural summary — the reference (mature-state) condition for
+  // this EVC, built from benchmarkData. Each clause is individually guarded, so
+  // treeless / partial benchmarks (canopy: null) simply omit the clause and the
+  // summary is left null rather than rendering an empty or broken sentence.
   let benchmarkSummary = null;
-  if (isDiorama && benchmarkData) {
+  if (benchmarkData) {
     const parts = [];
     if (benchmarkData.canopy?.cover_pct != null) {
       let line = `Canopy cover approximately ${benchmarkData.canopy.cover_pct}%`;
@@ -473,38 +476,27 @@ function EVCDescription({ isDiorama }) {
   }
 
   return (
-    <div className="evc-description-text">
-      {ecoDescription}
-      {benchmarkSummary && (
-        <>
-          {ecoDescription && ' '}
-          {benchmarkSummary}
-        </>
+    <>
+      {ecoDescription && (
+        <div className="evc-description-text">{ecoDescription}</div>
       )}
-    </div>
-  );
-}
-
-// ── Vegetation Community Tag (diorama only) ─────────────────────────────────
-
-function VegetationCommunityTag({ vegetationType }) {
-  if (!vegetationType) return null;
-
-  return (
-    <div className="evc-list-container">
-      <span className="field-label">Vegetation Community</span>
-      <div className="evc-community-detail">
-        Part of the broader <strong>{vegetationType}</strong> community
-      </div>
-    </div>
+      {benchmarkSummary && (
+        <div className="evc-benchmark-summary">
+          <span className="field-label">Reference condition (benchmark)</span>
+          <span className="field-gloss">
+            Typical structure of a mature, healthy stand of this community — a revegetation reference, not the current state of this site.
+          </span>
+          <div className="evc-description-text">{benchmarkSummary}</div>
+        </div>
+      )}
+    </>
   );
 }
 
 // ── InfoPanel ───────────────────────────────────────────────────────────────
 
-function InfoPanel({ mode = 'map' }) {
+function InfoPanel() {
   const selectedEVC = useMapStore((state) => state.selectedEVC);
-  const isDiorama = mode === 'diorama';
   const [activeLayer, setActiveLayer] = useState(null);     // accordion open state (5-group)
   const [hoveredLayer, setHoveredLayer] = useState(null);   // profile highlight (6-group)
 
@@ -527,9 +519,7 @@ function InfoPanel({ mode = 'map' }) {
           </div>
           <BioregionSubtitle />
 
-          <EVCDescription isDiorama={isDiorama} />
-
-          {isDiorama && <VegetationCommunityTag vegetationType={selectedEVC.vegetationType} />}
+          <EVCDescription />
 
           <VegetationProfile activeLayer={profileLayer} onLayerChange={setActiveLayer} />
 
