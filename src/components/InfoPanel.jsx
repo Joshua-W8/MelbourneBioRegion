@@ -1,6 +1,12 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import useMapStore from '../store/useMapStore';
 import VegetationProfile from './VegetationProfile';
+import {
+  LAYER_GROUPS,
+  LAYER_GROUP_ORDER,
+  lifeFormToGroup,
+  STRUCTURE_DISCLAIMER,
+} from '../data/layerGroups';
 import './InfoPanel.css';
 
 const BCS_COLORS = {
@@ -33,16 +39,6 @@ const LIFE_FORM_META = {
 
 // ── Layer group definitions (5 groups for accordion structure) ───────────────
 
-const LAYER_GROUPS = {
-  canopy:    { label: 'Canopy Trees',        color: '#1B5E20', codes: new Set(['IT', 'T']) },
-  shrub:     { label: 'Shrubs',              color: '#66BB6A', codes: new Set(['MS', 'SS', 'PS']) },
-  graminoid: { label: 'Graminoids',          color: '#b8860b', codes: new Set(['LTG', 'LNG', 'MTG', 'MNG']) },
-  herb:      { label: 'Herbs & Wildflowers', color: '#7c5db2', codes: new Set(['LH', 'MH', 'SH']) },
-  ground:    { label: 'Ferns & Ground Cover', color: '#228b22', codes: new Set(['GF', 'BL', 'SC']) },
-};
-
-const LAYER_GROUP_ORDER = ['canopy', 'shrub', 'graminoid', 'herb', 'ground'];
-
 const LAYER_DESCRIPTIONS = {
   canopy: 'The structural canopy \u2014 eucalypts that define the woodland character. Their shade regime determines which understorey species can grow beneath.',
   shrub: 'Dense woody layer providing nesting habitat and wind protection. Many are host plants for butterfly larvae.',
@@ -50,15 +46,6 @@ const LAYER_DESCRIPTIONS = {
   herb: 'The diversity engine \u2014 seasonal blooms support pollinators that sustain the entire food web. Often the most species-rich layer.',
   ground: 'Nutrient cycling, moisture retention, and microhabitat for invertebrates. Indicators of overall ecosystem health.',
 };
-
-// Map life form code → accordion group key
-function lifeFormToGroup(code) {
-  if (!code) return 'ground';
-  for (const [key, g] of Object.entries(LAYER_GROUPS)) {
-    if (g.codes.has(code)) return key;
-  }
-  return 'ground';
-}
 
 // Map life form code → VegetationProfile group key (6-group, with subcanopy)
 function lifeFormToProfileGroup(code) {
@@ -412,7 +399,7 @@ function VegetationLayers({ activeLayer, onLayerChange, onLayerHover }) {
 
 // ── Bioregion + Conservation Status subtitle ────────────────────────────────
 
-function BioregionSubtitle() {
+export function BioregionSubtitle() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
   const selectedEVC = useMapStore((state) => state.selectedEVC);
   const bcsColor = BCS_COLORS[selectedEVC?.bcsDesc] || '#666';
@@ -438,7 +425,7 @@ function BioregionSubtitle() {
 
 // ── EVC Description ─────────────────────────────────────────────────────────
 
-function EVCDescription() {
+export function EVCDescription() {
   const benchmarkData = useMapStore((state) => state.benchmarkData);
 
   const ecoDescription = benchmarkData?.description || null;
@@ -493,6 +480,85 @@ function EVCDescription() {
   );
 }
 
+// ── Structural Targets ──────────────────────────────────────────────────────
+// Per-layer reference structure from benchmarkData. Density is shown ONLY where
+// it genuinely exists in the data — large_trees.density_per_ha for the canopy.
+// Understorey/ground layers carry projective cover (cover_pct) and expected
+// species richness (num_species), NOT stem density, so they are labelled as
+// such rather than fabricated into plants/area. Same layer grouping as the
+// vegetation layers above (LAYER_GROUPS / LIFE_FORM_META).
+
+export function StructuralTargets() {
+  const benchmarkData = useMapStore((state) => state.benchmarkData);
+  const understorey = benchmarkData?.understorey;
+
+  const rows = useMemo(() => {
+    if (!benchmarkData) return [];
+
+    // Sum projective cover + expected species per layer group from understorey.
+    const stats = {};
+    for (const key of LAYER_GROUP_ORDER) stats[key] = { cover: 0, spp: 0 };
+    for (const row of understorey || []) {
+      const meta = LIFE_FORM_META[row.code];
+      const group = meta ? meta.group : lifeFormToGroup(row.code);
+      stats[group].cover += row.cover_pct || 0;
+      if (row.num_species != null) stats[group].spp += row.num_species;
+    }
+
+    // Canopy cover comes from the authoritative top-level canopy object.
+    const canopyCover = benchmarkData.canopy?.cover_pct;
+    if (canopyCover != null) {
+      stats.canopy.cover = Math.max(stats.canopy.cover, canopyCover);
+    }
+
+    const density = benchmarkData.large_trees?.density_per_ha ?? null;
+    const canopyHeight = benchmarkData.canopy?.height_m ?? null;
+    const litter = benchmarkData.ground_surface?.organic_litter_pct ?? null;
+
+    const out = [];
+    for (const key of LAYER_GROUP_ORDER) {
+      const g = LAYER_GROUPS[key];
+      const s = stats[key];
+      const metrics = [];
+
+      if (key === 'canopy') {
+        if (density != null) metrics.push(`~${density} trees/ha`);
+        if (s.cover > 0) metrics.push(`${s.cover}% cover`);
+        if (canopyHeight != null) metrics.push(`to ${canopyHeight}m`);
+      } else {
+        if (s.cover > 0) metrics.push(`${s.cover}% cover`);
+        if (s.spp > 0) metrics.push(`${s.spp} spp`);
+        if (key === 'ground' && litter != null) metrics.push(`${litter}% litter`);
+      }
+
+      if (metrics.length > 0) {
+        out.push({ key, label: g.label, color: g.color, metrics });
+      }
+    }
+    return out;
+  }, [benchmarkData, understorey]);
+
+  if (rows.length === 0) return null;
+
+  return (
+    <div className="structural-targets">
+      <span className="field-label">Reference structure (benchmark target)</span>
+      <span className="field-gloss">{STRUCTURE_DISCLAIMER}</span>
+      <div className="structural-targets-rows">
+        {rows.map((r) => (
+          <div key={r.key} className="structural-target-row">
+            <span className="structural-target-layer">
+              <span className="likelihood-dot" style={{ backgroundColor: r.color }} />
+              {r.label}
+            </span>
+            <span className="structural-target-metrics">{r.metrics.join(' · ')}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ── InfoPanel ───────────────────────────────────────────────────────────────
 
 function InfoPanel() {
@@ -528,6 +594,15 @@ function InfoPanel() {
             onLayerChange={setActiveLayer}
             onLayerHover={handleLayerHover}
           />
+
+          <StructuralTargets />
+
+          <button
+            className="export-pdf-btn"
+            onClick={() => window.print()}
+          >
+            Export PDF
+          </button>
         </div>
       ) : (
         <div className="empty-state">

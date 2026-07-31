@@ -4,6 +4,7 @@ import InfoPanel from './components/InfoPanel';
 import AddressSearch from './components/AddressSearch';
 import ContextFilters from './components/ContextFilters';
 import ThemeToggle from './components/ThemeToggle';
+import PrintableReport from './components/PrintableReport';
 import useMapStore from './store/useMapStore';
 import './App.css';
 
@@ -17,11 +18,14 @@ function App() {
 
   return (
     <>
-      <MapView />
-      <AddressSearch />
-      <ContextFilters />
-      <InfoPanel />
-      <ThemeToggle />
+      <div className="screen-only">
+        <MapView />
+        <AddressSearch />
+        <ContextFilters />
+        <InfoPanel />
+        <ThemeToggle />
+      </div>
+      <PrintableReport />
     </>
   );
 }

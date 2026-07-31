@@ -1,0 +1,126 @@
+/* Grouping wrapper for the on-screen app — display:contents so it generates no
+   box and has zero layout effect on screen (its children behave exactly as
+   before). In print it is hidden entirely. */
+.screen-only {
+  display: contents;
+}
+
+/* The print report is hidden on screen and only rendered when printing. */
+.printable-report {
+  display: none;
+}
+
+@media print {
+  /* Hide the interactive app chrome; show only the report. */
+  .screen-only {
+    display: none !important;
+  }
+
+  .printable-report {
+    display: block;
+    background: #fff;
+    color: #1a1a1a;
+
+    /* Force a clean light palette scoped to the report subtree, so the reused
+       components render dark-on-white regardless of the on-screen theme.
+       Custom properties defined here cascade to all descendants. */
+    --text-primary: #1a1a1a;
+    --text-secondary: #333333;
+    --text-muted: #666666;
+    --panel-bg: #ffffff;
+    --panel-border: #dddddd;
+    --card-bg: #f5f5f5;
+    --card-border: #dddddd;
+    --card-hover: #f5f5f5;
+    --accent-green: #2d7a3e;
+    --accent-green-dim: #256b34;
+  }
+
+  @page {
+    size: A4;
+    margin: 16mm;
+  }
+
+  .report-page {
+    break-after: page;
+    break-inside: avoid;
+  }
+  .report-page:last-child {
+    break-after: auto;
+  }
+
+  .print-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dddddd;
+  }
+  .print-title {
+    font-size: 20px;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .print-community {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    color: #1a1a1a;
+  }
+  .print-address {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 4px;
+  }
+
+  .print-h2 {
+    font-size: 15px;
+    margin: 0 0 10px;
+    color: #1a1a1a;
+  }
+  .print-h3 {
+    font-size: 13px;
+    margin: 12px 0 4px;
+  }
+  .print-count {
+    font-weight: 400;
+    color: #666666;
+  }
+
+  .print-species-group {
+    break-inside: avoid;
+  }
+  .print-species-ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #333333;
+  }
+
+  .print-profile {
+    max-width: 480px;
+  }
+  .print-profile .veg-profile-scene svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .print-body {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+    color: #333333;
+  }
+  .print-disclaimer {
+    color: #444444;
+    font-style: italic;
+  }
+  .print-link {
+    color: #2d7a3e;
+    word-break: break-all;
+  }
+  .print-footnote {
+    font-size: 10px;
+    color: #888888;
+    margin-top: 24px;
+  }
+}
